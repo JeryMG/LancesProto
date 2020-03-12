@@ -46,6 +46,7 @@ public class Hunter : Vivant
     private CameraTop90 playerCamera;
     private Rigidbody rb;
     [SerializeField] private Vector3 distanceKnockBack = new Vector3(1.5f,0,1.5f);
+    public bool aiming;
 
     private void Awake()
     {
@@ -70,14 +71,13 @@ public class Hunter : Vivant
         {
             ColorChange();
         }
-
-        
         
         //Viser, lancé et melee
         if (lancesRestantes > 0)
         {
             if (_playerInputs.AimWeapon && currentState == states.blinker)
             {
+                aiming = true;
                 Lance newLance = Instantiate(lancePrefab, Hand.position, Hand.rotation, Hand);
                 currentState = states.hunter;
                 lanceEquiped = newLance;
@@ -85,6 +85,7 @@ public class Hunter : Vivant
 
             if (_playerInputs.FireWeapon && currentState == states.hunter)
             {
+                aiming = false;
                 currentState = states.blinker;
                 lanceEquiped.transform.parent = null;
                 lanceEquiped.stop = false;

@@ -30,9 +30,8 @@ public class Lance : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) 
     {
-        if (other.gameObject.tag!= "Player")
+        if (other.gameObject.tag!= "Player" && !_player.aiming)
         {
-            
             lanceBody.velocity = Vector3.zero;
             stop = true;
             StayImmobile(true);

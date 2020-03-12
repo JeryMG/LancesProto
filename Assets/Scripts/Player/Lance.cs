@@ -12,15 +12,12 @@ public class Lance : MonoBehaviour
     private Hunter _player;
     public float lanceDamage = 5f;
 
-    private Vector3 lancePos;
-
     private void Start()
     {
         lanceBody = GetComponent<Rigidbody>();
         StayImmobile(true);
         stop = true;
         _player = FindObjectOfType<Hunter>();
-        lancePos = transform.position;
     }
 
     private void Update()
@@ -31,14 +28,19 @@ public class Lance : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other) 
     {
-        if (other.gameObject.tag!="Player")
+        if (other.gameObject.tag!= "Player")
         {
+            
             lanceBody.velocity = Vector3.zero;
             stop = true;
             StayImmobile(true);
-            _player.lieuxDeTp.Add(transform.position);
+            Debug.Log("cible ajoutée");
+            if (!_player.lieuxDeTp.Contains(transform.position))
+            {
+                _player.lieuxDeTp.Add(transform.position);
+            }
         }
 
         Enemi enemiBody = other.gameObject.GetComponent<Enemi>();
@@ -50,9 +52,6 @@ public class Lance : MonoBehaviour
 
     public void shooting()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.y = lancePos.y;
-        Vector3 direction = mousePos - lancePos;
         transform.Translate(Vector3.forward * lanceSpeed * Time.deltaTime);
     }
 

@@ -70,6 +70,8 @@ public class Hunter : Vivant
         {
             ColorChange();
         }
+
+        
         
         //Viser, lancé et melee
         if (lancesRestantes > 0)
@@ -121,9 +123,10 @@ public class Hunter : Vivant
         {
             if (_playerInputs.blink && currentState == states.blinker)
             {
-                Vector3 direction = lieuxDeTp[0] - transform.position;
-                direction = new Vector3(direction.x, 0, direction.z);
-                transform.position += direction * dashSpeed;
+                // Vector3 direction = lieuxDeTp[0] - transform.position;
+                // direction = new Vector3(direction.x, 0, direction.z);
+                lieuxDeTp[0] = new Vector3(lieuxDeTp[0].x, transform.position.y, lieuxDeTp[0].z);
+                transform.position = lieuxDeTp[0];
             }
         }
     }

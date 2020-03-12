@@ -21,9 +21,9 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
         <option value="$PROJECT_DIR$/Assets/goAnim.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" />
       </list>
     </option>
   </component>
@@ -63,7 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1583762244963</updated>
       <workItem from="1583762253825" duration="11157000" />
-      <workItem from="1583840079957" duration="1809000" />
+      <workItem from="1583840079957" duration="2408000" />
+      <workItem from="1583946457014" duration="5835000" />
     </task>
     <servers />
   </component>

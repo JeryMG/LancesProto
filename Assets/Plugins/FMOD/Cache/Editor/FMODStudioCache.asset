@@ -18,6 +18,75 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-3847868896802976646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Event 3D/Ennemi distance 3D/Destruction ennemi
+  m_EditorClassIdentifier: 
+  Path: event:/Event 3D/Ennemi distance 3D/Destruction ennemi
+  guid: 93aa1733b4d48d4e8c570d457ad1f7c9
+  Banks:
+  - {fileID: 6674497141808664079}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-3535081685056991130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Event 3D/Joueur 3D/Objet ramass\xE9"
+  m_EditorClassIdentifier: 
+  Path: "event:/Event 3D/Joueur 3D/Objet ramass\xE9"
+  guid: 2506a7bea779b54bb689373d633b768a
+  Banks:
+  - {fileID: 6674497141808664079}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1100
+--- !u!114 &-2224194330175727684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Event 3D/Joueur 3D/Lanc\xE9"
+  m_EditorClassIdentifier: 
+  Path: "event:/Event 3D/Joueur 3D/Lanc\xE9"
+  guid: e8d432c0b188cc4d97fe0bbae8f07fbe
+  Banks:
+  - {fileID: 6674497141808664079}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 400
 --- !u!114 &-121337009182667935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,11 +101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Projet-FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637196884986728376
+  lastModified: 637197214974066963
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 732
+    Value: 1002
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -52,16 +121,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -121337009182667935}
-  - {fileID: 2285077117246013735}
+  - {fileID: 6674497141808664079}
   EditorEvents:
-  - {fileID: 8461808099059832670}
+  - {fileID: -3535081685056991130}
+  - {fileID: 5243966579115094111}
+  - {fileID: -3847868896802976646}
+  - {fileID: -2224194330175727684}
+  - {fileID: 1113189361023297214}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2285077117246013735}
+  - {fileID: 6674497141808664079}
   StringsBanks:
   - {fileID: -121337009182667935}
-  stringsBankWriteTime: 637196884986728376
+  stringsBankWriteTime: 637197214974066963
   cacheVersion: 3
+--- !u!114 &1113189361023297214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Event 3D/Joueur 3D/T\xE9l\xE9portation"
+  m_EditorClassIdentifier: 
+  Path: "event:/Event 3D/Joueur 3D/T\xE9l\xE9portation"
+  guid: f8445ab0ecae494db87794e94168508d
+  Banks:
+  - {fileID: 6674497141808664079}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 181
 --- !u!114 &1481978067279856082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +193,47 @@ MonoBehaviour:
   lastModified: 637196884986668546
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &5243966579115094111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Event 2D/Environnement/Ambiance
+  m_EditorClassIdentifier: 
+  Path: event:/Event 2D/Environnement/Ambiance
+  guid: 271d7d4218e4394180fd4cab0c07ce8c
+  Banks:
+  - {fileID: 6674497141808664079}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 175000
+--- !u!114 &6674497141808664079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Projet-FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637197214974066963
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &8461808099059832670
 MonoBehaviour:
@@ -112,8 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: "event:/Lanc\xE9"
   guid: e8d432c0b188cc4d97fe0bbae8f07fbe
-  Banks:
-  - {fileID: 2285077117246013735}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

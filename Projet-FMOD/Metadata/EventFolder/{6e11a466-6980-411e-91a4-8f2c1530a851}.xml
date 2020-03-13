@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EventFolder" id="{6e11a466-6980-411e-91a4-8f2c1530a851}">
+		<property name="name">
+			<value>Ennemi CAC 3D</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9e37b811-aa84-42f4-9ad8-608b8a90dfcf}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{7fbeeec0-859a-4c16-8f0e-6d7b5a4e4393}">
 		<property name="assetPath">
-			<value>LancesProto/Ennemi_PriseDegats.wav</value>
+			<value>LancesProto/Ennemi_distance/Ennemi_PriseDegats.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

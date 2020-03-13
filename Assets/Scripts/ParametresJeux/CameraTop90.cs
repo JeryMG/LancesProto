@@ -15,6 +15,9 @@ public class CameraTop90 : MonoBehaviour
 	bool shaking;
 
 	private bool activated;
+	public bool clamped;
+	public bool followMouse;
+
 	void Start () {
 		target = player.position; //set default target
 		yStart = transform.position.y; //capture current y position
@@ -24,13 +27,17 @@ public class CameraTop90 : MonoBehaviour
 		if (activated)
 		{
 			smoothTime = 0.1f;
+			if (followMouse)
+			{
+				mousePos = CaptureMousePos();
+			}
 		}
 		else
 		{
 			smoothTime = 0.2f;
 		}
 		
-		if (Input.GetMouseButton(0))
+		if (Input.GetMouseButton(0) && !followMouse)
 		{
 			activated = true;
 			mousePos = CaptureMousePos(); //find out where the mouse is
@@ -38,7 +45,14 @@ public class CameraTop90 : MonoBehaviour
 
 		if (!Input.GetMouseButton(0))
 		{
-			activated = false;
+			if (followMouse)
+			{
+				activated = true;
+			}
+			else
+			{
+				activated = false;
+			}
 		}
 		
 		shakeOffset = UpdateShake(); //account for screen shake
@@ -84,6 +98,12 @@ public class CameraTop90 : MonoBehaviour
 	void UpdateCameraPosition(){
 		Vector3 tempPos;
 		tempPos = Vector3.SmoothDamp(transform.position, target, ref refVel, smoothTime); //smoothly move towards the target
+		if (clamped)
+		{
+			float clampedX = Mathf.Clamp(tempPos.x, -0.1f, 3.8f);
+			float clampedZ = Mathf.Clamp(tempPos.z, -15.4f, 13.2f);
+			tempPos = new Vector3(clampedX,tempPos.y,clampedZ);
+		}
 		transform.position = tempPos; //update the position
 	}
 

@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraTop90 : MonoBehaviour
 {
+	private Camera cam;
+	private Vector2 viewPortSize;
+	
     public Transform player;
 	Vector3 target, mousePos, refVel, shakeOffset;
 	public float cameraDist = 3.5f;
@@ -18,10 +22,18 @@ public class CameraTop90 : MonoBehaviour
 	public bool clamped;
 	public bool followMouse;
 
-	void Start () {
+	void Start () 
+	{
+		cam = Camera.main;
 		target = player.position; //set default target
 		yStart = transform.position.y; //capture current y position
 	}
+
+	private void Update()
+	{
+		viewPortSize = cam.ScreenToWorldPoint(new Vector3());
+	}
+
 	void FixedUpdate () 
 	{
 		if (activated)

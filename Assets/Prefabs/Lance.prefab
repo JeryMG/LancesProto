@@ -125,4 +125,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lanceSpeed: 50
   stop: 0
-  lanceDamage: 5
+  lanceDamage: 1
+  timerDestruction: 5

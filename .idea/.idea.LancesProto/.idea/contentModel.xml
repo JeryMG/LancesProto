@@ -14,6 +14,7 @@
             <e p="CameraTop90.cs" t="Include" />
             <e p="CreateAreaMesh.cs" t="Include" />
             <e p="IDamageable.cs" t="Include" />
+            <e p="InputsManager.cs" t="Include" />
             <e p="PlayerInputs.cs" t="Include" />
             <e p="RestartScene.cs" t="Include" />
             <e p="Vivant.cs" t="Include" />

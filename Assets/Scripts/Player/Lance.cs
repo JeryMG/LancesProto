@@ -7,14 +7,17 @@ using UnityEngine;
 public class Lance : MonoBehaviour
 {
     [SerializeField]private float lanceSpeed = 12f;
+    private PlayerInputs _inputs;
     public bool stop;
     private Rigidbody lanceBody;
     private Hunter _player;
     public float lanceDamage = 5f;
+    [SerializeField] private float timerDestruction = 5f;
 
     private void Start()
     {
         lanceBody = GetComponent<Rigidbody>();
+        _inputs = FindObjectOfType<PlayerInputs>();
         StayImmobile(true);
         stop = true;
         _player = FindObjectOfType<Hunter>();
@@ -25,6 +28,17 @@ public class Lance : MonoBehaviour
         if (!stop)
         {
             shooting();
+            
+            if (_inputs.blink)
+            {
+                lanceBody.velocity = Vector3.zero;
+                stop = true;
+                StayImmobile(true);
+                if (!_player.lieuxDeTp.Contains(transform.position))
+                {
+                    _player.lieuxDeTp.Add(transform.position);
+                }
+            }
         }
     }
 
@@ -42,10 +56,25 @@ public class Lance : MonoBehaviour
             }
         }
 
+        if (other.gameObject.CompareTag("Vide"))
+        {
+            Destroy(gameObject,timerDestruction);
+        }
+
         Enemi enemiBody = other.gameObject.GetComponent<Enemi>();
         if (enemiBody != null)
         {
             enemiBody.TakeDamage(lanceDamage);
+            transform.parent = enemiBody.transform;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (_player.lieuxDeTp.Contains(transform.position))
+        {
+            _player.lieuxDeTp.Remove(transform.position);
+            _player.lancesRestantes++;
         }
     }
 

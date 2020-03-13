@@ -22,7 +22,7 @@ public class Hunter : Vivant
 
     public Lance lancePrefab;
     public int lancesRestantes;
-    private states currentState;
+    public states currentState;
     private Color playerColor;
     private bool changeColor;
     private Material skinMat;
@@ -126,9 +126,14 @@ public class Hunter : Vivant
             {
                 // Vector3 direction = lieuxDeTp[0] - transform.position;
                 // direction = new Vector3(direction.x, 0, direction.z);
-                lieuxDeTp[0] = new Vector3(lieuxDeTp[0].x, transform.position.y, lieuxDeTp[0].z);
-                transform.position = lieuxDeTp[0];
+                lieuxDeTp[lieuxDeTp.Count - 1] = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].z);
+                transform.position = lieuxDeTp[lieuxDeTp.Count - 1];
             }
+        }
+
+        if (lancesRestantes > 3)
+        {
+            lancesRestantes = 3;
         }
     }
 
@@ -159,7 +164,7 @@ public class Hunter : Vivant
         if (other.gameObject.GetComponent<Lance>() != null)
         {
             Destroy(other.gameObject);
-            lieuxDeTp.Remove(lieuxDeTp[0]);
+            lieuxDeTp.Remove(lieuxDeTp[lieuxDeTp.Count - 1]);
             lieuxDeTp.RemoveAll(item => item == null);
             lancesRestantes++;
         }

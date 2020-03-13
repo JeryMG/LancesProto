@@ -151,7 +151,7 @@ public class Enemi : Vivant
     {
         if (other.transform.CompareTag("Lance"))
         {
-            if (health <= 0)
+            if (this.health <= 0)
             {
                 Destroy(gameObject);
                 Destroy(

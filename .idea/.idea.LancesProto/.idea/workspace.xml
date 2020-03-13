@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/InputsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../2GD/Prog Unity/Shooter/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
@@ -21,12 +22,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
         <option value="$PROJECT_DIR$/Assets/goAnim.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/InputsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
       </list>
     </option>
   </component>
@@ -69,6 +72,7 @@
       <workItem from="1583840079957" duration="2408000" />
       <workItem from="1583946457014" duration="6641000" />
       <workItem from="1584021267289" duration="4515000" />
+      <workItem from="1584086623742" duration="11733000" />
     </task>
     <servers />
   </component>

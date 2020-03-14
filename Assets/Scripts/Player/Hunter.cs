@@ -135,10 +135,15 @@ public class Hunter : Vivant
                 //Son de teleportation
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/Téléportation",
                     transform.position);
-
                 
                 lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
+            }
+
+            if (_playerInputs.LanceReturn && currentState == states.blinker)
+            {
+                lancesRestantes = 3;
+                lieuxDeTp.Clear();
             }
         }
 
@@ -179,8 +184,11 @@ public class Hunter : Vivant
             FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/ObjetRamassé",
                 transform.position);
 
-            
-            lieuxDeTp.Remove(lieuxDeTp[lieuxDeTp.Count - 1]);
+
+            if (lieuxDeTp.Count != 0)
+            {
+                lieuxDeTp.Remove(lieuxDeTp[lieuxDeTp.Count - 1]);
+            }
             lieuxDeTp.RemoveAll(item => item == null);
             lancesRestantes++;
         }

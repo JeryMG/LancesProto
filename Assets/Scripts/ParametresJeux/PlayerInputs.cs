@@ -21,6 +21,8 @@ public class PlayerInputs : MonoBehaviour
     public bool AimWeapon { get; private set; }
     public bool blink { get; private set; }
     public bool Melee { get; private set; }
+    public bool LanceReturn { get; private set; }
+
 
     public bool manetteInputs;
 
@@ -40,6 +42,7 @@ public class PlayerInputs : MonoBehaviour
             FireWeapon = Input.GetMouseButtonUp(0);
             Melee = Input.GetKeyDown(KeyCode.Space);
             blink = Input.GetMouseButtonDown(1);
+            LanceReturn = Input.GetKeyDown(KeyCode.R);
         }
         else
         {
@@ -49,6 +52,7 @@ public class PlayerInputs : MonoBehaviour
             FireWeapon = Input.GetButtonUp("TireLance");
             blink = Input.GetButtonDown("Blink");
             Melee = Input.GetButtonDown("Melee");
+            LanceReturn = Input.GetButtonDown("LanceReturn");
         }
 
         //Look inputs

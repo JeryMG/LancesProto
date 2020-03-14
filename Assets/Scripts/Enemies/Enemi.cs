@@ -147,10 +147,36 @@ public class Enemi : Vivant
             DeathEffect.main.startLifetimeMultiplier);
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Lance"))
         {
+            if (this.health <= 0)
+            {
+                //son de destruction 
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/DestructionEnnemi",transform.position);
+
+                
+                Destroy(gameObject);
+                Destroy(
+                    Instantiate(DeathEffect, transform.position,
+                        Quaternion.FromToRotation(Vector3.forward, transform.position)),
+                    DeathEffect.main.startLifetimeMultiplier);
+            }
+        }
+    }*/
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Lance"))
+        {
+            Lance LancePlayer = other.gameObject.GetComponent<Lance>();
+            
+            if (LancePlayer.returning)
+            {
+                TakeDamage(LancePlayer.lanceDamage);
+            }
+            
             if (this.health <= 0)
             {
                 //son de destruction 

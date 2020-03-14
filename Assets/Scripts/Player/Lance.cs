@@ -13,9 +13,14 @@ public class Lance : MonoBehaviour
     private Hunter _player;
     public float lanceDamage = 5f;
     [SerializeField] private float timerDestruction = 5f;
+    public bool returning;
+    private Transform PlayerTransform;
+
+    public float vitesseReturn;
 
     private void Start()
     {
+        PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         lanceBody = GetComponent<Rigidbody>();
         _inputs = FindObjectOfType<PlayerInputs>();
         StayImmobile(true);
@@ -25,7 +30,7 @@ public class Lance : MonoBehaviour
 
     private void Update()
     {
-        if (!stop)
+        if (!stop && !returning)
         {
             shooting();
             
@@ -39,6 +44,13 @@ public class Lance : MonoBehaviour
                     _player.lieuxDeTp.Add(transform);
                 }
             }
+        }
+        
+        returningToPlayer();
+
+        if (_inputs.LanceReturn)
+        {
+            returning = true;
         }
     }
 
@@ -65,7 +77,10 @@ public class Lance : MonoBehaviour
         if (enemiBody != null)
         {
             enemiBody.TakeDamage(lanceDamage);
-            transform.parent = enemiBody.transform;
+            if (!returning)
+            {
+                transform.parent = enemiBody.transform;
+            }
         }
     }
 
@@ -81,6 +96,16 @@ public class Lance : MonoBehaviour
     public void shooting()
     {
         transform.Translate(Vector3.forward * lanceSpeed * Time.deltaTime);
+    }
+
+    public void returningToPlayer()
+    {
+        if (returning)
+        {
+            StayImmobile(false);
+            Vector3 destination = PlayerTransform.position - transform.position;
+            transform.position += destination * vitesseReturn * Time.deltaTime;
+        }
     }
 
     public void StayImmobile(bool yes)

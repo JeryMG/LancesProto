@@ -127,3 +127,5 @@ MonoBehaviour:
   stop: 0
   lanceDamage: 1
   timerDestruction: 5
+  returning: 0
+  vitesseReturn: 5

@@ -162,10 +162,10 @@ GameObject:
   - component: {fileID: 633848292}
   - component: {fileID: 633848291}
   - component: {fileID: 633848290}
+  - component: {fileID: 633848293}
   - component: {fileID: 633848289}
   - component: {fileID: 633848288}
   - component: {fileID: 633848287}
-  - component: {fileID: 633848293}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -501,6 +501,8 @@ MonoBehaviour:
   smoothTime: 0.2
   clamped: 1
   followMouse: 0
+  offsetX: 0
+  offsetZ: 0
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0

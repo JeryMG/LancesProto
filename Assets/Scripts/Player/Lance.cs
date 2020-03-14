@@ -34,9 +34,9 @@ public class Lance : MonoBehaviour
                 lanceBody.velocity = Vector3.zero;
                 stop = true;
                 StayImmobile(true);
-                if (!_player.lieuxDeTp.Contains(transform.position))
+                if (!_player.lieuxDeTp.Contains(transform))
                 {
-                    _player.lieuxDeTp.Add(transform.position);
+                    _player.lieuxDeTp.Add(transform);
                 }
             }
         }
@@ -50,9 +50,9 @@ public class Lance : MonoBehaviour
             stop = true;
             StayImmobile(true);
             Debug.Log("cible ajoutée");
-            if (!_player.lieuxDeTp.Contains(transform.position))
+            if (!_player.lieuxDeTp.Contains(transform))
             {
-                _player.lieuxDeTp.Add(transform.position);
+                _player.lieuxDeTp.Add(transform);
             }
         }
 
@@ -71,9 +71,9 @@ public class Lance : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (_player.lieuxDeTp.Contains(transform.position))
+        if (_player.lieuxDeTp.Contains(transform))
         {
-            _player.lieuxDeTp.Remove(transform.position);
+            _player.lieuxDeTp.Remove(transform);
             _player.lancesRestantes++;
         }
     }

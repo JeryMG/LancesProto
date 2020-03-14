@@ -33,7 +33,7 @@ public class Hunter : Vivant
     private Lance lanceEquiped;
 
     [Header("Blink Variables")] 
-    [SerializeField] public List<Vector3> lieuxDeTp;
+    [SerializeField] public List<Transform> lieuxDeTp;
     private float dashSpeed = 1f;
     
     [Header("KaK Variables")] 
@@ -137,8 +137,8 @@ public class Hunter : Vivant
                     transform.position);
 
                 
-                lieuxDeTp[lieuxDeTp.Count - 1] = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].z);
-                transform.position = lieuxDeTp[lieuxDeTp.Count - 1];
+                lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
+                transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
             }
         }
 

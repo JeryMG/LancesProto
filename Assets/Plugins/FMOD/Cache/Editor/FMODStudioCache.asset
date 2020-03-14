@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: "event:/Event3D/Joueur3D/T\xE9l\xE9portation"
   guid: f8445ab0ecae494db87794e94168508d
   Banks:
-  - {fileID: -8348841860861139635}
+  - {fileID: -1440624439841021841}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -40,7 +40,7 @@ MonoBehaviour:
   lastModified: 637197738066818557
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7060895951730510065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiDistance3D/DestructionEnnemi
   guid: 93aa1733b4d48d4e8c570d457ad1f7c9
   Banks:
-  - {fileID: -8348841860861139635}
+  - {fileID: -1440624439841021841}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -184,6 +184,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &-1440624439841021841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Projet-FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637197779208627902
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1278844770251079501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +235,7 @@ MonoBehaviour:
   Path: event:/Event2D/Environnement/Ambiance
   guid: 271d7d4218e4394180fd4cab0c07ce8c
   Banks:
-  - {fileID: -8348841860861139635}
+  - {fileID: -1440624439841021841}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -240,7 +258,7 @@ MonoBehaviour:
   Path: "event:/Event3D/Joueur3D/Lanc\xE9"
   guid: e8d432c0b188cc4d97fe0bbae8f07fbe
   Banks:
-  - {fileID: -8348841860861139635}
+  - {fileID: -1440624439841021841}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -262,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Projet-FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637197738066888373
+  lastModified: 637197731763615444
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -282,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -121337009182667935}
-  - {fileID: -8348841860861139635}
+  - {fileID: -1440624439841021841}
   EditorEvents:
   - {fileID: 2805090919585786521}
   - {fileID: -1190991224179395039}
@@ -291,10 +309,10 @@ MonoBehaviour:
   - {fileID: -8622998089082379156}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8348841860861139635}
+  - {fileID: -1440624439841021841}
   StringsBanks:
   - {fileID: -121337009182667935}
-  stringsBankWriteTime: 637197738066888373
+  stringsBankWriteTime: 637197731763615444
   cacheVersion: 3
 --- !u!114 &690168491406289924
 MonoBehaviour:
@@ -387,7 +405,7 @@ MonoBehaviour:
   Path: "event:/Event3D/Joueur3D/ObjetRamass\xE9"
   guid: 2506a7bea779b54bb689373d633b768a
   Banks:
-  - {fileID: -8348841860861139635}
+  - {fileID: -1440624439841021841}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1

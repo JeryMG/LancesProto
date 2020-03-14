@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using FMOD.Studio;
 using UnityEngine;
 
@@ -23,6 +24,8 @@ public class CameraTop90 : MonoBehaviour
 	public bool clamped;
 	public bool followMouse;
 	private FMOD.Studio.EventInstance event_fmod;
+	[SerializeField] private float offsetX;
+	[SerializeField] private float offsetZ;
 
 	void Start () 
 	{
@@ -109,6 +112,8 @@ public class CameraTop90 : MonoBehaviour
 			ret = player.position;
 		}
 		ret += shakeOffset; //add the screen shake vector to the target
+		ret.x = ret.x + offsetX;
+		ret.z = ret.z + offsetZ;
 		ret.y = yStart; //make sure camera stays at same y coord
 		return ret;
 	}

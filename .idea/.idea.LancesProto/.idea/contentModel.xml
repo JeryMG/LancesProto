@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Jerys\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Jerys\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_LancesProto.446699322.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Jerys\Desktop\Prog\LancesProto" t="IncludeRecursive">
+    <e p="C:\Git\LancesProto" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -102,5 +100,7 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
+    <e p="C:\Users\Jerys\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Jerys\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_LancesProto.-1057277265.00" t="ExcludeRecursive" />
   </component>
 </project>

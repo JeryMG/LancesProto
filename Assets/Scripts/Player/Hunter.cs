@@ -85,6 +85,11 @@ public class Hunter : Vivant
 
             if (_playerInputs.FireWeapon && currentState == states.hunter)
             {
+                //Son Lancé
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/Lancé",
+                    transform.position);
+
+                
                 aiming = false;
                 currentState = states.blinker;
                 lanceEquiped.transform.parent = null;
@@ -126,6 +131,12 @@ public class Hunter : Vivant
             {
                 // Vector3 direction = lieuxDeTp[0] - transform.position;
                 // direction = new Vector3(direction.x, 0, direction.z);
+                
+                //Son de teleportation
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/Téléportation",
+                    transform.position);
+
+                
                 lieuxDeTp[lieuxDeTp.Count - 1] = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1];
             }
@@ -164,6 +175,11 @@ public class Hunter : Vivant
         if (other.gameObject.GetComponent<Lance>() != null)
         {
             Destroy(other.gameObject);
+            //Son de lance Ramassée
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/ObjetRamassé",
+                transform.position);
+
+            
             lieuxDeTp.Remove(lieuxDeTp[lieuxDeTp.Count - 1]);
             lieuxDeTp.RemoveAll(item => item == null);
             lancesRestantes++;

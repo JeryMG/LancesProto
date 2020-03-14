@@ -153,6 +153,10 @@ public class Enemi : Vivant
         {
             if (this.health <= 0)
             {
+                //son de destruction 
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/DestructionEnnemi",transform.position);
+
+                
                 Destroy(gameObject);
                 Destroy(
                     Instantiate(DeathEffect, transform.position,

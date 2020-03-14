@@ -7,6 +7,7 @@ TagManager:
   - Lance
   - Ground
   - Enemy
+  - Vide
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
 using UnityEngine;
 
 public class CameraTop90 : MonoBehaviour
@@ -21,16 +22,29 @@ public class CameraTop90 : MonoBehaviour
 	private bool activated;
 	public bool clamped;
 	public bool followMouse;
+	private FMOD.Studio.EventInstance event_fmod;
 
 	void Start () 
 	{
 		cam = Camera.main;
 		target = player.position; //set default target
 		yStart = transform.position.y; //capture current y position
+		
+		//son Ambiance
+		event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event2D/Environnement/Ambiance");
 	}
 
 	private void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.P))
+		{
+			event_fmod.start();
+		}
+
+		if (Input.GetKeyDown(KeyCode.M))
+		{
+			event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		}
 		viewPortSize = cam.ScreenToWorldPoint(new Vector3());
 	}
 

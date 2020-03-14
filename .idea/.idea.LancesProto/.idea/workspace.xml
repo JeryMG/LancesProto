@@ -26,10 +26,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/InputsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" />
       </list>
     </option>
   </component>
@@ -73,6 +73,7 @@
       <workItem from="1583946457014" duration="6641000" />
       <workItem from="1584021267289" duration="4515000" />
       <workItem from="1584086623742" duration="11733000" />
+      <workItem from="1584170258843" duration="2127000" />
     </task>
     <servers />
   </component>

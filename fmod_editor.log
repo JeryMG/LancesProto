@@ -8,7 +8,7 @@
 [WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001B842D99A48 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000027FAFF44AB8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -19,6 +19,428 @@
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FAF9593D8 : node = 0000027FAF1B1F90
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FAF9593D8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B20A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 18267
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FAF9593D8
+[LOG] SoundI::getSubSound                      : sound 0000027FAF9593D8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000027FAF9593D8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FA8EB63F8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAF95A4B8)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40268 : node = 0000027FAF1B1BD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40268
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 18267
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40268
+[LOG] SoundI::getSubSound                      : sound 0000028013C40268.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40268)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67DB78)
+[LOG] SoundI::release                          :     Téléportation2 (0000028013C40778)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40778 : node = 0000027FAF1B1BD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40778
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 18267
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40778
+[LOG] SoundI::getSubSound                      : sound 0000028013C40778.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40778)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67E058)
+[LOG] SoundI::release                          :     Téléportation2 (0000028013C40268)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40268 : node = 0000027FAF1B1BD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40268
+[LOG] SystemI::createSound                     :     filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 0000028013C40928 : node = 0000027FAF1B1D10
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40268
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40928
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1E20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 12600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Lance-ramassée', format=2, channels=2, frequency=48000, lengthbytes=1873216, lengthpcm=9709056, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40928
+[LOG] SoundI::getSubSound                      : sound 0000028013C40268.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000028013C40928.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40268)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67CE78)
+[LOG] SoundI::release                          :     Téléportation2 (0000028013C40778)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FABCB74A8 : node = 0000027FAF1B1BD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SoundI::getSubSound                      : sound 0000027FABCB74A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000027FABCB74A8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67CE78)
+[LOG] SoundI::release                          :     Téléportation2 (0000028013C40268)
+[LOG] SoundI::release                          : Lance-ramassée (0000028013C40928)
+[LOG] SoundI::release                          :     Lance-ramassée (0000027FAA67D018)
+[LOG] SoundI::release                          :     Lance-ramassée (0000027FABCB68D8)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40268 : node = 0000027FAF1B1E50
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40268
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1F60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 12600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Lance-ramassée', format=2, channels=2, frequency=48000, lengthbytes=1873216, lengthpcm=9709056, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40268
+[LOG] SoundI::getSubSound                      : sound 0000028013C40268.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40928 : node = 0000027FAF1B1F90
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40928
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B20A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40928
+[LOG] SoundI::getSubSound                      : sound 0000028013C40928.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40928)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67D018)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FABCB74A8)
+[LOG] SoundI::release                          : Lance-ramassée (0000028013C40268)
+[LOG] SoundI::release                          :     Lance-ramassée (0000027FAA67CE78)
+[LOG] SoundI::release                          :     Lance-ramassée (0000028013C40778)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FABCB74A8 : node = 0000027FAF1B1F90
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B20A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SoundI::getSubSound                      : sound 0000027FABCB74A8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40268 : node = 0000027FAF1B1BD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40268
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40268
+[LOG] SoundI::getSubSound                      : sound 0000028013C40268.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000027FABCB74A8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67D4F8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FABCB68D8)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40928 : node = 0000027FAF1B1D10
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40928
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1E20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40928
+[LOG] SoundI::getSubSound                      : sound 0000028013C40928.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40268)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67D698)
+[LOG] SoundI::release                          :     Téléportation2 (0000028013C40778)
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40928)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67D4F8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FABCB68D8)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FABCB74A8 : node = 0000027FAF1B1BD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SoundI::getSubSound                      : sound 0000027FABCB74A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000027FABCB74A8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67CE78)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FABCB68D8)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FABCB74A8 : node = 0000027FAF1B1D10
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1E20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SoundI::getSubSound                      : sound 0000027FABCB74A8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40778 : node = 0000027FAF1B1E50
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40778
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1F60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40778
+[LOG] SoundI::getSubSound                      : sound 0000028013C40778.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40928 : node = 0000027FAF1B1F90
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028013C40928
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B20A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40928
+[LOG] SoundI::getSubSound                      : sound 0000028013C40928.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000027FABCB74A8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67CE78)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FABCB68D8)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FAF95A4B8 : node = 0000027FAF1B1BD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FAF95A4B8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FAF95A4B8
+[LOG] SoundI::getSubSound                      : sound 0000027FAF95A4B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40778)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67D018)
+[LOG] SoundI::release                          :     Téléportation2 (0000028013C40268)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FABCB74A8 : node = 0000027FAF1B1D10
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1E20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FABCB74A8
+[LOG] SoundI::getSubSound                      : sound 0000027FABCB74A8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000028013C40778 : node = 0000027FAF1B1E50
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40928)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67D4F8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAF9593D8)
+[LOG] AsyncThread::threadFunc                  :     Starting Asynchronous operation on sound 0000028013C40778
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1F60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028013C40778
+[LOG] SoundI::getSubSound                      : sound 0000028013C40778.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000027FAF95A4B8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67DB78)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FABCB68D8)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FAF95A4B8 : node = 0000027FAF1B1F90
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FAF95A4B8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B20A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FAF95A4B8
+[LOG] SoundI::getSubSound                      : sound 0000027FAF95A4B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000027FABCB74A8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67CE78)
+[LOG] SoundI::release                          :     Téléportation2 (0000028013C40268)
+[LOG] SoundI::release                          : Téléportation2 (0000028013C40778)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67D018)
+[LOG] SoundI::release                          :     Téléportation2 (0000028013C40928)
+[LOG] SoundI::release                          : Téléportation2 (0000027FAF95A4B8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67D4F8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAF9593D8)
+[LOG] SystemI::createSound                     : filename = Projet-FMOD\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027FAF95A4B8 : node = 0000027FAF1B1BD0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000027FA8EB56A8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027FAF95A4B8
+[LOG] SystemI::createSoundInternal             :     Create name='Projet-FMOD\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10533568
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8032
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000027FAF1B1CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21071
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Téléportation2', format=2, channels=2, frequency=48000, lengthbytes=1970560, lengthpcm=8470656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027FAF95A4B8
+[LOG] SoundI::getSubSound                      : sound 0000027FAF95A4B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Téléportation2 (0000027FAF95A4B8)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAA67CE78)
+[LOG] SoundI::release                          :     Téléportation2 (0000027FAF9593D8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

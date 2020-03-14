@@ -5,7 +5,7 @@
 			<value>Téléportation</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{904ed026-1862-4965-9ae3-79dfef23c6d1}</destination>
@@ -121,7 +121,6 @@
 			<destination>{6ec16c07-d5f3-4052-b44d-44a680736af5}</destination>
 			<destination>{5775d4bc-71b5-4224-9799-67f9c29716b0}</destination>
 			<destination>{8a93601f-16a7-4de4-bac4-b51cfb9013cb}</destination>
-			<destination>{afe6913b-5b47-45d5-b1d8-ed82cf2b719a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{30f593f9-f8d9-4dd3-b608-7c81fdf778f2}" />
@@ -167,6 +166,5 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{8a93601f-16a7-4de4-bac4-b51cfb9013cb}" />
-	<object class="SpatialiserEffect" id="{afe6913b-5b47-45d5-b1d8-ed82cf2b719a}" />
 	<object class="MixerBusFader" id="{e85bc900-7b7c-439a-b2d7-76bc40dd7f2d}" />
 </objects>

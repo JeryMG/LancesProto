@@ -5,7 +5,7 @@
 			<value>Lancé</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{904ed026-1862-4965-9ae3-79dfef23c6d1}</destination>
@@ -95,6 +95,9 @@
 		<property name="timelockedOffset">
 			<value>18.26714901477834</value>
 		</property>
+		<property name="volume">
+			<value>-2</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{4554ddf2-8bea-4cb5-991d-cf830ad3789f}</destination>
 		</relationship>
@@ -120,7 +123,6 @@
 		<relationship name="effects">
 			<destination>{6393fe46-1250-4485-b340-4fc18f5ce69e}</destination>
 			<destination>{6425ef62-0c0f-4d6e-99a4-9b836eacbc36}</destination>
-			<destination>{a32383aa-2ce0-4898-aef7-0bfd4e01d72e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{03384c04-b34b-4e57-a0fe-32f8245e33c5}" />
@@ -133,20 +135,18 @@
 	<object class="MixerBusPanner" id="{da2a3bc9-b468-4b9e-8fcb-98c3091aedaa}" />
 	<object class="SFXReverbEffect" id="{6393fe46-1250-4485-b340-4fc18f5ce69e}">
 		<property name="decayTime">
-			<value>2300</value>
+			<value>6000</value>
 		</property>
 		<property name="diffusion">
 			<value>77</value>
 		</property>
 		<property name="wetLevel">
-			<value>-9</value>
+			<value>-5.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-11.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{6425ef62-0c0f-4d6e-99a4-9b836eacbc36}" />
-	<object class="SpatialiserEffect" id="{a32383aa-2ce0-4898-aef7-0bfd4e01d72e}">
-		<property name="maximumDistance">
-			<value>3000</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{a8a7a8be-4a9c-4c9c-943b-a9a807cbf991}" />
 </objects>

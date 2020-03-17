@@ -79,10 +79,10 @@
           <e p="Enemies" t="Include">
             <e p="Enemi.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
+            <e p="MoteurProjectile.cs" t="Include" />
           </e>
           <e p="ParametresJeux" t="Include">
             <e p="CameraTop90.cs" t="Include" />
-            <e p="CreateAreaMesh.cs" t="Include" />
             <e p="IDamageable.cs" t="Include" />
             <e p="PlayerInputs.cs" t="Include" />
             <e p="RestartScene.cs" t="Include" />
@@ -91,6 +91,7 @@
           <e p="Player" t="Include">
             <e p="Hunter.cs" t="Include" />
             <e p="Lance.cs" t="Include" />
+            <e p="ParryAbility.cs" t="Include" />
           </e>
         </e>
       </e>

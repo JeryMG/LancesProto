@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,14 +22,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Desktop/Prog/Exercice_Space/Assets/Scripts/Armes/Arme.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Prog/Exercice_Space/Assets/Scripts/Armes/Laser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/Scripts/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/MoteurProjectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/ARendre/LaserBeam.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Prog/LD43-The-Resistance-master/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ShootingParty/Assets/Scripts/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Prog/Exercice_Space/Assets/Scripts/Armes/MoteurLaser.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -29,11 +46,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/InputsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" />
+        <option value="$PROJECT_DIR$/Assets/ParryAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MoteurProjectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" />
       </list>
     </option>
   </component>
@@ -78,7 +98,8 @@
       <workItem from="1584021267289" duration="4515000" />
       <workItem from="1584086623742" duration="11733000" />
       <workItem from="1584170258843" duration="2127000" />
-      <workItem from="1584179412658" duration="6008000" />
+      <workItem from="1584179412658" duration="6110000" />
+      <workItem from="1584469055460" duration="8671000" />
     </task>
     <servers />
   </component>

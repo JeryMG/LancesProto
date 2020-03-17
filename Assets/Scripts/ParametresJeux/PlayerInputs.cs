@@ -22,6 +22,8 @@ public class PlayerInputs : MonoBehaviour
     public bool blink { get; private set; }
     public bool Melee { get; private set; }
     public bool LanceReturn { get; private set; }
+    public bool Parry { get; private set; }
+
 
 
     public bool manetteInputs;
@@ -43,6 +45,7 @@ public class PlayerInputs : MonoBehaviour
             Melee = Input.GetKeyDown(KeyCode.Space);
             blink = Input.GetMouseButtonDown(1);
             LanceReturn = Input.GetKeyDown(KeyCode.R);
+            Parry = Input.GetKeyDown(KeyCode.F);
         }
         else
         {

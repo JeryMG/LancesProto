@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manetteInputs: 0
+  InputsPS4: 0
 --- !u!54 &1583854398
 Rigidbody:
   m_ObjectHideFlags: 0

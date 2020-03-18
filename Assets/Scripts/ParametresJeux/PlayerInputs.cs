@@ -27,6 +27,7 @@ public class PlayerInputs : MonoBehaviour
 
 
     public bool manetteInputs;
+    public bool InputsPS4;
 
     private void Start()
     {
@@ -49,13 +50,26 @@ public class PlayerInputs : MonoBehaviour
         }
         else
         {
-            OrientationHorizontal = Input.GetAxis("ViseeHorizontale");
-            OrientationVerticale = Input.GetAxis("ViseeVerticale");
-            AimWeapon = Input.GetButton("TireLance");
-            FireWeapon = Input.GetButtonUp("TireLance");
-            blink = Input.GetButtonDown("Blink");
-            Melee = Input.GetButtonDown("Melee");
-            LanceReturn = Input.GetButtonDown("LanceReturn");
+            if (InputsPS4)
+            {
+                OrientationHorizontal = Input.GetAxis("ViseeHorizontale");
+                OrientationVerticale = Input.GetAxis("ViseeVerticale");
+                AimWeapon = Input.GetButton("TireLance");
+                FireWeapon = Input.GetButtonUp("TireLance");
+                blink = Input.GetButtonDown("Blink");
+                Melee = Input.GetButtonDown("Melee");
+                LanceReturn = Input.GetButtonDown("LanceReturn");
+            }
+            else
+            {
+                OrientationHorizontal = Input.GetAxis("XboxHorizontale");
+                OrientationVerticale = Input.GetAxis("XboxVerticale");
+                AimWeapon = Input.GetButton("TireLance");
+                FireWeapon = Input.GetButtonUp("TireLance");
+                blink = Input.GetButtonDown("Blink");
+                Melee = Input.GetButtonDown("Melee");
+                LanceReturn = Input.GetButtonDown("LanceReturn");
+            }
         }
 
         //Look inputs

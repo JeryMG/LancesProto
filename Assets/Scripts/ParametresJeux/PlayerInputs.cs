@@ -49,8 +49,8 @@ public class PlayerInputs : MonoBehaviour
         }
         else
         {
-            OrientationHorizontal = Input.GetAxisRaw("ViseeHorizontale");
-            OrientationVerticale = Input.GetAxisRaw("ViseeVerticale");
+            OrientationHorizontal = Input.GetAxis("ViseeHorizontale");
+            OrientationVerticale = Input.GetAxis("ViseeVerticale");
             AimWeapon = Input.GetButton("TireLance");
             FireWeapon = Input.GetButtonUp("TireLance");
             blink = Input.GetButtonDown("Blink");

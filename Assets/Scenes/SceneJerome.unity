@@ -1582,6 +1582,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LanceurProjectiles
       objectReference: {fileID: 0}
+    - target: {fileID: 2077271185262505138, guid: 499a5392f4319374b8b20acd459d0300,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4982049918520839574, guid: 499a5392f4319374b8b20acd459d0300,
         type: 3}
       propertyPath: m_LocalPosition.x

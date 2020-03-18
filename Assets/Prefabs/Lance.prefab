@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4967782149952105828}
   - component: {fileID: 4967782149952105831}
   - component: {fileID: 4967782149952105830}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Lance
   m_TagString: Lance
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lanceSpeed: 50
   stop: 0
-  lanceDamage: 1
+  lanceDamage: 7.5
   timerDestruction: 5
   returning: 0
   vitesseReturn: 5

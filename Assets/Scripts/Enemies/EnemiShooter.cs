@@ -15,6 +15,7 @@ public class EnemiShooter : Vivant
     private float nextAttackTime;
 
     private Transform playerTransform;
+    [SerializeField] private float idleDistanceTreshold = 10f;
 
     protected override void Start()
     {
@@ -26,6 +27,12 @@ public class EnemiShooter : Vivant
     {
         transform.LookAt(playerTransform);
         
+        float sqrDstToTarget = (playerTransform.position - transform.position).sqrMagnitude;
+        if (sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2))
+        {
+            Tir();
+        }
+        
         if (this.health <= 0)
         {
             //son de destruction 
@@ -33,8 +40,6 @@ public class EnemiShooter : Vivant
             
             Destroy(gameObject);
         }
-        
-        Tir();
     }
 
     private void Tir()
@@ -44,6 +49,15 @@ public class EnemiShooter : Vivant
             nextAttackTime = Time.time + FireRate;
             GameObject newProjectile =
                 Instantiate(prefab, outputTransform.position, outputTransform.rotation, Container);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Lance newLance = other.gameObject.GetComponent<Lance>();
+        if (newLance != null)
+        {
+            TakeDamage(newLance.lanceDamage);
         }
     }
 }

@@ -69,7 +69,7 @@ public class Hunter : Vivant
     {
         if (changeColor)
         {
-            ColorChange();
+            ColorChange(Color.green);
         }
         
         //Viser, lancé et melee
@@ -160,11 +160,11 @@ public class Hunter : Vivant
         rb.MovePosition(rb.position + Velocity * Time.deltaTime);
     }
 
-    private void ColorChange()
+    private void ColorChange(Color newColor)
     {
         timer += Time.deltaTime;
-        skinMat.color = Color.green;
-        if (timer >= 1)
+        skinMat.color = newColor;
+        if (timer >= 0.5)
         {
             skinMat.color = playerColor;
             changeColor = false;
@@ -196,6 +196,19 @@ public class Hunter : Vivant
         if (_enemi != null)
         {
             Debug.Log("mes hp : " + health);
+        }
+
+        // if (other.gameObject.CompareTag("Projectile"))
+        // {
+        //     ColorChange(Color.red);
+        // }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            ColorChange(Color.red);
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class PlayerInputs : MonoBehaviour
@@ -27,7 +28,7 @@ public class PlayerInputs : MonoBehaviour
 
 
     public bool manetteInputs;
-    public bool InputsPS4;
+    public bool InputsPS4 = true;
 
     private void Start()
     {
@@ -59,6 +60,7 @@ public class PlayerInputs : MonoBehaviour
                 blink = Input.GetButtonDown("Blink");
                 Melee = Input.GetButtonDown("Melee");
                 LanceReturn = Input.GetButtonDown("LanceReturn");
+                Parry = Input.GetButtonDown("Parry");
             }
             else
             {
@@ -95,6 +97,11 @@ public class PlayerInputs : MonoBehaviour
         if (FireWeapon)
         {
             OnFire();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button9) || Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            manetteInputs = !manetteInputs;
         }
     }
     

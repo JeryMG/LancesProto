@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/Projectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lance.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +47,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/InputsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
         <option value="$PROJECT_DIR$/Assets/ParryAbility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MoteurProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" />
       </list>
     </option>
@@ -92,7 +101,7 @@
       <workItem from="1584170258843" duration="2127000" />
       <workItem from="1584179412658" duration="6110000" />
       <workItem from="1584469055460" duration="8920000" />
-      <workItem from="1584538227120" duration="1098000" />
+      <workItem from="1584538227120" duration="6010000" />
     </task>
     <servers />
   </component>

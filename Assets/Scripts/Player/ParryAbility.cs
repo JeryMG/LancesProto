@@ -26,15 +26,24 @@ public class ParryAbility : MonoBehaviour
             {
                 //projectile.parried = true;
                 Debug.Log("Parried !!!!!!!");
-                StartCoroutine(changeColor());
+                StartCoroutine(changeColor(Color.green));
                 Destroy(other.gameObject);
             }
         }
     }
-    
-    IEnumerator changeColor()
+
+    private void OnTriggerEnter(Collider other)
     {
-        skinMat.color = Color.magenta;
+        if (other.CompareTag("Projectile"))
+        {
+            print("projectile incoming");
+            changeColor(Color.yellow);
+        }
+    }
+
+    IEnumerator changeColor(Color newColor)
+    {
+        skinMat.color = newColor;
         yield return new WaitForSeconds(1f);
         skinMat.color = playerColor;
     }

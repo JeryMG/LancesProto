@@ -15,6 +15,7 @@ public class _E_Cac : MonoBehaviour
     private void Update() {
        animPerso.runtimeAnimatorController=Anim[i];
        
+       
     }
     
 }

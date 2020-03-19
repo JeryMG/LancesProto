@@ -41,7 +41,7 @@ public class MoteurProjectile : MonoBehaviour
         }
         direction.y = transform.parent.position.y;
         
-        rb.AddForce(/*transform.parent.parent.forward*/ direction.normalized * forceProjectile, ForceMode.Impulse);
+        rb.AddForce(transform.parent.forward * forceProjectile, ForceMode.Impulse);
     }
 
     private void OnTriggerEnter(Collider other)

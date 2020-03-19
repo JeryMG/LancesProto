@@ -25,8 +25,6 @@ public class EnemiShooter : Vivant
 
     private void Update()
     {
-        transform.LookAt(playerTransform);
-        
         float sqrDstToTarget = (playerTransform.position - transform.position).sqrMagnitude;
         if (sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2))
         {
@@ -46,6 +44,7 @@ public class EnemiShooter : Vivant
     {
         if (Time.time > nextAttackTime && playerTransform != null)
         {
+            transform.LookAt(playerTransform);
             nextAttackTime = Time.time + FireRate;
             GameObject newProjectile =
                 Instantiate(prefab, outputTransform.position, outputTransform.rotation, Container);

@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: 7d0a9d3b7b96ecb448de4b6800b41d56
+guid: a9c21802e8553ea4997707cebf82131d
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
+  - first:
+      74: 7709686125681325085
+    second: Armature|Armature.001Action
   - first:
       74: -910873995330061161
     second: Armature|Dong
@@ -12,6 +15,12 @@ ModelImporter:
   - first:
       74: -8254766801698350605
     second: Armature|DongCorp.001
+  - first:
+      74: 2264077025236624520
+    second: Armature.001|Armature.001Action
+  - first:
+      74: -3668810691096344804
+    second: Armature.001|Dong
   - first:
       74: 7944448997209187546
     second: Armature.002|Dong

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using FMOD.Studio;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CameraTop90 : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class CameraTop90 : MonoBehaviour
 	Vector3 target, mousePos, refVel, shakeOffset;
 	public float cameraDist = 3.5f;
 	public float smoothTime = 0.2f;
-	private float yStart;
+
+	public float yStart;
 	//shake
 	float shakeMag, shakeTimeEnd;
 	Vector3 shakeVector;
@@ -26,7 +28,11 @@ public class CameraTop90 : MonoBehaviour
 	private FMOD.Studio.EventInstance event_fmod;
 	[SerializeField] private float offsetX;
 	[SerializeField] private float offsetZ;
-
+	
+	//Shake2
+	Vector3 cameraInitialPosition;
+	public float shakeMagnetude = 0.05f, shakeTime = 0.5f;
+	
 	void Start () 
 	{
 		cam = Camera.main;
@@ -138,10 +144,34 @@ public class CameraTop90 : MonoBehaviour
 		transform.position = tempPos; //update the position
 	}
 
-	public void Shake(Vector3 direction, float magnitude, float length){ //capture values set for where it's called
-		shaking = true; //to know whether it's shaking
-		shakeVector = direction; //direction to shake towards
-		shakeMag = magnitude; //how far in that direction
-		shakeTimeEnd = Time.time + length; //how long to shake
+	// public void Shake(Vector3 direction, float magnitude, float length){ //capture values set for where it's called
+	// 	shaking = true; //to know whether it's shaking
+	// 	shakeVector = direction; //direction to shake towards
+	// 	shakeMag = magnitude; //how far in that direction
+	// 	shakeTimeEnd = Time.time + length; //how long to shake
+	// }
+	//
+	public void ShakeIt()
+	{
+		cameraInitialPosition = UpdateTargetPos();
+		InvokeRepeating ("StartCameraShaking", 0f, 0.005f);
+		Invoke ("StopCameraShaking", shakeTime);
 	}
+
+	void StartCameraShaking()
+	{
+		float cameraShakingOffsetX = Random.value * shakeMagnetude * 2 - shakeMagnetude;
+		float cameraShakingOffsetY = Random.value * shakeMagnetude * 2 - shakeMagnetude;
+		Vector3 cameraIntermadiatePosition = cam.transform.position;
+		cameraIntermadiatePosition.x += cameraShakingOffsetX;
+		cameraIntermadiatePosition.y += cameraShakingOffsetY;
+		cam.transform.position = cameraIntermadiatePosition;
+	}
+
+	void StopCameraShaking()
+	{
+		CancelInvoke ("StartCameraShaking");
+		cam.transform.position = cameraInitialPosition;
+	}
+
 }

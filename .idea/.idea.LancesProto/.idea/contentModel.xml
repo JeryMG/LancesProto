@@ -75,8 +75,26 @@
             </e>
           </e>
         </e>
+        <e p="Prefabs" t="Include">
+          <e p="Ennemis" t="Include">
+            <e p="_E_Gong" t="Include">
+              <e p="dongV1" t="Include">
+                <e p="TestAnimGong.cs" t="Include" />
+              </e>
+              <e p="DOngV2" t="Include">
+                <e p="AnimGong.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Joueur" t="Include">
+            <e p="Anim" t="Include">
+              <e p="AnimActiv.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
+            <e p="_E_Cac.cs" t="Include" />
             <e p="Enemi.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
             <e p="MoteurProjectile.cs" t="Include" />

@@ -437,6 +437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be72094353c76642b846880bdd6e2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  MaxHealth: 5
+  currentState: 0
   Anim:
   - {fileID: 9100000, guid: adc075fe2faee6a49a28f6cda7b3bba3, type: 2}
   - {fileID: 9100000, guid: 1a1d364ce0db73344b3e4e6aa37a3a5e, type: 2}

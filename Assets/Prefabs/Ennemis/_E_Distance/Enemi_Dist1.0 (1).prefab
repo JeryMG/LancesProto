@@ -71,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2558723703744519696}
   - component: {fileID: 7419923826475660548}
+  - component: {fileID: 754986023557459924}
   m_Layer: 0
   m_Name: Enemi_Dist1.0 (1)
   m_TagString: Untagged
@@ -91,6 +92,7 @@ Transform:
   m_Children:
   - {fileID: 2025431046342309297}
   - {fileID: 6350918209402385200}
+  - {fileID: 4589741720486911937}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180.732, z: 0}
@@ -113,6 +115,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &754986023557459924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574342862727195651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f7137689629f749b579056ea1b4b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  MaxHealth: 5
+  speed: 12
+  Joueur: {fileID: 0}
+  _mainDroite: {fileID: 3337751405117669585}
+  _missile: {fileID: 2932763859805331887, guid: b8bcf6d8def6639418e99ebf74b25a59,
+    type: 3}
+  AssezProche: 0
+  DeathEffect: {fileID: 6790313682755352314, guid: a642d501cbc43064a994bec54c30d7b0,
+    type: 3}
+  _distanceNecessaire: 0
+  _missileTire: 0
+  timer: 0
 --- !u!1 &1944519000089260749
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +360,36 @@ Transform:
   m_Father: {fileID: 8237348102827065175}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -4.1812286, y: -5.3509326, z: 9.275106}
+--- !u!1 &3337751405117669585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4589741720486911937}
+  m_Layer: 0
+  m_Name: MainDroite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4589741720486911937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3337751405117669585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.313, z: 1.182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2558723703744519696}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3579458075287263649
 GameObject:
   m_ObjectHideFlags: 0

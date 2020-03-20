@@ -13,7 +13,8 @@ public class MoteurProjectile : MonoBehaviour
 
     public bool parried = false;
     private Hunter playerPos;
-    
+    private bool letsGo;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,19 +30,14 @@ public class MoteurProjectile : MonoBehaviour
 
     public void go()
     {
-        Vector3 direction = new Vector3();
-        
-        if (parried)
+        if (!letsGo)
         {
-            direction = transform.parent.parent.position - transform.position;
-        }
-        else
-        {
+            Vector3 direction = new Vector3();
             direction = playerPos.transform.position - transform.position;
+            //direction.y = transform.parent.position.y;
+            rb.AddForce(transform.parent.parent.position * forceProjectile, ForceMode.Impulse);
+            letsGo = false;
         }
-        direction.y = transform.parent.position.y;
-        
-        rb.AddForce(transform.parent.forward * forceProjectile, ForceMode.Impulse);
     }
 
     private void OnTriggerEnter(Collider other)

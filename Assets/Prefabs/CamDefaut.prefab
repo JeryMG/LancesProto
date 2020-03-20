@@ -59,7 +59,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -4
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -102,10 +102,13 @@ MonoBehaviour:
   player: {fileID: 0}
   cameraDist: 3.5
   smoothTime: 0.2
+  yStart: 0
   clamped: 0
   followMouse: 0
   offsetX: 0
-  offsetZ: 0
+  offsetZ: -4
+  shakeMagnetude: 0.15
+  shakeTime: 0.2
 --- !u!114 &8066166204938742966
 MonoBehaviour:
   m_ObjectHideFlags: 0

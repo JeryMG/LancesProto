@@ -14,18 +14,26 @@ public class EnemiShooter : Vivant
     [SerializeField] private float FireRate = 0.3f;
     private float nextAttackTime;
 
-    private Transform playerTransform;
+    private Transform target;
+    private bool hasTarget;
+    private NavMeshAgent pathFinder;
     [SerializeField] private float idleDistanceTreshold = 10f;
 
     protected override void Start()
     {
         base.Start();
-        playerTransform = FindObjectOfType<Hunter>().transform;
+        target = FindObjectOfType<Hunter>().transform;
+        if (target != null)
+        {
+            hasTarget = true;
+        }
+        pathFinder = GetComponent<NavMeshAgent>();
+        StartCoroutine(UpdatePath());
     }
 
     private void Update()
     {
-        float sqrDstToTarget = (playerTransform.position - transform.position).sqrMagnitude;
+        float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
         if (sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2))
         {
             Tir();
@@ -39,12 +47,28 @@ public class EnemiShooter : Vivant
             Destroy(gameObject);
         }
     }
+    
+    public IEnumerator UpdatePath()
+    {
+        float refreshRate = 0.25f;
+
+        while (hasTarget)
+        {
+            pathFinder.enabled = true;
+            Vector3 targetPosition = new Vector3(target.position.x, 0 , target.position.z);
+            if (!dead) 
+            { 
+                pathFinder.SetDestination(targetPosition);
+            }
+            yield return new WaitForSeconds(refreshRate);
+        }
+    }
 
     private void Tir()
     {
-        if (Time.time > nextAttackTime && playerTransform != null)
+        if (Time.time > nextAttackTime && target != null)
         {
-            transform.LookAt(playerTransform);
+            transform.LookAt(target);
             nextAttackTime = Time.time + FireRate;
             GameObject newProjectile =
                 Instantiate(prefab, outputTransform.position, outputTransform.rotation, Container);
@@ -53,10 +77,12 @@ public class EnemiShooter : Vivant
 
     private void OnCollisionEnter(Collision other)
     {
+        bool hitted = false;
         Lance newLance = other.gameObject.GetComponent<Lance>();
-        if (newLance != null)
+        if (newLance != null && !hitted)
         {
             TakeDamage(newLance.lanceDamage);
+            hitted = true;
         }
     }
 }

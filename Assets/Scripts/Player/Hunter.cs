@@ -101,25 +101,27 @@ public class Hunter : Vivant
             if (_playerInputs.Melee && currentState == states.blinker)
             {
                 changeColor = true;
+                playerCamera.ShakeIt();
+
                 Collider[] _hitbox = Physics.OverlapBox(hitBox.position, hitBoxSize / 2);
                 foreach (Collider hits in _hitbox)
                 {
-                    Enemi hitable = hits.GetComponent<Enemi>();
-                    Rigidbody hitBody = hits.GetComponent<Rigidbody>();
+                    _E_Cac hitable = hits.GetComponent<_E_Cac>();
+                    //Rigidbody hitBody = hits.GetComponent<Rigidbody>();
                     NavMeshAgent pathfinder = hits.GetComponent<NavMeshAgent>();
                     
                     if (hitable != null)
                     {
                         Debug.Log("hitted");
-                        hitable.StartCoroutine("stun", 0.7f);
+                        //hitable.StartCoroutine("stun", 0.7f);
                         
                         hitable.TakeDamage(KakDamage);
-                        Vector3 direction = hitBody.position - transform.position;
-                        playerCamera.Shake(direction, shakeMag, shakeLength);
+                        Vector3 direction = hitable.transform.position - transform.position;
+                        //playerCamera.Shake(direction, shakeMag, shakeLength);
                         direction.y = hitable.transform.position.y;
                         hitable.transform.position += distanceKnockBack;
                         
-                        hitable.UpdatePath();
+                        //hitable.UpdatePath();
                     }
                 }
             }
@@ -136,8 +138,13 @@ public class Hunter : Vivant
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/Téléportation",
                     transform.position);
                 
+                //tp
                 lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
+                
+                //Camera shake
+                playerCamera.ShakeIt();
+
             }
 
             if (_playerInputs.LanceReturn && currentState == states.blinker)

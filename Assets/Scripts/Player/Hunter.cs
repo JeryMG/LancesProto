@@ -38,8 +38,6 @@ public class Hunter : Vivant
     
     [Header("KaK Variables")] 
     [SerializeField] float KakDamage = 2f;
-    [SerializeField] float shakeMag = 2f;
-    [SerializeField] float shakeLength = 0.7f;
 
     [Header("Random")]
     private PlayerInputs _playerInputs;

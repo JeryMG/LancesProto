@@ -17,7 +17,8 @@ public class CameraTop90 : MonoBehaviour
 	public float smoothTime = 0.2f;
 
 	public float yStart;
-	//shake
+	
+	//shake obsolete
 	float shakeMag, shakeTimeEnd;
 	Vector3 shakeVector;
 	bool shaking;
@@ -25,9 +26,9 @@ public class CameraTop90 : MonoBehaviour
 	private bool activated;
 	public bool clamped;
 	public bool followMouse;
-	private FMOD.Studio.EventInstance event_fmod;
-	[SerializeField] private float offsetX;
-	[SerializeField] private float offsetZ;
+	private EventInstance event_fmod;
+	// [SerializeField] private float offsetX;
+	// [SerializeField] private float offsetZ;
 	
 	//Shake2
 	Vector3 cameraInitialPosition;
@@ -118,8 +119,8 @@ public class CameraTop90 : MonoBehaviour
 			ret = player.position;
 		}
 		ret += shakeOffset; //add the screen shake vector to the target
-		ret.x = ret.x + offsetX;
-		ret.z = ret.z + offsetZ;
+		ret.x = ret.x /*+ offsetX*/;
+		ret.z = ret.z /*+ offsetZ*/;
 		ret.y = yStart; //make sure camera stays at same y coord
 		return ret;
 	}

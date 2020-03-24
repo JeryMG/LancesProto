@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class AnimActiv : MonoBehaviour
 {
-    [SerializeField] private Animator animbody;
+    /*[SerializeField] private Animator animbody;
     public  List<AnimatorController> Anim=new List<AnimatorController>();
     private float TotatFrame;
     private bool toucher=false;
@@ -37,5 +36,5 @@ public class AnimActiv : MonoBehaviour
 
         }
       
-    }
+    }*/
 }

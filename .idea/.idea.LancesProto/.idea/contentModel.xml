@@ -83,9 +83,6 @@
               <e p="dongV1" t="Include">
                 <e p="TestAnimGong.cs" t="Include" />
               </e>
-              <e p="DOngV2" t="Include">
-                <e p="AnimGong.cs" t="Include" />
-              </e>
             </e>
           </e>
           <e p="Joueur" t="Include">

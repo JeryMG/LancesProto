@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
@@ -40,7 +39,7 @@ public class _E_Cac : Vivant, IClochePropag
 
     [Header("Animations")]
     public ParticleSystem DeathEffect;
-    [SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
+    [SerializeField] private List<RuntimeAnimatorController> Anim =new List<RuntimeAnimatorController>();
     public Animator animPerso;
     public Animator gongWaveAnimator;
 
@@ -105,7 +104,7 @@ public class _E_Cac : Vivant, IClochePropag
 
        if (currentState == State.Chasing)
        {
-           animPerso.runtimeAnimatorController=Anim[2];
+           animPerso.runtimeAnimatorController = Anim[2];
 
            pathFinder.acceleration = 8;
            pathFinder.stoppingDistance = 3;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class _missileEnnemi : MonoBehaviour
 {
-    private bool fk = false;
+    
     void Update()
     {
         this.transform.position+=this.transform.forward*Time.deltaTime*30f;

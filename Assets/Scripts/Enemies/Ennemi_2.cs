@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class Ennemi_2 : Vivant
 {
-    [SerializeField] private int speed = 12;
+    /*[SerializeField] private int speed = 12;
     [SerializeField] private GameObject Joueur;
     [SerializeField] private GameObject _mainDroite;
     [SerializeField] private GameObject _missile;
@@ -125,6 +125,7 @@ public class Ennemi_2 : Vivant
             }
         }
     }
+    */
 
     
 

@@ -6,6 +6,8 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="E_Gong.cs" t="Include" />
+        <e p="GongWave.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
@@ -81,9 +83,6 @@
               <e p="dongV1" t="Include">
                 <e p="TestAnimGong.cs" t="Include" />
               </e>
-              <e p="DOngV2" t="Include">
-                <e p="AnimGong.cs" t="Include" />
-              </e>
             </e>
           </e>
           <e p="Joueur" t="Include">
@@ -95,12 +94,15 @@
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
             <e p="_E_Cac.cs" t="Include" />
+            <e p="_missileEnnemi.cs" t="Include" />
             <e p="Enemi.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
+            <e p="Ennemi_2.cs" t="Include" />
             <e p="MoteurProjectile.cs" t="Include" />
           </e>
           <e p="ParametresJeux" t="Include">
             <e p="CameraTop90.cs" t="Include" />
+            <e p="IClochePropag.cs" t="Include" />
             <e p="IDamageable.cs" t="Include" />
             <e p="PlayerInputs.cs" t="Include" />
             <e p="RestartScene.cs" t="Include" />

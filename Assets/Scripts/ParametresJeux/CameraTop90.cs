@@ -17,17 +17,13 @@ public class CameraTop90 : MonoBehaviour
 	public float smoothTime = 0.2f;
 
 	public float yStart;
-	//shake
-	float shakeMag, shakeTimeEnd;
-	Vector3 shakeVector;
-	bool shaking;
 
 	private bool activated;
 	public bool clamped;
 	public bool followMouse;
-	private FMOD.Studio.EventInstance event_fmod;
-	[SerializeField] private float offsetX;
-	[SerializeField] private float offsetZ;
+	private EventInstance event_fmod;
+	// [SerializeField] private float offsetX;
+	// [SerializeField] private float offsetZ;
 	
 	//Shake2
 	Vector3 cameraInitialPosition;
@@ -90,7 +86,6 @@ public class CameraTop90 : MonoBehaviour
 			}
 		}
 		
-		shakeOffset = UpdateShake(); //account for screen shake
 		target = UpdateTargetPos(); //find out where the camera ought to be
 		UpdateCameraPosition(); //smoothly move the camera closer to it's target location
 	}
@@ -117,21 +112,12 @@ public class CameraTop90 : MonoBehaviour
 		{
 			ret = player.position;
 		}
-		ret += shakeOffset; //add the screen shake vector to the target
-		ret.x = ret.x + offsetX;
-		ret.z = ret.z + offsetZ;
+		//ret.x = ret.x /*+ offsetX*/;
+		//ret.z = ret.z /*+ offsetZ*/;
 		ret.y = yStart; //make sure camera stays at same y coord
 		return ret;
 	}
-	Vector3 UpdateShake(){
-		if (!shaking || Time.time > shakeTimeEnd){
-			shaking = false; //set shaking false when the shake time is up
-			return Vector3.zero; //return zero so that it won't effect the target
-		}
-		Vector3 tempOffset = shakeVector; 
-		tempOffset *= shakeMag; //find out how far to shake, in what direction
-		return tempOffset;
-	}
+	
 	void UpdateCameraPosition(){
 		Vector3 tempPos;
 		tempPos = Vector3.SmoothDamp(transform.position, target, ref refVel, smoothTime); //smoothly move towards the target
@@ -143,14 +129,7 @@ public class CameraTop90 : MonoBehaviour
 		}
 		transform.position = tempPos; //update the position
 	}
-
-	// public void Shake(Vector3 direction, float magnitude, float length){ //capture values set for where it's called
-	// 	shaking = true; //to know whether it's shaking
-	// 	shakeVector = direction; //direction to shake towards
-	// 	shakeMag = magnitude; //how far in that direction
-	// 	shakeTimeEnd = Time.time + length; //how long to shake
-	// }
-	//
+	
 	public void ShakeIt()
 	{
 		cameraInitialPosition = UpdateTargetPos();

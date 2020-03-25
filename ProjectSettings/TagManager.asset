@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Vide
   - Projectile
+  - Wave
   layers:
   - Default
   - TransparentFX

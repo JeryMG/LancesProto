@@ -18,7 +18,7 @@ public class Hunter : Vivant
     
     public Transform Hand;
     public Transform hitBox;
-    [SerializeField] private Vector3 hitBoxSize;
+    [SerializeField] private Vector3 hitBoxSize = new Vector3(3, 1.5f, 2);
 
     public Lance lancePrefab;
     public int lancesRestantes;
@@ -34,12 +34,9 @@ public class Hunter : Vivant
 
     [Header("Blink Variables")] 
     [SerializeField] public List<Transform> lieuxDeTp;
-    private float dashSpeed = 1f;
-    
+
     [Header("KaK Variables")] 
     [SerializeField] float KakDamage = 2f;
-    [SerializeField] float shakeMag = 2f;
-    [SerializeField] float shakeLength = 0.7f;
 
     [Header("Random")]
     private PlayerInputs _playerInputs;

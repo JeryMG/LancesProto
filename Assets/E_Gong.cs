@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class _E_Cac : Vivant, IClochePropag
+public class E_Gong : Vivant
 {
     public enum State
     {
@@ -14,42 +14,44 @@ public class _E_Cac : Vivant, IClochePropag
         Patrolling,
         Attacking,
     }
-
+    
     public State currentState;
-    public GameObject Onde;
     private NavMeshAgent pathFinder;
     private bool hasTarget;
     private Hunter _hunter;
     private Transform target;
     private Vivant targetVie;
     
-    [Header("Mode Attack")]
-    public float damage = 2f;
-    [SerializeField] private float attackDistanceTreshold = 3f;
-    [SerializeField] private float TimeBetweenAttacks = 1;
-    private float NextAttackTime;
-
     [Header("Mode Idle")]
     [SerializeField] private float idleDistanceTreshold = 10f;
-
+    
     [Header("Patrolling")]
-    private Transform[] points;
+    public Transform[] points;
     public Transform pathHolder;
     private int destPoint = 0;
-
+    
+    [Header("Mode Attack")]
+    public float damage = 2f;
+    [SerializeField] private float attackDistanceTreshold = 2f;
+    [SerializeField] private float TimeBetweenAttacks = 1.2f;
+    private float NextAttackTime;
+    
+    [Header("Gong wave")]
+    [SerializeField] private float gongTimer = 10f;
+    private float nextGongTime;
+    public Animator gongWaveAnimator;
+    
     [Header("Animations")]
     public ParticleSystem DeathEffect;
-    [SerializeField] private List<RuntimeAnimatorController> Anim =new List<RuntimeAnimatorController>();
-    public Animator animPerso;
-    public Animator gongWaveAnimator;
+    //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
+    //public Animator animPerso;
 
-    
-    protected override void Start() 
+    protected override void Start()
     {
-        base.Start(); 
+        base.Start();
         pathFinder = GetComponent<NavMeshAgent>();
-        Onde.SetActive(false);
-
+        gongWaveAnimator.gameObject.SetActive(false);
+        
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             currentState = State.Patrolling;
@@ -68,57 +70,58 @@ public class _E_Cac : Vivant, IClochePropag
             points[i].position = pathHolder.GetChild(i).position;
             points[i].position = new Vector3(points[i].position.x, transform.position.y, points[i].position.z);
         }
-
+        
         OnDeath += enemyDeath;
     }
 
-    private void Update() 
+    private void Update()
     {
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
-       if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
-       {
-           currentState = State.Patrolling;
-       }
-       else
-       {
-           currentState = State.Chasing;
-       }
-
-       if (hasTarget)
-       {
-           if (Time.time > NextAttackTime)
-           {
-               if (sqrDstToTarget < Mathf.Pow(attackDistanceTreshold, 2))
-               {
-                   NextAttackTime = Time.time + TimeBetweenAttacks;
-                   StartCoroutine(Attack());
-               }
-           }
-       }
+        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
+        {
+            currentState = State.Patrolling;
+        }
+        else
+        {
+            currentState = State.Chasing;
+        }
         
-       if (currentState == State.Idle)
-       {
-           pathFinder.enabled = false;
-           animPerso.runtimeAnimatorController=Anim[0];
-       }
+        if (hasTarget)
+        {
+            if (Time.time > NextAttackTime)
+            {
+                if (sqrDstToTarget < Mathf.Pow(attackDistanceTreshold, 2))
+                {
+                    NextAttackTime = Time.time + TimeBetweenAttacks;
+                    StartCoroutine(Attack());
+                }
+            }
+        }
+        if (currentState == State.Idle)
+        {
+            pathFinder.enabled = false;
+            //animPerso.runtimeAnimatorController=Anim[0];
+        }
+        
+        if (currentState == State.Chasing)
+        {
+            //animPerso.runtimeAnimatorController=Anim[2];
 
-       if (currentState == State.Chasing)
-       {
-           animPerso.runtimeAnimatorController = Anim[2];
-
-           pathFinder.acceleration = 8;
-           pathFinder.stoppingDistance = 3;
-       }
-
-       if (currentState == State.Patrolling)
-       {
-           animPerso.runtimeAnimatorController=Anim[1];
+            pathFinder.acceleration = 8;
+            pathFinder.stoppingDistance = 0;
+            
+            StartCoroutine(GongWave());
+        }
+        
+        if (currentState == State.Patrolling)
+        {
+            //animPerso.runtimeAnimatorController=Anim[1];
            
-           pathFinder.acceleration = 1;
-           pathFinder.stoppingDistance = 0;
-           if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
-               GotoNextPoint();
-       }
+            pathFinder.acceleration = 1;
+            pathFinder.stoppingDistance = 0;
+            if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
+                GotoNextPoint();
+        }
     }
     
     public IEnumerator UpdatePath()
@@ -140,6 +143,21 @@ public class _E_Cac : Vivant, IClochePropag
         }
     }
 
+    IEnumerator GongWave()
+    {
+        if (Time.time > nextGongTime)
+        {
+            gongWaveAnimator.gameObject.SetActive(true);
+            nextGongTime = Time.time + gongTimer;
+            pathFinder.enabled = false;
+            gongWaveAnimator.SetTrigger("Elargi");
+            Invoke("desactiveOnde", 3f);
+            pathFinder.enabled = true;
+        }
+        //yield return new WaitForSeconds(gongTimer);
+        yield return null;
+    }
+    
     IEnumerator Attack()
     {
         currentState = State.Attacking;
@@ -185,7 +203,7 @@ public class _E_Cac : Vivant, IClochePropag
         // revenir au debut du tableau quand on arrive au bout.
         destPoint = (destPoint + 1) % points.Length;
     }
-
+    
     void enemyDeath()
     {
         //son de destruction 
@@ -199,25 +217,9 @@ public class _E_Cac : Vivant, IClochePropag
                 Quaternion.FromToRotation(Vector3.forward, transform.position)),
             DeathEffect.main.startLifetimeMultiplier);
     }
-
-    [ContextMenu("propage onde")]
-    public void propagOnde()
-    {
-        Onde.SetActive(true);
-        gongWaveAnimator.SetTrigger("Elargi");
-        Invoke("desactiveOnde", 3f);
-    }
-
+    
     private void desactiveOnde()
     {
-        Onde.SetActive(false);
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Wave"))
-        {
-            propagOnde();
-        }
+        gongWaveAnimator.gameObject.SetActive(false);
     }
 }

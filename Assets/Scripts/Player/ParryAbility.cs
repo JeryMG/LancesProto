@@ -24,6 +24,9 @@ public class ParryAbility : MonoBehaviour
         {
             if (playerInputs.Parry)
             {
+                // son Parade
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Parade");
+
                 //projectile.parried = true;
                 Debug.Log("Parried !!!!!!!");
                 StartCoroutine(changeColor(Color.green));

@@ -36,6 +36,10 @@ public class EnemiShooter : Vivant
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
         if (sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2))
         {
+            //son tir
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Tir", transform.position);
+
+
             Tir();
         }
         

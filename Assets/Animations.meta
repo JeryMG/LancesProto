@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Ennemis/_E_Chien.meta
+guid: bfb8d05a19e98dd42a89767755aa7154
+=======
 guid: cc74a2c3f802f3c46be5e119a438627a
+>>>>>>> ac62dbf54cfd4602a349b79fa3a62bb19ca940b1:Assets/Animations.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

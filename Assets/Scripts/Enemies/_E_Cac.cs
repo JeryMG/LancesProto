@@ -90,7 +90,10 @@ public class _E_Cac : Vivant, IClochePropag
            {
                if (sqrDstToTarget < Mathf.Pow(attackDistanceTreshold, 2))
                {
-                   NextAttackTime = Time.time + TimeBetweenAttacks;
+                    //Son CAC 
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/CAC",transform.position);
+
+                    NextAttackTime = Time.time + TimeBetweenAttacks;
                    StartCoroutine(Attack());
                }
            }

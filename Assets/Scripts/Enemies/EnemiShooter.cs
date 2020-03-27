@@ -81,6 +81,7 @@ public class EnemiShooter : Vivant, IClochePropag
     private void Update() 
     {
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
+<<<<<<< HEAD
        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
        {
            currentState = State.Patrolling;
@@ -102,6 +103,16 @@ public class EnemiShooter : Vivant, IClochePropag
                }
            }
        }
+=======
+        if (sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2))
+        {
+            //son tir
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Tir", transform.position);
+
+
+            Tir();
+        }
+>>>>>>> d842c83f86dd9c2bb2a26bb702503ac20fefcedb
         
        if (currentState == State.Idle)
        {

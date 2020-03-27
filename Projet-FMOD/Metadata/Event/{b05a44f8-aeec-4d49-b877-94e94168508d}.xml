@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{296e2d70-5972-4c19-94d5-9f77aca8ea91}">
+		<property name="volume">
+			<value>-7</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{81b95515-3cda-444c-8c10-3e3188506296}</destination>
 		</relationship>
@@ -90,16 +93,19 @@
 	<object class="MixerBusPanner" id="{18ec8bdb-69d0-428e-8b67-754ac7d36b28}" />
 	<object class="SingleSound" id="{ebf23ae5-7558-4bd4-90b3-12dcab50d36d}">
 		<property name="length">
-			<value>0.3199999999999999</value>
+			<value>0.2149999999999998</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>20.97999999999999</value>
+			<value>21.08499999999998</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{1456960a-8e16-4882-b724-58ff9dab344d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{0c41f7fc-cd12-4c52-b4e5-61e42f023610}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -137,9 +143,6 @@
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{5775d4bc-71b5-4224-9799-67f9c29716b0}">
-		<property name="decayTime">
-			<value>1900</value>
-		</property>
 		<property name="lateDelay">
 			<value>100</value>
 		</property>
@@ -156,10 +159,10 @@
 			<value>20000</value>
 		</property>
 		<property name="wetLevel">
-			<value>0</value>
+			<value>-9</value>
 		</property>
 		<property name="dryLevel">
-			<value>10</value>
+			<value>5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{8a93601f-16a7-4de4-bac4-b51cfb9013cb}" />

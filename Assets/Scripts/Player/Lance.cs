@@ -38,6 +38,7 @@ public class Lance : MonoBehaviour
             {
                 lanceBody.velocity = Vector3.zero;
                 stop = true;
+
                 StayImmobile(true);
                 if (!_player.lieuxDeTp.Contains(transform))
                 {
@@ -50,6 +51,9 @@ public class Lance : MonoBehaviour
 
         if (_inputs.LanceReturn)
         {
+            // son attraction
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Attraction");
+
             returning = true;
         }
     }

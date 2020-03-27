@@ -12,7 +12,6 @@ public class EnemiShooter : Vivant, IClochePropag
         Idle,
         Chasing,
         Patrolling,
-        Shooting
     }
 
     public State currentState;
@@ -81,40 +80,30 @@ public class EnemiShooter : Vivant, IClochePropag
     private void Update() 
     {
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
-<<<<<<< HEAD
-       if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
-       {
-           currentState = State.Patrolling;
-       }
-       else
-       {
-           currentState = State.Chasing;
-       }
-
-       if (hasTarget)
-       {
-           if (Time.time > NextShotTime)
-           {
-               if (sqrDstToTarget < Mathf.Pow(shootingDistanceTreshold, 2))
-               {
-                   //currentState = State.Shooting;
-                   NextShotTime = Time.time + TimeBetweenShots;
-                   StartCoroutine(shoot());
-               }
-           }
-       }
-=======
-        if (sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2))
+        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
         {
-            //son tir
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Tir", transform.position);
-
-
-            Tir();
+            currentState = State.Patrolling;
         }
->>>>>>> d842c83f86dd9c2bb2a26bb702503ac20fefcedb
-        
-       if (currentState == State.Idle)
+        else
+        {
+            currentState = State.Chasing;
+        }
+
+        //Shoot ici
+        if (hasTarget)
+        {
+            if (Time.time > NextShotTime)
+            {
+                if (sqrDstToTarget < Mathf.Pow(shootingDistanceTreshold, 2))
+                {
+                    //currentState = State.Shooting;
+                    NextShotTime = Time.time + TimeBetweenShots;
+                    StartCoroutine(shoot());
+                }
+            }
+        }
+
+        if (currentState == State.Idle)
        {
            pathFinder.enabled = false;
        }

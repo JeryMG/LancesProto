@@ -5,7 +5,7 @@
 			<value>DestructionEnnemi</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{83f47698-832f-44e4-a944-401179eb5075}</destination>
@@ -101,10 +101,13 @@
 	<object class="MixerBusPanner" id="{66cb4619-6af5-4e90-a27f-0581dce4c0d1}" />
 	<object class="SingleSound" id="{ff5e650a-7f97-46ea-9567-a30fcb631aa0}">
 		<property name="length">
-			<value>1.8700000000000001</value>
+			<value>1.8449999999999998</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.55000000000000004</value>
+			<value>0.57500000000000007</value>
+		</property>
+		<property name="volume">
+			<value>-2.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{df93bb9f-349a-44c5-8697-523513ce7a2c}</destination>
@@ -112,7 +115,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{ab38a6cc-1b2c-424d-9e25-06fb4b6c0126}">
 		<property name="volume">
-			<value>-3</value>
+			<value>-7.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -139,7 +142,6 @@
 		<relationship name="effects">
 			<destination>{32096312-194d-4f12-8d02-76d4796e6509}</destination>
 			<destination>{25fea101-9f03-4955-87a0-dcf8ac369b16}</destination>
-			<destination>{a11f0015-4dfb-4fbd-904f-b223cb375433}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{de8648ec-d10d-453b-a833-cc5c0cef2c67}" />
@@ -190,7 +192,6 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{25fea101-9f03-4955-87a0-dcf8ac369b16}" />
-	<object class="SpatialiserEffect" id="{a11f0015-4dfb-4fbd-904f-b223cb375433}" />
 	<object class="MixerBusFader" id="{7b632882-33b3-4e08-8590-800cc7cba92c}" />
 	<object class="AutomationPoint" id="{ed92f947-cb34-45b9-ad6c-33d36d9fb585}">
 		<property name="position">

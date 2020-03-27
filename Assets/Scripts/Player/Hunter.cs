@@ -74,6 +74,9 @@ public class Hunter : Vivant
         {
             if (_playerInputs.AimWeapon && currentState == states.blinker)
             {
+                //Son mélée
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Lance/Visee");
+
                 aiming = true;
                 Lance newLance = Instantiate(lancePrefab, Hand.position, Hand.rotation, Hand);
                 currentState = states.hunter;
@@ -83,8 +86,7 @@ public class Hunter : Vivant
             if (_playerInputs.FireWeapon && currentState == states.hunter)
             {
                 //Son Lancé
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/Lancé",
-                    transform.position);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/Lance",transform.position);
 
                 
                 aiming = false;
@@ -97,6 +99,8 @@ public class Hunter : Vivant
 
             if (_playerInputs.Melee && currentState == states.blinker)
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);
+
                 changeColor = true;
                 playerCamera.ShakeIt();
 
@@ -109,6 +113,9 @@ public class Hunter : Vivant
                     
                     if (hitable != null)
                     {
+                        //Son CAC quand il touche
+                        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC", transform.position);
+
                         Debug.Log("hitted");
                         //hitable.StartCoroutine("stun", 0.7f);
                         

@@ -5,7 +5,7 @@
 			<value>CAC</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{6e11a466-6980-411e-91a4-8f2c1530a851}</destination>
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{077f5c91-e6cc-43f7-8ce2-2385633ade12}">
+		<property name="volume">
+			<value>-4</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{0be144b9-3884-452a-be79-2378723c02cd}</destination>
 		</relationship>
@@ -121,7 +124,6 @@
 		<relationship name="effects">
 			<destination>{2ed66886-e93f-4798-97de-2538fbd64522}</destination>
 			<destination>{4be7e0d1-e821-44e2-a0b9-d9944aaeb053}</destination>
-			<destination>{d06ec496-133b-4357-b6ea-0453b3b0ab0e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{9fc39771-f0c3-4f29-9f95-8a607d84eebc}">
@@ -154,13 +156,12 @@
 			<value>13</value>
 		</property>
 		<property name="delay">
-			<value>0.810000002</value>
+			<value>0.599999964</value>
 		</property>
 		<property name="mix">
-			<value>100</value>
+			<value>62</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{4be7e0d1-e821-44e2-a0b9-d9944aaeb053}" />
-	<object class="SpatialiserEffect" id="{d06ec496-133b-4357-b6ea-0453b3b0ab0e}" />
 	<object class="MixerBusFader" id="{eddaf114-a823-4fc9-ae93-1fc70c48cac2}" />
 </objects>

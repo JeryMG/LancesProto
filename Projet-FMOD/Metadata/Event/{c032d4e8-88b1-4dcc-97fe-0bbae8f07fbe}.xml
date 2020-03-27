@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{c032d4e8-88b1-4dcc-97fe-0bbae8f07fbe}">
 		<property name="name">
-			<value>Lancé</value>
+			<value>Lance</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{eb94058f-5612-41ed-94b5-21332814b20a}">
+		<property name="volume">
+			<value>-2.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{538ba751-aa60-4ac5-9d30-cf78a3867e88}</destination>
 		</relationship>
@@ -90,13 +93,19 @@
 	<object class="MixerBusPanner" id="{956fdc2c-5146-45fd-992a-4e31e8b89860}" />
 	<object class="SingleSound" id="{9339f362-82f9-4d81-9763-4f5b58ec030a}">
 		<property name="length">
-			<value>0.19885443583118034</value>
+			<value>0.13885443583118029</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.060000000000000012</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{4ca7cab5-c208-4d91-8a24-659505ae5397}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{f74d9f7c-7bc1-4f0c-8d4b-08153f04c316}">
+		<property name="volume">
+			<value>-10.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 2</value>
 		</property>

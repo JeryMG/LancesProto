@@ -98,7 +98,6 @@
             <e p="Enemi.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
             <e p="Ennemi_2.cs" t="Include" />
-            <e p="MoteurProjectile.cs" t="Include" />
           </e>
           <e p="ParametresJeux" t="Include">
             <e p="CameraTop90.cs" t="Include" />

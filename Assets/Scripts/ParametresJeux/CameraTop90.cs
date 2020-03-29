@@ -23,7 +23,7 @@ public class CameraTop90 : MonoBehaviour
 	public bool followMouse;
 	private EventInstance event_fmod;
 	// [SerializeField] private float offsetX;
-	// [SerializeField] private float offsetZ;
+	[SerializeField] private float offsetZ = -4f;
 	
 	//Shake2
 	Vector3 cameraInitialPosition;
@@ -32,6 +32,8 @@ public class CameraTop90 : MonoBehaviour
 	void Start () 
 	{
 		cam = Camera.main;
+		viewPortSize = cam.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)) - cam.ScreenToWorldPoint(Vector2.zero);
+
 		target = player.position; //set default target
 		yStart = transform.position.y; //capture current y position
 		
@@ -50,7 +52,6 @@ public class CameraTop90 : MonoBehaviour
 		{
 			event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		}
-		viewPortSize = cam.ScreenToWorldPoint(new Vector3());
 	}
 
 	void FixedUpdate () 
@@ -113,7 +114,7 @@ public class CameraTop90 : MonoBehaviour
 			ret = player.position;
 		}
 		//ret.x = ret.x /*+ offsetX*/;
-		//ret.z = ret.z /*+ offsetZ*/;
+		ret.z = ret.z + offsetZ;
 		ret.y = yStart; //make sure camera stays at same y coord
 		return ret;
 	}
@@ -153,4 +154,12 @@ public class CameraTop90 : MonoBehaviour
 		cam.transform.position = cameraInitialPosition;
 	}
 
+	private void OnDrawGizmosSelected()
+	{
+		Color c = Color.red;
+		c.a = 0.3f;
+		Gizmos.color = c;
+		
+		Gizmos.DrawCube(transform.position, viewPortSize);
+	}
 }

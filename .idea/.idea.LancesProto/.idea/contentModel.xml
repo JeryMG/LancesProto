@@ -6,8 +6,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="E_Gong.cs" t="Include" />
-        <e p="GongWave.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
@@ -95,9 +93,11 @@
           <e p="Enemies" t="Include">
             <e p="_E_Cac.cs" t="Include" />
             <e p="_missileEnnemi.cs" t="Include" />
+            <e p="E_Gong.cs" t="Include" />
             <e p="Enemi.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
             <e p="Ennemi_2.cs" t="Include" />
+            <e p="GongWave.cs" t="Include" />
           </e>
           <e p="ParametresJeux" t="Include">
             <e p="CameraTop90.cs" t="Include" />
@@ -111,6 +111,7 @@
             <e p="Hunter.cs" t="Include" />
             <e p="Lance.cs" t="Include" />
             <e p="ParryAbility.cs" t="Include" />
+            <e p="Respawner.cs" t="Include" />
           </e>
         </e>
       </e>

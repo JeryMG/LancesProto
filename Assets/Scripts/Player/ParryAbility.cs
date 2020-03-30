@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ParryAbility : MonoBehaviour
 {
-    private PlayerInputs playerInputs;
+    /*private PlayerInputs playerInputs;
     private Material skinMat;
     private Color playerColor;
     
@@ -49,5 +49,5 @@ public class ParryAbility : MonoBehaviour
         skinMat.color = newColor;
         yield return new WaitForSeconds(1f);
         skinMat.color = playerColor;
-    }
+    }*/
 }

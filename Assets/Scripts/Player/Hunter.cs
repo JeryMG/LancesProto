@@ -42,14 +42,15 @@ public class Hunter : Vivant
     private PlayerInputs _playerInputs;
     private CameraTop90 playerCamera;
     private Rigidbody rb;
+    private Respawner respawner;
     [SerializeField] private Vector3 distanceKnockBack = new Vector3(1.5f,0,1.5f);
-    public bool aiming;
 
     private void Awake()
     {
         currentState = states.blinker;
         _playerInputs = GetComponent<PlayerInputs>();
         playerCamera = FindObjectOfType<CameraTop90>();
+        respawner = FindObjectOfType<Respawner>();
         rb = GetComponent<Rigidbody>();
         lancesRestantes = nbrLances;
 
@@ -76,8 +77,7 @@ public class Hunter : Vivant
             {
                 //Son mélée
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Lance/Visee");
-
-                aiming = true;
+                
                 Lance newLance = Instantiate(lancePrefab, Hand.position, Hand.rotation, Hand);
                 currentState = states.hunter;
                 lanceEquiped = newLance;
@@ -87,9 +87,7 @@ public class Hunter : Vivant
             {
                 //Son Lancé
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/Lance",transform.position);
-
                 
-                aiming = false;
                 currentState = states.blinker;
                 lanceEquiped.transform.parent = null;
                 lanceEquiped.stop = false;
@@ -102,7 +100,7 @@ public class Hunter : Vivant
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);
 
                 changeColor = true;
-                playerCamera.ShakeIt();
+                //playerCamera.ShakeIt();
 
                 Collider[] _hitbox = Physics.OverlapBox(hitBox.position, hitBoxSize / 2);
                 foreach (Collider hits in _hitbox)
@@ -147,7 +145,7 @@ public class Hunter : Vivant
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
                 
                 //Camera shake
-                playerCamera.ShakeIt();
+                //playerCamera.ShakeIt();
 
             }
 
@@ -187,7 +185,7 @@ public class Hunter : Vivant
     private void OnCollisionEnter(Collision other)
     {
         Enemi _enemi = other.gameObject.GetComponent<Enemi>();
-        
+
         if (other.gameObject.GetComponent<Lance>() != null)
         {
             Destroy(other.gameObject);
@@ -209,10 +207,10 @@ public class Hunter : Vivant
             Debug.Log("mes hp : " + health);
         }
 
-        // if (other.gameObject.CompareTag("Projectile"))
-        // {
-        //     ColorChange(Color.red);
-        // }
+        if (other.gameObject.CompareTag("Vide"))
+        {
+            transform.position = respawner.transform.position;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -225,6 +223,6 @@ public class Hunter : Vivant
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(hitBox.position, hitBoxSize);
+        //Gizmos.DrawWireCube(hitBox.position, hitBoxSize);
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - Vide
   - Projectile
   - Wave
+  - MurInvisible
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - FlecheEnemi
+  - enemi
+  - Ground
   - 
   - 
   - 

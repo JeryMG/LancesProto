@@ -1,42 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class _missileEnnemi : MonoBehaviour
 {
-    
-    void Update()
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float damage = 2f;
+
+    private Rigidbody flecheBody;
+
+    private void Start()
     {
-        this.transform.position+=this.transform.forward*Time.deltaTime*30f;
-      
+        Hunter target = FindObjectOfType<Hunter>();
+        Destroy(gameObject,2f);
+        flecheBody = GetComponent<Rigidbody>();
+        transform.LookAt(target.transform);
+        flecheBody.AddForce(speed * transform.forward,ForceMode.Impulse);
     }
 
-
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Mur");
-
+        Vivant playerEntity = other.gameObject.GetComponent<Vivant>();
         
-
-        if (other.gameObject.tag == "Player")
+        if (playerEntity != null)
         {
-            other.gameObject.GetComponent<Vivant>().TakeDamage(2f);
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag != "Player")
-        {
-            Debug.Log("Thomas");
-            Destroy(this.gameObject);
+            playerEntity.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
-
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions.Must;
 
-[RequireComponent(typeof(Rigidbody), typeof(PlayerInputs))]
+[RequireComponent(typeof(Rigidbody))]
 public class Hunter : Vivant
 {
     public enum states
@@ -143,7 +143,7 @@ public class Hunter : Vivant
                 //tp
                 lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
-                
+
                 //Camera shake
                 //playerCamera.ShakeIt();
 

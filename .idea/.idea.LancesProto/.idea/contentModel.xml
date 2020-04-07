@@ -101,10 +101,10 @@
           </e>
           <e p="ParametresJeux" t="Include">
             <e p="CameraTop90.cs" t="Include" />
+            <e p="GameSystem.cs" t="Include" />
             <e p="IClochePropag.cs" t="Include" />
             <e p="IDamageable.cs" t="Include" />
             <e p="PlayerInputs.cs" t="Include" />
-            <e p="RestartScene.cs" t="Include" />
             <e p="Vivant.cs" t="Include" />
           </e>
           <e p="Player" t="Include">

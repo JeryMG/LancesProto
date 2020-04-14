@@ -16,9 +16,7 @@ public class Lance : MonoBehaviour
     public bool returning;
     private Transform PlayerTransform;
 
-
     public float vitesseReturn;
-    //private bool isFlying = false;
 
     private void Start()
     {
@@ -47,11 +45,6 @@ public class Lance : MonoBehaviour
                     _player.lieuxDeTp.Add(transform);
                 }
             }
-
-            // if (isFlying && _inputs.blink)
-            // {
-            //     GameSystem.Instance.StartCoroutine(GameSystem.Instance.SlowMotion());
-            // }
         }
         
         returningToPlayer();
@@ -60,11 +53,12 @@ public class Lance : MonoBehaviour
         {
             // son attraction
             FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Attraction");
+
             returning = true;
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other) 
     {
         if (other.gameObject.tag!= "Player" /*&& !_player.aiming*/)
         {
@@ -106,7 +100,6 @@ public class Lance : MonoBehaviour
     public void shooting()
     {
         transform.Translate(Vector3.forward * lanceSpeed * Time.deltaTime);
-        //isFlying = true;
     }
 
     public void returningToPlayer()
@@ -125,7 +118,6 @@ public class Lance : MonoBehaviour
         {
             lanceBody.useGravity = false;
             lanceBody.isKinematic = true;
-            //isFlying = true;
         }
         if (!yes)
         {

@@ -5,28 +5,32 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/EnemyKaK.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/EnemyKaK.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/KaK.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/KaK.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Lances.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Lances.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/LanceurProjectiles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LanceurProjectiles.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mur.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mur.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Projectiles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Projectiles.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CamDefaut.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CamDefaut.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LD_Lance_TEST.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LD_Lance_TEST.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/E_Gong.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/E_Gong.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GongWave.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GongWave.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyCaC.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyCaC.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyDeathEffect.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyDeathEffect.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lance.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lance.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OndeGong.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OndeGong.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/RestartScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/RestartScene.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +41,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/src/Runtime/RuntimeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/TypeDeterminer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,7 +64,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/Scripts/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/ARendre/LaserBeam.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/MaterialUpgrader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" root0="FORCE_HIGHLIGHTING" />
@@ -75,6 +78,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/InputsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
         <option value="$PROJECT_DIR$/Assets/ParryAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MoteurProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa17260.40435/CameraShake.cs" />
@@ -89,18 +93,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_missileEnnemi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Respawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" />
         <option value="$PROJECT_DIR$/Assets/NewCamera1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/LancerInputs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/NewPlayerInputs.cs" />
-        <option value="$PROJECT_DIR$/Assets/BasicMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/RestartScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
       </list>
     </option>
   </component>
@@ -154,11 +152,6 @@
       <workItem from="1585316755222" duration="10239000" />
       <workItem from="1585434806613" duration="15368000" />
       <workItem from="1585514122171" duration="664000" />
-      <workItem from="1585570022656" duration="13000000" />
-      <workItem from="1585636401799" duration="21779000" />
-      <workItem from="1585776127617" duration="4405000" />
-      <workItem from="1585816846638" duration="10773000" />
-      <workItem from="1586085662828" duration="7055000" />
     </task>
     <servers />
   </component>
@@ -167,16 +160,6 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -189,11 +172,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="604" y="123" key="RollbackChangesDialog" timestamp="1585593649189">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="604" y="123" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585593649189" />
   </component>
 </project>

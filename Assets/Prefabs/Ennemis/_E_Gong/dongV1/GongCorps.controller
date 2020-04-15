@@ -73,7 +73,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Donf
+  m_Name: Dong
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7783188504158275469}
@@ -230,7 +230,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: Donf
+    m_Name: Dong
     m_StateMachine: {fileID: -2532457588352521044}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -382,7 +382,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -792080998060889972}
-    m_Position: {x: 400, y: 160, z: 0}
+    m_Position: {x: 280, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -128065068446388148}
     m_Position: {x: 510, y: 60, z: 0}

@@ -7,14 +7,12 @@ public class ParryAbility : MonoBehaviour
 {
     private PlayerInputs playerInputs;
     public Material skinMat;
-    public Material playerColor;
+    public Material parade;
+    public Color playerColor;
     private bool inputPressed;
     private GameObject _player;
     private bool go;
     float countdown;
-    public Material parryAvailable;
-    public Material parryMissed;
-    public Material parrySuccess;
 
     public List<GameObject> incomings;
     
@@ -23,7 +21,7 @@ public class ParryAbility : MonoBehaviour
         playerInputs = FindObjectOfType<PlayerInputs>();
         _player = GameObject.FindGameObjectWithTag("Player");
         skinMat= _player.GetComponent<Renderer>().material;
-        playerColor = skinMat;
+        playerColor = skinMat.color;
     }
 
     private void Update()
@@ -32,18 +30,9 @@ public class ParryAbility : MonoBehaviour
         
         if (!inputPressed && playerInputs.Parry)
         {
+            skinMat = parade;
             Debug.Log("Update Input");
             inputPressed = true;
-        }
-        
-        if (go)
-        {
-            countdown += Time.deltaTime;
-        }
-
-        if (countdown >= 1)
-        {
-            _player.GetComponent<Renderer>().material = playerColor;
         }
     }
 
@@ -57,7 +46,7 @@ public class ParryAbility : MonoBehaviour
                 Destroy(incomings[i]);
             }
             incomings.Clear();
-            colorChange(parrySuccess);
+            StartCoroutine(changeColor(Color.yellow));
             inputPressed = false;
         }
     }
@@ -67,21 +56,14 @@ public class ParryAbility : MonoBehaviour
         if (other.CompareTag("Projectile"))
         {
             print("projectile incoming");
-            skinMat = parryAvailable;
             incomings.Add(other.gameObject);
         }
     }
 
-    IEnumerator changeColor(Material newColor)
+    IEnumerator changeColor(Color newColor)
     {
-        skinMat = newColor;
+        skinMat.SetColor("_newcol", newColor);
         yield return new WaitForSeconds(1f);
-        skinMat = playerColor;
-    }
-
-    void colorChange(Material newMat)
-    {
-        go = true;
-        skinMat = newMat;
+        skinMat.SetColor("player", playerColor);
     }
 }

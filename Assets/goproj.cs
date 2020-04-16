@@ -13,7 +13,6 @@ public class goproj : MonoBehaviour
     private void Start()
     {
         _parryAbility = FindObjectOfType<ParryAbility>();
-        _player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
@@ -26,20 +25,21 @@ public class goproj : MonoBehaviour
         if (other.CompareTag("MurInvisible"))
         {
             parable = true;
+            StartCoroutine(changeColor(Color.green));
         }
 
         if (other.CompareTag("Player"))
         {
             _parryAbility.incomings.Remove(this.gameObject);
-            StartCoroutine(changeColor());
+            StartCoroutine(changeColor(Color.red));
         }
     }
     
-    IEnumerator changeColor()
+    IEnumerator changeColor(Color color)
     {
-        _parryAbility.skinMat = _parryAbility.parryMissed;
-        yield return new WaitForSeconds(0.7f);
-        _parryAbility.skinMat = _parryAbility.playerColor;
+        _parryAbility.skinMat.SetColor("missed", color);
+        yield return new WaitForSeconds(0.5f);
+        _parryAbility.skinMat.SetColor("player", _parryAbility.playerColor);
 
     }
 }

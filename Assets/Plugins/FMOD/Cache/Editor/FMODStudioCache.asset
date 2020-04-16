@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: "event:/Event3D/Joueur3D/T\xE9l\xE9portation"
   guid: f8445ab0ecae494db87794e94168508d
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -92,7 +92,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiDistance3D/DestructionEnnemi
   guid: 93aa1733b4d48d4e8c570d457ad1f7c9
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
   Path: event:/Event2D/Joueur/Attraction
   guid: e47f1078e329c24c82ab956afd27ebcf
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -230,7 +230,7 @@ MonoBehaviour:
   lastModified: 637209268545105105
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5346263504709323094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiCAC3D/CAC
   guid: 62ce456c9bdb7f4281dc51417b23a840
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -269,7 +269,7 @@ MonoBehaviour:
   Path: event:/Event3D/Lance3D/Ennemi
   guid: 02c0d198e881bf4bb16bc395b570901c
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -292,7 +292,7 @@ MonoBehaviour:
   Path: event:/Event2D/Joueur/Parade
   guid: 7174a960e24aea438de4c203edb595ad
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
   Path: event:/Event2D/Joueur/Mort
   guid: 10f05b6daad03a43ad5db5621a992004
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -472,7 +472,7 @@ MonoBehaviour:
   Path: event:/Event3D/Joueur3D/CAC
   guid: c42e0eb061a10c4a9302d8858d7220c0
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -513,7 +513,7 @@ MonoBehaviour:
   Path: event:/Event3D/Joueur3D/Lance
   guid: e8d432c0b188cc4d97fe0bbae8f07fbe
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -612,7 +612,7 @@ MonoBehaviour:
   Path: event:/Event2D/Environnement/Ambiance
   guid: 271d7d4218e4394180fd4cab0c07ce8c
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Projet-FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637209268545124726
+  lastModified: 637209268413335748
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -121337009182667935}
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   EditorEvents:
   - {fileID: 2805090919585786521}
   - {fileID: -1190991224179395039}
@@ -770,10 +770,10 @@ MonoBehaviour:
   - {fileID: 7196183661420267723}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   StringsBanks:
   - {fileID: -121337009182667935}
-  stringsBankWriteTime: 637209268545124726
+  stringsBankWriteTime: 637209268413335748
   cacheVersion: 3
 --- !u!114 &235726790488454487
 MonoBehaviour:
@@ -847,6 +847,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &998818536368538424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Projet-FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637209268413325773
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1113189361023297214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,7 +956,7 @@ MonoBehaviour:
   Path: event:/Event3D/Joueur3D/Marche
   guid: 3c26bdb1e58b4247a16e9a31a70aaecb
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -997,7 +1015,7 @@ MonoBehaviour:
   Path: "event:/Event3D/Joueur3D/ObjetRamass\xE9"
   guid: 2506a7bea779b54bb689373d633b768a
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1110,7 +1128,7 @@ MonoBehaviour:
   Path: event:/Event2D/Lance/Visee
   guid: fab63d48a37bb54ea3621303dcc98cf8
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1169,7 +1187,7 @@ MonoBehaviour:
   Path: event:/Event3D/Lance3D/Sol
   guid: 3ecae9b4896c0746837da45260c65446
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1340,7 +1358,7 @@ MonoBehaviour:
   Path: event:/Event3D/Joueur3D/CAC_Swift
   guid: 3e03afb3285f604ea0caa53a032b9bd7
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1363,7 +1381,7 @@ MonoBehaviour:
   Path: event:/Event3D/Lance3D/Mur
   guid: 4287f634dd127044accfd6949c30cf08
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -1404,7 +1422,7 @@ MonoBehaviour:
   Path: event:/Event3D/Lance3D/Armure
   guid: 4c710542cc550744b993c43b8a960104
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1481,7 +1499,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiDistance3D/Tir
   guid: ce53093e13fd8a44adc9adee0da3841d
   Banks:
-  - {fileID: -5549210090039352592}
+  - {fileID: 998818536368538424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

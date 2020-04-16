@@ -5,7 +5,9 @@ using UnityEngine;
 public class Anim_EnenmieCac : MonoBehaviour
 {
     public Animator anim;
-
+    private void Start() {
+        MarcheRapide();
+    }
     public void Repos()
     {
         ResetLayer();
@@ -24,13 +26,13 @@ public class Anim_EnenmieCac : MonoBehaviour
         anim.SetLayerWeight(2,1);
         anim.Play("EchoOnde",2,0f);       
     }
-    public void MarcheRapide()
+    public void MarcheLente()
     {
         ResetLayer();
         anim.SetLayerWeight(3,1);
         anim.Play("MarcheLente", 3,0f);
     }
-    public void MarcheLente()
+    public void MarcheRapide()
     {
         ResetLayer();
         anim.SetLayerWeight(4,1);

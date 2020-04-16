@@ -100,12 +100,12 @@ public class E_Gong : Vivant
         if (currentState == State.Idle)
         {
             pathFinder.enabled = false;
-            //animPerso.runtimeAnimatorController=Anim[0];
+            //anim repos
         }
         
         if (currentState == State.Chasing)
         {
-            //animPerso.runtimeAnimatorController=Anim[2];
+            //anim marche rapide
 
             pathFinder.acceleration = 8;
             pathFinder.stoppingDistance = 0;
@@ -115,7 +115,7 @@ public class E_Gong : Vivant
         
         if (currentState == State.Patrolling)
         {
-            //animPerso.runtimeAnimatorController=Anim[1];
+            //marche lentee
            
             pathFinder.acceleration = 1;
             pathFinder.stoppingDistance = 0;
@@ -172,14 +172,14 @@ public class E_Gong : Vivant
         //"Animation" de Lunge
         while (percent <= 1)
         {
-            if (percent >= .5f && !appliedDamage)
-            {
-                appliedDamage = true;
-                targetVie.TakeDamage(damage);
-            }
-            percent += Time.deltaTime * attackSpeed;
-            float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
-            transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
+            // if (percent >= .5f && !appliedDamage)
+            // {
+            //     appliedDamage = true;
+            //     targetVie.TakeDamage(damage);
+            // }
+            // percent += Time.deltaTime * attackSpeed;
+            // float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
+            // transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
             yield return null;
         }
         

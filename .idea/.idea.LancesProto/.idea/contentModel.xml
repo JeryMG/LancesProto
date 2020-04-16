@@ -102,11 +102,8 @@
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
             <e p="_E_Cac.cs" t="Include" />
-            <e p="_missileEnnemi.cs" t="Include" />
             <e p="E_Gong.cs" t="Include" />
-            <e p="Enemi.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
-            <e p="Ennemi_2.cs" t="Include" />
             <e p="GongWave.cs" t="Include" />
           </e>
           <e p="ParametresJeux" t="Include">

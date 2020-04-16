@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Claims;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions.Must;
@@ -40,6 +41,7 @@ public class Hunter : Vivant
 
     [Header("Animation")] 
     public PlayAnimHeros animPerso;
+    public TrailRenderer _trail;
 
     [Header("Random")]
     private PlayerInputs _playerInputs;
@@ -47,6 +49,7 @@ public class Hunter : Vivant
     private Rigidbody rb;
     private Respawner respawner;
     [SerializeField] private Vector3 distanceKnockBack = new Vector3(1.5f,0,1.5f);
+    private bool dejaJouee;
 
     private void Awake()
     {
@@ -98,6 +101,8 @@ public class Hunter : Vivant
                 lanceEquiped.stop = false;
                 lanceEquiped.StayImmobile(false);
                 lancesRestantes--;
+                
+                animPerso.AnimLancer();
             }
 
             if (_playerInputs.Melee && currentState == states.blinker)
@@ -149,9 +154,7 @@ public class Hunter : Vivant
                 lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
 
-                //Camera shake
-                //playerCamera.ShakeIt();
-
+                StartCoroutine(trail());
             }
 
             if (_playerInputs.LanceReturn && currentState == states.blinker)
@@ -172,13 +175,15 @@ public class Hunter : Vivant
         Vector3 movement = new Vector3(_playerInputs.Horizontal, 0, _playerInputs.Vertical);
         Vector3 Velocity = movement.normalized * speed;
         rb.MovePosition(rb.position + Velocity * Time.deltaTime);
-        if (movement != Vector3.zero)
+        if (movement != Vector3.zero && !dejaJouee)
         {
             animPerso.AnimCourse();
+            dejaJouee = true;
         }
-        else
+        if(movement == Vector3.zero && dejaJouee)
         {
             animPerso.AnimPause();
+            dejaJouee = false;
         }
     }
 
@@ -197,7 +202,7 @@ public class Hunter : Vivant
 
     private void OnCollisionEnter(Collision other)
     {
-        Enemi _enemi = other.gameObject.GetComponent<Enemi>();
+        Vivant _enemi = other.gameObject.GetComponent<Vivant>();
 
         if (other.gameObject.GetComponent<Lance>() != null)
         {
@@ -232,6 +237,13 @@ public class Hunter : Vivant
         {
             ColorChange(Color.red);
         }
+    }
+
+    IEnumerator trail()
+    {
+        _trail.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        _trail.gameObject.SetActive(false);
     }
 
     private void OnDrawGizmos()

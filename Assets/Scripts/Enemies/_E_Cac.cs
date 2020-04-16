@@ -105,15 +105,13 @@ public class _E_Cac : Vivant, IClochePropag
        if (currentState == State.Idle)
        {
            pathFinder.enabled = false;
-           //animPerso.runtimeAnimatorController=Anim[0];
-           animations_cac.Repos();
+           //Anim de repos !!!!!!
        }
 
        if (currentState == State.Chasing)
        {
-           //animPerso.runtimeAnimatorController = Anim[2];
+           //Anim de marche rapîde !!!!!!
 
-           animations_cac.MarcheRapide();
 
            pathFinder.acceleration = 8;
            pathFinder.stoppingDistance = 3;
@@ -121,9 +119,8 @@ public class _E_Cac : Vivant, IClochePropag
 
        if (currentState == State.Patrolling)
        {
-           //animPerso.runtimeAnimatorController=Anim[1];
-           
-           animations_cac.MarcheLente();
+           //Anim de marche lente !!!!!!
+
            pathFinder.acceleration = 1;
            pathFinder.stoppingDistance = 0;
            if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
@@ -132,7 +129,7 @@ public class _E_Cac : Vivant, IClochePropag
 
        if (currentState == State.Attacking)
        {
-           animations_cac.Attaque();
+           //anime d'attaque
        }
     }
     
@@ -166,17 +163,17 @@ public class _E_Cac : Vivant, IClochePropag
         float percent = 0;
         bool appliedDamage = false;
     
-        //"Animation" de Lunge
+        //ANIMATION
         while (percent <= 1)
         {
-            if (percent >= .5f && !appliedDamage)
+             if (percent >= .5f && !appliedDamage)
             {
                 appliedDamage = true;
-                targetVie.TakeDamage(damage);
+                 targetVie.TakeDamage(damage);
             }
-            percent += Time.deltaTime * attackSpeed;
-            float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
-            transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
+             percent += Time.deltaTime * attackSpeed;
+            // float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
+            // transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
             yield return null;
         }
         

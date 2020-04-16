@@ -6,13 +6,6 @@ public class Anim_EnenmieCac : MonoBehaviour
 {
     public Animator anim;
 
-    private void Update() {
-        if(Input.GetMouseButtonDown(0))
-        {   
-            OndeRecus();
-        }
-    }
-
     public void Repos()
     {
         ResetLayer();

@@ -83,6 +83,11 @@
                 <e p="Anim_EnenmieCac.cs" t="Include" />
               </e>
             </e>
+            <e p="_E_Distance" t="Include">
+              <e p="V2" t="Include">
+                <e p="Anim_E_Vole.cs" t="Include" />
+              </e>
+            </e>
             <e p="_E_Gong" t="Include">
               <e p="DOngV2" t="Include">
                 <e p="TestAnimGong.cs" t="Include" />

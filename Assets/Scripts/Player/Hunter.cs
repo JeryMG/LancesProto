@@ -175,33 +175,20 @@ public class Hunter : Vivant
         Vector3 movement = new Vector3(_playerInputs.Horizontal, 0, _playerInputs.Vertical);
         Vector3 Velocity = movement.normalized * speed;
         rb.MovePosition(rb.position + Velocity * Time.deltaTime);
-<<<<<<< HEAD
+
         if (movement != Vector3.zero && !dejaJouee)
-=======
-        if (movement != Vector3.zero&&Dejajouer==false)
->>>>>>> 3cea819a57056caeb9be0f9664135fa18de421f4
         {
 
             animPerso.AnimCourse();
-<<<<<<< HEAD
+
             dejaJouee = true;
         }
+        
         if(movement == Vector3.zero && dejaJouee)
         {
             animPerso.AnimPause();
             dejaJouee = false;
         }
-=======
-            Dejajouer=true;
-        }
-        
-            if(Dejajouer==true)
-            {
-            animPerso.AnimPause();
-            Dejajouer=!Dejajouer;
-            }
-        
->>>>>>> 3cea819a57056caeb9be0f9664135fa18de421f4
     }
 
     private void ColorChange(Color newColor)

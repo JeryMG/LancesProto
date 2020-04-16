@@ -6,14 +6,6 @@ public class PlayAnimHeros : MonoBehaviour
 {
     public Animator anim;
     
-    private void Update() {
-        if(Input.GetMouseButtonDown(0))
-        {           
-            
-            anim.enabled = true;  
-            AnimLancer();
-        }
-    }
 
     public void AnimPause()
     {               

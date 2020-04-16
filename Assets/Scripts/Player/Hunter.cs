@@ -38,6 +38,9 @@ public class Hunter : Vivant
     [Header("KaK Variables")] 
     [SerializeField] float KakDamage = 2f;
 
+    [Header("Animation")] 
+    public PlayAnimHeros animPerso;
+
     [Header("Random")]
     private PlayerInputs _playerInputs;
     private CameraTop90 playerCamera;
@@ -54,6 +57,8 @@ public class Hunter : Vivant
         rb = GetComponent<Rigidbody>();
         lancesRestantes = nbrLances;
 
+        animPerso = GetComponentInChildren<PlayAnimHeros>();
+        
         skinMat= GetComponent<Renderer>().material;
         playerColor = skinMat.color;
     }
@@ -167,6 +172,14 @@ public class Hunter : Vivant
         Vector3 movement = new Vector3(_playerInputs.Horizontal, 0, _playerInputs.Vertical);
         Vector3 Velocity = movement.normalized * speed;
         rb.MovePosition(rb.position + Velocity * Time.deltaTime);
+        if (movement != Vector3.zero)
+        {
+            animPerso.AnimCourse();
+        }
+        else
+        {
+            animPerso.AnimPause();
+        }
     }
 
     private void ColorChange(Color newColor)

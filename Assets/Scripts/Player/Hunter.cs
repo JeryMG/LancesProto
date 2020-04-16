@@ -166,20 +166,25 @@ public class Hunter : Vivant
             lancesRestantes = 3;
         }
     }
-
+    bool Dejajouer=false;
     private void Move()
     {
         Vector3 movement = new Vector3(_playerInputs.Horizontal, 0, _playerInputs.Vertical);
         Vector3 Velocity = movement.normalized * speed;
         rb.MovePosition(rb.position + Velocity * Time.deltaTime);
-        if (movement != Vector3.zero)
+        if (movement != Vector3.zero&&Dejajouer==false)
         {
+
             animPerso.AnimCourse();
+            Dejajouer=true;
         }
-        else
-        {
+        
+            if(Dejajouer==true)
+            {
             animPerso.AnimPause();
-        }
+            Dejajouer=!Dejajouer;
+            }
+        
     }
 
     private void ColorChange(Color newColor)

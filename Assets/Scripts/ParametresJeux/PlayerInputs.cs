@@ -129,6 +129,7 @@ public class PlayerInputs : MonoBehaviour
         }
     }
     
+
     private void LookAt(Vector3 lookPoint)
     {
         Vector3 heightCorrectionPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);

@@ -5,33 +5,60 @@ using UnityEngine;
 
 public class ParryAbility : MonoBehaviour
 {
-    /*private PlayerInputs playerInputs;
-    private Material skinMat;
-    private Color playerColor;
+    private PlayerInputs playerInputs;
+    public Material skinMat;
+    public Material playerColor;
+    private bool inputPressed;
+    private GameObject _player;
+    private bool go;
+    float countdown;
+    public Material parryAvailable;
+    public Material parryMissed;
+    public Material parrySuccess;
+
+    public List<GameObject> incomings;
     
     void Start()
     {
         playerInputs = FindObjectOfType<PlayerInputs>();
-        skinMat= transform.parent.GetComponent<Renderer>().material;
-        playerColor = skinMat.color;
+        _player = GameObject.FindGameObjectWithTag("Player");
+        skinMat= _player.GetComponent<Renderer>().material;
+        playerColor = skinMat;
     }
-    
-    private void OnTriggerStay(Collider other)
-    {
-        MoteurProjectile projectile = other.GetComponent<MoteurProjectile>();
-        
-        if (projectile != null)
-        {
-            if (playerInputs.Parry)
-            {
-                // son Parade
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Parade");
 
-                //projectile.parried = true;
-                Debug.Log("Parried !!!!!!!");
-                StartCoroutine(changeColor(Color.green));
-                Destroy(other.gameObject);
+    private void Update()
+    {
+        incomings.RemoveAll(item => item == null);
+        
+        if (!inputPressed && playerInputs.Parry)
+        {
+            Debug.Log("Update Input");
+            inputPressed = true;
+        }
+        
+        if (go)
+        {
+            countdown += Time.deltaTime;
+        }
+
+        if (countdown >= 1)
+        {
+            _player.GetComponent<Renderer>().material = playerColor;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (inputPressed && incomings.Count != 0)
+        {
+            Debug.Log("Fixed Update : Input consumed");
+            for (int i = 0; i < incomings.Count; i++)
+            {
+                Destroy(incomings[i]);
             }
+            incomings.Clear();
+            colorChange(parrySuccess);
+            inputPressed = false;
         }
     }
 
@@ -40,14 +67,21 @@ public class ParryAbility : MonoBehaviour
         if (other.CompareTag("Projectile"))
         {
             print("projectile incoming");
-            changeColor(Color.yellow);
+            skinMat = parryAvailable;
+            incomings.Add(other.gameObject);
         }
     }
 
-    IEnumerator changeColor(Color newColor)
+    IEnumerator changeColor(Material newColor)
     {
-        skinMat.color = newColor;
+        skinMat = newColor;
         yield return new WaitForSeconds(1f);
-        skinMat.color = playerColor;
-    }*/
+        skinMat = playerColor;
+    }
+
+    void colorChange(Material newMat)
+    {
+        go = true;
+        skinMat = newMat;
+    }
 }

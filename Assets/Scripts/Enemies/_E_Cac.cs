@@ -39,9 +39,10 @@ public class _E_Cac : Vivant, IClochePropag
 
     [Header("Animations")]
     public ParticleSystem DeathEffect;
-    [SerializeField] private List<RuntimeAnimatorController> Anim =new List<RuntimeAnimatorController>();
-    public Animator animPerso;
-    public Animator gongWaveAnimator;
+    // [SerializeField] private List<RuntimeAnimatorController> Anim =new List<RuntimeAnimatorController>();
+    // public Animator animPerso;
+    // public Animator gongWaveAnimator;
+    public Anim_EnenmieCac animations_cac;
 
     
     protected override void Start() 
@@ -60,6 +61,8 @@ public class _E_Cac : Vivant, IClochePropag
 
             StartCoroutine(UpdatePath());
         }
+
+        animations_cac = GetComponentInChildren<Anim_EnenmieCac>();
         
         points = new Transform[pathHolder.childCount];
         for (int i = 0; i < points.Length; i++)
@@ -102,12 +105,15 @@ public class _E_Cac : Vivant, IClochePropag
        if (currentState == State.Idle)
        {
            pathFinder.enabled = false;
-           animPerso.runtimeAnimatorController=Anim[0];
+           //animPerso.runtimeAnimatorController=Anim[0];
+           animations_cac.Repos();
        }
 
        if (currentState == State.Chasing)
        {
-           animPerso.runtimeAnimatorController = Anim[2];
+           //animPerso.runtimeAnimatorController = Anim[2];
+
+           animations_cac.MarcheRapide();
 
            pathFinder.acceleration = 8;
            pathFinder.stoppingDistance = 3;
@@ -115,12 +121,18 @@ public class _E_Cac : Vivant, IClochePropag
 
        if (currentState == State.Patrolling)
        {
-           animPerso.runtimeAnimatorController=Anim[1];
+           //animPerso.runtimeAnimatorController=Anim[1];
            
+           animations_cac.MarcheLente();
            pathFinder.acceleration = 1;
            pathFinder.stoppingDistance = 0;
            if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
                GotoNextPoint();
+       }
+
+       if (currentState == State.Attacking)
+       {
+           animations_cac.Attaque();
        }
     }
     
@@ -207,7 +219,7 @@ public class _E_Cac : Vivant, IClochePropag
     public void propagOnde()
     {
         Onde.SetActive(true);
-        gongWaveAnimator.SetTrigger("Elargi");
+        //gongWaveAnimator.SetTrigger("Elargi");
         Invoke("desactiveOnde", 3f);
     }
 
@@ -221,6 +233,13 @@ public class _E_Cac : Vivant, IClochePropag
         if (other.gameObject.CompareTag("Wave"))
         {
             propagOnde();
+        }
+
+        if (other.gameObject.CompareTag("Lance"))
+        {
+            pathFinder.enabled = false;
+            animations_cac.DegasRecus();
+            pathFinder.enabled = true;
         }
     }
 }

@@ -6,6 +6,7 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="goproj.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
@@ -77,8 +78,13 @@
         </e>
         <e p="Prefabs" t="Include">
           <e p="Ennemis" t="Include">
+            <e p="_E_Cac" t="Include">
+              <e p="V2" t="Include">
+                <e p="Anim_EnenmieCac.cs" t="Include" />
+              </e>
+            </e>
             <e p="_E_Gong" t="Include">
-              <e p="dongV1" t="Include">
+              <e p="DOngV2" t="Include">
                 <e p="TestAnimGong.cs" t="Include" />
               </e>
             </e>
@@ -87,8 +93,12 @@
             <e p="Anim" t="Include">
               <e p="AnimActiv.cs" t="Include" />
             </e>
+            <e p="V5" t="Include">
+              <e p="PlayAnimHeros.cs" t="Include" />
+            </e>
           </e>
         </e>
+        <e p="projectile.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
             <e p="_E_Cac.cs" t="Include" />

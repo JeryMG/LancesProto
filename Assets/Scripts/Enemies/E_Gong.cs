@@ -40,6 +40,7 @@ public class E_Gong : Vivant
     [SerializeField] private float gongTimer = 10f;
     private float nextGongTime;
     public Animator gongWaveAnimator;
+    private TestAnimGong AnimGong;
     
     [Header("Animations")]
     public ParticleSystem DeathEffect;
@@ -51,6 +52,7 @@ public class E_Gong : Vivant
         base.Start();
         pathFinder = GetComponent<NavMeshAgent>();
         gongWaveAnimator.gameObject.SetActive(false);
+        AnimGong = GetComponentInChildren<TestAnimGong>();
         
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
@@ -105,7 +107,7 @@ public class E_Gong : Vivant
         
         if (currentState == State.Chasing)
         {
-            //anim marche rapide
+            AnimGong.Marche();
 
             pathFinder.acceleration = 8;
             pathFinder.stoppingDistance = 0;
@@ -153,6 +155,8 @@ public class E_Gong : Vivant
             gongWaveAnimator.SetTrigger("Elargi");
             Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
+            AnimGong.GongActiver();
+
         }
         //yield return new WaitForSeconds(gongTimer);
         yield return null;
@@ -170,6 +174,8 @@ public class E_Gong : Vivant
         bool appliedDamage = false;
     
         //"Animation" de Lunge
+        AnimGong.animCac();
+
         while (percent <= 1)
         {
             // if (percent >= .5f && !appliedDamage)

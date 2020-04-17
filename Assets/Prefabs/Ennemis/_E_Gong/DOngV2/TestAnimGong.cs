@@ -6,12 +6,7 @@ public class TestAnimGong : MonoBehaviour
 {
     public Animator anim;
 
-    private void Update() {
-        if(Input.GetMouseButtonDown(0))
-        {   
-            animCac();
-        }
-    }
+
 
     public void Marche()
     {

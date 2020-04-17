@@ -43,6 +43,7 @@ public class EnemiShooter : Vivant, IClochePropag
     public ParticleSystem DeathEffect;
     //[SerializeField] private List<RuntimeAnimatorController> Anim =new List<RuntimeAnimatorController>();
     private Animator animPerso;
+    private Anim_E_Vole AnimVole;
     public Animator gongWaveAnimator;
 
     
@@ -51,6 +52,7 @@ public class EnemiShooter : Vivant, IClochePropag
         base.Start();
         animPerso = GetComponent<Animator>();
         //animPerso.Play("AnimVolEnn");
+        AnimVole = GetComponentInChildren<Anim_E_Vole>();
         
         pathFinder = GetComponent<NavMeshAgent>();
         Onde.SetActive(false);
@@ -106,14 +108,15 @@ public class EnemiShooter : Vivant, IClochePropag
         if (currentState == State.Idle)
        {
            pathFinder.enabled = false;
-           //anime repos
+           
        }
 
        if (currentState == State.Chasing)
        {
+           AnimVole.AnimVole();
            pathFinder.acceleration = 8;
            pathFinder.stoppingDistance = shootingDistanceTreshold;
-           //anime marche rapide
+           
 
        }
 
@@ -192,6 +195,8 @@ public class EnemiShooter : Vivant, IClochePropag
         Onde.SetActive(true);
         gongWaveAnimator.SetTrigger("Elargi");
         Invoke("desactiveOnde", 3f);
+        AnimVole.AnimVoleEchos();
+
     }
 
     private void desactiveOnde()

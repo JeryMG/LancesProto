@@ -14,7 +14,7 @@ public class _E_Cac : Vivant, IClochePropag
         Patrolling,
         Attacking,
     }
-
+    public bool DejaJoue=false;
     public State currentState;
     public GameObject Onde;
     private NavMeshAgent pathFinder;
@@ -73,6 +73,7 @@ public class _E_Cac : Vivant, IClochePropag
         }
 
         OnDeath += enemyDeath;
+
     }
 
     private void Update() 
@@ -95,6 +96,7 @@ public class _E_Cac : Vivant, IClochePropag
                {
                     //Son CAC 
                     FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/CAC",transform.position);
+                    
 
                     NextAttackTime = Time.time + TimeBetweenAttacks;
                    StartCoroutine(Attack());
@@ -105,24 +107,27 @@ public class _E_Cac : Vivant, IClochePropag
        if (currentState == State.Idle)
        {
            pathFinder.enabled = false;
-           //Anim de repos !!!!!!
+           
        }
 
-       if (currentState == State.Chasing)
+       if (currentState == State.Chasing&&DejaJoue==false)
        {
            //Anim de marche rapîde !!!!!!
-
-
+        
+           animations_cac.MarcheRapide();
            pathFinder.acceleration = 8;
            pathFinder.stoppingDistance = 3;
+           DejaJoue=true;
        }
 
-       if (currentState == State.Patrolling)
+       if (currentState == State.Patrolling&&DejaJoue==true)
        {
            //Anim de marche lente !!!!!!
+           animations_cac.MarcheLente();
 
            pathFinder.acceleration = 1;
            pathFinder.stoppingDistance = 0;
+           DejaJoue=false;
            if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
                GotoNextPoint();
        }
@@ -130,6 +135,8 @@ public class _E_Cac : Vivant, IClochePropag
        if (currentState == State.Attacking)
        {
            //anime d'attaque
+            animations_cac.Attaque();
+
        }
     }
     
@@ -217,6 +224,7 @@ public class _E_Cac : Vivant, IClochePropag
     {
         Onde.SetActive(true);
         //gongWaveAnimator.SetTrigger("Elargi");
+        animations_cac.OndeRecus();
         Invoke("desactiveOnde", 3f);
     }
 

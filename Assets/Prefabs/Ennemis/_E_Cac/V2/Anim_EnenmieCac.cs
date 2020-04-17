@@ -5,9 +5,6 @@ using UnityEngine;
 public class Anim_EnenmieCac : MonoBehaviour
 {
     public Animator anim;
-    private void Start() {
-        MarcheRapide();
-    }
     public void Repos()
     {
         ResetLayer();

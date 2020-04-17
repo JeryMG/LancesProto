@@ -1002,7 +1002,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -1.9235769e-10, z: 4.5904e-41, w: 0}
+  m_BoundingSphereOverride: {x: 9.439e-42, y: 1.04e-43, z: 9.61e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2176,7 +2176,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2226
+  m_Name: pb_Mesh-2450
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3020,6 +3020,12 @@ PrefabInstance:
     - target: {fileID: 1077123968288378779, guid: 7c9d9b8bec91a894ba0a0d0fa66c4cb5,
         type: 3}
       propertyPath: Effetcac
+      value: 
+      objectReference: {fileID: 8017564437663864950, guid: 6448ff2e455847b46ad0abeebdda21dc,
+        type: 3}
+    - target: {fileID: 1077123968288378779, guid: 7c9d9b8bec91a894ba0a0d0fa66c4cb5,
+        type: 3}
+      propertyPath: ff
       value: 
       objectReference: {fileID: 8017564437663864950, guid: 6448ff2e455847b46ad0abeebdda21dc,
         type: 3}

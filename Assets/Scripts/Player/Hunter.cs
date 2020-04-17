@@ -108,6 +108,7 @@ public class Hunter : Vivant
             if (_playerInputs.Melee && currentState == states.blinker)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);
+                
 
                 changeColor = true;
                 //playerCamera.ShakeIt();

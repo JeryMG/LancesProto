@@ -11,16 +11,16 @@ public class TestAnimGong : MonoBehaviour
     public void Marche()
     {
         ResetLayer();
-        anim.SetLayerWeight(2,1);
-        anim.Play("Marche", 2,0f); 
+        anim.SetLayerWeight(0,1);
+        anim.Play("Marche", 0,0f); 
     }
     public void animCac()
     {
         ResetLayer();
-        anim.SetLayerWeight(0,1);
         anim.SetLayerWeight(1,1);
-        anim.Play("CacCorps", 0,0f);       
-        anim.Play("CacArme", 1,0f);       
+        anim.SetLayerWeight(2,1);
+        anim.Play("CacCorps", 1,0f);       
+        anim.Play("CacArme", 2,0f);       
 
 
     }

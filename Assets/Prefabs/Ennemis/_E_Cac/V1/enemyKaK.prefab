@@ -4656,21 +4656,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   MaxHealth: 5
+  DejaJoue: 0
   currentState: 0
   Onde: {fileID: 7371508318143076906}
   damage: 2
   attackDistanceTreshold: 3
   TimeBetweenAttacks: 1
-  idleDistanceTreshold: 10
+  idleDistanceTreshold: 20
   pathHolder: {fileID: 8632970731366629324}
   DeathEffect: {fileID: 6790313682755352314, guid: a642d501cbc43064a994bec54c30d7b0,
     type: 3}
-  Anim:
-  - {fileID: 9100000, guid: adc075fe2faee6a49a28f6cda7b3bba3, type: 2}
-  - {fileID: 9100000, guid: 8df51bc8a33e7524f9937b1743594612, type: 2}
-  - {fileID: 9100000, guid: 1a1d364ce0db73344b3e4e6aa37a3a5e, type: 2}
-  animPerso: {fileID: 0}
-  gongWaveAnimator: {fileID: 7296026631917596270}
+  animations_cac: {fileID: 0}
 --- !u!54 &1931443285147725877
 Rigidbody:
   m_ObjectHideFlags: 0

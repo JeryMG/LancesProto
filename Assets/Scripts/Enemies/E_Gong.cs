@@ -44,6 +44,8 @@ public class E_Gong : Vivant
     
     [Header("Animations")]
     public ParticleSystem DeathEffect;
+
+    private bool dejaJouee;
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
     //public Animator animPerso;
 
@@ -111,7 +113,17 @@ public class E_Gong : Vivant
         
         if (currentState == State.Chasing)
         {
-            AnimGong.Marche();
+            if (!dejaJouee)
+            {
+                AnimGong.Marche();
+                dejaJouee = true;
+            }
+        
+            // if(dejaJouee)
+            // {
+            //     AnimGong.Marche();
+            //     dejaJouee = false;
+            // }
 
             pathFinder.acceleration = 8;
             pathFinder.stoppingDistance = 0;
@@ -122,7 +134,8 @@ public class E_Gong : Vivant
         if (currentState == State.Patrolling)
         {
             //marche lentee
-           
+            AnimGong.Marche();
+
             pathFinder.acceleration = 1;
             pathFinder.stoppingDistance = 0;
             if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
@@ -160,9 +173,8 @@ public class E_Gong : Vivant
             Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
             AnimGong.GongActiver();
-
+            dejaJouee = false;
         }
-        //yield return new WaitForSeconds(gongTimer);
         yield return null;
     }
     
@@ -178,7 +190,7 @@ public class E_Gong : Vivant
         bool appliedDamage = false;
     
         //"Animation" de Lunge
-        AnimGong.animCac();
+        //AnimGong.animCac();
 
         while (percent <= 1)
         {

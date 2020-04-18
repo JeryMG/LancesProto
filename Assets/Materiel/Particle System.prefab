@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2755996632260918848}
-  m_LocalRotation: {x: -0.48420957, y: 0.51530683, z: 0.51530683, w: 0.48420957}
+  m_LocalRotation: {x: 0.6709725, y: -0.034717716, z: 0.031698287, w: 0.7399905}
   m_LocalPosition: {x: 0, y: 0.66, z: 0.342}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 93.564}
+  m_LocalEulerAnglesHint: {x: 84.4, y: -5.2, z: 0.19}
 --- !u!198 &8017564437663864950
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -40,8 +40,8 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2755996632260918848}
   serializedVersion: 6
-  lengthInSec: 0.5
-  simulationSpeed: 3
+  lengthInSec: 1
+  simulationSpeed: 0.5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.0001
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -549,7 +549,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 2.8797932
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -591,7 +591,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1
+    maxNumParticles: 15
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -856,7 +856,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 1
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4700,8 +4700,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1b7f4c4ca66fc754d9e22f50488764e6, type: 2}
-  - {fileID: 2100000, guid: 1b7f4c4ca66fc754d9e22f50488764e6, type: 2}
+  - {fileID: 2100000, guid: 03f1442077d62414ab7e356e592655a6, type: 2}
+  - {fileID: 2100000, guid: 03f1442077d62414ab7e356e592655a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4732,7 +4732,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 2
+  m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0

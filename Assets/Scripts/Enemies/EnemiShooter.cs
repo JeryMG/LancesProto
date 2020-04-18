@@ -108,12 +108,12 @@ public class EnemiShooter : Vivant, IClochePropag
         if (currentState == State.Idle)
        {
            pathFinder.enabled = false;
-           
+           AnimVole.AnimVole();
        }
 
        if (currentState == State.Chasing)
        {
-           AnimVole.AnimVole();
+           
            pathFinder.acceleration = 8;
            pathFinder.stoppingDistance = shootingDistanceTreshold;
            
@@ -122,6 +122,7 @@ public class EnemiShooter : Vivant, IClochePropag
 
        if (currentState == State.Patrolling)
        {
+           
            pathFinder.acceleration = 1;
            pathFinder.stoppingDistance = 0;
            if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)

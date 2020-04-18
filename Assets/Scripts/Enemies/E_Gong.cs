@@ -78,24 +78,28 @@ public class E_Gong : Vivant
 
     private void Update()
     {
-        float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
-        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
+        if(target!=null)
         {
-            currentState = State.Patrolling;
-        }
-        else
-        {
-            currentState = State.Chasing;
-        }
-        
-        if (hasTarget)
-        {
-            if (Time.time > NextAttackTime)
+            float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
+            if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
             {
-                if (sqrDstToTarget < Mathf.Pow(attackDistanceTreshold, 2))
+                currentState = State.Patrolling;
+            }
+            else
+            {
+                currentState = State.Chasing;
+            }
+        
+        
+            if (hasTarget)
+            {
+                if (Time.time > NextAttackTime)
                 {
-                    NextAttackTime = Time.time + TimeBetweenAttacks;
-                    StartCoroutine(Attack());
+                    if (sqrDstToTarget < Mathf.Pow(attackDistanceTreshold, 2))
+                    {
+                        NextAttackTime = Time.time + TimeBetweenAttacks;
+                        StartCoroutine(Attack());
+                    }
                 }
             }
         }

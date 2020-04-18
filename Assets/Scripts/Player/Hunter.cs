@@ -49,6 +49,9 @@ public class Hunter : Vivant
     private Rigidbody rb;
     private Respawner respawner;
     [SerializeField] private Vector3 distanceKnockBack = new Vector3(1.5f,0,1.5f);
+    public ParticleSystem ff;
+    ParticleSystem CacEffect=null;
+
     private bool dejaJouee;
 
     private void Awake()
@@ -108,6 +111,9 @@ public class Hunter : Vivant
             if (_playerInputs.Melee && currentState == states.blinker)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);
+                
+                CacEffect=GameObject.Instantiate(ff,this.transform.position,Quaternion.Euler(new Vector3(-90,this.transform.eulerAngles.y,0)));
+                animPerso.AnimCac();
 
                 changeColor = true;
                 //playerCamera.ShakeIt();

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/Gong_AnimV2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/Gong_AnimV2.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/TestAnimGong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/TestAnimGong.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +91,9 @@
         <option value="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/PlayAnimHeros.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V2/Anim_EnenmieCac.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/TestAnimGong.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
       </list>
     </option>
@@ -156,6 +159,7 @@
       <workItem from="1587024270143" duration="4186000" />
       <workItem from="1587033381573" duration="11577000" />
       <workItem from="1587129440388" duration="599000" />
+      <workItem from="1587219494668" duration="3716000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Hunter), typeof(PlayerInputs))]
 public class ParryAbility : MonoBehaviour
 {
     private PlayerInputs playerInputs;
@@ -46,7 +47,6 @@ public class ParryAbility : MonoBehaviour
                 Destroy(incomings[i]);
             }
             incomings.Clear();
-            StartCoroutine(changeColor(Color.yellow));
             inputPressed = false;
         }
     }
@@ -58,12 +58,5 @@ public class ParryAbility : MonoBehaviour
             print("projectile incoming");
             incomings.Add(other.gameObject);
         }
-    }
-
-    IEnumerator changeColor(Color newColor)
-    {
-        skinMat.SetColor("_newcol", newColor);
-        yield return new WaitForSeconds(1f);
-        skinMat.SetColor("player", playerColor);
     }
 }

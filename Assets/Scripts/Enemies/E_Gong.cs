@@ -183,16 +183,16 @@ public class E_Gong : Vivant
         currentState = State.Attacking;
         pathFinder.enabled = false;
     
-        Vector3 originalPosition = transform.position;
-        Vector3 attackPosition = target.position - (target.position - transform.position).normalized;
-        float attackSpeed = 3f;
-        float percent = 0;
-        bool appliedDamage = false;
+        // Vector3 originalPosition = transform.position;
+        // Vector3 attackPosition = target.position - (target.position - transform.position).normalized;
+        // float attackSpeed = 3f;
+        // float percent = 0;
+        // bool appliedDamage = false;
     
         //"Animation" de Lunge
         //AnimGong.animCac();
 
-        while (percent <= 1)
+        //while (percent <= 1)
         {
             // if (percent >= .5f && !appliedDamage)
             // {

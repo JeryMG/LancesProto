@@ -2,13 +2,121 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Folder.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Folder/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Folder/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Shaders.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/Gong_AnimV2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/Gong_AnimV2.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/TestAnimGong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/TestAnimGong.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/Fleche.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/Fleche.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/V1/Enemi_Dist1.0 (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/V1/Enemi_Dist1.0 (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/AnimActiv.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/AnimActiv.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/AnimCombat.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/AnimCombat.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Armature.004_Torus.008Action.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Armature.004_Torus.008Action.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CARA_ANIME_CAC2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CARA_ANIME_CAC2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Cac1mvt.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Cac1mvt.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Cac2mvt.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Cac2mvt.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CacDebut.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CacDebut.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CacFin.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CacFin.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Course.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Course.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CourseFin.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CourseFin.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CourseStart.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/CourseStart.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/J.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/J.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Mball_002.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Mball_002.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Running.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/Running.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/RunningStart.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/RunningStart.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/RunningStop.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/RunningStop.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/AnimCapPause.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/AnimCapPause.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/Hero_Anim_pourlatrick (1).controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/Hero_Anim_pourlatrick (1).controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/Hero_Anim_pourlatrick.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/Hero_Anim_pourlatrick.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/animperso.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/animperso.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/metarig.003_pause.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V2/metarig.003_pause.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/CapRun.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/CapRun.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/Corps_Run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/Corps_Run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/Hero_Anim_New1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/Hero_Anim_New1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/Pause.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/Pause.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/Pause_Cape.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/Pause_Cape.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/_Anim_Hero_v3.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V3/_Anim_Hero_v3.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/Anim_Hero_v4.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/Anim_Hero_v4.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/Armature.003_LanceLance.001.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/Armature.003_LanceLance.001.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/Hero_Marche_STPBATARD.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/Hero_Marche_STPBATARD.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/metarig.001_CourseCorp.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/metarig.001_CourseCorp.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/metarig.001_LanceCorp.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/metarig.001_LanceCorp.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/metarig.001_PauseCorp.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V4/metarig.001_PauseCorp.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/Anim-Hero.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/Anim-Hero.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/CacCorps.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/CacCorps.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/Caclance.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/Caclance.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/CourseCorps.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/CourseCorps.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/CourseLoop.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/CourseLoop.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/Hero_New_Petit.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/Hero_New_Petit.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/Hero_New_Petit.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/Hero_New_Petit.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/LancerCorps.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/LancerCorps.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/LancerLance.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/LancerLance.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/PauseCorps.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/PauseCorps.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/PlayAnimHeros.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/PlayAnimHeros.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +137,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/IClochePropag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Joueur/Anim/AnimActiv.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/LD43-The-Resistance-master/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/PhysicsInputTest2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ShootingParty/Assets/Scripts/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Build/interfaces/CameraShake.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" root0="FORCE_HIGHLIGHTING" />
@@ -46,14 +155,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/goproj.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/Scripts/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/PlayAnimHeros.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/Fleche.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Electricity.prefab.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/ARendre/LaserBeam.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/MaterialUpgrader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D0FFE769-B7A3-4B4C-AC3A-7CDC5C696293/3f/0142b1f2/AnimatorController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -64,7 +173,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
         <option value="$PROJECT_DIR$/Assets/ParryAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MoteurProjectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa17260.40435/CameraShake.cs" />
         <option value="$USER_HOME$/Desktop/2GD/Prog Unity/Anims/Assets/tourneur.cs" />
         <option value="$PROJECT_DIR$/Assets/Onde.cs" />
@@ -83,18 +191,21 @@
         <option value="$PROJECT_DIR$/Assets/BasicMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/RestartScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/PlayerInputs.cs" />
         <option value="$PROJECT_DIR$/Assets/projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/goproj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Joueur/V5/PlayAnimHeros.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V2/Anim_EnenmieCac.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DOngV2/TestAnimGong.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" />
       </list>
     </option>
   </component>
@@ -159,7 +270,9 @@
       <workItem from="1587024270143" duration="4186000" />
       <workItem from="1587033381573" duration="11577000" />
       <workItem from="1587129440388" duration="599000" />
-      <workItem from="1587219494668" duration="4287000" />
+      <workItem from="1587219494668" duration="6168000" />
+      <workItem from="1587285901313" duration="11832000" />
+      <workItem from="1587299161107" duration="854000" />
     </task>
     <servers />
   </component>

@@ -83,8 +83,8 @@ public class Lance : MonoBehaviour
             Destroy(gameObject,timerDestruction);
         }
 
-        _E_Cac enemiBody = other.gameObject.GetComponent<_E_Cac>();
-        if (enemiBody != null)
+        Vivant enemiBody = other.gameObject.GetComponent<Vivant>();
+        if (enemiBody != null && other.gameObject.CompareTag("Enemy"))
         {
             enemiBody.TakeDamage(lanceDamage);
             if (!returning)

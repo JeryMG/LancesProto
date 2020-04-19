@@ -94,14 +94,6 @@
               </e>
             </e>
           </e>
-          <e p="Joueur" t="Include">
-            <e p="Anim" t="Include">
-              <e p="AnimActiv.cs" t="Include" />
-            </e>
-            <e p="V5" t="Include">
-              <e p="PlayAnimHeros.cs" t="Include" />
-            </e>
-          </e>
         </e>
         <e p="projectile.cs" t="Include" />
         <e p="Scripts" t="Include">
@@ -110,6 +102,9 @@
             <e p="E_Gong.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
             <e p="GongWave.cs" t="Include" />
+            <e p="tests" t="Include">
+              <e p="FollowPlayer.cs" t="Include" />
+            </e>
           </e>
           <e p="ParametresJeux" t="Include">
             <e p="CameraTop90.cs" t="Include" />
@@ -120,6 +115,7 @@
             <e p="Vivant.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="CacAbility.cs" t="Include" />
             <e p="Hunter.cs" t="Include" />
             <e p="Lance.cs" t="Include" />
             <e p="ParryAbility.cs" t="Include" />

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions.Must;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody), typeof(PlayerInputs))]
 public class Hunter : Vivant
 {
     public enum states
@@ -18,8 +18,6 @@ public class Hunter : Vivant
     float timer = 0f;
     
     public Transform Hand;
-    public Transform hitBox;
-    [SerializeField] private Vector3 hitBoxSize = new Vector3(3, 1.5f, 2);
 
     public Lance lancePrefab;
     public int lancesRestantes;
@@ -36,35 +34,23 @@ public class Hunter : Vivant
     [Header("Blink Variables")] 
     [SerializeField] public List<Transform> lieuxDeTp;
 
-    [Header("KaK Variables")] 
-    [SerializeField] float KakDamage = 2f;
-
-    [Header("Animation")] 
-    public PlayAnimHeros animPerso;
+    [Header("Animation")]
     public TrailRenderer _trail;
 
     [Header("Random")]
     private PlayerInputs _playerInputs;
-    private CameraTop90 playerCamera;
     private Rigidbody rb;
     private Respawner respawner;
-    [SerializeField] private Vector3 distanceKnockBack = new Vector3(1.5f,0,1.5f);
-    public ParticleSystem ff;
-    ParticleSystem CacEffect=null;
-
     private bool dejaJouee;
 
     private void Awake()
     {
         currentState = states.blinker;
         _playerInputs = GetComponent<PlayerInputs>();
-        playerCamera = FindObjectOfType<CameraTop90>();
         respawner = FindObjectOfType<Respawner>();
         rb = GetComponent<Rigidbody>();
         lancesRestantes = nbrLances;
 
-        animPerso = GetComponentInChildren<PlayAnimHeros>();
-        
         skinMat= GetComponent<Renderer>().material;
         playerColor = skinMat.color;
     }
@@ -104,19 +90,15 @@ public class Hunter : Vivant
                 lanceEquiped.stop = false;
                 lanceEquiped.StayImmobile(false);
                 lancesRestantes--;
-                
-                animPerso.AnimLancer();
             }
 
-            if (_playerInputs.Melee && currentState == states.blinker)
+            /*if (_playerInputs.Melee && currentState == states.blinker)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);
                 
-                CacEffect=GameObject.Instantiate(ff,this.transform.position,Quaternion.Euler(new Vector3(-90,this.transform.eulerAngles.y,0)));
-                animPerso.AnimCac();
+                //CacEffect=GameObject.Instantiate(ff,this.transform.position,Quaternion.Euler(new Vector3(-90,this.transform.eulerAngles.y,0)));
 
                 changeColor = true;
-                //playerCamera.ShakeIt();
 
                 Collider[] _hitbox = Physics.OverlapBox(hitBox.position, hitBoxSize / 2);
                 foreach (Collider hits in _hitbox)
@@ -135,14 +117,11 @@ public class Hunter : Vivant
                         
                         hitable.TakeDamage(KakDamage);
                         Vector3 direction = hitable.transform.position - transform.position;
-                        //playerCamera.Shake(direction, shakeMag, shakeLength);
                         direction.y = hitable.transform.position.y;
                         hitable.transform.position += distanceKnockBack;
-                        
-                        //hitable.UpdatePath();
                     }
                 }
-            }
+            }*/
         }
 
         if (lancesRestantes < 3)
@@ -175,7 +154,7 @@ public class Hunter : Vivant
             lancesRestantes = 3;
         }
     }
-    bool Dejajouer=false;
+    
     private void Move()
     {
         Vector3 movement = new Vector3(_playerInputs.Horizontal, 0, _playerInputs.Vertical);

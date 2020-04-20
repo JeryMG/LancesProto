@@ -42,6 +42,7 @@ public class Hunter : Vivant
     private Rigidbody rb;
     private Respawner respawner;
     private bool dejaJouee;
+    [SerializeField] private float rayonLance;
 
     private void Awake()
     {
@@ -223,6 +224,6 @@ public class Hunter : Vivant
 
     private void OnDrawGizmos()
     {
-        //Gizmos.DrawWireCube(hitBox.position, hitBoxSize);
+        //Gizmos.DrawWireSphere(transform.position, rayonLance);
     }
 }

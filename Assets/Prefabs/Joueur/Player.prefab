@@ -225,7 +225,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077123968288378768}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c4b6f8578fae646969ea9c6f7aeef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 4213951110149900425}
   KakDamage: 2
   hitBox: {fileID: 1077123967169455146}
   hitBoxSize: {x: 5, y: 5, z: 5}
@@ -350,7 +351,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077123968288378768}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0c77d9ce707f8034caf85131f086c458, type: 2}
   m_CullingMode: 0
@@ -497,7 +498,7 @@ PrefabInstance:
     - target: {fileID: 1102578539036800114, guid: 4767cfe44eb86884b909397bd9a83d6d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 1102578539036800114, guid: 4767cfe44eb86884b909397bd9a83d6d,
         type: 3}
@@ -629,6 +630,12 @@ PrefabInstance:
 --- !u!4 &125981889265902648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1102578539036800114, guid: 4767cfe44eb86884b909397bd9a83d6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1077123967695867978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4213951110149900425 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3785346680129018051, guid: 4767cfe44eb86884b909397bd9a83d6d,
     type: 3}
   m_PrefabInstance: {fileID: 1077123967695867978}
   m_PrefabAsset: {fileID: 0}

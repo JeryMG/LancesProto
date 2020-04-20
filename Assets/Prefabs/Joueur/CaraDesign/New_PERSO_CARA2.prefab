@@ -89,8 +89,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.36273408, y: -0.49983358, z: -0.048677683}
-    m_Extent: {x: 0.8768549, y: 0.6087253, z: 0.555753}
+    m_Center: {x: -0.7240057, y: -0.99765193, z: -0.09715915}
+    m_Extent: {x: 1.7501743, y: 1.2149962, z: 1.1092653}
   m_DirtyAABB: 0
 --- !u!183 &483287666998350224
 Cloth:
@@ -922,8 +922,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.5068004, y: 0.060932677, z: 0.0036310703}
-    m_Extent: {x: 1.0085056, y: 0.06093273, z: 0.107293844}
+    m_Center: {x: -1.0115576, y: 0.12161968, z: 0.0072475076}
+    m_Extent: {x: 2.0129452, y: 0.12161975, z: 0.2141551}
   m_DirtyAABB: 0
 --- !u!183 &3863941098167655416
 Cloth:
@@ -1020,6 +1020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102578539036800114}
+  - component: {fileID: 3785346680129018051}
   m_Layer: 0
   m_Name: New_PERSO_CARA2
   m_TagString: Untagged
@@ -1035,8 +1036,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4113612259041150561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.09, y: 3.0673, z: 7.46}
-  m_LocalScale: {x: 0.50101, y: 0.50101, z: 0.50101}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3198706452463051189}
   - {fileID: 105711315556882454}
@@ -1060,6 +1061,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3785346680129018051
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113612259041150561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7005e5aa11938f43808d14fa46b6ad4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5697791248452154122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,8 +1643,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.5060984, y: 0.055667758, z: 0.0028078854}
-    m_Extent: {x: 1.0071084, y: 0.05566778, z: 0.082969524}
+    m_Center: {x: -1.0101562, y: 0.11111109, z: 0.005604446}
+    m_Extent: {x: 2.0101562, y: 0.111111134, z: 0.1656045}
   m_DirtyAABB: 0
 --- !u!183 &7395588568449026668
 Cloth:

@@ -2,9 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/silver.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/silver.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/white.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/white.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/OndeGong.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/OndeGong.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/TestProps/PunchingBag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/TestProps/PunchingBag.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/CaraDesign/New_PERSO_CARA2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/CaraDesign/New_PERSO_CARA2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome 1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome 1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Shaders/Lit.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ShootingParty/Assets/Scripts/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Build/interfaces/CameraShake.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" root0="FORCE_HIGHLIGHTING" />
@@ -43,6 +63,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/goproj.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/Scripts/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Game/test/Boutton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/Fleche.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Electricity.prefab.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/ARendre/LaserBeam.cs" root0="SKIP_HIGHLIGHTING" />
@@ -50,7 +71,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/testObjets/platformD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D0FFE769-B7A3-4B4C-AC3A-7CDC5C696293/3f/0142b1f2/AnimatorController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/respawPlat.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -71,7 +94,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Ennemi_2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_missileEnnemi.cs" />
         <option value="$PROJECT_DIR$/Assets/Respawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" />
         <option value="$PROJECT_DIR$/Assets/NewCamera1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/LancerInputs.cs" />
@@ -89,12 +111,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$USER_HOME$/Desktop/2GD/Prog Unity/Anims/Assets/coll.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prefabs/Game/test/platformD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/testObjets/platformD.cs" />
+        <option value="$PROJECT_DIR$/Assets/cube.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prefabs/Game/test/Boutton.cs" />
+        <option value="$PROJECT_DIR$/Assets/respawPlat.cs" />
       </list>
     </option>
   </component>
@@ -162,7 +190,7 @@
       <workItem from="1587219494668" duration="6168000" />
       <workItem from="1587285901313" duration="11832000" />
       <workItem from="1587299161107" duration="854000" />
-      <workItem from="1587370830021" duration="5610000" />
+      <workItem from="1587370830021" duration="21068000" />
     </task>
     <servers />
   </component>

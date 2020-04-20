@@ -60,8 +60,6 @@ public class _E_Cac : Vivant, IClochePropag
             _hunter = FindObjectOfType<Hunter>();
             target = GameObject.FindGameObjectWithTag("Player").transform;
             targetVie = _hunter.GetComponent<Vivant>();
-
-            //StartCoroutine(UpdatePath());
         }
 
         animations_cac = GetComponentInChildren<Anim_EnenmieCac>();
@@ -111,8 +109,7 @@ public class _E_Cac : Vivant, IClochePropag
        if (currentState == State.Chasing&&DejaJoue==false)
        {
            //Anim de marche rapîde !!!!!!
-
-           StartCoroutine(UpdatePath());
+           
            animations_cac.MarcheRapide();
            pathFinder.acceleration = 8;
            pathFinder.stoppingDistance = 3;
@@ -123,8 +120,6 @@ public class _E_Cac : Vivant, IClochePropag
        {
            //Anim de marche lente !!!!!!
            animations_cac.MarcheLente();
-
-           StartCoroutine(UpdatePath());
 
            pathFinder.acceleration = 1;
            pathFinder.stoppingDistance = 0;
@@ -138,38 +133,14 @@ public class _E_Cac : Vivant, IClochePropag
            //anime d'attaque
             animations_cac.Attaque();
        }
-    }
-    
-    public IEnumerator UpdatePath()
-    {            
-        float refreshRate = 0.25f;
 
-        if (!stunned)
-        {
-            rb.velocity = Vector3.zero;
-
-            while (hasTarget)
-            {
-                if (currentState == State.Chasing)
-                {
-                    pathFinder.enabled = true;
-                    Vector3 targetPosition = new Vector3(target.position.x, 0 , target.position.z);
-                    if (!dead)
-                    {
-                        pathFinder.SetDestination(targetPosition);
-                    }
-                }
-                yield return new WaitForSeconds(refreshRate);
-            }
-        }
-        else
-        {
-            rb.velocity = Vector3.zero;
-            pathFinder.enabled = false;
-            yield return new WaitForSeconds(refreshRate);
-        }
+       if (stunned)
+       {
+           //anime de degat recu quand cac player
+           animations_cac.DegasRecus();
+       }
     }
-     
+
     IEnumerator Attack()
     {
         /*if (!stunned)

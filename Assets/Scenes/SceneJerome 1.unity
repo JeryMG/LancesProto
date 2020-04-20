@@ -198,6 +198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PunchingBag (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 840349655840520798, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5734799778823260848, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -377,11 +382,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemyKaK
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632970731411079796, guid: b2d4af9e8f11ad240a0422c33344939e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8632970731411079807, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}
@@ -729,6 +729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PunchingBag (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 840349655840520798, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5734799778823260848, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
@@ -757,7 +762,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1228
+  m_Name: pb_Mesh-8944
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -986,6 +991,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PunchingBag (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 840349655840520798, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5734799778823260848, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -1079,6 +1089,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PunchingBag (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 840349655840520798, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5734799778823260848, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
         type: 3}
@@ -1458,6 +1473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PunchingBag (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 840349655840520798, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5734799778823260848, guid: 69d6fe4f41b6fa64cbddd86289c25fb5,
         type: 3}

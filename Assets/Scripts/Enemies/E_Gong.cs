@@ -109,6 +109,7 @@ public class E_Gong : Vivant
         {
             pathFinder.enabled = false;
             //anim repos
+
         }
         
         if (currentState == State.Chasing)
@@ -166,14 +167,22 @@ public class E_Gong : Vivant
     {
         if (Time.time > nextGongTime)
         {
+            Debug.Log("goodlooking");
             gongWaveAnimator.gameObject.SetActive(true);
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
-            gongWaveAnimator.SetTrigger("Elargi");
+            //gongWaveAnimator.set("Elargi");
             Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
             AnimGong.GongActiver();
-            dejaJouee = false;
+            if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).IsName("DongCorps"))
+            {
+                
+            }
+            else
+            {
+                dejaJouee = false;               
+            }
         }
         yield return null;
     }

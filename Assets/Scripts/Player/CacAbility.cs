@@ -17,7 +17,7 @@ public class CacAbility : MonoBehaviour
     public Transform hitBox;
     [SerializeField] private Vector3 hitBoxSize = new Vector3(3, 1.5f, 2);
     [SerializeField] private float kakForce = 2f;
-
+    [SerializeField] private GameObject ff;
     private void Start()
     {
         _player = GetComponent<Hunter>();
@@ -28,9 +28,12 @@ public class CacAbility : MonoBehaviour
     {
         if (playerInputs.Melee && _player.currentState == Hunter.states.blinker)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);
-                
-            //CacEffect=GameObject.Instantiate(ff,this.transform.position,Quaternion.Euler(new Vector3(-90,this.transform.eulerAngles.y,0)));
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);   
+            GameObject fff=Instantiate(ff,this.transform.position,Quaternion.Euler(new Vector3(-90,this.transform.eulerAngles.y,0)));
+            fff.transform.parent=this.transform;
+            Destroy(fff,2);
+
+
             
 
             Collider[] _hitbox = Physics.OverlapBox(hitBox.position, hitBoxSize / 2);

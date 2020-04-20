@@ -10,6 +10,7 @@ public class CacAbility : MonoBehaviour
 {
     private Hunter _player;
     private PlayerInputs playerInputs;
+    private Animator animator;
     private bool inputPressed;
 
     [Header("KaK Variables")] 
@@ -17,11 +18,12 @@ public class CacAbility : MonoBehaviour
     public Transform hitBox;
     [SerializeField] private Vector3 hitBoxSize = new Vector3(3, 1.5f, 2);
     [SerializeField] private float kakForce = 2f;
-    [SerializeField] private GameObject ff;
+    public GameObject ff;
     private void Start()
     {
         _player = GetComponent<Hunter>();
         playerInputs = GetComponent<PlayerInputs>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -32,11 +34,10 @@ public class CacAbility : MonoBehaviour
             GameObject fff=Instantiate(ff,this.transform.position,Quaternion.Euler(new Vector3(-90,this.transform.eulerAngles.y,0)));
             fff.transform.parent=this.transform;
             Destroy(fff,2);
-
-
             
-
-            Collider[] _hitbox = Physics.OverlapBox(hitBox.position, hitBoxSize / 2);
+            animator.SetTrigger("stepUp");
+            
+            Collider[] _hitbox = Physics.OverlapBox(hitBox.position, hitBoxSize / 2, hitBox.rotation);
             foreach (Collider hits in _hitbox)
             {
                 if (!hits.CompareTag("Player"))

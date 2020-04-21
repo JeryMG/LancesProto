@@ -116,7 +116,7 @@ public class _E_Cac : Vivant, IClochePropag
            DejaJoue=true;
        }
 
-       if (currentState == State.Patrolling&&DejaJoue==true)
+       if (currentState == State.Patrolling && DejaJoue)
        {
            //Anim de marche lente !!!!!!
            animations_cac.MarcheLente();
@@ -124,7 +124,7 @@ public class _E_Cac : Vivant, IClochePropag
            pathFinder.acceleration = 1;
            pathFinder.stoppingDistance = 0;
            DejaJoue=false;
-           if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
+           if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f) 
                GotoNextPoint();
        }
 

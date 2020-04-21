@@ -91,8 +91,7 @@ public class E_Gong : Vivant
             {
                 currentState = State.Chasing;
             }
-        
-        
+            
             if (hasTarget)
             {
                 if (Time.time > NextAttackTime)

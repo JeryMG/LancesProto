@@ -12,6 +12,7 @@ public class EnemiShooter : Vivant, IClochePropag
         Idle,
         Chasing,
         Patrolling,
+        Shooting,
     }
 
     public State currentState;
@@ -26,7 +27,7 @@ public class EnemiShooter : Vivant, IClochePropag
     //public float damage = 2f;
     public GameObject prefabProjectile;
     public Transform arcPoint;
-    public Transform projectileContainer;
+    [SerializeField] private float stopingD = 8f;
     [SerializeField] private float shootingDistanceTreshold = 3f;
     [SerializeField] private float TimeBetweenShots = 0.3f;
     private float NextShotTime;
@@ -38,6 +39,7 @@ public class EnemiShooter : Vivant, IClochePropag
     private Transform[] points;
     public Transform pathHolder;
     private int destPoint = 0;
+    public float turnSpeed = 90f;
 
     [Header("Animations")]
     public ParticleSystem DeathEffect;
@@ -45,11 +47,14 @@ public class EnemiShooter : Vivant, IClochePropag
     private Animator animPerso;
     private Anim_E_Vole AnimVole;
     public Animator gongWaveAnimator;
+    private FollowPlayer followPlayer;
 
-    
+
     protected override void Start() 
     {
         base.Start();
+        followPlayer = GetComponent<FollowPlayer>();
+
         animPerso = GetComponent<Animator>();
         //animPerso.Play("AnimVolEnn");
         AnimVole = GetComponentInChildren<Anim_E_Vole>();
@@ -64,8 +69,6 @@ public class EnemiShooter : Vivant, IClochePropag
             _hunter = FindObjectOfType<Hunter>();
             target = GameObject.FindGameObjectWithTag("Player").transform;
             targetVie = _hunter.GetComponent<Vivant>();
-
-            StartCoroutine(UpdatePath());
         }
         
         points = new Transform[pathHolder.childCount];
@@ -81,84 +84,80 @@ public class EnemiShooter : Vivant, IClochePropag
 
     private void Update() 
     {
+        if (shootingDistanceTreshold < stopingD)
+        {
+            shootingDistanceTreshold = stopingD;
+        }
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
         if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
         {
             currentState = State.Patrolling;
         }
-        else
+        if(sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2))
         {
             currentState = State.Chasing;
         }
-
-        //Shoot ici
+        
         if (hasTarget)
         {
             if (Time.time > NextShotTime)
             {
                 if (sqrDstToTarget < Mathf.Pow(shootingDistanceTreshold, 2))
                 {
-                    //currentState = State.Shooting;
                     NextShotTime = Time.time + TimeBetweenShots;
                     StartCoroutine(shoot());
                 }
             }
         }
-
+        
         if (currentState == State.Idle)
-       {
-           pathFinder.enabled = false;
-           AnimVole.AnimVole();
-       }
+        {
+            pathFinder.enabled = false;
+            AnimVole.AnimVole();
+        }
 
-       if (currentState == State.Chasing)
-       {
-           
-           pathFinder.acceleration = 8;
-           pathFinder.stoppingDistance = shootingDistanceTreshold;
-           
+        if (currentState == State.Chasing)
+        {
+            pathFinder.stoppingDistance = stopingD;
+            pathFinder.acceleration = 8;
+        }
 
-       }
-
-       if (currentState == State.Patrolling)
-       {
-           
-           pathFinder.acceleration = 1;
-           pathFinder.stoppingDistance = 0;
-           if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
-               GotoNextPoint();
-       }
-       //anime marche lente
-
+        if (currentState == State.Patrolling)
+        {
+            pathFinder.acceleration = 1;
+            pathFinder.stoppingDistance = 0;
+            if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
+                GotoNextPoint();
+        }
+        //anime marche lente
     }
 
     IEnumerator shoot()
     {
-        GameObject newProjectile = Instantiate(prefabProjectile, arcPoint.position, Quaternion.Euler(90,0,0), projectileContainer);
-        newProjectile.transform.LookAt(_hunter.transform.position);
+        currentState = State.Shooting;
+        pathFinder.enabled = false;
+        
+        GameObject newProj = Instantiate(prefabProjectile, arcPoint.position, arcPoint.rotation);
+        NextShotTime = Time.time + TimeBetweenShots;
         
         yield return null;
+        currentState = State.Chasing;
+        pathFinder.enabled = true;
     }
     
-    public IEnumerator UpdatePath()
+    IEnumerator TurnToFace(Vector3 looktarget)
     {
-        float refreshRate = 0.25f;
+        Vector3 dirToLookTarget = (looktarget - transform.position).normalized;
+        float targetAngle = 90 - Mathf.Atan2(dirToLookTarget.z, dirToLookTarget.x) * Mathf.Rad2Deg;
 
-        while (hasTarget)
+        while (Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.y, targetAngle)) > 0.05f)
         {
-            if (currentState == State.Chasing)
-            {
-                pathFinder.enabled = true;
-                Vector3 targetPosition = new Vector3(target.position.x, 0 , target.position.z);
-                if (!dead)
-                {
-                    pathFinder.SetDestination(targetPosition);
-                }
-            }
-            yield return new WaitForSeconds(refreshRate);
+            float angle = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetAngle, turnSpeed * Time.deltaTime);
+            transform.eulerAngles = Vector3.up * angle;
+            yield return null;
         }
     }
-    
+
     void GotoNextPoint() 
     {
         // Returns si ya pas de points dans le tableaux

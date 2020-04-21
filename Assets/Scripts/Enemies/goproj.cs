@@ -5,41 +5,34 @@ using UnityEngine;
 
 public class goproj : MonoBehaviour
 {
-    private float Speed = 12;
-    public bool parable;
+    public float Speed = 8;
     private ParryAbility _parryAbility;
-    private GameObject _player;
+    private Transform _player;
+    private Vector3 direction;
+    private float damage = 5f;
+   [SerializeField] private float deathTime = 2f;
 
     private void Start()
     {
         _parryAbility = FindObjectOfType<ParryAbility>();
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        direction = _player.position - transform.position;
+        Destroy(gameObject, deathTime);
     }
 
     void Update()
     {
         transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+        //transform.position += _player.tran
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("MurInvisible"))
-        {
-            parable = true;
-            StartCoroutine(changeColor(Color.green));
-        }
-
         if (other.CompareTag("Player"))
         {
+            Vivant player = other.GetComponent<Vivant>();
             _parryAbility.incomings.Remove(this.gameObject);
-            StartCoroutine(changeColor(Color.red));
+            player.TakeDamage(damage);
         }
-    }
-    
-    IEnumerator changeColor(Color color)
-    {
-        _parryAbility.skinMat.SetColor("missed", color);
-        yield return new WaitForSeconds(0.5f);
-        _parryAbility.skinMat.SetColor("player", _parryAbility.playerColor);
-
     }
 }

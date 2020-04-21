@@ -92,37 +92,6 @@ public class Hunter : Vivant
                 lanceEquiped.StayImmobile(false);
                 lancesRestantes--;
             }
-
-            /*if (_playerInputs.Melee && currentState == states.blinker)
-            {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);
-                
-                //CacEffect=GameObject.Instantiate(ff,this.transform.position,Quaternion.Euler(new Vector3(-90,this.transform.eulerAngles.y,0)));
-
-                changeColor = true;
-
-                Collider[] _hitbox = Physics.OverlapBox(hitBox.position, hitBoxSize / 2);
-                foreach (Collider hits in _hitbox)
-                {
-                    _E_Cac hitable = hits.GetComponent<_E_Cac>();
-                    //Rigidbody hitBody = hits.GetComponent<Rigidbody>();
-                    NavMeshAgent pathfinder = hits.GetComponent<NavMeshAgent>();
-                    
-                    if (hitable != null)
-                    {
-                        //Son CAC quand il touche
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC", transform.position);
-
-                        Debug.Log("hitted");
-                        //hitable.StartCoroutine("stun", 0.7f);
-                        
-                        hitable.TakeDamage(KakDamage);
-                        Vector3 direction = hitable.transform.position - transform.position;
-                        direction.y = hitable.transform.position.y;
-                        hitable.transform.position += distanceKnockBack;
-                    }
-                }
-            }*/
         }
 
         if (lancesRestantes < 3)

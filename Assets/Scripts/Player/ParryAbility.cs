@@ -7,9 +7,6 @@ using UnityEngine;
 public class ParryAbility : MonoBehaviour
 {
     private PlayerInputs playerInputs;
-    public Material skinMat;
-    public Material parade;
-    public Color playerColor;
     private bool inputPressed;
     private GameObject _player;
     private bool go;
@@ -21,8 +18,6 @@ public class ParryAbility : MonoBehaviour
     {
         playerInputs = FindObjectOfType<PlayerInputs>();
         _player = GameObject.FindGameObjectWithTag("Player");
-        skinMat= _player.GetComponent<Renderer>().material;
-        playerColor = skinMat.color;
     }
 
     private void Update()
@@ -31,7 +26,6 @@ public class ParryAbility : MonoBehaviour
         
         if (!inputPressed && playerInputs.Parry)
         {
-            skinMat = parade;
             Debug.Log("Update Input");
             inputPressed = true;
         }
@@ -45,6 +39,8 @@ public class ParryAbility : MonoBehaviour
             for (int i = 0; i < incomings.Count; i++)
             {
                 Destroy(incomings[i]);
+                //son parade
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Parade");
             }
             incomings.Clear();
             inputPressed = false;

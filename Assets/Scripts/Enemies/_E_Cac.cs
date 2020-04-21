@@ -112,7 +112,7 @@ public class _E_Cac : Vivant, IClochePropag
            
            animations_cac.MarcheRapide();
            pathFinder.acceleration = 8;
-           pathFinder.stoppingDistance = 3;
+           pathFinder.stoppingDistance = 5;
            DejaJoue=true;
        }
 
@@ -132,6 +132,7 @@ public class _E_Cac : Vivant, IClochePropag
        {
            //anime d'attaque
             animations_cac.Attaque();
+            pathFinder.stoppingDistance = 5;
        }
 
        if (stunned)
@@ -143,38 +144,31 @@ public class _E_Cac : Vivant, IClochePropag
 
     IEnumerator Attack()
     {
-        /*if (!stunned)
+        currentState = State.Attacking;
+        pathFinder.enabled = false;
+    
+         Vector3 originalPosition = transform.position;
+         Vector3 attackPosition = target.position - (target.position - transform.position).normalized;
+         float attackSpeed = 3f;
+         float percent = 0;
+         bool appliedDamage = false;
+    
+        //"Animation" de Lunge
+        while (percent <= 1)
         {
-            currentState = State.Attacking;
-            pathFinder.enabled = false;
-            
-            Vector3 originalPosition = transform.position;
-            Vector3 attackPosition = target.position - (target.position - transform.position).normalized;
-            float attackSpeed = 3f;
-            float percent = 0;
-            bool appliedDamage = false;
-         
-            //ANIMATION
-            while (percent <= 1)
+            if (percent >= .5f && !appliedDamage)
             {
-                if (percent >= .5f && !appliedDamage)
-                {
-                    appliedDamage = true;
-                    targetVie.TakeDamage(damage);
-                }
-                percent += Time.deltaTime * attackSpeed;
-                float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
-                transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
-                //Son CAC 
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/CAC",transform.position);
-                yield return null;
+                appliedDamage = true;
+                targetVie.TakeDamage(damage);
             }
+            percent += Time.deltaTime * attackSpeed;
+            float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
+            //transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
+            yield return null;
         }
-             
+        
         currentState = State.Chasing;
-        pathFinder.enabled = true;*/
-        yield return null;
-
+        pathFinder.enabled = true;
     }
     
     void GotoNextPoint() 

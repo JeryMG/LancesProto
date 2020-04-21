@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{705eb514-f6f2-44fc-88f9-c70366b6c2cc}">
+		<property name="assetPath">
+			<value>LancesProto/Ambiance/echo-soundtrack-oblivion.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>262.89600000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{95350ebc-6550-4846-9dbb-081b6911d56d}</destination>
+		</relationship>
+	</object>
+</objects>

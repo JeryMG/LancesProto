@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{079b7885-1f81-4178-972a-257bc1c99064}">
+		<property name="assetPath">
+			<value>LancesProto/Ennemi_Distance/Projectile/passby pt5.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.3142857142857141</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{95350ebc-6550-4846-9dbb-081b6911d56d}</destination>
+		</relationship>
+	</object>
+</objects>

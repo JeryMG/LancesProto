@@ -111,10 +111,10 @@ MonoBehaviour:
   prefabProjectile: {fileID: 881005668960327761, guid: 839485fa741f5d641a0a11d50fdce437,
     type: 3}
   arcPoint: {fileID: 5649263960909309692}
-  stopingD: 15
-  shootingDistanceTreshold: 20
+  stopingD: 5
+  shootingDistanceTreshold: 35
   TimeBetweenShots: 1
-  idleDistanceTreshold: 40
+  idleDistanceTreshold: 60
   pathHolder: {fileID: 62227398571215617}
   turnSpeed: 90
   DeathEffect: {fileID: 6790313682755352314, guid: a642d501cbc43064a994bec54c30d7b0,
@@ -161,7 +161,7 @@ CapsuleCollider:
   m_Radius: 1.25
   m_Height: 6.52
   m_Direction: 1
-  m_Center: {x: 0, y: 4.79, z: 0}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!1 &4243034912348372563
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 8664703369255783405, guid: 97b94f9459ead5945854a2483801f8c4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.73
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8664703369255783405, guid: 97b94f9459ead5945854a2483801f8c4,
         type: 3}

@@ -460,7 +460,22 @@ PrefabInstance:
     - target: {fileID: 8632970731411079796, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632970731411079801, guid: b2d4af9e8f11ad240a0422c33344939e,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632970731411079803, guid: b2d4af9e8f11ad240a0422c33344939e,
+        type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632970731411079803, guid: b2d4af9e8f11ad240a0422c33344939e,
+        type: 3}
+      propertyPath: attackDistanceTreshold
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8632970731411079807, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}
@@ -973,7 +988,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11180
+  m_Name: pb_Mesh-27010
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1394,6 +1409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemiDist
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597102815451038833, guid: 2fb51673ba28c524bbb131fc6e13a31e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb51673ba28c524bbb131fc6e13a31e, type: 3}
@@ -2202,7 +2222,7 @@ PrefabInstance:
     - target: {fileID: 1077123968288378777, guid: 7c9d9b8bec91a894ba0a0d0fa66c4cb5,
         type: 3}
       propertyPath: m_Constraints
-      value: 84
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1077123968288378780, guid: 7c9d9b8bec91a894ba0a0d0fa66c4cb5,
         type: 3}

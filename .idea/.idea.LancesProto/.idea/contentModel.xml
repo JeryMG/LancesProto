@@ -104,6 +104,7 @@
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
             <e p="_E_Cac.cs" t="Include" />
+            <e p="_E_Gong_Cac.cs" t="Include" />
             <e p="E_Gong.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
             <e p="GongWave.cs" t="Include" />

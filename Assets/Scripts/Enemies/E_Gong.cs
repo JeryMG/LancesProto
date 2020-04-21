@@ -13,6 +13,7 @@ public class E_Gong : Vivant
         Chasing,
         Patrolling,
         Attacking,
+
     }
     
     public State currentState;
@@ -48,6 +49,7 @@ public class E_Gong : Vivant
     private bool dejaJouee;
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
     //public Animator animPerso;
+    public bool ADGF=false;
 
     protected override void Start()
     {
@@ -104,16 +106,18 @@ public class E_Gong : Vivant
                     }
                 }
             }
+           
         }
         if (currentState == State.Idle)
         {
+            ADGF=false;
             pathFinder.enabled = false;
             //anim repos
-
         }
         
         if (currentState == State.Chasing)
         {
+
             if (!dejaJouee)
             {
                 AnimGong.Marche();
@@ -135,6 +139,11 @@ public class E_Gong : Vivant
         if (currentState == State.Patrolling)
         {
             //marche lentee
+            if(dejaJouee)
+            {
+                //AnimGong.Marche();
+                //dejaJouee=false;
+            }
             AnimGong.Marche();
 
             pathFinder.acceleration = 1;
@@ -143,7 +152,7 @@ public class E_Gong : Vivant
                 GotoNextPoint();
         }
     }
-    
+     
     public IEnumerator UpdatePath()
     {
         float refreshRate = 0.25f;
@@ -167,22 +176,14 @@ public class E_Gong : Vivant
     {
         if (Time.time > nextGongTime)
         {
-            Debug.Log("goodlooking");
+            ADGF=true;
             gongWaveAnimator.gameObject.SetActive(true);
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
             //gongWaveAnimator.set("Elargi");
             Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
-            AnimGong.GongActiver();
-            if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).IsName("DongCorps"))
-            {
-                
-            }
-            else
-            {
-                dejaJouee = false;               
-            }
+            //AnimGong.GongActiver();   
         }
         yield return null;
     }

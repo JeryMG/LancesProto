@@ -30,7 +30,9 @@ public class CacAbility : MonoBehaviour
     {
         if (playerInputs.Melee && _player.currentState == Hunter.states.blinker)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);   
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/CAC_Swift", transform.position);
+
+            //creation d'un gameobject, qui contient le particule systeme qu'il detruit    
             GameObject fff=Instantiate(ff,this.transform.position,Quaternion.Euler(new Vector3(-90,this.transform.eulerAngles.y,0)));
             fff.transform.parent=this.transform;
             Destroy(fff,2);

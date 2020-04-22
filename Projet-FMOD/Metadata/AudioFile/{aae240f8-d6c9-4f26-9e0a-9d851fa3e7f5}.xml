@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{aae240f8-d6c9-4f26-9e0a-9d851fa3e7f5}">
+		<property name="assetPath">
+			<value>LancesProto/Ennemi_Distance/Boss_Cloche.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.428004535147393</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{95350ebc-6550-4846-9dbb-081b6911d56d}</destination>
+		</relationship>
+	</object>
+</objects>

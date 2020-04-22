@@ -60,8 +60,6 @@ public class _E_Cac : Vivant, IClochePropag
             _hunter = FindObjectOfType<Hunter>();
             target = GameObject.FindGameObjectWithTag("Player").transform;
             targetVie = _hunter.GetComponent<Vivant>();
-
-            //StartCoroutine(UpdatePath());
         }
 
         animations_cac = GetComponentInChildren<Anim_EnenmieCac>();
@@ -111,25 +109,22 @@ public class _E_Cac : Vivant, IClochePropag
        if (currentState == State.Chasing&&DejaJoue==false)
        {
            //Anim de marche rapîde !!!!!!
-
-           StartCoroutine(UpdatePath());
+           
            animations_cac.MarcheRapide();
            pathFinder.acceleration = 8;
-           pathFinder.stoppingDistance = 3;
+           pathFinder.stoppingDistance = 5;
            DejaJoue=true;
        }
 
-       if (currentState == State.Patrolling&&DejaJoue==true)
+       if (currentState == State.Patrolling && DejaJoue)
        {
            //Anim de marche lente !!!!!!
            animations_cac.MarcheLente();
 
-           StartCoroutine(UpdatePath());
-
            pathFinder.acceleration = 1;
            pathFinder.stoppingDistance = 0;
            DejaJoue=false;
-           if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
+           if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f) 
                GotoNextPoint();
        }
 
@@ -137,73 +132,43 @@ public class _E_Cac : Vivant, IClochePropag
        {
            //anime d'attaque
             animations_cac.Attaque();
+            pathFinder.stoppingDistance = 5;
+       }
+
+       if (stunned)
+       {
+           //anime de degat recu quand cac player
+           animations_cac.DegasRecus();
        }
     }
-    
-    public IEnumerator UpdatePath()
-    {            
-        float refreshRate = 0.25f;
 
-        if (!stunned)
-        {
-            rb.velocity = Vector3.zero;
-
-            while (hasTarget)
-            {
-                if (currentState == State.Chasing)
-                {
-                    pathFinder.enabled = true;
-                    Vector3 targetPosition = new Vector3(target.position.x, 0 , target.position.z);
-                    if (!dead)
-                    {
-                        pathFinder.SetDestination(targetPosition);
-                    }
-                }
-                yield return new WaitForSeconds(refreshRate);
-            }
-        }
-        else
-        {
-            rb.velocity = Vector3.zero;
-            pathFinder.enabled = false;
-            yield return new WaitForSeconds(refreshRate);
-        }
-    }
-     
     IEnumerator Attack()
     {
-        /*if (!stunned)
+        currentState = State.Attacking;
+        pathFinder.enabled = false;
+    
+         Vector3 originalPosition = transform.position;
+         Vector3 attackPosition = target.position - (target.position - transform.position).normalized;
+         float attackSpeed = 3f;
+         float percent = 0;
+         bool appliedDamage = false;
+    
+        //"Animation" de Lunge
+        while (percent <= 1)
         {
-            currentState = State.Attacking;
-            pathFinder.enabled = false;
-            
-            Vector3 originalPosition = transform.position;
-            Vector3 attackPosition = target.position - (target.position - transform.position).normalized;
-            float attackSpeed = 3f;
-            float percent = 0;
-            bool appliedDamage = false;
-         
-            //ANIMATION
-            while (percent <= 1)
+            if (percent >= .5f && !appliedDamage)
             {
-                if (percent >= .5f && !appliedDamage)
-                {
-                    appliedDamage = true;
-                    targetVie.TakeDamage(damage);
-                }
-                percent += Time.deltaTime * attackSpeed;
-                float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
-                transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
-                //Son CAC 
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/CAC",transform.position);
-                yield return null;
+                appliedDamage = true;
+                targetVie.TakeDamage(damage);
             }
+            percent += Time.deltaTime * attackSpeed;
+            float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
+            //transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
+            yield return null;
         }
-             
+        
         currentState = State.Chasing;
-        pathFinder.enabled = true;*/
-        yield return null;
-
+        pathFinder.enabled = true;
     }
     
     void GotoNextPoint() 

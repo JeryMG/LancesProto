@@ -9,10 +9,15 @@ public class E_Gong : Vivant
 {
     public enum State
     {
+        //quand le joueur est mort
         Idle,
+        //quand il voit le joueur
         Chasing,
+        //quand il a perdu le joueur de vu
         Patrolling,
+        //quand le joueur se trouve ou corps au corps 
         Attacking,
+
     }
     
     public State currentState;
@@ -44,10 +49,16 @@ public class E_Gong : Vivant
     
     [Header("Animations")]
     public ParticleSystem DeathEffect;
-
+    [SerializeField] private float vision;
     private bool dejaJouee;
+    private bool GActiver=false;
+    public bool JoueurAuCac=false;
+    private int RandAnimCac=1;
+    
+
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
     //public Animator animPerso;
+    
 
     protected override void Start()
     {
@@ -91,6 +102,23 @@ public class E_Gong : Vivant
             {
                 currentState = State.Chasing;
             }
+             
+            if(JoueurAuCac==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>1)
+            {
+                AnimGong.animCac();
+                GActiver=true;
+            }
+            if(sqrDstToTarget<Mathf.Pow(vision, 2)&&GActiver==false)
+            {
+                AnimGong.GongActiver();                
+                GActiver=true;
+            }
+            if(GActiver==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>1)
+            {
+                RandAnimCac=UnityEngine.Random.Range(1,3);
+
+               GActiver=false;
+            }
         
         
             if (hasTarget)
@@ -104,6 +132,8 @@ public class E_Gong : Vivant
                     }
                 }
             }
+            
+           
         }
         if (currentState == State.Idle)
         {
@@ -113,9 +143,10 @@ public class E_Gong : Vivant
         
         if (currentState == State.Chasing)
         {
+
             if (!dejaJouee)
             {
-                AnimGong.Marche();
+                //AnimGong.Marche();
                 dejaJouee = true;
             }
         
@@ -134,7 +165,12 @@ public class E_Gong : Vivant
         if (currentState == State.Patrolling)
         {
             //marche lentee
-            AnimGong.Marche();
+            if(dejaJouee)
+            {
+                //AnimGong.Marche();
+                //dejaJouee=false;
+            }
+            
 
             pathFinder.acceleration = 1;
             pathFinder.stoppingDistance = 0;
@@ -142,7 +178,7 @@ public class E_Gong : Vivant
                 GotoNextPoint();
         }
     }
-    
+     
     public IEnumerator UpdatePath()
     {
         float refreshRate = 0.25f;
@@ -169,11 +205,10 @@ public class E_Gong : Vivant
             gongWaveAnimator.gameObject.SetActive(true);
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
-            gongWaveAnimator.SetTrigger("Elargi");
+            //gongWaveAnimator.set("Elargi");
             Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
-            AnimGong.GongActiver();
-            dejaJouee = false;
+            AnimGong.GongActiver();   
         }
         yield return null;
     }
@@ -244,4 +279,6 @@ public class E_Gong : Vivant
     {
         gongWaveAnimator.gameObject.SetActive(false);
     }
+
+    
 }

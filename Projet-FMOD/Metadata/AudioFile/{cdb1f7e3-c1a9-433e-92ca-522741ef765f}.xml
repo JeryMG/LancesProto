@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{cdb1f7e3-c1a9-433e-92ca-522741ef765f}">
+		<property name="assetPath">
+			<value>LancesProto/Ennemi_Distance/Projectile/Archery arrow - sliding bamboo stack 3.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.88816326530612244</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{95350ebc-6550-4846-9dbb-081b6911d56d}</destination>
+		</relationship>
+	</object>
+</objects>

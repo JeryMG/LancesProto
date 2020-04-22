@@ -6,7 +6,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="goproj.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
@@ -94,14 +93,22 @@
               </e>
             </e>
           </e>
+          <e p="Game" t="Include">
+            <e p="test" t="Include">
+              <e p="Boutton.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="projectile.cs" t="Include" />
+        <e p="respawPlat.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
             <e p="_E_Cac.cs" t="Include" />
+            <e p="_E_Gong_Cac.cs" t="Include" />
             <e p="E_Gong.cs" t="Include" />
             <e p="EnemiShooter.cs" t="Include" />
             <e p="GongWave.cs" t="Include" />
+            <e p="goproj.cs" t="Include" />
             <e p="tests" t="Include">
               <e p="FollowPlayer.cs" t="Include" />
             </e>
@@ -120,6 +127,9 @@
             <e p="Lance.cs" t="Include" />
             <e p="ParryAbility.cs" t="Include" />
             <e p="Respawner.cs" t="Include" />
+          </e>
+          <e p="testObjets" t="Include">
+            <e p="platformD.cs" t="Include" />
           </e>
         </e>
       </e>

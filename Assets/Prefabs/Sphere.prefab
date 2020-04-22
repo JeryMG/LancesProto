@@ -106,4 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b72c7213ef3b8448b8f945d3e483fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parable: 0
+  Speed: 10
+  deathTime: 4

@@ -9,7 +9,7 @@ public class _E_Gong_Cac : MonoBehaviour
     public GameObject joueur;
     private void Start() 
     {
-        joueur= GetComponentInParent<GameObject>();
+        joueur=this.gameObject.GetComponentInParent<GameObject>();
         fdd=GetComponentInParent<E_Gong>();
     }
     private void OnTriggerEnter(Collider other) {

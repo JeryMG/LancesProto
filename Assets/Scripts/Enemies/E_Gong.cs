@@ -53,8 +53,7 @@ public class E_Gong : Vivant
     private bool dejaJouee;
     private bool GActiver=false;
     public bool JoueurAuCac=false;
-    private int RandAnimCac=1;
-    
+    public bool test=false;
 
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
     //public Animator animPerso;
@@ -104,22 +103,34 @@ public class E_Gong : Vivant
             //anims
             if(JoueurAuCac==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>1)
             {
-                AnimGong.animCac();
-                GActiver=true;
+                if(sqrDstToTarget>Mathf.Pow(vision,2))
+                {
+                    AnimGong.GongActiver();                
+                    GActiver=true;
+                    
+                }
+                else
+                {
+                    Debug.Log("hihihih");
+                    AnimGong.animCac();                
+                    GActiver=true;
+                }
             }
 
             if(sqrDstToTarget<Mathf.Pow(vision, 2)&&GActiver==false)
             {
-                AnimGong.GongActiver();                
-                GActiver=true;
+                GActiver=false;
             }
             
             if(GActiver==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>1)
             {
-                RandAnimCac=UnityEngine.Random.Range(1,3);
-
-               GActiver=false;
+                
+                GActiver=false;
+                //test=false;
             }
+            
+
+            
         
             //Attack state
             if (hasTarget)
@@ -206,7 +217,7 @@ public class E_Gong : Vivant
             gongWaveAnimator.SetTrigger("Elargi");
             //Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
-            AnimGong.GongActiver();   
+            //AnimGong.GongActiver();   
         }
         yield return null;
     }

@@ -33,6 +33,7 @@ public class goproj : MonoBehaviour
             Vivant player = other.GetComponent<Vivant>();
             _parryAbility.incomings.Remove(this.gameObject);
             player.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }

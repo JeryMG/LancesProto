@@ -168,6 +168,8 @@ public class _E_Cac : Vivant, IClochePropag
             if (percent >= .5f && !appliedDamage)
             {
                 appliedDamage = true;
+                //son d'attaque
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/CAC",transform.position);
                 targetVie.TakeDamage(damage);
                 AttaqueJoue=true;
             }
@@ -217,6 +219,7 @@ public class _E_Cac : Vivant, IClochePropag
     public void propagOnde()
     {
         gongWaveAnimator.SetTrigger("Elargi");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         animations_cac.OndeRecus();
     }
 

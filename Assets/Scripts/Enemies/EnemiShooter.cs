@@ -151,6 +151,7 @@ public class EnemiShooter : Vivant, IClochePropag
         pathFinder.enabled = false;
         
         GameObject newProj = Instantiate(prefabProjectile, arcPoint.position, arcPoint.rotation);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Tir",transform.position);
         NextShotTime = Time.time + TimeBetweenShots;
         
         yield return null;
@@ -206,6 +207,7 @@ public class EnemiShooter : Vivant, IClochePropag
     public void propagOnde()
     {
         gongWaveAnimator.SetTrigger("Elargi");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         AnimVole.AnimVoleEchos();
         Echojoue=true;
     }

@@ -78,9 +78,24 @@ public class Lance : MonoBehaviour
             }
         }
 
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Lance3D/Ennemi",transform.position);
+        }
+
         if (other.gameObject.CompareTag("Vide"))
         {
             Destroy(gameObject,timerDestruction);
+        }
+
+        if (other.gameObject.CompareTag("Mur"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Lance3D/Mur",transform.position);
+        }
+        
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Lance3D/Sol",transform.position);
         }
 
         Vivant enemiBody = other.gameObject.GetComponent<Vivant>();

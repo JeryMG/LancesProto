@@ -18,7 +18,7 @@ public class GongWave : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _E_Cac bro = other.gameObject.GetComponent<_E_Cac>();
+        IClochePropag bro = other.gameObject.GetComponent<IClochePropag>();
         
         if (other.gameObject.CompareTag("Player"))
         {

@@ -176,14 +176,6 @@ public class Hunter : Vivant
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Projectile"))
-        {
-            ColorChange(Color.red);
-        }
-    }
-
     IEnumerator trail()
     {
         _trail.gameObject.SetActive(true);

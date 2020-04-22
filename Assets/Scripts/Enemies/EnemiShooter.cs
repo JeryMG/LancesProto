@@ -49,6 +49,7 @@ public class EnemiShooter : Vivant, IClochePropag
     private Anim_E_Vole AnimVole;
     public Animator gongWaveAnimator;
     private FollowPlayer followPlayer;
+    public bool Echojoue=false;
 
 
     protected override void Start() 
@@ -85,6 +86,11 @@ public class EnemiShooter : Vivant, IClochePropag
 
     private void Update() 
     {
+        if(Echojoue==true&&AnimVole.anim.GetCurrentAnimatorStateInfo(0).normalizedTime>=1)
+            {
+                AnimVole.AnimVole();
+                Echojoue=false;
+            }
         if (shootingDistanceTreshold < stopingD)
         {
             shootingDistanceTreshold = stopingD;
@@ -115,6 +121,7 @@ public class EnemiShooter : Vivant, IClochePropag
         {
             pathFinder.enabled = false;
             AnimVole.AnimVole();
+            
         }
 
         if (currentState == State.Chasing)
@@ -139,6 +146,7 @@ public class EnemiShooter : Vivant, IClochePropag
 
     IEnumerator shoot()
     {
+        
         currentState = State.Shooting;
         pathFinder.enabled = false;
         
@@ -199,6 +207,7 @@ public class EnemiShooter : Vivant, IClochePropag
     {
         gongWaveAnimator.SetTrigger("Elargi");
         AnimVole.AnimVoleEchos();
+        Echojoue=true;
     }
 
     private void desactiveOnde()

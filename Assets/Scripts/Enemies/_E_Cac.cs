@@ -45,6 +45,7 @@ public class _E_Cac : Vivant, IClochePropag
     // public Animator gongWaveAnimator;
     public Anim_EnenmieCac animations_cac;
     private Rigidbody rb;
+    private bool AttaqueJoue=false;
 
 
     protected override void Start() 
@@ -78,6 +79,12 @@ public class _E_Cac : Vivant, IClochePropag
 
     private void Update() 
     {
+        if(AttaqueJoue==true&&animations_cac.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>=1)
+       {
+           Debug.Log("hi");
+           AttaqueJoue=false;
+       }
+
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
        {
@@ -132,6 +139,7 @@ public class _E_Cac : Vivant, IClochePropag
        {
            //anime d'attaque
             animations_cac.Attaque();
+            this.GetComponent<Rigidbody>().AddForce(this.transform.forward*100,ForceMode.Force);
             pathFinder.stoppingDistance = 5;
        }
 
@@ -140,6 +148,7 @@ public class _E_Cac : Vivant, IClochePropag
            //anime de degat recu quand cac player
            animations_cac.DegasRecus();
        }
+       
     }
 
     IEnumerator Attack()
@@ -160,9 +169,11 @@ public class _E_Cac : Vivant, IClochePropag
             {
                 appliedDamage = true;
                 targetVie.TakeDamage(damage);
+                AttaqueJoue=true;
             }
             percent += Time.deltaTime * attackSpeed;
             float interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
+
             //transform.position = Vector3.Lerp(originalPosition, attackPosition, interpolation);
             yield return null;
         }

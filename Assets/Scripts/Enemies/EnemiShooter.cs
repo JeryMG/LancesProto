@@ -13,6 +13,7 @@ public class EnemiShooter : Vivant, IClochePropag
         Chasing,
         Patrolling,
         Shooting,
+        Gonging,
     }
 
     public State currentState;
@@ -129,7 +130,11 @@ public class EnemiShooter : Vivant, IClochePropag
             if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
                 GotoNextPoint();
         }
-        //anime marche lente
+
+        if (currentState == State.Gonging)
+        {
+            propagOnde();
+        }
     }
 
     IEnumerator shoot()
@@ -138,6 +143,7 @@ public class EnemiShooter : Vivant, IClochePropag
         pathFinder.enabled = false;
         
         GameObject newProj = Instantiate(prefabProjectile, arcPoint.position, arcPoint.rotation);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Tir",transform.position);
         NextShotTime = Time.time + TimeBetweenShots;
         
         yield return null;
@@ -192,11 +198,9 @@ public class EnemiShooter : Vivant, IClochePropag
     [ContextMenu("propage onde")]
     public void propagOnde()
     {
-        Onde.SetActive(true);
         gongWaveAnimator.SetTrigger("Elargi");
-        Invoke("desactiveOnde", 3f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         AnimVole.AnimVoleEchos();
-
     }
 
     private void desactiveOnde()
@@ -208,7 +212,7 @@ public class EnemiShooter : Vivant, IClochePropag
     {
         if (other.gameObject.CompareTag("Wave"))
         {
-            propagOnde();
+            currentState = State.Gonging;
         }
     }
 }

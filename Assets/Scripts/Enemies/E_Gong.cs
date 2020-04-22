@@ -11,11 +11,11 @@ public class E_Gong : Vivant
     {
         //quand le joueur est mort
         Idle,
-        //quand il voit le joueur
-        Chasing,
-        //quand il a perdu le joueur de vu
+        //quand le joueur est dans sa range de gong mais hors de sange cac
+        Gonging,
+        //quand le joueur est hors de sa range gong
         Patrolling,
-        //quand le joueur se trouve ou corps au corps 
+        //quand le joueur se trouve tres proche (range de cac)
         Attacking,
 
     }
@@ -28,7 +28,7 @@ public class E_Gong : Vivant
     private Vivant targetVie;
     
     [Header("Mode Idle")]
-    [SerializeField] private float idleDistanceTreshold = 10f;
+    [SerializeField] private float idleDistanceTreshold = 40f;
     
     [Header("Patrolling")]
     public Transform[] points;
@@ -37,10 +37,10 @@ public class E_Gong : Vivant
     
     [Header("Mode Attack")]
     public float damage = 2f;
-    [SerializeField] private float attackDistanceTreshold = 2f;
+    [SerializeField] private float attackDistanceTreshold = 3f;
     [SerializeField] private float TimeBetweenAttacks = 1.2f;
     private float NextAttackTime;
-    
+
     [Header("Gong wave")]
     [SerializeField] private float gongTimer = 10f;
     private float nextGongTime;
@@ -53,18 +53,15 @@ public class E_Gong : Vivant
     private bool dejaJouee;
     private bool GActiver=false;
     public bool JoueurAuCac=false;
-    private int RandAnimCac=1;
-    
+    public bool test=false;
 
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
     //public Animator animPerso;
-    
 
     protected override void Start()
     {
         base.Start();
         pathFinder = GetComponent<NavMeshAgent>();
-        gongWaveAnimator.gameObject.SetActive(false);
         AnimGong = GetComponentInChildren<TestAnimGong>();
         
         if (GameObject.FindGameObjectWithTag("Player") != null)
@@ -75,7 +72,7 @@ public class E_Gong : Vivant
             target = GameObject.FindGameObjectWithTag("Player").transform;
             targetVie = _hunter.GetComponent<Vivant>();
 
-            StartCoroutine(UpdatePath());
+            //StartCoroutine(UpdatePath());
         }
         
         points = new Transform[pathHolder.childCount];
@@ -100,27 +97,42 @@ public class E_Gong : Vivant
             }
             else
             {
-                currentState = State.Chasing;
+                currentState = State.Gonging;
             }
              
+            //anims
             if(JoueurAuCac==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>1)
             {
-                AnimGong.animCac();
-                GActiver=true;
+                if(sqrDstToTarget>Mathf.Pow(vision,2))
+                {
+                    AnimGong.GongActiver();                
+                    GActiver=true;
+                    
+                }
+                else
+                {
+                    Debug.Log("hihihih");
+                    AnimGong.animCac();                
+                    GActiver=true;
+                }
             }
+
             if(sqrDstToTarget<Mathf.Pow(vision, 2)&&GActiver==false)
             {
-                AnimGong.GongActiver();                
-                GActiver=true;
+                GActiver=false;
             }
+            
             if(GActiver==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>1)
             {
-                RandAnimCac=UnityEngine.Random.Range(1,3);
-
-               GActiver=false;
+                
+                GActiver=false;
+                //test=false;
             }
+            
+
+            
         
-        
+            //Attack state
             if (hasTarget)
             {
                 if (Time.time > NextAttackTime)
@@ -132,8 +144,6 @@ public class E_Gong : Vivant
                     }
                 }
             }
-            
-           
         }
         if (currentState == State.Idle)
         {
@@ -141,9 +151,8 @@ public class E_Gong : Vivant
             //anim repos
         }
         
-        if (currentState == State.Chasing)
+        if (currentState == State.Gonging)
         {
-
             if (!dejaJouee)
             {
                 //AnimGong.Marche();
@@ -185,7 +194,7 @@ public class E_Gong : Vivant
 
         while (hasTarget)
         {
-            if (currentState == State.Chasing)
+            if (currentState == State.Gonging)
             {
                 pathFinder.enabled = true;
                 Vector3 targetPosition = new Vector3(target.position.x, 0 , target.position.z);
@@ -202,13 +211,13 @@ public class E_Gong : Vivant
     {
         if (Time.time > nextGongTime)
         {
-            gongWaveAnimator.gameObject.SetActive(true);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
-            //gongWaveAnimator.set("Elargi");
-            Invoke("desactiveOnde", 3f);
+            gongWaveAnimator.SetTrigger("Elargi");
+            //Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
-            AnimGong.GongActiver();   
+            //AnimGong.GongActiver();   
         }
         yield return null;
     }
@@ -240,7 +249,7 @@ public class E_Gong : Vivant
             yield return null;
         }
         
-        currentState = State.Chasing;
+        currentState = State.Gonging;
         pathFinder.enabled = true;
     }
     
@@ -279,6 +288,4 @@ public class E_Gong : Vivant
     {
         gongWaveAnimator.gameObject.SetActive(false);
     }
-
-    
 }

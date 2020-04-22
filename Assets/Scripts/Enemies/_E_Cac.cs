@@ -39,6 +39,7 @@ public class _E_Cac : Vivant, IClochePropag
 
     [Header("Animations")]
     public ParticleSystem DeathEffect;
+    public Animator gongWaveAnimator;
     // [SerializeField] private List<RuntimeAnimatorController> Anim =new List<RuntimeAnimatorController>();
     // public Animator animPerso;
     // public Animator gongWaveAnimator;
@@ -51,7 +52,6 @@ public class _E_Cac : Vivant, IClochePropag
         base.Start(); 
         pathFinder = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
-        Onde.SetActive(false);
 
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
@@ -159,6 +159,8 @@ public class _E_Cac : Vivant, IClochePropag
             if (percent >= .5f && !appliedDamage)
             {
                 appliedDamage = true;
+                //son d'attaque
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/CAC",transform.position);
                 targetVie.TakeDamage(damage);
             }
             percent += Time.deltaTime * attackSpeed;
@@ -205,10 +207,9 @@ public class _E_Cac : Vivant, IClochePropag
     [ContextMenu("propage onde")]
     public void propagOnde()
     {
-        Onde.SetActive(true);
-        //gongWaveAnimator.SetTrigger("Elargi");
+        gongWaveAnimator.SetTrigger("Elargi");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         animations_cac.OndeRecus();
-        Invoke("desactiveOnde", 3f);
     }
 
     private void desactiveOnde()
@@ -220,9 +221,13 @@ public class _E_Cac : Vivant, IClochePropag
     {
         if (other.gameObject.CompareTag("Wave"))
         {
-            propagOnde();
-        }
+            pathFinder.enabled = false;
 
+            propagOnde();
+            pathFinder.enabled = true;
+
+        }
+        
         if (other.gameObject.CompareTag("Lance"))
         {
             pathFinder.enabled = false;

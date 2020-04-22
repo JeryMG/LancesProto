@@ -51,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7371508318143076906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4648,6 +4648,7 @@ MonoBehaviour:
   pathHolder: {fileID: 8632970731366629324}
   DeathEffect: {fileID: 6790313682755352314, guid: a642d501cbc43064a994bec54c30d7b0,
     type: 3}
+  gongWaveAnimator: {fileID: 7296026631917596270}
   animations_cac: {fileID: 9184055434681579586}
 --- !u!54 &1931443285147725877
 Rigidbody:

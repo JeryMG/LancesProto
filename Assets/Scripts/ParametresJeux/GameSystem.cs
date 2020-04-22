@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMOD.Studio;
 
 public class GameSystem : MonoBehaviour
 {
     public static GameSystem Instance { get; private set; }
 
     private float slowmotionScale = 0.3f;
+    
+    private EventInstance event_fmod;
+
 
     private void Awake()
     {
@@ -22,9 +26,24 @@ public class GameSystem : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event2D/Environnement/Ambiance");
+    }
+
     private void Update()
     {
         RestartScene();
+        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            event_fmod.start();
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
     }
 
     private static void RestartScene()

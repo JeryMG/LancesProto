@@ -18,7 +18,7 @@ public class GongWave : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _E_Cac bro = other.gameObject.GetComponent<_E_Cac>();
+        IClochePropag bro = other.gameObject.GetComponent<IClochePropag>();
         
         if (other.gameObject.CompareTag("Player"))
         {
@@ -27,8 +27,12 @@ public class GongWave : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("lets go !!!!");
-            bro.propagOnde();
+            if (bro != null)
+            {
+                Debug.Log("lets go !!!!");
+                bro.propagOnde();
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
+            }
         }
     }
 }

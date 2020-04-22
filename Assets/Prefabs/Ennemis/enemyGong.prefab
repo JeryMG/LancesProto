@@ -69,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   MaxHealth: 5
+  stunned: 0
   currentState: 0
   idleDistanceTreshold: 10
   points: []
@@ -76,9 +77,12 @@ MonoBehaviour:
   damage: 2
   attackDistanceTreshold: 2
   TimeBetweenAttacks: 1.2
+  gongDistanceTreshold: 30
   gongTimer: 10
   gongWaveAnimator: {fileID: 0}
   DeathEffect: {fileID: 0}
+  vision: 0
+  JoueurAuCac: 0
 --- !u!1 &1750036897204442342
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1750036897544190705
 Transform:
   m_ObjectHideFlags: 0
@@ -208,10 +212,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1.35
+  m_Height: 7.78
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.25, y: 0, z: 0}
 --- !u!195 &1750036897544190707
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -248,17 +252,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   MaxHealth: 10
+  stunned: 0
   currentState: 0
-  idleDistanceTreshold: 10
+  idleDistanceTreshold: 40
   points: []
   pathHolder: {fileID: 1750036897204442337}
   damage: 2
-  attackDistanceTreshold: 2
+  attackDistanceTreshold: 3
   TimeBetweenAttacks: 1.2
+  gongDistanceTreshold: 35
   gongTimer: 5
   gongWaveAnimator: {fileID: 1750036896819762320}
   DeathEffect: {fileID: 6790313682755352314, guid: a642d501cbc43064a994bec54c30d7b0,
     type: 3}
+  vision: 0
+  JoueurAuCac: 0
 --- !u!1 &1750036897661473897
 GameObject:
   m_ObjectHideFlags: 0

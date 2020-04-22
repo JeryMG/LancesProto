@@ -54,6 +54,8 @@ public class Hunter : Vivant
 
         skinMat= GetComponent<Renderer>().material;
         playerColor = skinMat.color;
+
+        OnDeath += playDeathSound;
     }
 
     private void FixedUpdate()
@@ -143,6 +145,11 @@ public class Hunter : Vivant
             timer = 0;
         }
         
+    }
+
+    private void playDeathSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Mort");
     }
 
     private void OnCollisionEnter(Collision other)

@@ -58,7 +58,6 @@ public class E_Gong : Vivant
 
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
     //public Animator animPerso;
-    
 
     protected override void Start()
     {
@@ -201,7 +200,7 @@ public class E_Gong : Vivant
     {
         if (Time.time > nextGongTime)
         {
-            //gongWaveAnimator.gameObject.SetActive(true);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
             gongWaveAnimator.SetTrigger("Elargi");

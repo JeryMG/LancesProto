@@ -53,8 +53,7 @@ public class E_Gong : Vivant
     private bool dejaJouee;
     private bool GActiver=false;
     public bool JoueurAuCac=false;
-    private int RandAnimCac=1;
-    
+    public bool test=false;
 
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
     //public Animator animPerso;
@@ -103,22 +102,51 @@ public class E_Gong : Vivant
                 currentState = State.Chasing;
             }
              
-            if(JoueurAuCac==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>1)
+            
+            //if(GActiver==false)
+            //{
+            //    if(JoueurAuCac==true)
+            //    {
+            //        if(RandAnimCac==1)
+            //        {   
+            //            AnimGong.animCac();
+            //            RandAnimCac=0;
+            //            JoueurAuCac=false;
+            //        }                   
+            //    }               
+            //}
+
+            
+            if(GActiver==false)
             {
-                AnimGong.animCac();
-                GActiver=true;
-            }
-            if(sqrDstToTarget<Mathf.Pow(vision, 2)&&GActiver==false)
-            {
-                AnimGong.GongActiver();                
-                GActiver=true;
+                if(sqrDstToTarget>Mathf.Pow(vision,2))
+                {
+                    AnimGong.GongActiver();                
+                    GActiver=true;
+                    
+                }
+                else
+                {
+                    Debug.Log("hihihih");
+                    AnimGong.animCac();                
+                    GActiver=true;
+                }
             }
             if(GActiver==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>1)
             {
-                RandAnimCac=UnityEngine.Random.Range(1,3);
-
-               GActiver=false;
+                GActiver=false;
             }
+        
+            
+            if(GActiver==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(2).normalizedTime>1)
+            {
+                
+                GActiver=false;
+                //test=false;
+            }
+            
+
+            
         
         
             if (hasTarget)
@@ -208,7 +236,7 @@ public class E_Gong : Vivant
             //gongWaveAnimator.set("Elargi");
             Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
-            AnimGong.GongActiver();   
+            //AnimGong.GongActiver();   
         }
         yield return null;
     }
@@ -280,5 +308,10 @@ public class E_Gong : Vivant
         gongWaveAnimator.gameObject.SetActive(false);
     }
 
+    private void OnDrawGizmos()
+    {
+        Ray ray;
+        Gizmos.DrawRay(this.transform.position,this.transform.forward*vision);
+    }
     
 }

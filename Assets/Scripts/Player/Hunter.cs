@@ -116,7 +116,6 @@ public class Hunter : Vivant
 
             if (_playerInputs.LanceReturn && currentState == states.blinker)
             {
-                lancesRestantes = 3;
                 lieuxDeTp.Clear();
             }
         }

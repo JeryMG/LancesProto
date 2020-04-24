@@ -124,8 +124,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lanceSpeed: 50
+  acceleration: 15
+  maxSpeed: 60
   stop: 0
   lanceDamage: 3.5
   timerDestruction: 1
   returning: 0
-  vitesseReturn: 5
+  distanceReturn: 2

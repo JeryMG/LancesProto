@@ -175,6 +175,11 @@ PrefabInstance:
       propertyPath: gongTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1750036897544190704, guid: acb24d08f61a12b4aa3cca15fb864f98,
+        type: 3}
+      propertyPath: vision
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1750036897544190705, guid: acb24d08f61a12b4aa3cca15fb864f98,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -249,6 +254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemyGong
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750036897544190709, guid: acb24d08f61a12b4aa3cca15fb864f98,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1750036897544190711, guid: acb24d08f61a12b4aa3cca15fb864f98,
         type: 3}
@@ -430,6 +440,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1178023843}
+    - target: {fileID: 6379066761722361448, guid: b2d4af9e8f11ad240a0422c33344939e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371508318143076906, guid: b2d4af9e8f11ad240a0422c33344939e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8145595308955528358, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -554,7 +574,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1240
+  m_Name: pb_Mesh-2350
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -939,7 +959,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1420
+  m_Name: pb_Mesh-2532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1111,7 +1131,7 @@ PrefabInstance:
     - target: {fileID: 3597102815451038828, guid: 2fb51673ba28c524bbb131fc6e13a31e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.21
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 3597102815451038828, guid: 2fb51673ba28c524bbb131fc6e13a31e,
         type: 3}
@@ -1164,10 +1184,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1365179089423739923, guid: 09ec440f7641bd14ea89823ee023c275,
         type: 3}
+    - target: {fileID: 3597102815451038830, guid: 2fb51673ba28c524bbb131fc6e13a31e,
+        type: 3}
+      propertyPath: stopingD
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597102815451038830, guid: 2fb51673ba28c524bbb131fc6e13a31e,
+        type: 3}
+      propertyPath: shootingDistanceTreshold
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597102815451038830, guid: 2fb51673ba28c524bbb131fc6e13a31e,
+        type: 3}
+      propertyPath: TimeBetweenShots
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3597102815451038831, guid: 2fb51673ba28c524bbb131fc6e13a31e,
         type: 3}
       propertyPath: m_AngularSpeed
       value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597102815451038831, guid: 2fb51673ba28c524bbb131fc6e13a31e,
+        type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3597102815451038833, guid: 2fb51673ba28c524bbb131fc6e13a31e,
         type: 3}
@@ -1177,7 +1217,7 @@ PrefabInstance:
     - target: {fileID: 3597102815451038833, guid: 2fb51673ba28c524bbb131fc6e13a31e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4648031331185135012, guid: 2fb51673ba28c524bbb131fc6e13a31e,
         type: 3}
@@ -1326,7 +1366,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15962
+  m_Name: pb_Mesh-2700
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

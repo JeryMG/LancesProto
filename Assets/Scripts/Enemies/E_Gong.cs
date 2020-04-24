@@ -176,25 +176,6 @@ public class E_Gong : Vivant
                 GotoNextPoint();
         }
     }
-     
-    public IEnumerator UpdatePath()
-    {
-        float refreshRate = 0.25f;
-
-        while (hasTarget)
-        {
-            if (currentState == State.Gonging)
-            {
-                pathFinder.enabled = true;
-                Vector3 targetPosition = new Vector3(target.position.x, 0 , target.position.z);
-                if (!dead)
-                {
-                    pathFinder.SetDestination(targetPosition);
-                }
-            }
-            yield return new WaitForSeconds(refreshRate);
-        }
-    }
 
     IEnumerator GongWave()
     {

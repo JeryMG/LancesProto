@@ -101,7 +101,6 @@
           </e>
         </e>
         <e p="projectile.cs" t="Include" />
-        <e p="respawPlat.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
             <e p="_E_Cac.cs" t="Include" />
@@ -120,6 +119,11 @@
             <e p="IClochePropag.cs" t="Include" />
             <e p="IDamageable.cs" t="Include" />
             <e p="PlayerInputs.cs" t="Include" />
+            <e p="SpawnEnemy.cs" t="Include" />
+            <e p="testObjets" t="Include">
+              <e p="platformD.cs" t="Include" />
+              <e p="respawPlat.cs" t="Include" />
+            </e>
             <e p="Vivant.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
@@ -128,9 +132,6 @@
             <e p="Lance.cs" t="Include" />
             <e p="ParryAbility.cs" t="Include" />
             <e p="Respawner.cs" t="Include" />
-          </e>
-          <e p="testObjets" t="Include">
-            <e p="platformD.cs" t="Include" />
           </e>
         </e>
       </e>

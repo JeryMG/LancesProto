@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Effet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materiel ED/Effet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/EffetSOL.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materiel ED/EffetSOL.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/EnemiDist.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/EnemiDist.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Lance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Lance.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jerome.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/testObjets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/testObjets/platformD.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/testObjets/platformD.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/respawPlat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/respawPlat.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,8 +112,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
       </list>
     </option>
   </component>
@@ -197,7 +184,7 @@
       <workItem from="1587370830021" duration="21068000" />
       <workItem from="1587471786722" duration="14344000" />
       <workItem from="1587547096013" duration="12327000" />
-      <workItem from="1587716627172" duration="21677000" />
+      <workItem from="1587716627172" duration="22547000" />
     </task>
     <servers />
   </component>

@@ -34,6 +34,7 @@ public class Lance : MonoBehaviour
         StayImmobile(true);
         stop = true;
         _player = FindObjectOfType<Hunter>();
+        Destroy(gameObject,4);
     }
 
     private void Update()

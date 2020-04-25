@@ -5,7 +5,7 @@
 			<value>Mur</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{232cf74d-c8e7-4cc8-a389-73a6f85c5ac5}</destination>
@@ -103,6 +103,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d9a3c8ce-3425-4d9b-a00f-5112de59ff45}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -120,7 +123,6 @@
 		<relationship name="effects">
 			<destination>{e81a1471-5a57-40c2-af98-ec1c66fb498e}</destination>
 			<destination>{f86b6a09-960b-42f5-9250-f8d4d8e3d13d}</destination>
-			<destination>{970e8c2b-19bb-4137-ba4e-fcfa3ec0b44a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c9c3c964-f43f-4460-a3fd-700f78e65a22}" />
@@ -132,11 +134,13 @@
 	</object>
 	<object class="MixerBusPanner" id="{46135fc6-457f-476e-b48e-6c3fee22194a}" />
 	<object class="SFXReverbEffect" id="{e81a1471-5a57-40c2-af98-ec1c66fb498e}">
+		<property name="decayTime">
+			<value>190</value>
+		</property>
 		<property name="wetLevel">
 			<value>-19.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{f86b6a09-960b-42f5-9250-f8d4d8e3d13d}" />
-	<object class="SpatialiserEffect" id="{970e8c2b-19bb-4137-ba4e-fcfa3ec0b44a}" />
 	<object class="MixerBusFader" id="{bc8afdd7-8359-4f7b-971d-672f98863fef}" />
 </objects>

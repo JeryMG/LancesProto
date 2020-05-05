@@ -45,6 +45,7 @@ public class _E_Cac : Vivant, IClochePropag
     // public Animator gongWaveAnimator;
     public Anim_EnenmieCac animations_cac;
     private Rigidbody rb;
+    private Rigidbody RbPlayer;
     private bool AttaqueJoue=false;
 
 
@@ -59,6 +60,7 @@ public class _E_Cac : Vivant, IClochePropag
             currentState = State.Patrolling;
             hasTarget = true;
             _hunter = FindObjectOfType<Hunter>();
+            RbPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
             target = GameObject.FindGameObjectWithTag("Player").transform;
             targetVie = _hunter.GetComponent<Vivant>();
         }
@@ -81,9 +83,12 @@ public class _E_Cac : Vivant, IClochePropag
     {
         if(AttaqueJoue==true&&animations_cac.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>=1)
        {
-           Debug.Log("hi");
-           AttaqueJoue=false;
+            //GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().constraints&=~RigidbodyConstraints.FreezePositionY;  
+            //animations_cac.MarcheRapide();
+            pathFinder.speed=15f;
+            AttaqueJoue=false;
        }
+       
 
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
@@ -118,8 +123,8 @@ public class _E_Cac : Vivant, IClochePropag
            //Anim de marche rapîde !!!!!!
            
            animations_cac.MarcheRapide();
-           pathFinder.acceleration = 8;
-           pathFinder.stoppingDistance = 5;
+           pathFinder.acceleration = 30;
+           pathFinder.stoppingDistance = 1;
            DejaJoue=true;
        }
 
@@ -137,10 +142,14 @@ public class _E_Cac : Vivant, IClochePropag
 
        if (currentState == State.Attacking)
        {
+           AttaqueJoue=true;
            //anime d'attaque
             animations_cac.Attaque();
-            this.GetComponent<Rigidbody>().AddForce(this.transform.forward*100,ForceMode.Force);
-            pathFinder.stoppingDistance = 5;
+            //this.GetComponent<Rigidbody>().AddForce(this.transform.forward*100,ForceMode.Acceleration);
+            pathFinder.stoppingDistance = 1;
+            //RbPlayer.velocity=new Vector3(0,0,0);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().velocity=this.transform.forward*10f;
+            //GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().constraints=RigidbodyConstraints.FreezePositionY;
        }
 
        if (stunned)
@@ -149,6 +158,14 @@ public class _E_Cac : Vivant, IClochePropag
            animations_cac.DegasRecus();
        }
        
+    }
+    private void FixedUpdate() 
+    {
+        if (currentState == State.Attacking)
+       {
+            //this.GetComponent<Rigidbody>().AddForce(this.transform.forward*50,ForceMode.Impulse);
+
+       }    
     }
 
     IEnumerator Attack()
@@ -218,9 +235,12 @@ public class _E_Cac : Vivant, IClochePropag
     [ContextMenu("propage onde")]
     public void propagOnde()
     {
+        pathFinder.enabled=false;
         gongWaveAnimator.SetTrigger("Elargi");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         animations_cac.OndeRecus();
+        AttaqueJoue=true;
+        pathFinder.speed=0f;
     }
 
     private void desactiveOnde()

@@ -5,7 +5,7 @@
 			<value>Armure</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{232cf74d-c8e7-4cc8-a389-73a6f85c5ac5}</destination>
@@ -113,7 +113,6 @@
 	<object class="MixerBusEffectChain" id="{925f8cfd-e59a-4945-8190-95283b4bc124}">
 		<relationship name="effects">
 			<destination>{a51eb864-a8d8-4d5e-8301-02d66c8ece45}</destination>
-			<destination>{2629a029-7416-49d0-9bce-c32dba12122e}</destination>
 			<destination>{4dd5efbe-f5f8-44cb-98be-3ae2112930f7}</destination>
 		</relationship>
 	</object>
@@ -126,7 +125,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{69395b81-6b73-4f3c-8c9e-d854cf5c6e0f}" />
 	<object class="MixerBusFader" id="{a51eb864-a8d8-4d5e-8301-02d66c8ece45}" />
-	<object class="SpatialiserEffect" id="{2629a029-7416-49d0-9bce-c32dba12122e}" />
 	<object class="SFXReverbEffect" id="{4dd5efbe-f5f8-44cb-98be-3ae2112930f7}" />
 	<object class="MixerBusFader" id="{0f918362-db0e-437f-9847-cc26a535396c}" />
 </objects>

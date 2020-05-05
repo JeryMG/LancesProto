@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine.Utility;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,19 +12,51 @@ public class FollowPlayer : MonoBehaviour
     private GameObject _player;
     private Vivant entity;
     private Rigidbody rb;
+    private float distance;
+    private Vector3 direction;
+    private EnemiShooter shooter;
+    
+    //raycast
+    public Transform target;
+    private Vector3 pointToReach;
+    private NavMeshHit hit;
+    private bool blocked = false;
     
     void Start()
     {
         pathfinder = GetComponent<NavMeshAgent>();
         entity = GetComponent<Vivant>();
         rb = GetComponent<Rigidbody>();
+        shooter = GetComponent<EnemiShooter>();
         
         _player = GameObject.FindGameObjectWithTag("Player");
+        target = _player.transform;
     }
 
     private void Update()
     {
+        distance = Vector3.Distance(target.position, transform.position);
+        direction = target.position - transform.position;
+        direction.y = 0;
+
+        if (shooter != null)
+        {
+            if (distance < shooter.stopingD)
+            {
+                Vector3 newTarget = transform.position - direction * distance;
+                pointToReach = newTarget;
+                pathfinder.stoppingDistance = shooter.stopingD;
+                shooter.facing = false;
+            }
+            else
+            {
+                pathfinder.stoppingDistance = shooter.stopingD;
+                pointToReach = target.position;
+            }
+        }
+        
         StartCoroutine(resfreshDestination());
+        StartCoroutine(raycastDirection());
     }
 
     IEnumerator resfreshDestination()
@@ -33,7 +66,7 @@ public class FollowPlayer : MonoBehaviour
             rb.velocity = Vector3.zero;
             pathfinder.enabled = true;
             float refreshRate = 0.15f;
-            pathfinder.SetDestination(_player.transform.position);
+            pathfinder.SetDestination(pointToReach);
 
             yield return new WaitForSeconds(refreshRate);
             //yield return StartCoroutine(TurnToFace(_player.transform.position));
@@ -43,19 +76,31 @@ public class FollowPlayer : MonoBehaviour
             pathfinder.enabled = false;
         }
     }
-    
+
+    IEnumerator raycastDirection()
+    {
+        blocked = NavMesh.Raycast(transform.position, pointToReach, out hit, NavMesh.AllAreas);
+        Debug.DrawLine(transform.position, pointToReach, blocked ? Color.red : Color.green);
+        if (blocked)
+            Debug.DrawRay(hit.position, Vector3.up, Color.red);
+        yield return null;
+    }
+
     IEnumerator TurnToFace(Vector3 looktarget)
     {
+        Debug.Log("YOOOOOO");
+        pathfinder.isStopped = true;
         Vector3 dirToLookTarget = (looktarget - transform.position).normalized;
         float targetAngle = 90 - Mathf.Atan2(dirToLookTarget.z, dirToLookTarget.x) * Mathf.Rad2Deg;
 
         while (Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.y, targetAngle)) > 0.05f)
         {
-            float turnSpeed = 90;
+            float turnSpeed = 180;
             float angle = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetAngle, turnSpeed * Time.deltaTime);
             transform.eulerAngles = Vector3.up * angle;
             yield return null;
         }
+        pathfinder.isStopped = false;
     }
-
 }
+

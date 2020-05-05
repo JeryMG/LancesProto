@@ -28,8 +28,8 @@ public class EnemiShooter : Vivant, IClochePropag
     //public float damage = 2f;
     public GameObject prefabProjectile;
     public Transform arcPoint;
-    [SerializeField] private float stopingD = 8f;
-    [SerializeField] private float shootingDistanceTreshold = 3f;
+    public float stopingD = 8f;
+    public float shootingDistanceTreshold = 3f;
     [SerializeField] private float TimeBetweenShots = 0.3f;
     private float NextShotTime;
 
@@ -40,7 +40,6 @@ public class EnemiShooter : Vivant, IClochePropag
     private Transform[] points;
     public Transform pathHolder;
     private int destPoint = 0;
-    public float turnSpeed = 90f;
 
     [Header("Animations")]
     public ParticleSystem DeathEffect;
@@ -48,14 +47,13 @@ public class EnemiShooter : Vivant, IClochePropag
     private Animator animPerso;
     private Anim_E_Vole AnimVole;
     public Animator gongWaveAnimator;
-    private FollowPlayer followPlayer;
     public bool Echojoue=false;
+    public bool facing;
 
 
     protected override void Start() 
     {
         base.Start();
-        followPlayer = GetComponent<FollowPlayer>();
 
         animPerso = GetComponent<Animator>();
         //animPerso.Play("AnimVolEnn");
@@ -109,7 +107,7 @@ public class EnemiShooter : Vivant, IClochePropag
         {
             if (Time.time > NextShotTime)
             {
-                if (sqrDstToTarget < Mathf.Pow(shootingDistanceTreshold, 2))
+                if (sqrDstToTarget <= Mathf.Pow(shootingDistanceTreshold, 2) /*&& sqrDstToTarget >= Mathf.Pow(stopingD, 2)*/)
                 {
                     NextShotTime = Time.time + TimeBetweenShots;
                     StartCoroutine(shoot());
@@ -121,12 +119,11 @@ public class EnemiShooter : Vivant, IClochePropag
         {
             pathFinder.enabled = false;
             AnimVole.AnimVole();
-            
         }
 
         if (currentState == State.Chasing)
         {
-            pathFinder.stoppingDistance = stopingD;
+            //pathFinder.stoppingDistance = stopingD;
             pathFinder.acceleration = 8;
         }
 
@@ -146,7 +143,7 @@ public class EnemiShooter : Vivant, IClochePropag
 
     IEnumerator shoot()
     {
-        
+        yield return StartCoroutine(TurnToFace(target.position));
         currentState = State.Shooting;
         pathFinder.enabled = false;
         
@@ -157,19 +154,6 @@ public class EnemiShooter : Vivant, IClochePropag
         yield return null;
         currentState = State.Chasing;
         pathFinder.enabled = true;
-    }
-    
-    IEnumerator TurnToFace(Vector3 looktarget)
-    {
-        Vector3 dirToLookTarget = (looktarget - transform.position).normalized;
-        float targetAngle = 90 - Mathf.Atan2(dirToLookTarget.z, dirToLookTarget.x) * Mathf.Rad2Deg;
-
-        while (Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.y, targetAngle)) > 0.05f)
-        {
-            float angle = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetAngle, turnSpeed * Time.deltaTime);
-            transform.eulerAngles = Vector3.up * angle;
-            yield return null;
-        }
     }
 
     void GotoNextPoint() 
@@ -187,6 +171,27 @@ public class EnemiShooter : Vivant, IClochePropag
         // Choisir prochain point,
         // revenir au debut du tableau quand on arrive au bout.
         destPoint = (destPoint + 1) % points.Length;
+    }
+    
+    IEnumerator TurnToFace(Vector3 looktarget)
+    {
+        if (!facing)
+        {
+            Debug.Log("YOOOOOO");
+            pathFinder.isStopped = true;
+            Vector3 dirToLookTarget = (looktarget - transform.position).normalized;
+            float targetAngle = 90 - Mathf.Atan2(dirToLookTarget.z, dirToLookTarget.x) * Mathf.Rad2Deg;
+
+            while (Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.y, targetAngle)) > 0.05f)
+            {
+                float turnSpeed = 360;
+                float angle = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetAngle, turnSpeed * Time.deltaTime);
+                transform.eulerAngles = Vector3.up * angle;
+                yield return null;
+            }
+            pathFinder.isStopped = false;
+            facing = true;
+        }
     }
 
     void enemyDeath()
@@ -210,11 +215,6 @@ public class EnemiShooter : Vivant, IClochePropag
         FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         AnimVole.AnimVoleEchos();
         Echojoue=true;
-    }
-
-    private void desactiveOnde()
-    {
-        Onde.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision other)

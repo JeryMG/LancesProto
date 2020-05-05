@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Lance : MonoBehaviour
 {
+    [Header("Lance Speed")]
     [SerializeField]private float lanceSpeed = 12f;
+    private float vitesseReturn = 0f;
+    [SerializeField]private float acceleration = 1.0f;
+    [SerializeField]private float maxSpeed = 60.0f;
+
     private PlayerInputs _inputs;
     public bool stop;
     private Rigidbody lanceBody;
@@ -14,10 +20,10 @@ public class Lance : MonoBehaviour
     public float lanceDamage = 5f;
     [SerializeField] private float timerDestruction = 5f;
     public bool returning;
+    [SerializeField] private float distanceReturn = 3f;
     private Transform PlayerTransform;
 
 
-    public float vitesseReturn;
     //private bool isFlying = false;
 
     private void Start()
@@ -28,39 +34,38 @@ public class Lance : MonoBehaviour
         StayImmobile(true);
         stop = true;
         _player = FindObjectOfType<Hunter>();
+        Destroy(gameObject,4);
     }
 
     private void Update()
     {
-        if (!stop && !returning)
+        if (_player != null)
         {
-            shooting();
-            
-            if (_inputs.blink)
+            if (!stop && !returning)
             {
-                lanceBody.velocity = Vector3.zero;
-                stop = true;
-
-                StayImmobile(true);
-                if (!_player.lieuxDeTp.Contains(transform))
+                shooting();
+            
+                if (_inputs.blink)
                 {
-                    _player.lieuxDeTp.Add(transform);
+                    //lanceBody.velocity = Vector3.zero;
+                    //stop = true;
+
+                    //StayImmobile(true);
+                    if (!_player.lieuxDeTp.Contains(transform))
+                    {
+                        _player.lieuxDeTp.Add(transform);
+                    }
                 }
             }
-
-            // if (isFlying && _inputs.blink)
-            // {
-            //     GameSystem.Instance.StartCoroutine(GameSystem.Instance.SlowMotion());
-            // }
-        }
         
-        returningToPlayer();
+            returningToPlayer();
 
-        if (_inputs.LanceReturn)
-        {
-            // son attraction
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Attraction");
-            returning = true;
+            if (_inputs.LanceReturn)
+            {
+                // son attraction
+                RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Attraction");
+                returning = true;
+            }
         }
     }
 
@@ -131,6 +136,16 @@ public class Lance : MonoBehaviour
             StayImmobile(false);
             Vector3 destination = PlayerTransform.position - transform.position;
             transform.position += destination * vitesseReturn * Time.deltaTime;
+            
+            vitesseReturn += acceleration * Time.deltaTime;
+ 
+            if (vitesseReturn > maxSpeed)
+                vitesseReturn = maxSpeed;
+
+            if (Vector3.Distance(transform.position, PlayerTransform.position) < distanceReturn)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

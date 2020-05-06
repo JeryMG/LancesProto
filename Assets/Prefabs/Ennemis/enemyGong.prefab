@@ -234,7 +234,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: 2.71
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1750036897544190704
@@ -257,13 +257,13 @@ MonoBehaviour:
   points: []
   pathHolder: {fileID: 1750036897204442337}
   damage: 2
-  attackDistanceTreshold: 3
-  TimeBetweenAttacks: 1.2
-  gongTimer: 2
+  attackDistanceTreshold: 7
+  TimeBetweenAttacks: 2
+  gongTimer: 3
   gongWaveAnimator: {fileID: 1750036896819762320}
   DeathEffect: {fileID: 6790313682755352314, guid: a642d501cbc43064a994bec54c30d7b0,
     type: 3}
-  vision: 3
+  vision: 5
   JoueurAuCac: 0
 --- !u!1 &1750036897661473897
 GameObject:
@@ -481,6 +481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141615546357758048, guid: 8ccfcb5f5d8fab84ab988b242df78aa3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9141615546357758049, guid: 8ccfcb5f5d8fab84ab988b242df78aa3,
         type: 3}

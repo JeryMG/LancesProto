@@ -15,7 +15,8 @@ public class Hunter : Vivant
         blinker
     }
     
-    float timer = 0f;
+    public float timer = 0f;
+    private float leTemps;
     
     public Transform Hand;
 
@@ -43,6 +44,8 @@ public class Hunter : Vivant
     private Respawner respawner;
     private bool dejaJouee;
     [SerializeField] private float rayonLance;
+    public float CDLances = 4f;
+
 
     private void Awake()
     {
@@ -65,11 +68,6 @@ public class Hunter : Vivant
     
     private void Update()
     {
-        if (changeColor)
-        {
-            ColorChange(Color.green);
-        }
-        
         //Viser, lancé et melee
         if (lancesRestantes > 0)
         {
@@ -98,6 +96,8 @@ public class Hunter : Vivant
 
         if (lancesRestantes < 3)
         {
+            timer += Time.deltaTime;
+                
             if (_playerInputs.blink && currentState == states.blinker)
             {
                 // Vector3 direction = lieuxDeTp[0] - transform.position;
@@ -110,6 +110,8 @@ public class Hunter : Vivant
                 //tp
                 lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
+                
+                timer = 0;
 
                 StartCoroutine(trail());
             }
@@ -117,6 +119,13 @@ public class Hunter : Vivant
             if (_playerInputs.LanceReturn && currentState == states.blinker)
             {
                 lieuxDeTp.Clear();
+            }
+
+            if (Time.time > leTemps)
+            {
+                lancesRestantes = nbrLances;
+                timer = 0;
+                leTemps = Time.time + CDLances;
             }
         }
 
@@ -131,19 +140,6 @@ public class Hunter : Vivant
         Vector3 movement = new Vector3(_playerInputs.Horizontal, 0, _playerInputs.Vertical);
         Vector3 Velocity = movement.normalized * speed;
         rb.MovePosition(rb.position + Velocity * Time.deltaTime);
-    }
-
-    private void ColorChange(Color newColor)
-    {
-        timer += Time.deltaTime;
-        skinMat.color = newColor;
-        if (timer >= 0.5)
-        {
-            skinMat.color = playerColor;
-            changeColor = false;
-            timer = 0;
-        }
-        
     }
 
     private void playDeathSound()
@@ -169,6 +165,7 @@ public class Hunter : Vivant
             }
             lieuxDeTp.RemoveAll(item => item == null);
             lancesRestantes++;
+            timer = 0;
         }
 
         if (_enemi != null)

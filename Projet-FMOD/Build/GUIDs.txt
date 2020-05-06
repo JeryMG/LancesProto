@@ -8,9 +8,6 @@
 {60a97471-4ae2-43ea-8de4-c203edb595ad} event:/Event2D/Joueur/Parade
 {483db6fa-7ba3-4eb5-a362-1303dcc98cf8} event:/Event2D/Lance/Visee
 {6c45ce62-db9b-427f-81dc-51417b23a840} event:/Event3D/EnnemiCAC3D/CAC
-{75925b31-c362-4146-9879-2f8ec3df993a} event:/Event3D/EnnemiCAC3D/Spawn
-{c0b8ae64-ec71-40e5-bf5a-c704492b6195} event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche
-{4b4f83f5-35ec-4d18-9eab-db7d2bc2edaa} event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche
 {3317aa93-d4b4-4e8d-8c57-0d457ad1f7c9} event:/Event3D/EnnemiDistance3D/DestructionEnnemi
 {3e0953ce-fd13-448a-adc9-adee0da3841d} event:/Event3D/EnnemiDistance3D/Tir
 {b00e2ec4-a161-4a0c-9302-d8858d7220c0} event:/Event3D/Joueur3D/CAC

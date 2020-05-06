@@ -69,13 +69,15 @@ public class FollowPlayer : MonoBehaviour
             rb.velocity = Vector3.zero;
             pathfinder.enabled = true;
             float refreshRate = 0.15f;
-            //if(shooter!=null)
-            pathfinder.SetDestination(pointToReach);
-            //if(shooter==null)
-            //{
-            //    pathfinder.SetDestination(direction);
-//
-            //}
+            if (shooter != null)
+            {
+                pathfinder.SetDestination(pointToReach);
+            }
+            else
+            {
+                pathfinder.SetDestination(target.position);
+            }
+
             yield return new WaitForSeconds(refreshRate);
             //yield return StartCoroutine(TurnToFace(_player.transform.position));
         }

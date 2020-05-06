@@ -13,6 +13,7 @@ public class _E_Cac : Vivant, IClochePropag
         Chasing,
         Patrolling,
         Attacking,
+        Gonging
     }
     public bool DejaJoue=false;
     public State currentState;
@@ -45,7 +46,6 @@ public class _E_Cac : Vivant, IClochePropag
     // public Animator gongWaveAnimator;
     public Anim_EnenmieCac animations_cac;
     private Rigidbody rb;
-    private Rigidbody RbPlayer;
     private bool AttaqueJoue=false;
 
 
@@ -54,13 +54,14 @@ public class _E_Cac : Vivant, IClochePropag
         base.Start(); 
         pathFinder = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
+        Onde.gameObject.SetActive(true);
+
 
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             currentState = State.Patrolling;
             hasTarget = true;
             _hunter = FindObjectOfType<Hunter>();
-            RbPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
             target = GameObject.FindGameObjectWithTag("Player").transform;
             targetVie = _hunter.GetComponent<Vivant>();
         }
@@ -83,12 +84,9 @@ public class _E_Cac : Vivant, IClochePropag
     {
         if(AttaqueJoue==true&&animations_cac.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>=1)
        {
-            //GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().constraints&=~RigidbodyConstraints.FreezePositionY;  
-            //animations_cac.MarcheRapide();
-            pathFinder.speed=15f;
-            AttaqueJoue=false;
+           Debug.Log("hi");
+           AttaqueJoue=false;
        }
-       
 
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
@@ -123,8 +121,8 @@ public class _E_Cac : Vivant, IClochePropag
            //Anim de marche rapîde !!!!!!
            
            animations_cac.MarcheRapide();
-           pathFinder.acceleration = 30;
-           pathFinder.stoppingDistance = 1;
+           pathFinder.acceleration = 12;
+           pathFinder.stoppingDistance = 5;
            DejaJoue=true;
        }
 
@@ -142,14 +140,16 @@ public class _E_Cac : Vivant, IClochePropag
 
        if (currentState == State.Attacking)
        {
-           AttaqueJoue=true;
            //anime d'attaque
             animations_cac.Attaque();
-            //this.GetComponent<Rigidbody>().AddForce(this.transform.forward*100,ForceMode.Acceleration);
-            pathFinder.stoppingDistance = 1;
-            //RbPlayer.velocity=new Vector3(0,0,0);
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().velocity=this.transform.forward*10f;
-            //GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().constraints=RigidbodyConstraints.FreezePositionY;
+            //this.GetComponent<Rigidbody>().AddForce(this.transform.forward*100,ForceMode.Force);
+            pathFinder.stoppingDistance = 5;
+       }
+       
+       if (currentState == State.Gonging)
+       {
+           Onde.gameObject.SetActive(true);
+           propagOnde();
        }
 
        if (stunned)
@@ -158,14 +158,6 @@ public class _E_Cac : Vivant, IClochePropag
            animations_cac.DegasRecus();
        }
        
-    }
-    private void FixedUpdate() 
-    {
-        if (currentState == State.Attacking)
-       {
-            //this.GetComponent<Rigidbody>().AddForce(this.transform.forward*50,ForceMode.Impulse);
-
-       }    
     }
 
     IEnumerator Attack()
@@ -235,28 +227,26 @@ public class _E_Cac : Vivant, IClochePropag
     [ContextMenu("propage onde")]
     public void propagOnde()
     {
-        pathFinder.enabled=false;
+        Onde.gameObject.SetActive(true);
+
         gongWaveAnimator.SetTrigger("Elargi");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         animations_cac.OndeRecus();
-        AttaqueJoue=true;
-        pathFinder.speed=0f;
     }
-
-    private void desactiveOnde()
-    {
-        Onde.SetActive(false);
-    }
-
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Wave"))
         {
-            pathFinder.enabled = false;
+            // Debug.Log("gooopoooooo");
+            // Onde.SetActive(true);
+            // pathFinder.enabled = false;
+            //
+            // propagOnde();
+            // pathFinder.enabled = true;
 
-            propagOnde();
-            pathFinder.enabled = true;
-
+            Onde.gameObject.SetActive(true);
+                currentState = State.Gonging;
         }
         
         if (other.gameObject.CompareTag("Lance"))

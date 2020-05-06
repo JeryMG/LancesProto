@@ -29,7 +29,6 @@ public class GongWave : MonoBehaviour
         {
             if (bro != null)
             {
-                Debug.Log("lets go !!!!");
                 bro.propagOnde();
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
             }

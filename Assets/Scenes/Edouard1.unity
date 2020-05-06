@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2578,7 +2578,7 @@ PrefabInstance:
     - target: {fileID: 808987994155120116, guid: dac4bb90259b34e4a9baf6e3d3769dc0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.28
+      value: -7.29
       objectReference: {fileID: 0}
     - target: {fileID: 808987994155120116, guid: dac4bb90259b34e4a9baf6e3d3769dc0,
         type: 3}
@@ -7375,13 +7375,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 891948476284975731, guid: f8f84f827f498a545be058b37ce73c4a,
         type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10.868006
       objectReference: {fileID: 0}
     - target: {fileID: 891948476284975731, guid: f8f84f827f498a545be058b37ce73c4a,
         type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 891948476284975731, guid: f8f84f827f498a545be058b37ce73c4a,
         type: 3}
@@ -7401,12 +7401,12 @@ PrefabInstance:
     - target: {fileID: 891948476284975731, guid: f8f84f827f498a545be058b37ce73c4a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -0.39077428
       objectReference: {fileID: 0}
     - target: {fileID: 891948476284975731, guid: f8f84f827f498a545be058b37ce73c4a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -1.6284043
       objectReference: {fileID: 0}
     - target: {fileID: 891948476284975731, guid: f8f84f827f498a545be058b37ce73c4a,
         type: 3}
@@ -7651,13 +7651,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5559019577941677484, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_LocalPosition.x
+      value: -19.73
       objectReference: {fileID: 0}
     - target: {fileID: 5663571431692103086, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_LocalPosition.y
+      value: 4.27
       objectReference: {fileID: 0}
     - target: {fileID: 6124882526225422489, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}

@@ -53,11 +53,11 @@ public class E_Gong : Vivant
     private bool dejaJouee;
     private bool GActiver=false;
     public bool JoueurAuCac=false;
-    private int RandAnimCac=1;
-    
+    public bool test=false;
 
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
     //public Animator animPerso;
+    
 
     protected override void Start()
     {
@@ -92,6 +92,7 @@ public class E_Gong : Vivant
         if(target!=null)
         {
             float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
+            
             if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
             {
                 currentState = State.Patrolling;
@@ -100,39 +101,20 @@ public class E_Gong : Vivant
             {
                 currentState = State.Gonging;
             }
-             
             //anims
-            if(JoueurAuCac==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>1)
+            if(GActiver==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>=1)
             {
-                AnimGong.animCac();
-                GActiver=true;
+                GActiver=false;
+                test=false;
             }
-
-            if(sqrDstToTarget<Mathf.Pow(vision, 2)&&GActiver==false)
+            if(test==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>=1)
             {
-                AnimGong.GongActiver();                
-                GActiver=true;
+                test=false;
             }
-            
-            if(GActiver==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>1)
-            {
-                RandAnimCac=UnityEngine.Random.Range(1,3);
-
-               GActiver=false;
-            }
+                       
         
             //Attack state
-            if (hasTarget)
-            {
-                if (Time.time > NextAttackTime)
-                {
-                    if (sqrDstToTarget < Mathf.Pow(attackDistanceTreshold, 2))
-                    {
-                        NextAttackTime = Time.time + TimeBetweenAttacks;
-                        StartCoroutine(Attack());
-                    }
-                }
-            }
+            
         }
         if (currentState == State.Idle)
         {
@@ -158,6 +140,7 @@ public class E_Gong : Vivant
             pathFinder.stoppingDistance = 0;
             
             StartCoroutine(GongWave());
+
         }
         
         if (currentState == State.Patrolling)
@@ -181,22 +164,32 @@ public class E_Gong : Vivant
     {
         if (Time.time > nextGongTime)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
+            //gongWaveAnimator.gameObject.SetActive(true);
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
             gongWaveAnimator.SetTrigger("Elargi");
             //Invoke("desactiveOnde", 3f);
-            pathFinder.enabled = true;
-            AnimGong.GongActiver();   
+            pathFinder.enabled = true;  
+            if(GActiver==false&&test==false)
+            {
+                AnimGong.GongActiver();
+                GActiver=true;
+                test=true;
+            }
         }
         yield return null;
     }
     
     IEnumerator Attack()
     {
+        Debug.Log("tu te joues quand connard");
         currentState = State.Attacking;
         pathFinder.enabled = false;
-    
+        if(test==false)
+        {
+            AnimGong.animCac();
+            test=true;
+        }
         // Vector3 originalPosition = transform.position;
         // Vector3 attackPosition = target.position - (target.position - transform.position).normalized;
         // float attackSpeed = 3f;
@@ -204,8 +197,6 @@ public class E_Gong : Vivant
         // bool appliedDamage = false;
     
         //"Animation" de Lunge
-        //AnimGong.animCac();
-
         //while (percent <= 1)
         {
             // if (percent >= .5f && !appliedDamage)

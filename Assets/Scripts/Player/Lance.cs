@@ -47,10 +47,10 @@ public class Lance : MonoBehaviour
             
                 if (_inputs.blink)
                 {
-                    lanceBody.velocity = Vector3.zero;
-                    stop = true;
+                    //lanceBody.velocity = Vector3.zero;
+                    //stop = true;
 
-                    StayImmobile(true);
+                    //StayImmobile(true);
                     if (!_player.lieuxDeTp.Contains(transform))
                     {
                         _player.lieuxDeTp.Add(transform);
@@ -76,7 +76,7 @@ public class Lance : MonoBehaviour
             lanceBody.velocity = Vector3.zero;
             stop = true;
             StayImmobile(true);
-            
+            Debug.Log("cible ajoutée");
             if (!_player.lieuxDeTp.Contains(transform))
             {
                 _player.lieuxDeTp.Add(transform);

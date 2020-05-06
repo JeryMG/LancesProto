@@ -143,6 +143,8 @@ public class EnemiShooter : Vivant, IClochePropag
 
     IEnumerator shoot()
     {
+        //Onde.gameObject.SetActive(false);
+
         yield return StartCoroutine(TurnToFace(target.position));
         currentState = State.Shooting;
         pathFinder.enabled = false;
@@ -177,7 +179,6 @@ public class EnemiShooter : Vivant, IClochePropag
     {
         if (!facing)
         {
-            Debug.Log("YOOOOOO");
             pathFinder.isStopped = true;
             Vector3 dirToLookTarget = (looktarget - transform.position).normalized;
             float targetAngle = 90 - Mathf.Atan2(dirToLookTarget.z, dirToLookTarget.x) * Mathf.Rad2Deg;
@@ -215,12 +216,14 @@ public class EnemiShooter : Vivant, IClochePropag
         FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         AnimVole.AnimVoleEchos();
         Echojoue=true;
+        Onde.gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Wave"))
         {
+            Onde.gameObject.SetActive(true);
             currentState = State.Gonging;
         }
     }

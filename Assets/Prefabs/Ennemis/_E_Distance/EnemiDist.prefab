@@ -62,11 +62,11 @@ Transform:
   m_LocalPosition: {x: -1.6338584, y: 5.2649894, z: -16.367203}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4648031331185135012}
   - {fileID: 5319960885866619045}
   - {fileID: 5649263960909309692}
   - {fileID: 1024895218434959542}
   - {fileID: 62227398571215617}
-  - {fileID: 4648031331185135012}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -193,7 +193,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3597102815451038828}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4976928258705052386
 GameObject:
@@ -225,7 +225,7 @@ Transform:
   - {fileID: 3981532287763182368}
   - {fileID: 8724157370612451012}
   m_Father: {fileID: 3597102815451038828}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5156710763789609061
 GameObject:
@@ -261,7 +261,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3597102815451038828}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6156603340400435989
 MeshFilter:
@@ -4672,7 +4672,7 @@ MeshCollider:
   m_GameObject: {fileID: 5156710763789609061}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -4767,7 +4767,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3597102815451038828}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3597102815418411848
 PrefabInstance:
@@ -4819,7 +4819,7 @@ PrefabInstance:
     - target: {fileID: 8664703369255783405, guid: 97b94f9459ead5945854a2483801f8c4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8664703369255783405, guid: 97b94f9459ead5945854a2483801f8c4,
         type: 3}

@@ -259,7 +259,7 @@ MonoBehaviour:
   damage: 2
   attackDistanceTreshold: 7
   TimeBetweenAttacks: 2
-  gongTimer: 2
+  gongTimer: 3
   gongWaveAnimator: {fileID: 1750036896819762320}
   DeathEffect: {fileID: 6790313682755352314, guid: a642d501cbc43064a994bec54c30d7b0,
     type: 3}
@@ -481,6 +481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141615546357758048, guid: 8ccfcb5f5d8fab84ab988b242df78aa3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9141615546357758049, guid: 8ccfcb5f5d8fab84ab988b242df78aa3,
         type: 3}

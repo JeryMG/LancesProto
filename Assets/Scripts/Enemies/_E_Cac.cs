@@ -13,6 +13,7 @@ public class _E_Cac : Vivant, IClochePropag
         Chasing,
         Patrolling,
         Attacking,
+        Gonging
     }
     public bool DejaJoue=false;
     public State currentState;
@@ -53,6 +54,8 @@ public class _E_Cac : Vivant, IClochePropag
         base.Start(); 
         pathFinder = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
+        Onde.gameObject.SetActive(true);
+
 
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
@@ -139,8 +142,14 @@ public class _E_Cac : Vivant, IClochePropag
        {
            //anime d'attaque
             animations_cac.Attaque();
-            this.GetComponent<Rigidbody>().AddForce(this.transform.forward*100,ForceMode.Force);
+            //this.GetComponent<Rigidbody>().AddForce(this.transform.forward*100,ForceMode.Force);
             pathFinder.stoppingDistance = 5;
+       }
+       
+       if (currentState == State.Gonging)
+       {
+           Onde.gameObject.SetActive(true);
+           propagOnde();
        }
 
        if (stunned)
@@ -218,25 +227,26 @@ public class _E_Cac : Vivant, IClochePropag
     [ContextMenu("propage onde")]
     public void propagOnde()
     {
+        Onde.gameObject.SetActive(true);
+
         gongWaveAnimator.SetTrigger("Elargi");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         animations_cac.OndeRecus();
     }
-
-    private void desactiveOnde()
-    {
-        Onde.SetActive(false);
-    }
-
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Wave"))
         {
-            pathFinder.enabled = false;
+            // Debug.Log("gooopoooooo");
+            // Onde.SetActive(true);
+            // pathFinder.enabled = false;
+            //
+            // propagOnde();
+            // pathFinder.enabled = true;
 
-            propagOnde();
-            pathFinder.enabled = true;
-
+            Onde.gameObject.SetActive(true);
+                currentState = State.Gonging;
         }
         
         if (other.gameObject.CompareTag("Lance"))

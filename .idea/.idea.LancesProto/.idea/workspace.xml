@@ -2,15 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jerome.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/GongWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/GongWave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/EnemyKaK.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/EnemyKaK.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/LD_Lance_TEST.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/LD_Lance_TEST.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Lances.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Lances.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/white.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/white.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/COMBO DONG 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/COMBO DONG 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/COMBO DONG 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/COMBO DONG 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/EFFET DONG.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/EFFET DONG.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Effet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Effet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/EffetSOL.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/EffetSOL.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Projectil.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Projectil.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/TPenemi.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/TPenemi.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Wind.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Wind.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/EFF_HIT_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/EFF_HIT_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/Effet_Impact_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/Effet_Impact_4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/Glow_HIT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/Glow_HIT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/HIT (1).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/HIT (1).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/HIT (2).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/HIT (2).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/Impact_EFF_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/Impact_EFF_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/Impact_EFF_2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Impact Effect/Impact_EFF_2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/JoueurEffect/ASS_LANCE_EFFECT3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/JoueurEffect/ASS_LANCE_EFFECT3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/JoueurEffect/New_PERSO_CARA2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/JoueurEffect/New_PERSO_CARA2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/JoueurEffect/POSTPROTest.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/JoueurEffect/POSTPROTest.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/JoueurEffect/SLASHEFFECT.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/JoueurEffect/SLASHEFFECT.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/CaraDesign/New_PERSO_CARA2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/CaraDesign/New_PERSO_CARA2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/CaraDesign/PlayerPourEdOUARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/CaraDesign/PlayerPourEdOUARD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Edouard1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Edouard1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Edouard1/POSTPROTest Profile 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Edouard1/POSTPROTest Profile 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Edouard1/POSTPROTest Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Edouard1/POSTPROTest Profile.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +238,7 @@
       <workItem from="1587471786722" duration="14344000" />
       <workItem from="1587547096013" duration="12327000" />
       <workItem from="1587716627172" duration="23131000" />
-      <workItem from="1588747608587" duration="4767000" />
+      <workItem from="1588747608587" duration="5232000" />
     </task>
     <servers />
   </component>

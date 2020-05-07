@@ -82,11 +82,7 @@ public class _E_Cac : Vivant, IClochePropag
 
     private void Update() 
     {
-        if(AttaqueJoue==true&&animations_cac.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>=1)
-       {
-           Debug.Log("hi");
-           AttaqueJoue=false;
-       }
+        
 
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
@@ -156,6 +152,11 @@ public class _E_Cac : Vivant, IClochePropag
        {
            //anime de degat recu quand cac player
            animations_cac.DegasRecus();
+       }
+       if(AttaqueJoue==true&&animations_cac.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>=1)
+       {
+           animations_cac.MarcheRapide();
+           AttaqueJoue=false;
        }
        
     }

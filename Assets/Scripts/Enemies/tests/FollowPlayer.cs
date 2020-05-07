@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Cinemachine.Utility;
+//using Cinemachine.Utility;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,7 +13,7 @@ public class FollowPlayer : MonoBehaviour
     private Vivant entity;
     private Rigidbody rb;
     private float distance;
-    private Vector3 direction;
+    public  Vector3 direction;
     private EnemiShooter shooter;
     
     //raycast
@@ -38,7 +38,6 @@ public class FollowPlayer : MonoBehaviour
         distance = Vector3.Distance(target.position, transform.position);
         direction = target.position - transform.position;
         direction.y = 0;
-
         if (shooter != null)
         {
             if (distance < shooter.stopingD)
@@ -53,6 +52,10 @@ public class FollowPlayer : MonoBehaviour
                 pathfinder.stoppingDistance = shooter.stopingD;
                 pointToReach = target.position;
             }
+        }
+        else
+        {
+            pointToReach=direction;
         }
         
         StartCoroutine(resfreshDestination());

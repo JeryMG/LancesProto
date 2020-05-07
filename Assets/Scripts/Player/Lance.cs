@@ -34,7 +34,7 @@ public class Lance : MonoBehaviour
         StayImmobile(true);
         stop = true;
         _player = FindObjectOfType<Hunter>();
-        Destroy(gameObject,_player.CDLances);
+        Destroy(gameObject,5f);
     }
 
     private void Update()
@@ -44,18 +44,17 @@ public class Lance : MonoBehaviour
             if (!stop && !returning)
             {
                 shooting();
-            
-                if (_inputs.blink)
+                if (!_player.lieuxDeTp.Contains(transform))
                 {
-                    //lanceBody.velocity = Vector3.zero;
-                    //stop = true;
-
-                    //StayImmobile(true);
-                    if (!_player.lieuxDeTp.Contains(transform))
-                    {
-                        _player.lieuxDeTp.Add(transform);
-                    }
+                    _player.lieuxDeTp.Add(transform);
                 }
+                // if (_inputs.blink)
+                // {
+                //     if (!_player.lieuxDeTp.Contains(transform))
+                //     {
+                //         _player.lieuxDeTp.Add(transform);
+                //     }
+                // }
             }
         
             returningToPlayer();
@@ -65,7 +64,6 @@ public class Lance : MonoBehaviour
                 // son attraction
                 RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Attraction");
                 returning = true;
-                _player.timer = 0;
             }
         }
     }
@@ -121,7 +119,6 @@ public class Lance : MonoBehaviour
         {
             _player.lieuxDeTp.Remove(transform);
             _player.lancesRestantes++;
-            _player.timer = 0;
         }
     }
 

@@ -14,6 +14,7 @@ public class Boutton : MonoBehaviour
     private void Start()
     {
         bouttonRenderer = GetComponent<Renderer>();
+        bouttonRenderer.material.SetColor("_BaseColor", Color.blue);
     }
 
     private void OnCollisionEnter(Collision other)

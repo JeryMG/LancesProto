@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Claims;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions.Must;
@@ -14,9 +15,8 @@ public class Hunter : Vivant
         hunter,
         blinker
     }
-    
-    public float timer = 0f;
-    private float leTemps;
+
+    public float cdLances = 15f;
     
     public Transform Hand;
 
@@ -44,7 +44,7 @@ public class Hunter : Vivant
     private Respawner respawner;
     private bool dejaJouee;
     [SerializeField] private float rayonLance;
-    public float CDLances = 4f;
+    public CinemachineVirtualCamera cam;
 
 
     private void Awake()
@@ -96,8 +96,6 @@ public class Hunter : Vivant
 
         if (lancesRestantes < 3)
         {
-            timer += Time.deltaTime;
-                
             if (_playerInputs.blink && currentState == states.blinker)
             {
                 // Vector3 direction = lieuxDeTp[0] - transform.position;
@@ -110,8 +108,6 @@ public class Hunter : Vivant
                 //tp
                 lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
-                
-                timer = 0;
 
                 StartCoroutine(trail());
             }
@@ -119,13 +115,6 @@ public class Hunter : Vivant
             if (_playerInputs.LanceReturn && currentState == states.blinker)
             {
                 lieuxDeTp.Clear();
-            }
-
-            if (Time.time > leTemps)
-            {
-                lancesRestantes = nbrLances;
-                timer = 0;
-                leTemps = Time.time + CDLances;
             }
         }
 
@@ -165,7 +154,6 @@ public class Hunter : Vivant
             }
             lieuxDeTp.RemoveAll(item => item == null);
             lancesRestantes++;
-            timer = 0;
         }
 
         if (_enemi != null)

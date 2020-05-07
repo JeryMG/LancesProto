@@ -128,6 +128,6 @@ MonoBehaviour:
   maxSpeed: 60
   stop: 0
   lanceDamage: 3.5
-  timerDestruction: 1
+  timerDestruction: 4
   returning: 0
   distanceReturn: 2

@@ -4636,7 +4636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  MaxHealth: 50
+  MaxHealth: 10
   stunned: 0
   DejaJoue: 0
   currentState: 0

@@ -11,7 +11,9 @@ public class SpawnEnemy : MonoBehaviour
     {
         public int enemyCount;
         public float TimeBetweenWaves;
-    } 
+    }
+
+    public ParticleSystem effetSol;
     
     public Wave[] Waves;
     public List<Vivant> enemy;
@@ -34,6 +36,7 @@ public class SpawnEnemy : MonoBehaviour
     
     private void Start()
     {
+        effetSol.gameObject.SetActive(false);
         playerEntity = FindObjectOfType<Hunter>();
         playerT = playerEntity.transform;
         playerEntity.OnDeath += onPlayerDeath;
@@ -56,8 +59,9 @@ public class SpawnEnemy : MonoBehaviour
     
     IEnumerator SpawnAnEnemy()
     {
-        float spawnDelay = 1;
+        float spawnDelay = 2;
         // effet sol
+        effetSol.gameObject.SetActive(true);
         
         float spawnTimer = 0;
 
@@ -70,6 +74,7 @@ public class SpawnEnemy : MonoBehaviour
         int id = Random.Range(0, 2);
         Vivant spawnedEnemy = Instantiate(enemy[id], spawnPoint.position + Vector3.up, Quaternion.identity);
         spawnedEnemy.OnDeath += OnEnemyDeath;
+        effetSol.gameObject.SetActive(false);
     }
     
     void OnEnemyDeath()

@@ -90,7 +90,7 @@
 	<object class="MixerBusPanner" id="{f653092d-7082-47da-a1ff-51833059a966}" />
 	<object class="MultiSound" id="{53637a3f-1d44-45c4-aa2c-9e664d5c543a}">
 		<property name="length">
-			<value>0.42176870748299322</value>
+			<value>0.25</value>
 		</property>
 		<property name="playlistMode">
 			<value>1</value>
@@ -180,13 +180,16 @@
 			<value>100</value>
 		</property>
 		<property name="diffusion">
-			<value>43.5</value>
+			<value>57.5</value>
 		</property>
 		<property name="lowShelfGain">
-			<value>-11.5</value>
+			<value>-8</value>
+		</property>
+		<property name="highCut">
+			<value>3200</value>
 		</property>
 		<property name="wetLevel">
-			<value>2</value>
+			<value>-13.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{88594857-2311-429a-8ae7-a670bd4d25a6}" />

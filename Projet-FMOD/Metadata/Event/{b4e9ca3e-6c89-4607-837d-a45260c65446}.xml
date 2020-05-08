@@ -5,7 +5,7 @@
 			<value>Sol</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{232cf74d-c8e7-4cc8-a389-73a6f85c5ac5}</destination>
@@ -75,6 +75,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{79f33815-f1f0-440e-b1af-23833fcf9fdc}">
+		<property name="volume">
+			<value>-12</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{696d4de1-16f6-48d6-a82c-6dc44bbae789}</destination>
 		</relationship>
@@ -124,7 +127,6 @@
 	<object class="MixerBusEffectChain" id="{696d4de1-16f6-48d6-a82c-6dc44bbae789}">
 		<relationship name="effects">
 			<destination>{33f355ae-37a6-481b-b893-b9f8658b1f04}</destination>
-			<destination>{ed84cb9f-5be2-4dda-aa51-4b2c1f6871eb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{49c6872c-2173-4b10-9189-42a80f670ec3}" />
@@ -144,11 +146,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{e1cc14ce-c14e-4e78-a883-831051b5f811}" />
 	<object class="MixerBusFader" id="{33f355ae-37a6-481b-b893-b9f8658b1f04}" />
-	<object class="SpatialiserEffect" id="{ed84cb9f-5be2-4dda-aa51-4b2c1f6871eb}">
-		<property name="bypass">
-			<value>true</value>
-		</property>
-	</object>
 	<object class="AutomationCurve" id="{d0e8687c-59ed-44d5-a68f-8bcafd80a3ea}">
 		<relationship name="parameter">
 			<destination>{241f69bf-7127-4fc2-a575-7d80278b2145}</destination>

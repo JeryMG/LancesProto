@@ -3,27 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/KaK.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/KaK.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Lances.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Lances.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/LanceurProjectiles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LanceurProjectiles.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mur.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mur.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/jerome/1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/jerome/1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/jerome/2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/jerome/2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/jerome/3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/jerome/3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/tests/ground2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/tests/ground2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/tests/ground3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/tests/ground3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/tests/head.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/tests/head.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/tests/ruban1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/tests/ruban1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/tests/ruban2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/tests/ruban2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/test/Boutton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/test/Boutton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Projectil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Projectil.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/Fleche.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/Fleche.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Lance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Lance.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jerome.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/goproj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/goproj.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,14 +107,12 @@
         <option value="$USER_HOME$/Desktop/2GD/Prog Unity/Anims/Assets/coll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Game/test/platformD.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/testObjets/platformD.cs" />
         <option value="$PROJECT_DIR$/Assets/cube.cs" />
         <option value="$PROJECT_DIR$/Assets/respawPlat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/projEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/IPropageDong.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/goproj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/GongWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
@@ -133,9 +120,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Game/test/Boutton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/goproj.cs" />
       </list>
     </option>
   </component>
@@ -209,7 +198,8 @@
       <workItem from="1587716627172" duration="23131000" />
       <workItem from="1588770328616" duration="5410000" />
       <workItem from="1588775989429" duration="24000" />
-      <workItem from="1588834786973" duration="5602000" />
+      <workItem from="1588834786973" duration="6301000" />
+      <workItem from="1588956489887" duration="12512000" />
     </task>
     <servers />
   </component>

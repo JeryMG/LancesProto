@@ -8,6 +8,9 @@
 {60a97471-4ae2-43ea-8de4-c203edb595ad} event:/Event2D/Joueur/Parade
 {483db6fa-7ba3-4eb5-a362-1303dcc98cf8} event:/Event2D/Lance/Visee
 {6c45ce62-db9b-427f-81dc-51417b23a840} event:/Event3D/EnnemiCAC3D/CAC
+{75925b31-c362-4146-9879-2f8ec3df993a} event:/Event3D/EnnemiCAC3D/Spawn
+{c0b8ae64-ec71-40e5-bf5a-c704492b6195} event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche
+{4b4f83f5-35ec-4d18-9eab-db7d2bc2edaa} event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche
 {3317aa93-d4b4-4e8d-8c57-0d457ad1f7c9} event:/Event3D/EnnemiDistance3D/DestructionEnnemi
 {3e0953ce-fd13-448a-adc9-adee0da3841d} event:/Event3D/EnnemiDistance3D/Tir
 {b00e2ec4-a161-4a0c-9302-d8858d7220c0} event:/Event3D/Joueur3D/CAC
@@ -16,7 +19,7 @@
 {b1bd263c-8be5-4742-a16e-9a31a70aaecb} event:/Event3D/Joueur3D/Marche
 {bea70625-79a7-4bb5-b689-373d633b768a} event:/Event3D/Joueur3D/ObjetRamassé
 {b05a44f8-aeec-4d49-b877-94e94168508d} event:/Event3D/Joueur3D/Téléportation
-{4205714c-55cc-4407-b993-c43b8a960104} event:/Event3D/Lance3D/Armure
+{0d7901cf-67b3-4017-bab4-3e8fece2cabb} event:/Event3D/Lance3D/Armure
 {98d1c002-81e8-4bbf-b16b-c395b570901c} event:/Event3D/Lance3D/Ennemi
 {34f68742-12dd-4470-accf-d6949c30cf08} event:/Event3D/Lance3D/Mur
 {b4e9ca3e-6c89-4607-837d-a45260c65446} event:/Event3D/Lance3D/Sol

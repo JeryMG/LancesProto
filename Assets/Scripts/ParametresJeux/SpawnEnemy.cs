@@ -49,6 +49,10 @@ public class SpawnEnemy : MonoBehaviour
         {
             if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
             {
+
+                //SON SPAWN
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/Spawn", transform.position);
+
                 enemiesRemainingToSpawn--;
                 nextSpawnTime = Time.time + currentWave.TimeBetweenWaves;
 

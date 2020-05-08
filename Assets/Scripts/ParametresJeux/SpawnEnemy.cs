@@ -31,6 +31,7 @@ public class SpawnEnemy : MonoBehaviour
     
     private bool isDisabled;
     private bool startSpawn;
+    private bool SonJouer=false;
 
     public event Action<int> OnNewWave;
     
@@ -49,10 +50,12 @@ public class SpawnEnemy : MonoBehaviour
         {
             if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
             {
-
+                if(SonJouer==false)
+                {
                 //SON SPAWN
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/Spawn", transform.position);
-
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/Spawn", transform.position);
+                    SonJouer=true;
+                }
                 enemiesRemainingToSpawn--;
                 nextSpawnTime = Time.time + currentWave.TimeBetweenWaves;
 
@@ -93,6 +96,8 @@ public class SpawnEnemy : MonoBehaviour
     
     void NextWave()
     {
+        SonJouer=false;
+
         currentWaveNumber++;
         //print("wave " + currentWaveNumber);
         if (currentWaveNumber - 1 < Waves.Length)

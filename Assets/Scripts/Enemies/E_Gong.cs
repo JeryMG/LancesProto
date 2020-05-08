@@ -54,6 +54,7 @@ public class E_Gong : Vivant
     private bool GActiver=false;
     public bool JoueurAuCac=false;
     private int RandAnimCac=1;
+    private bool SoundActiveGong=false;
     
 
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
@@ -103,6 +104,10 @@ public class E_Gong : Vivant
             if(sqrDstToTarget < Mathf.Pow(attackDistanceTreshold, 2))
             {
                 currentState = State.Attacking;
+            }
+            if(SoundActiveGong==true&&Time.time < nextGongTime)
+            {
+                 SoundActiveGong=false;
             }
              
             //anims
@@ -186,7 +191,11 @@ public class E_Gong : Vivant
     {
         if (Time.time > nextGongTime)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
+            if(SoundActiveGong==false)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
+                SoundActiveGong=true;
+            }
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
             gongWaveAnimator.SetTrigger("Elargi");

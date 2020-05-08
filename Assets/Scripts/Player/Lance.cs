@@ -24,6 +24,7 @@ public class Lance : MonoBehaviour
     private Transform PlayerTransform;
 
 
+
     //private bool isFlying = false;
 
     private void Start()
@@ -90,6 +91,10 @@ public class Lance : MonoBehaviour
         if (other.gameObject.CompareTag("Vide"))
         {
             Destroy(gameObject,timerDestruction);
+        }
+        if(other.gameObject.GetComponent<E_Gong>()!=null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Lance3D/Armure",transform.position);
         }
 
         if (other.gameObject.CompareTag("Mur"))

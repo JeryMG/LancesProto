@@ -35,5 +35,10 @@ public class goproj : MonoBehaviour
             player.TakeDamage(damage);
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

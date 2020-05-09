@@ -60,7 +60,7 @@ public class Lance : MonoBehaviour
         
             returningToPlayer();
 
-            if (_inputs.LanceReturn)
+            if (_inputs.LanceReturn && _player.currentState == Hunter.states.blinker)
             {
                 // son attraction
                 RuntimeManager.PlayOneShot("event:/Event2D/Joueur/Attraction");
@@ -149,6 +149,7 @@ public class Lance : MonoBehaviour
             if (Vector3.Distance(transform.position, PlayerTransform.position) < distanceReturn)
             {
                 Destroy(gameObject);
+                _player.lanceReturning = false;
             }
         }
     }

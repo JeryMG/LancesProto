@@ -31,6 +31,7 @@ public class Hunter : Vivant
     [Header("Hunter Variables")]
     private int nbrLances = 3;
     private Lance lanceEquiped;
+    public bool lanceReturning;
 
     [Header("Blink Variables")] 
     [SerializeField] public List<Transform> lieuxDeTp;
@@ -43,8 +44,8 @@ public class Hunter : Vivant
     private Rigidbody rb;
     private Respawner respawner;
     private bool dejaJouee;
-    [SerializeField] private float rayonLance;
-    public CinemachineVirtualCamera cam;
+    private float yMax;
+    private bool grounded;
 
 
     private void Awake()
@@ -68,8 +69,10 @@ public class Hunter : Vivant
     
     private void Update()
     {
+        ClampHauteurJoueur();
+        
         //Viser, lancé et melee
-        if (lancesRestantes > 0)
+        if (lancesRestantes > 0 && !lanceReturning)
         {
             if (_playerInputs.AimWeapon && currentState == states.blinker)
             {
@@ -106,7 +109,7 @@ public class Hunter : Vivant
                     transform.position);
                 
                 //tp
-                lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, transform.position.y, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
+                lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, /*transform.position.y*/ lieuxDeTp[lieuxDeTp.Count - 1].position.y + 1, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
 
                 StartCoroutine(trail());
@@ -115,12 +118,14 @@ public class Hunter : Vivant
             if (_playerInputs.LanceReturn && currentState == states.blinker)
             {
                 lieuxDeTp.Clear();
+                lanceReturning = true;
             }
         }
 
-        if (lancesRestantes > 3)
+        if (lancesRestantes >= 3)
         {
             lancesRestantes = 3;
+            lanceReturning = false;
         }
     }
     
@@ -129,6 +134,14 @@ public class Hunter : Vivant
         Vector3 movement = new Vector3(_playerInputs.Horizontal, 0, _playerInputs.Vertical);
         Vector3 Velocity = movement.normalized * speed;
         rb.MovePosition(rb.position + Velocity * Time.deltaTime);
+    }
+
+    private void ClampHauteurJoueur()
+    {
+        if (transform.position.y >= yMax + 1)
+        {
+            transform.position = new Vector3(transform.position.x, yMax, transform.position.z);
+        }
     }
 
     private void playDeathSound()
@@ -142,6 +155,10 @@ public class Hunter : Vivant
 
         if (other.gameObject.GetComponent<Lance>() != null)
         {
+            if (other.gameObject.GetComponent<Lance>().returning)
+            {
+                lanceReturning = false;
+            }
             Destroy(other.gameObject);
             //Son de lance Ramassée
             FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Joueur3D/ObjetRamassé",
@@ -163,7 +180,14 @@ public class Hunter : Vivant
 
         if (other.gameObject.CompareTag("Vide"))
         {
+            rb.velocity = Vector3.zero;
             transform.position = respawner.transform.position;
+        }
+
+        if (other.transform.CompareTag("Ground") && !grounded)
+        {
+            grounded = true;
+            yMax = transform.position.y;
         }
     }
 

@@ -11,6 +11,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         public int enemyCount;
         public float TimeBetweenWaves;
+        public int enemyType;
     }
 
     public ParticleSystem effetSol;
@@ -78,8 +79,9 @@ public class SpawnEnemy : MonoBehaviour
             yield return null;
         }
 
-        int id = Random.Range(0, 2);
-        Vivant spawnedEnemy = Instantiate(enemy[id], spawnPoint.position + Vector3.up, Quaternion.identity);
+        //int id = Random.Range(0, enemy.Count);
+        
+        Vivant spawnedEnemy = Instantiate(enemy[Waves[currentWaveNumber - 1].enemyType], spawnPoint.position + Vector3.up, Quaternion.identity);
         spawnedEnemy.OnDeath += OnEnemyDeath;
         effetSol.gameObject.SetActive(false);
     }

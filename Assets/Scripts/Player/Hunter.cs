@@ -6,6 +6,7 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions.Must;
+using UnityEngine.Experimental.GlobalIllumination;
 
 [RequireComponent(typeof(Rigidbody), typeof(PlayerInputs))]
 public class Hunter : Vivant
@@ -111,6 +112,7 @@ public class Hunter : Vivant
                 //tp
                 lieuxDeTp[lieuxDeTp.Count - 1].position = new Vector3(lieuxDeTp[lieuxDeTp.Count - 1].position.x, /*transform.position.y*/ lieuxDeTp[lieuxDeTp.Count - 1].position.y + 1, lieuxDeTp[lieuxDeTp.Count - 1].position.z);
                 transform.position = lieuxDeTp[lieuxDeTp.Count - 1].position;
+                
 
                 StartCoroutine(trail());
             }

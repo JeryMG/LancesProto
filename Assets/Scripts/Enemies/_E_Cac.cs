@@ -231,6 +231,8 @@ public class _E_Cac : Vivant, IClochePropag
         Onde.gameObject.SetActive(true);
 
         gongWaveAnimator.SetTrigger("Elargi");
+        Debug.Log("jejouecloche");
+
         FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         animations_cac.OndeRecus();
     }
@@ -247,7 +249,7 @@ public class _E_Cac : Vivant, IClochePropag
             // pathFinder.enabled = true;
 
             Onde.gameObject.SetActive(true);
-                currentState = State.Gonging;
+            currentState = State.Gonging;
         }
         
         if (other.gameObject.CompareTag("Lance"))

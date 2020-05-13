@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/solLV1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/solLV1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Lance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Lance.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Edouard1/POSTPROTest Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Edouard1/POSTPROTest Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/silver.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/silver.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/vert.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/couleurs/lv1/vert.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,16 +113,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/IPropageDong.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/GongWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Game/test/Boutton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/goproj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
+        <option value="$PROJECT_DIR$/Assets/limitCamera.cs" />
       </list>
     </option>
   </component>
@@ -198,6 +200,8 @@
       <workItem from="1588834786973" duration="6301000" />
       <workItem from="1588956489887" duration="13106000" />
       <workItem from="1589035631892" duration="2471000" />
+      <workItem from="1589110348125" duration="2914000" />
+      <workItem from="1589287453807" duration="716000" />
     </task>
     <servers />
   </component>

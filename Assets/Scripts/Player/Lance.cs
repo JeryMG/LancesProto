@@ -107,6 +107,7 @@ public class Lance : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Lance3D/Sol",transform.position);
         }
 
+        E_Gong Egong = other.gameObject.GetComponent<E_Gong>();
         Vivant enemiBody = other.gameObject.GetComponent<Vivant>();
         if (enemiBody != null && other.gameObject.CompareTag("Enemy"))
         {
@@ -115,6 +116,14 @@ public class Lance : MonoBehaviour
             {
                 transform.parent = enemiBody.transform;
             }
+        }
+        
+        Lance lance = other.gameObject.GetComponent<Lance>();
+
+        if (Egong != null)
+        {
+            Egong.stunned = true;
+            StartCoroutine( Egong.StunXseconds(5f));
         }
     }
 

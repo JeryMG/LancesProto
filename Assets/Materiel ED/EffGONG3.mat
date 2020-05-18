@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EffGONG3
+  m_Shader: {fileID: -6465566751694194690, guid: 1a1ca4ffac72fcd4aaa4a0897a0a41ef,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - Vector1_83E548BA: 2
+    - Vector1_89B3CF3A: 2.43
+    m_Colors:
+    - Color_84EEC277: {r: 0, g: 0.056834165, b: 0.3679245, a: 0}
+    - Color_8CECA9CC: {r: 0.68303937, g: 1.4902678, b: 2.6390157, a: 0}

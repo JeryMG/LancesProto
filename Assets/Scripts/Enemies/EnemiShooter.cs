@@ -137,6 +137,7 @@ public class EnemiShooter : Vivant, IClochePropag
 
         if (currentState == State.Gonging)
         {
+            Onde.gameObject.SetActive(true);
             propagOnde();
         }
     }
@@ -212,13 +213,15 @@ public class EnemiShooter : Vivant, IClochePropag
     [ContextMenu("propage onde")]
     public void propagOnde()
     {
+        Onde.gameObject.SetActive(true);
+        
         gongWaveAnimator.SetTrigger("Elargi");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);
         AnimVole.AnimVoleEchos();
         Echojoue=true;
-        Onde.gameObject.SetActive(false);
+        //Onde.gameObject.SetActive(false);
     }
-
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Wave"))

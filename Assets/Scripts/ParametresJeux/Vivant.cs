@@ -20,6 +20,12 @@ public class Vivant : MonoBehaviour, IDamageable
     
     public virtual void TakeDamage(float damage)
     {
+        // Son Hit Effect
+/*        if (this.CompareTag("Player"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Hit_Effect/Hit_Effect");
+        }*/
+
         health -= damage;
         if (health <= 0 && !dead)
         {

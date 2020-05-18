@@ -83,7 +83,7 @@ public class Lance : MonoBehaviour
             }
         }
 
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && other.gameObject.GetComponent<E_Gong>() == null)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/Lance3D/Ennemi",transform.position);
         }

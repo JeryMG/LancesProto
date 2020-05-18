@@ -264,7 +264,9 @@ public class E_Gong : Vivant
     void enemyDeath()
     {
         //son de destruction 
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/DestructionEnnemi",transform.position);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/DestructionGONG", transform.position);
+
+
         
         //Animation de mort
         

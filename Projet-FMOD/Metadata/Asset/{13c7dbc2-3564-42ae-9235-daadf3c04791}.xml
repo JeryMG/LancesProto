@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{13c7dbc2-3564-42ae-9235-daadf3c04791}">
+		<property name="assetPath">
+			<value>LancesProto/Player/Hit_effect/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{95350ebc-6550-4846-9dbb-081b6911d56d}</destination>
+		</relationship>
+	</object>
+</objects>

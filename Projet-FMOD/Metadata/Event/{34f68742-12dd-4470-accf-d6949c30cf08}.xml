@@ -5,7 +5,7 @@
 			<value>Mur</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{232cf74d-c8e7-4cc8-a389-73a6f85c5ac5}</destination>
@@ -53,7 +53,7 @@
 			<destination>{58dde3ca-3595-4c1e-a66e-0db2eba9c786}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{da0254b9-2d50-451f-aa50-f4a4e598cfc0}</destination>
+			<destination>{df2543ec-217b-4f3f-adb2-e41a141fef44}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{fd00a2a6-b918-4672-9e8c-2704e2df532b}" />
@@ -103,6 +103,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d9a3c8ce-3425-4d9b-a00f-5112de59ff45}">
+		<property name="volume">
+			<value>-24</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -118,9 +121,11 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{9da62df4-e95c-47b8-99cb-99d91cecbc4d}">
 		<relationship name="effects">
-			<destination>{e81a1471-5a57-40c2-af98-ec1c66fb498e}</destination>
 			<destination>{f86b6a09-960b-42f5-9250-f8d4d8e3d13d}</destination>
-			<destination>{970e8c2b-19bb-4137-ba4e-fcfa3ec0b44a}</destination>
+			<destination>{12c61529-4db4-4545-a7ac-10fa98143196}</destination>
+			<destination>{d02a649f-5343-44db-baf3-1ac5a2a22c16}</destination>
+			<destination>{b5f8e768-2ec5-47ec-bb2f-a9c70d54e4e7}</destination>
+			<destination>{d1eb49be-aae8-4900-b13f-15e842a8d772}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c9c3c964-f43f-4460-a3fd-700f78e65a22}" />
@@ -131,12 +136,81 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{46135fc6-457f-476e-b48e-6c3fee22194a}" />
-	<object class="SFXReverbEffect" id="{e81a1471-5a57-40c2-af98-ec1c66fb498e}">
+	<object class="MixerBusFader" id="{f86b6a09-960b-42f5-9250-f8d4d8e3d13d}" />
+	<object class="SFXReverbEffect" id="{12c61529-4db4-4545-a7ac-10fa98143196}">
+		<property name="decayTime">
+			<value>1400</value>
+		</property>
+		<property name="HFReference">
+			<value>2000</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>53</value>
+		</property>
+		<property name="diffusion">
+			<value>21</value>
+		</property>
+		<property name="density">
+			<value>49.5</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>20</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>100</value>
+		</property>
 		<property name="wetLevel">
-			<value>-19.5</value>
+			<value>-5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-3.5</value>
 		</property>
 	</object>
-	<object class="MixerBusFader" id="{f86b6a09-960b-42f5-9250-f8d4d8e3d13d}" />
-	<object class="SpatialiserEffect" id="{970e8c2b-19bb-4137-ba4e-fcfa3ec0b44a}" />
+	<object class="FlangerEffect" id="{d02a649f-5343-44db-baf3-1ac5a2a22c16}">
+		<property name="rate">
+			<value>0.0840000063</value>
+		</property>
+		<property name="delay">
+			<value>0.340000033</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{955e8796-02c1-4769-aea0-f5262e9bbfe5}</destination>
+		</relationship>
+	</object>
+	<object class="ThreeEQEffect" id="{b5f8e768-2ec5-47ec-bb2f-a9c70d54e4e7}">
+		<property name="lowGain">
+			<value>-57</value>
+		</property>
+		<property name="lowCrossover">
+			<value>440</value>
+		</property>
+		<property name="highCrossover">
+			<value>3400</value>
+		</property>
+	</object>
+	<object class="PitchShifterEffect" id="{d1eb49be-aae8-4900-b13f-15e842a8d772}">
+		<property name="pitch">
+			<value>1</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{d4efbac6-3b3b-4463-935a-27dc1187b07d}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{bc8afdd7-8359-4f7b-971d-672f98863fef}" />
+	<object class="RandomizerModulator" id="{955e8796-02c1-4769-aea0-f5262e9bbfe5}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>rate</value>
+		</property>
+		<property name="amount">
+			<value>18.5</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{d4efbac6-3b3b-4463-935a-27dc1187b07d}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>7.5</value>
+		</property>
+	</object>
 </objects>

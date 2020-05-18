@@ -97,7 +97,7 @@ public class E_Gong : Vivant
             {
                 currentState = State.Patrolling;
             }
-            if(sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2) && sqrDstToTarget > Mathf.Pow(attackDistanceTreshold, 2))
+            if(sqrDstToTarget < Mathf.Pow(idleDistanceTreshold, 2) && sqrDstToTarget > Mathf.Pow(attackDistanceTreshold, 2) && !stunned)
             {
                 currentState = State.Gonging;
             }
@@ -108,6 +108,11 @@ public class E_Gong : Vivant
             if(SoundActiveGong==true&&Time.time < nextGongTime)
             {
                  SoundActiveGong=false;
+            }
+
+            if (stunned)
+            {
+                currentState = State.Idle;
             }
              
             //anims
@@ -189,7 +194,7 @@ public class E_Gong : Vivant
 
     IEnumerator GongWave()
     {
-        if (Time.time > nextGongTime)
+        if (Time.time > nextGongTime && !stunned)
         {
             if(SoundActiveGong==false)
             {
@@ -259,7 +264,9 @@ public class E_Gong : Vivant
     void enemyDeath()
     {
         //son de destruction 
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/DestructionEnnemi",transform.position);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/DestructionGONG", transform.position);
+
+
         
         //Animation de mort
         
@@ -273,5 +280,16 @@ public class E_Gong : Vivant
     private void desactiveOnde()
     {
         gongWaveAnimator.gameObject.SetActive(false);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Lance lance = other.gameObject.GetComponent<Lance>();
+
+        if (lance != null)
+        {
+            stunned = true;
+            StartCoroutine(StunXseconds(5f));
+        }
     }
 }

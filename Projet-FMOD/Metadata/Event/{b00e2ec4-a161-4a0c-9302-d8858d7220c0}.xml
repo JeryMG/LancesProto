@@ -56,7 +56,7 @@
 			<destination>{8f8f5176-c5bd-4f48-bb78-d71584ebccdc}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{da0254b9-2d50-451f-aa50-f4a4e598cfc0}</destination>
+			<destination>{df2543ec-217b-4f3f-adb2-e41a141fef44}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{2f4b2e5f-be01-4858-b641-c923606820c6}" />
@@ -113,7 +113,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{c783678d-1582-472e-8b8f-947b7166080f}">
 		<property name="volume">
-			<value>-8.5</value>
+			<value>-18.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -132,8 +132,10 @@
 		<relationship name="effects">
 			<destination>{4fb7db60-fd43-4fc1-adec-9da5d2d9cabe}</destination>
 			<destination>{549146a5-63aa-4164-8d78-35ae36b73ef9}</destination>
-			<destination>{e0c69768-07da-4327-bce0-d1716e577cf9}</destination>
-			<destination>{fbc9fa80-6fa4-427f-bb92-08cab5e412f5}</destination>
+			<destination>{12874c08-0030-4031-917d-643ee7ec5245}</destination>
+			<destination>{9ce7d081-5c00-46ca-82b7-7acad4170b93}</destination>
+			<destination>{62348301-4a15-4f79-8465-b1d7ff8383d9}</destination>
+			<destination>{662812e2-eff0-4794-b37e-f529115d8f34}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2c064b61-8d9e-40fc-9bc3-17dcb1530ba3}">
@@ -182,18 +184,67 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{549146a5-63aa-4164-8d78-35ae36b73ef9}" />
-	<object class="SFXReverbEffect" id="{e0c69768-07da-4327-bce0-d1716e577cf9}">
+	<object class="SFXReverbEffect" id="{12874c08-0030-4031-917d-643ee7ec5245}">
+		<property name="decayTime">
+			<value>500</value>
+		</property>
+		<property name="HFReference">
+			<value>2000</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>53</value>
+		</property>
+		<property name="diffusion">
+			<value>21</value>
+		</property>
+		<property name="density">
+			<value>49.5</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>20</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>100</value>
+		</property>
 		<property name="wetLevel">
-			<value>-8.5</value>
+			<value>-5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-3.5</value>
 		</property>
 	</object>
-	<object class="FlangerEffect" id="{fbc9fa80-6fa4-427f-bb92-08cab5e412f5}">
+	<object class="FlangerEffect" id="{9ce7d081-5c00-46ca-82b7-7acad4170b93}">
 		<property name="rate">
-			<value>0.419999987</value>
+			<value>0.0840000063</value>
 		</property>
 		<property name="delay">
-			<value>0.00999999978</value>
+			<value>0.340000033</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{9356db5c-169f-497e-9371-4967ca9c69bb}</destination>
+		</relationship>
+	</object>
+	<object class="ThreeEQEffect" id="{62348301-4a15-4f79-8465-b1d7ff8383d9}">
+		<property name="lowGain">
+			<value>-30</value>
+		</property>
+		<property name="highGain">
+			<value>-15</value>
+		</property>
+		<property name="lowCrossover">
+			<value>440</value>
+		</property>
+		<property name="highCrossover">
+			<value>3400</value>
+		</property>
+	</object>
+	<object class="PitchShifterEffect" id="{662812e2-eff0-4794-b37e-f529115d8f34}">
+		<property name="pitch">
+			<value>1</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{4289ffa1-c464-4671-a3fe-2f7eb496b964}</destination>
+		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{ac5b4a87-89bb-4ae7-967b-9fe4cda89714}" />
 	<object class="Automator" id="{d5f14a78-b828-4e00-ac79-6d9c308b1ea1}">
@@ -203,6 +254,22 @@
 		<relationship name="automationCurves">
 			<destination>{f2dcfacf-306d-4f9b-8c49-4acb274d3f44}</destination>
 		</relationship>
+	</object>
+	<object class="RandomizerModulator" id="{9356db5c-169f-497e-9371-4967ca9c69bb}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>rate</value>
+		</property>
+		<property name="amount">
+			<value>18.5</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{4289ffa1-c464-4671-a3fe-2f7eb496b964}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>7.5</value>
+		</property>
 	</object>
 	<object class="AutomationCurve" id="{f2dcfacf-306d-4f9b-8c49-4acb274d3f44}">
 		<relationship name="parameter">

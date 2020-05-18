@@ -90,6 +90,7 @@ public class E_Gong : Vivant
 
     private void Update()
     {
+        
         if(target!=null)
         {
             float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
@@ -108,6 +109,7 @@ public class E_Gong : Vivant
             if(SoundActiveGong==true&&Time.time < nextGongTime)
             {
                  SoundActiveGong=false;
+                 dejaJouee=false;
             }
 
             if (stunned)
@@ -157,12 +159,20 @@ public class E_Gong : Vivant
         
         if (currentState == State.Gonging)
         {
-            if (!dejaJouee)
+            if (dejaJouee==true)
             {
-                //AnimGong.Marche();
-                dejaJouee = true;
-            }
+                
+            
         
+            if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>0.35)
+            {
+                if(SoundActiveGong==false)
+                {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
+                SoundActiveGong=true;
+                }
+            }
+            }
             // if(dejaJouee)
             // {
             //     AnimGong.Marche();
@@ -196,17 +206,18 @@ public class E_Gong : Vivant
     {
         if (Time.time > nextGongTime && !stunned)
         {
-            if(SoundActiveGong==false)
+            if(dejaJouee==false)
             {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
-                SoundActiveGong=true;
+                dejaJouee=true;
             }
+            
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
             gongWaveAnimator.SetTrigger("Elargi");
             //Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
             AnimGong.GongActiver();   
+            
         }
         yield return null;
     }

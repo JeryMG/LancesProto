@@ -10442,8 +10442,8 @@ Transform:
   - {fileID: 1682966131}
   - {fileID: 807668758}
   - {fileID: 1433306088}
-  - {fileID: 359748660}
   - {fileID: 1587674305}
+  - {fileID: 359748660}
   - {fileID: 1809678187}
   - {fileID: 2003237630}
   m_Father: {fileID: 0}
@@ -14179,7 +14179,7 @@ PrefabInstance:
     - target: {fileID: 2622789437202617739, guid: 5469dd2fc1e4c6e4d8324a6385cbfc52,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5469dd2fc1e4c6e4d8324a6385cbfc52, type: 3}

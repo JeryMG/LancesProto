@@ -4763,11 +4763,12 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c0a2fdfa235eeb48b6a26cddd65611c, type: 2}
-  - {fileID: 2100000, guid: 2c0a2fdfa235eeb48b6a26cddd65611c, type: 2}
+  - {fileID: 2100000, guid: ec6a3dcfd52a94845a65f120767bf1da, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

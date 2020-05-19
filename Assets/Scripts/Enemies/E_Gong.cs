@@ -218,6 +218,8 @@ public class E_Gong : Vivant
             pathFinder.enabled = true;
             AnimGong.GongActiver();   
             
+
+            
         }
         yield return null;
     }

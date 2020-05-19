@@ -70,6 +70,7 @@ MonoBehaviour:
   health: 0
   MaxHealth: 5
   stunned: 0
+  HitParticule: {fileID: 0}
   currentState: 0
   idleDistanceTreshold: 10
   points: []
@@ -250,6 +251,8 @@ MonoBehaviour:
   health: 0
   MaxHealth: 20
   stunned: 0
+  HitParticule: {fileID: 2347459403106267186, guid: a154c2069f7658f498744a621c4873ef,
+    type: 3}
   currentState: 0
   idleDistanceTreshold: 40
   points: []

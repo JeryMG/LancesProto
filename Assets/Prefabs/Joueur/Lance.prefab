@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54e2a5fc8f2d914d9a35f47a22645eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lanceSpeed: 65
-  acceleration: 60
+  lanceSpeed: 60
+  acceleration: 80
   maxSpeed: 100
   stop: 0
   lanceDamage: 3.5

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiDistance3D/DestructionGONG
   guid: 816f41aff9ab0f42a84e09d610d3415e
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiCAC3D/Spawn
   guid: 315b927562c3464198792f8ec3df993a
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
   Path: event:/Event3D/Lance3D/Ennemi
   guid: 02c0d198e881bf4bb16bc395b570901c
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
   Path: event:/Event2D/Joueur/Parade
   guid: 7174a960e24aea438de4c203edb595ad
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -107,7 +107,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche
   guid: f5834f4bec35184d9eabdb7d2bc2edaa
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -115,6 +115,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2368
+--- !u!114 &-5524568727900773399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Projet-FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637254140305008372
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-3465005123982737367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +148,7 @@ MonoBehaviour:
   Path: event:/Event3D/Lance3D/Mur
   guid: 4287f634dd127044accfd6949c30cf08
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -153,7 +171,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiDistance3D/Tir
   guid: ce53093e13fd8a44adc9adee0da3841d
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -194,7 +212,7 @@ MonoBehaviour:
   Path: event:/Event2D/Environnement/Ambiance
   guid: 271d7d4218e4394180fd4cab0c07ce8c
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -235,7 +253,7 @@ MonoBehaviour:
   Path: "event:/Event3D/Joueur3D/T\xE9l\xE9portation"
   guid: f8445ab0ecae494db87794e94168508d
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -258,7 +276,7 @@ MonoBehaviour:
   Path: event:/Event3D/Lance3D/Armure
   guid: cf01790db3671740bab43e8fece2cabb
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -281,7 +299,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiDistance3D/DestructionEnnemi
   guid: 93aa1733b4d48d4e8c570d457ad1f7c9
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -304,7 +322,7 @@ MonoBehaviour:
   Path: event:/Event3D/Joueur3D/CAC
   guid: c42e0eb061a10c4a9302d8858d7220c0
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -326,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 3462955658764432398}
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   EditorEvents:
   - {fileID: -7719094018020753894}
   - {fileID: 2883249837296658843}
@@ -353,10 +371,10 @@ MonoBehaviour:
   - {fileID: 4798737024595519165}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   StringsBanks:
   - {fileID: 3462955658764432398}
-  stringsBankWriteTime: 637253591947261075
+  stringsBankWriteTime: 637254140305038258
   cacheVersion: 3
 --- !u!114 &372615390092040985
 MonoBehaviour:
@@ -373,7 +391,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche
   guid: 64aeb8c071ece540bf5ac704492b6195
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -396,7 +414,7 @@ MonoBehaviour:
   Path: event:/Event3D/Joueur3D/CAC_Swift
   guid: 3e03afb3285f604ea0caa53a032b9bd7
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -419,7 +437,7 @@ MonoBehaviour:
   Path: event:/Event3D/Joueur3D/Lance
   guid: e8d432c0b188cc4d97fe0bbae8f07fbe
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -442,7 +460,7 @@ MonoBehaviour:
   Path: event:/Event2D/Joueur/Mort
   guid: 10f05b6daad03a43ad5db5621a992004
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -465,7 +483,7 @@ MonoBehaviour:
   Path: event:/Event3D/EnnemiCAC3D/CAC
   guid: 62ce456c9bdb7f4281dc51417b23a840
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -487,7 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Projet-FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637253591947261075
+  lastModified: 637254140305038258
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -508,7 +526,7 @@ MonoBehaviour:
   Path: event:/Event2D/Lance/Visee
   guid: fab63d48a37bb54ea3621303dcc98cf8
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -531,7 +549,7 @@ MonoBehaviour:
   Path: event:/Event3D/Lance3D/Sol
   guid: 3ecae9b4896c0746837da45260c65446
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -554,7 +572,7 @@ MonoBehaviour:
   Path: event:/Hit_Effect/Hit_Effect
   guid: a1de883f8921ff45a31925ff5f569a00
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -577,7 +595,7 @@ MonoBehaviour:
   Path: "event:/Event3D/Joueur3D/ObjetRamass\xE9"
   guid: 2506a7bea779b54bb689373d633b768a
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -600,7 +618,7 @@ MonoBehaviour:
   Path: snapshot:/Snapshot_Hit_Effect
   guid: dc2ec3278a4d1740a56ed7eb970c1cec
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -623,7 +641,7 @@ MonoBehaviour:
   Path: event:/Event2D/Joueur/Attraction
   guid: e47f1078e329c24c82ab956afd27ebcf
   Banks:
-  - {fileID: -1984946205434420551}
+  - {fileID: -5524568727900773399}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

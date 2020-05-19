@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Jerys\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Jerys\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_LancesProto-15aae0f8a9c23ee7b384a50833f13a97fd0ac50e.469006066.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Jerys\Desktop\LancesProto-15aae0f8a9c23ee7b384a50833f13a97fd0ac50e" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="ballz.cs" t="Include" />
+        <e p="Particul_DONG_Script.cs" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="FMOD" t="Include">
+            <e p="addons" t="Include">
+              <e p="ResonanceAudio" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="FmodResonanceAudioRoomEditor.cs" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="FmodResonanceAudio.cs" t="Include" />
+                  <e p="FmodResonanceAudioRoom.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="src" t="Include">
+              <e p="Editor" t="Include">
+                <e p="BankRefDrawer.cs" t="Include" />
+                <e p="CreateEventPopup.cs" t="Include" />
+                <e p="EditorBankRef.cs" t="Include" />
+                <e p="EditorEventRef.cs" t="Include" />
+                <e p="EditorParamRef.cs" t="Include" />
+                <e p="EditorUtils.cs" t="Include" />
+                <e p="EventBrowser.cs" t="Include" />
+                <e p="EventCache.cs" t="Include" />
+                <e p="EventManager.cs" t="Include" />
+                <e p="EventRefDrawer.cs" t="Include" />
+                <e p="FindAndReplace.cs" t="Include" />
+                <e p="LogViewer.cs" t="Include" />
+                <e p="ParamRefDrawer.cs" t="Include" />
+                <e p="SettingsEditor.cs" t="Include" />
+                <e p="StudioBankLoaderEditor.cs" t="Include" />
+                <e p="StudioEventEmitterEditor.cs" t="Include" />
+                <e p="StudioEventEmitterGizmoDrawer.cs" t="Include" />
+                <e p="StudioGlobalParameterTriggerEditor.cs" t="Include" />
+                <e p="StudioListenerEditor.cs" t="Include" />
+                <e p="StudioParameterTriggerEditor.cs" t="Include" />
+                <e p="Timeline" t="Include">
+                  <e p="FMODEventPlayableEditor.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="BankRefAttribute.cs" t="Include" />
+                <e p="EventHandler.cs" t="Include" />
+                <e p="EventRefAttribute.cs" t="Include" />
+                <e p="FMODRuntimeManagerOnGUIHelper.cs" t="Include" />
+                <e p="ParamRef.cs" t="Include" />
+                <e p="ParamRefAttribute.cs" t="Include" />
+                <e p="RuntimeManager.cs" t="Include" />
+                <e p="RuntimeUtils.cs" t="Include" />
+                <e p="Settings.cs" t="Include" />
+                <e p="StudioBankLoader.cs" t="Include" />
+                <e p="StudioEventEmitter.cs" t="Include" />
+                <e p="StudioGlobalParameterTrigger.cs" t="Include" />
+                <e p="StudioListener.cs" t="Include" />
+                <e p="StudioParameterTrigger.cs" t="Include" />
+                <e p="Timeline" t="Include">
+                  <e p="FMODEventPlayable.cs" t="Include" />
+                  <e p="FMODEventTrack.cs" t="Include" />
+                </e>
+                <e p="wrapper" t="Include">
+                  <e p="fmod.cs" t="Include" />
+                  <e p="fmod_android.cs" t="Include" />
+                  <e p="fmod_dsp.cs" t="Include" />
+                  <e p="fmod_errors.cs" t="Include" />
+                  <e p="fmod_studio.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Prefabs" t="Include">
+          <e p="Ennemis" t="Include">
+            <e p="_E_Cac" t="Include">
+              <e p="V2" t="Include">
+                <e p="Anim_EnenmieCac.cs" t="Include" />
+              </e>
+            </e>
+            <e p="_E_Distance" t="Include">
+              <e p="V2" t="Include">
+                <e p="Anim_E_Vole.cs" t="Include" />
+              </e>
+            </e>
+            <e p="_E_Gong" t="Include">
+              <e p="DOngV2" t="Include">
+                <e p="TestAnimGong.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Game" t="Include">
+            <e p="test" t="Include">
+              <e p="Boutton.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="projectile.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Enemies" t="Include">
+            <e p="_E_Cac.cs" t="Include" />
+            <e p="_E_Gong_Cac.cs" t="Include" />
+            <e p="E_Gong.cs" t="Include" />
+            <e p="EnemiShooter.cs" t="Include" />
+            <e p="GongWave.cs" t="Include" />
+            <e p="goproj.cs" t="Include" />
+            <e p="tests" t="Include">
+              <e p="FollowPlayer.cs" t="Include" />
+            </e>
+          </e>
+          <e p="ParametresJeux" t="Include">
+            <e p="CameraTop90.cs" t="Include" />
+            <e p="GameSystem.cs" t="Include" />
+            <e p="IClochePropag.cs" t="Include" />
+            <e p="IDamageable.cs" t="Include" />
+            <e p="PlayerInputs.cs" t="Include" />
+            <e p="SpawnEnemy.cs" t="Include" />
+            <e p="testObjets" t="Include">
+              <e p="platformD.cs" t="Include" />
+              <e p="respawPlat.cs" t="Include" />
+            </e>
+            <e p="Vivant.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="CacAbility.cs" t="Include" />
+            <e p="Hunter.cs" t="Include" />
+            <e p="Lance.cs" t="Include" />
+            <e p="ParryAbility.cs" t="Include" />
+            <e p="Respawner.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="LancesProto-15aae0f8a9c23ee7b384a50833f13a97fd0ac50e.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

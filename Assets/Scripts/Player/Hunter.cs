@@ -47,6 +47,7 @@ public class Hunter : Vivant
     private bool dejaJouee;
     private float yMax;
     private bool grounded;
+    public ParticleSystem degats;
 
 
     private void Awake()

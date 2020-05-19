@@ -23,6 +23,8 @@ public class Lance : MonoBehaviour
     [SerializeField] private float distanceReturn = 3f;
     private Transform PlayerTransform;
 
+    public ballz _ballz;
+
 
 
     //private bool isFlying = false;
@@ -134,6 +136,7 @@ public class Lance : MonoBehaviour
             _player.lieuxDeTp.Remove(transform);
             _player.lancesRestantes++;
         }
+        _ballz.lancesNumber = _player.lancesRestantes;
     }
 
     public void shooting()

@@ -130,9 +130,10 @@ MonoBehaviour:
   maxSpeed: 100
   stop: 0
   lanceDamage: 3.5
-  timerDestruction: 7
+  timerDestruction: 14
   returning: 0
   distanceReturn: 1
+  _ballz: {fileID: 0}
 --- !u!1 &8098453993720225303
 GameObject:
   m_ObjectHideFlags: 0

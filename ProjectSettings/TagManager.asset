@@ -12,6 +12,7 @@ TagManager:
   - Wave
   - MurInvisible
   - Mur
+  - Ballz
   layers:
   - Default
   - TransparentFX

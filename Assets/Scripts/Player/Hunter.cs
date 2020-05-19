@@ -39,7 +39,8 @@ public class Hunter : Vivant
 
     [Header("Animation")]
     public TrailRenderer _trail;
-
+    public Animator animMove;
+    
     [Header("Random")]
     private PlayerInputs _playerInputs;
     private Rigidbody rb;
@@ -47,7 +48,7 @@ public class Hunter : Vivant
     private bool dejaJouee;
     private float yMax;
     private bool grounded;
-    public ParticleSystem degats;
+    public List<GameObject> balls;
 
 
     private void Awake()
@@ -96,6 +97,22 @@ public class Hunter : Vivant
                 lanceEquiped.stop = false;
                 lanceEquiped.StayImmobile(false);
                 lancesRestantes--;
+                
+                
+                if (lancesRestantes == 2)
+                {
+                    balls[0].SetActive(false);
+                }
+                
+                if (lancesRestantes == 1)
+                {
+                    balls[1].SetActive(false);
+                }
+                
+                if (lancesRestantes == 0)
+                {
+                    balls[2].SetActive(false);
+                }
             }
         }
 
@@ -130,11 +147,58 @@ public class Hunter : Vivant
             lancesRestantes = 3;
             lanceReturning = false;
         }
+        //Pour les 3 Balles
+        if (lancesRestantes == 3)
+        {
+            balls[0].SetActive(true);
+        }
+        if (lancesRestantes == 2)
+        {
+            balls[1].SetActive(true);
+        }
+        if (lancesRestantes == 1)
+        {
+            balls[2].SetActive(true);
+        }
     }
     
     private void Move()
     {
         Vector3 movement = new Vector3(_playerInputs.Horizontal, 0, _playerInputs.Vertical);
+        if (_playerInputs.Horizontal == 0 && _playerInputs.Vertical == 0)
+        {
+            if (animMove != null)
+            {
+                animMove.SetBool("isMoving", false);
+            }
+        }
+
+        if ((_playerInputs.Horizontal > 0 && _playerInputs.Vertical > 0 && transform.rotation.y < 0) 
+            || (_playerInputs.Horizontal < 0 && _playerInputs.Vertical < 0 && transform.rotation.y > 0)
+            || (_playerInputs.Horizontal > 0 && _playerInputs.Vertical < 0 && transform.rotation.y < 0)
+            || (_playerInputs.Horizontal < 0 && _playerInputs.Vertical > 0 && transform.rotation.y > 0)
+            || (_playerInputs.Horizontal > 0 && transform.rotation.y < 0)
+            || (_playerInputs.Horizontal < 0 && transform.rotation.y > 0)
+            || (_playerInputs.Vertical > 0 && transform.rotation.y > 0)
+            || (_playerInputs.Vertical < 0 && transform.rotation.y < 0)
+            )
+        {
+            if (animMove != null)
+            {
+                animMove.SetBool("isMoving", false);
+            }
+        }
+        else
+        {
+            if (_playerInputs.Horizontal != 0 || _playerInputs.Vertical != 0)
+            {
+                if (animMove != null)
+                {
+                    animMove.SetBool("isMoving", true);
+                }
+            }
+        }
+        
         Vector3 Velocity = movement.normalized * speed;
         rb.MovePosition(rb.position + Velocity * Time.deltaTime);
     }

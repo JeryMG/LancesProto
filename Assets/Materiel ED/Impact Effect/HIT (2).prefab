@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2347459402274018205}
   - component: {fileID: 2347459402274018207}
   - component: {fileID: 2347459402274018206}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Imp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4832,7 +4832,7 @@ GameObject:
   - component: {fileID: 2347459402376895020}
   - component: {fileID: 2347459402376895022}
   - component: {fileID: 2347459402376895021}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WaveHIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9653,7 +9653,7 @@ GameObject:
   - component: {fileID: 2347459402712953849}
   - component: {fileID: 2347459402712953851}
   - component: {fileID: 2347459402712953850}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: SparksHIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14474,7 +14474,7 @@ GameObject:
   - component: {fileID: 2347459402866836351}
   - component: {fileID: 2347459402866836345}
   - component: {fileID: 2347459402866836344}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: GlowHIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19295,7 +19295,7 @@ GameObject:
   - component: {fileID: 2347459403106267181}
   - component: {fileID: 2347459403106267180}
   - component: {fileID: 2347459403106267187}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: HIT (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19573,7 +19573,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 8
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -24112,7 +24112,7 @@ GameObject:
   - component: {fileID: 2347459403953080803}
   - component: {fileID: 2347459403953080797}
   - component: {fileID: 2347459403953080796}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: SparksHIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}

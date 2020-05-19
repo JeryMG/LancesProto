@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 786689074593348441}
   - component: {fileID: 786689074593348446}
   - component: {fileID: 786689074593348447}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: HIT (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 786689074593348444}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.2379875, y: 7.38, z: -8.96}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 786689075642795993}
   - {fileID: 786689075897891543}
@@ -226,7 +226,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.59366465, b: 1, a: 1}
+      maxColor: {r: 0.6554379, g: 0.7171183, b: 0.9716981, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: 786689074671822429}
   - component: {fileID: 786689074671822431}
   - component: {fileID: 786689074671822428}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Imp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9648,7 +9648,7 @@ GameObject:
   - component: {fileID: 786689075349448653}
   - component: {fileID: 786689075349448655}
   - component: {fileID: 786689075349448652}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: GlowHIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14469,7 +14469,7 @@ GameObject:
   - component: {fileID: 786689075642795993}
   - component: {fileID: 786689075642795995}
   - component: {fileID: 786689075642795992}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: SparksHIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19281,7 +19281,7 @@ GameObject:
   - component: {fileID: 786689075897891543}
   - component: {fileID: 786689075897891537}
   - component: {fileID: 786689075897891542}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: WaveHIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000233903CCDB8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002368C46E898 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,7 +17,57 @@
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000236365983E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000236365983E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000023636596FA8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000023636596FA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000236365968E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000236365968E8
+[LOG] SoundI::release                          : Cloche_grave (0000023636597D28)
+[LOG] SoundI::release                          :     Cloche_grave (00000236364495B8)
+[LOG] SoundI::release                          :     Cloche_grave (00000236365983E8)
+[LOG] SoundI::release                          : Cloche_grave (00000236365979C8)
+[LOG] SoundI::release                          :     Cloche_grave (0000023632E7C948)
+[LOG] SoundI::release                          :     Cloche_grave (0000023636596FA8)
+[LOG] SoundI::release                          : Drop_Bass_2 (0000023636598598)
+[LOG] SoundI::release                          :     Drop_Bass_2 (0000023632E7C468)
+[LOG] SoundI::release                          :     Drop_Bass_2 (00000236365968E8)
+[LOG] SoundI::release                          :  (000002368BEFBC98)
+[LOG] SoundI::release                          :     Spawn (000002362C0F9738)
+[LOG] SoundI::release                          :  (0000023632FA8068)
+[LOG] SoundI::release                          :     Punch1 (0000023632E7F528)
+[LOG] SoundI::release                          :  (0000023632FABE38)
+[LOG] SoundI::release                          :     Punch2 (0000023632E7C7A8)
+[LOG] SoundI::release                          :  (0000023632FABCC8)
+[LOG] SoundI::release                          :     Arrow-By-Airy Shimmer-Fast 2 (00000236364E91F8)
+[LOG] SoundI::release                          :  (0000023632FAA738)
+[LOG] SoundI::release                          :     Arrow-By-Ruffles-Fast 1 (00000236364EA3D8)
+[LOG] SoundI::release                          :  (0000023632FA9D28)
+[LOG] SoundI::release                          :     untitled-001 (00000236364E9BB8)
+[LOG] SoundI::release                          :  (0000023632FAA2E8)
+[LOG] SoundI::release                          :     untitled-002 (00000236364E9058)
+[LOG] SoundI::release                          :  (0000023632FAB428)
+[LOG] SoundI::release                          :     untitled-003 (00000236364E7658)
+[LOG] SoundI::release                          :  (0000023632FAB878)
+[LOG] SoundI::release                          :     untitled-004 (00000236364EA718)
+[LOG] SoundI::release                          :  (0000023632FA8EC8)
+[LOG] SoundI::release                          :     untitled-005 (00000236364E77F8)
+[LOG] SoundI::release                          :  (0000023632FAB148)
+[LOG] SoundI::release                          :     untitled-006 (00000236364E8B78)
+[LOG] SoundI::release                          :  (0000023632FA81D8)
+[LOG] SoundI::release                          :     Test_hit (0000023632E7CC88)
+[LOG] SoundI::release                          :  (0000023632FAAB88)
+[LOG] SoundI::release                          :     Swift4 (000002362C0F8D78)
+[LOG] SoundI::release                          :  (0000023632FAAFD8)
+[LOG] SoundI::release                          :     Lance_effect (000002362C0F90B8)
+[LOG] SoundI::release                          :  (0000023632FAACF8)
+[LOG] SoundI::release                          :     Visee_Mix (000002362C0F93F8)
+[LOG] SoundI::release                          :  (0000023632FA8798)
+[LOG] SoundI::release                          :     Explosion_Corps1 (0000023632E7D4A8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 

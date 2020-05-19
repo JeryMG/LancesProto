@@ -10,6 +10,7 @@ public class Vivant : MonoBehaviour, IDamageable
     [SerializeField] private float MaxHealth = 5;
     public bool stunned;
     protected bool dead;
+    public GameObject HitParticule;
 
     public event Action OnDeath;
 
@@ -20,6 +21,11 @@ public class Vivant : MonoBehaviour, IDamageable
     
     public virtual void TakeDamage(float damage)
     {
+        Destroy(
+            Instantiate(HitParticule, transform.position,
+                Quaternion.FromToRotation(Vector3.forward, transform.position)),
+            2);
+        
         // Son Hit Effect
 /*        if (this.CompareTag("Player"))
         {
@@ -31,8 +37,10 @@ public class Vivant : MonoBehaviour, IDamageable
         {
             Die();
         }
-    }
+        //  HitParticule.SetActive(false);
 
+
+    }
     public IEnumerator StunXseconds(float seconds)
     {
         if (stunned)

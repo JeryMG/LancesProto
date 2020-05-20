@@ -81,9 +81,7 @@ public class _E_Cac : Vivant, IClochePropag
     }
 
     private void Update() 
-    {
-        
-
+    { 
         float sqrDstToTarget = (target.position - transform.position).sqrMagnitude;
        if (sqrDstToTarget > Mathf.Pow(idleDistanceTreshold, 2))
        {
@@ -158,7 +156,6 @@ public class _E_Cac : Vivant, IClochePropag
            animations_cac.MarcheRapide();
            AttaqueJoue=false;
        }
-       
     }
 
     IEnumerator Attack()

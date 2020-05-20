@@ -10,7 +10,7 @@ public class GongWave : MonoBehaviour
     public GameObject GauchePart;
     public GameObject DroitePart;
 
-    [SerializeField] private float damage = 5f;
+    [SerializeField] private float damage = 2f;
     
     private void Start()
     {
@@ -20,19 +20,20 @@ public class GongWave : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        bool damageTaken = false;
         Debug.Log("hikiki");    
         IClochePropag bro = other.gameObject.GetComponent<IClochePropag>();
         
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !damageTaken)
         {
             targetVie.TakeDamage(damage);
+            damageTaken = true;
         }
 
         if (other.CompareTag("Enemy"))
         {
             if (bro != null)
             {
-                
                 Destroy(
                 Instantiate(GauchePart, transform.position,
                 Quaternion.FromToRotation(Vector3.forward, transform.position)),

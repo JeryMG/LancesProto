@@ -9,7 +9,7 @@ public class goproj : MonoBehaviour
     private ParryAbility _parryAbility;
     private Transform _player;
     private Vector3 direction;
-    private float damage = 5f;
+    public float damage = 5f;
    [SerializeField] private float deathTime = 2f;
 
     private void Start()

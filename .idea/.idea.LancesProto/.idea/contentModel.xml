@@ -6,7 +6,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="ballz.cs" t="Include" />
         <e p="Particul_DONG_Script.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
@@ -128,6 +127,7 @@
             <e p="Vivant.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="ballz.cs" t="Include" />
             <e p="CacAbility.cs" t="Include" />
             <e p="Hunter.cs" t="Include" />
             <e p="Lance.cs" t="Include" />

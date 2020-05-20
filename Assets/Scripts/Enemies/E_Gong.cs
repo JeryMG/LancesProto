@@ -116,27 +116,7 @@ public class E_Gong : Vivant
             {
                 currentState = State.Idle;
             }
-             
-            //anims
-            /*if(JoueurAuCac==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(1).normalizedTime>1)
-            {
-                AnimGong.animCac();
-                GActiver=true;
-            }
-
-            if(sqrDstToTarget<Mathf.Pow(vision, 2)&&GActiver==false)
-            {
-                AnimGong.GongActiver();                
-                GActiver=true;
-            }
             
-            if(GActiver==true&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>1)
-            {
-                RandAnimCac=UnityEngine.Random.Range(1,3);
-
-               GActiver=false;
-            }*/
-        
             //Attack state
             if (hasTarget)
             {
@@ -161,17 +141,14 @@ public class E_Gong : Vivant
         {
             if (dejaJouee==true)
             {
-                
-            
-        
-            if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>0.35)
-            {
-                if(SoundActiveGong==false)
+                if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>0.35)
                 {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
-                SoundActiveGong=true;
+                    if(SoundActiveGong==false)
+                    {
+                        FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche",transform.position);
+                        SoundActiveGong=true;
+                    }
                 }
-            }
             }
             // if(dejaJouee)
             // {
@@ -193,8 +170,6 @@ public class E_Gong : Vivant
                 //AnimGong.Marche();
                 //dejaJouee=false;
             }
-            
-
             pathFinder.acceleration = 1;
             pathFinder.stoppingDistance = 0;
             if (!pathFinder.pathPending && pathFinder.remainingDistance < 0.5f)
@@ -216,10 +191,7 @@ public class E_Gong : Vivant
             gongWaveAnimator.SetTrigger("Elargi");
             //Invoke("desactiveOnde", 3f);
             pathFinder.enabled = true;
-            AnimGong.GongActiver();   
-            
-
-            
+            AnimGong.GongActiver();
         }
         yield return null;
     }
@@ -278,12 +250,9 @@ public class E_Gong : Vivant
     {
         //son de destruction 
         FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/DestructionGONG", transform.position);
-
-
         
         //Animation de mort
-        
-        
+
         Destroy(
             Instantiate(DeathEffect, transform.position,
                 Quaternion.FromToRotation(Vector3.forward, transform.position)),

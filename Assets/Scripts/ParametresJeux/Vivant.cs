@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Xml.Schema;
 
@@ -11,12 +12,28 @@ public class Vivant : MonoBehaviour, IDamageable
     public bool stunned;
     protected bool dead;
     public GameObject HitParticule;
+    [Header("HP variables")]
+    public Image LifeFill;
+    private float lifeAmount;
+    private bool isLifeFillNotNull;
+    private bool goRestoreHP;
+    private bool restoringHP;
+
 
     public event Action OnDeath;
+
+    private void Awake()
+    {
+        isLifeFillNotNull = LifeFill != null;
+    }
 
     protected virtual void Start()
     {
         health = MaxHealth;
+        if (isLifeFillNotNull)
+        {
+            LifeFill.fillAmount = 1f;
+        }
     }
     
     public virtual void TakeDamage(float damage)
@@ -25,22 +42,51 @@ public class Vivant : MonoBehaviour, IDamageable
             Instantiate(HitParticule, transform.position,
                 Quaternion.FromToRotation(Vector3.forward, transform.position)),
             2);
-        
-        // Son Hit Effect
-/*        if (this.CompareTag("Player"))
-        {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Hit_Effect/Hit_Effect");
-        }*/
 
         health -= damage;
+        if (CompareTag("Player"))
+        {
+            //goRestoreHP = true;
+            UpdateLifeBar();
+            //StartCoroutine(restoreHP());
+        }
         if (health <= 0 && !dead)
         {
             Die();
         }
-        //  HitParticule.SetActive(false);
-
-
     }
+
+    private void UpdateLifeBar()
+    {
+        lifeAmount = health / MaxHealth;
+        LifeFill.fillAmount = lifeAmount;
+    }
+
+    IEnumerator restoreHP()
+    {
+        if (goRestoreHP)
+        {
+            yield return new WaitForSeconds(10);
+            restoringHP = true;
+            goRestoreHP = false;
+        }
+        
+        if (health < MaxHealth)
+        {
+            if (restoringHP)
+            {
+                health += 0.5f;
+                UpdateLifeBar();
+                yield return new WaitForSeconds(1);
+            }
+        }
+        else
+        {
+            yield return null;
+            restoringHP = false;
+        }
+    }
+    
     public IEnumerator StunXseconds(float seconds)
     {
         if (stunned)

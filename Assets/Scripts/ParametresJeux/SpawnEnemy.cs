@@ -29,6 +29,7 @@ public class SpawnEnemy : MonoBehaviour
     private int enemiesRemainingToSpawn;
     private int enemiesRemainingAlive;
     private float nextSpawnTime;
+    public float spawnDelay;
     
     private bool isDisabled;
     private bool startSpawn;
@@ -53,7 +54,7 @@ public class SpawnEnemy : MonoBehaviour
             {
                 if(SonJouer==false)
                 {
-                //SON SPAWN
+                    //SON SPAWN
                     FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiCAC3D/Spawn", transform.position);
                     SonJouer=true;
                 }
@@ -67,7 +68,6 @@ public class SpawnEnemy : MonoBehaviour
     
     IEnumerator SpawnAnEnemy()
     {
-        float spawnDelay = 2;
         // effet sol
         effetSol.gameObject.SetActive(true);
         

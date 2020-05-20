@@ -56,9 +56,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LookaheadTime: 0.1
-  m_LookaheadSmoothing: 14.2
-  m_LookaheadIgnoreY: 1
+  m_LookaheadTime: 0.06
+  m_LookaheadSmoothing: 30
+  m_LookaheadIgnoreY: 0
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -66,13 +66,13 @@ MonoBehaviour:
   m_ScreenY: 0.53
   m_CameraDistance: 54
   m_DeadZoneWidth: 0.15
-  m_DeadZoneHeight: 0.16
+  m_DeadZoneHeight: 0.1
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.65
   m_SoftZoneHeight: 0.71
   m_BiasX: 0
-  m_BiasY: 0.00000021674418
+  m_BiasY: 0.00000019542507
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 0
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:

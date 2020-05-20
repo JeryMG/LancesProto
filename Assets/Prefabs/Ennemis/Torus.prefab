@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a636466f43e67ad4f8d04db27f4999b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GauchePart: {fileID: 0}
-  DroitePart: {fileID: 0}
+  GauchePart: {fileID: 2645133089058554620, guid: 3cc79664c44d34e489440d1283216dcd,
+    type: 3}
+  DroitePart: {fileID: 4998105254166600798, guid: b5e7370cbde9e1949af03b0de4ee3e0b,
+    type: 3}
   damage: 2

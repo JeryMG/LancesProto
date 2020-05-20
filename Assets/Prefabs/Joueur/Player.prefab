@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  MaxHealth: 5
+  MaxHealth: 25
   stunned: 0
   HitParticule: {fileID: 2347459403106267186, guid: a154c2069f7658f498744a621c4873ef,
     type: 3}

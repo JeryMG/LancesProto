@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Activator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Activator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Donus1_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Donus1_0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Torus1.0.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Torus1.0.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL2/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL2/NavMesh.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/../Proto_Stealth/Assets/Scripts/Guard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Materiel ED/slash.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Activator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/PhysicsInputTest2 (1).cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CreateAreaMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/InputsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemi.cs" />
         <option value="$PROJECT_DIR$/Assets/ParryAbility.cs" />
@@ -119,6 +123,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/GongWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Activator.cs" />
       </list>
     </option>
   </component>
@@ -199,7 +204,7 @@
       <workItem from="1589287453807" duration="716000" />
       <workItem from="1589809410747" duration="6212000" />
       <workItem from="1589908180073" duration="10784000" />
-      <workItem from="1589961239170" duration="12456000" />
+      <workItem from="1589961239170" duration="13704000" />
     </task>
     <servers />
   </component>

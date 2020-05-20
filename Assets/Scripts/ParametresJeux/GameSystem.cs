@@ -10,6 +10,10 @@ public class GameSystem : MonoBehaviour
     public static GameSystem Instance { get; private set; }
 
     private float slowmotionScale = 0.3f;
+
+    public Transform TpPosition;
+
+    private Hunter player;
     
     private EventInstance event_fmod;
 
@@ -24,6 +28,8 @@ public class GameSystem : MonoBehaviour
         {
             Instance = this;
         }
+
+        player = FindObjectOfType<Hunter>();
     }
 
     private void Start()
@@ -43,6 +49,11 @@ public class GameSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.T) && TpPosition != null)
+        {
+            player.transform.position = TpPosition.position;
         }
     }
 

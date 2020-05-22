@@ -5,7 +5,7 @@
 			<value>Boss_cloche</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{220e8807-eb1b-427c-a868-fb33d15581e7}</destination>
@@ -167,6 +167,7 @@
 			<destination>{794e1205-4e54-406c-bded-950419c8e0fa}</destination>
 			<destination>{efd1ed88-283f-4e86-a92b-4007c0d87855}</destination>
 			<destination>{9fb79aa2-6faf-4601-a011-42901f9f836a}</destination>
+			<destination>{0abbaf02-3cb7-4285-8621-1e81601284a3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f2637a1d-d8da-448f-a81a-2bec1dddad0a}" />
@@ -216,6 +217,20 @@
 		<relationship name="modulators">
 			<destination>{8f42ba8b-c715-4541-b7d2-3c9ebc01db36}</destination>
 		</relationship>
+	</object>
+	<object class="SpatialiserEffect" id="{0abbaf02-3cb7-4285-8621-1e81601284a3}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>300</value>
+		</property>
+		<property name="soundSize">
+			<value>10000</value>
+		</property>
 	</object>
 	<object class="AutomationCurve" id="{64d768c6-cf40-4dac-a5b7-039eabb1a708}">
 		<relationship name="parameter">

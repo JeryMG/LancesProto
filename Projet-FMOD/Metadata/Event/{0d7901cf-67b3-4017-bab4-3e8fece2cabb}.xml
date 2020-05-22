@@ -5,7 +5,7 @@
 			<value>Armure</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{232cf74d-c8e7-4cc8-a389-73a6f85c5ac5}</destination>
@@ -129,6 +129,7 @@
 			<destination>{50bc5baf-9709-4f1a-a1ee-52ca0ccac381}</destination>
 			<destination>{3bbbd8c0-1902-4e76-8d23-30597fab1518}</destination>
 			<destination>{50ecf563-75e8-40bf-919c-a456453331b4}</destination>
+			<destination>{2a249246-4fa3-4933-a132-014ae3d4016c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{65691f5b-765e-4461-b67b-94c73cbd6dd5}" />
@@ -221,6 +222,20 @@
 		<relationship name="modulators">
 			<destination>{473742fd-964d-4a5a-9b70-e5bb8b62b66d}</destination>
 		</relationship>
+	</object>
+	<object class="SpatialiserEffect" id="{2a249246-4fa3-4933-a132-014ae3d4016c}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>300</value>
+		</property>
+		<property name="soundSize">
+			<value>10000</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{65fc1f90-2e64-41bb-973f-386c59eecc5e}" />
 	<object class="RandomizerModulator" id="{a54b2267-8ad6-4ef7-902b-dfa02b556981}">

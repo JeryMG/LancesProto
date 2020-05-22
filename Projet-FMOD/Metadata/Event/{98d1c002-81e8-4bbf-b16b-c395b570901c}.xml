@@ -5,7 +5,7 @@
 			<value>Ennemi</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{232cf74d-c8e7-4cc8-a389-73a6f85c5ac5}</destination>
@@ -135,6 +135,7 @@
 			<destination>{61447e12-49e6-4357-9a89-04900e3f24ef}</destination>
 			<destination>{e44525ec-3e20-4832-ba52-4d045ba24e42}</destination>
 			<destination>{94c85772-9503-4d62-8f29-5187abc3d841}</destination>
+			<destination>{7e809f99-62f9-4d5c-b4a6-145ac923fdb0}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{25d0052d-76c5-4ec1-b362-95d1194dc308}" />
@@ -174,6 +175,20 @@
 		</property>
 		<property name="highCrossover">
 			<value>2900</value>
+		</property>
+	</object>
+	<object class="SpatialiserEffect" id="{7e809f99-62f9-4d5c-b4a6-145ac923fdb0}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>300</value>
+		</property>
+		<property name="soundSize">
+			<value>10000</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{8c814575-bc92-447f-973d-941a76dd9d7e}">

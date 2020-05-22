@@ -5,7 +5,7 @@
 			<value>Ennemi_Cloche</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{220e8807-eb1b-427c-a868-fb33d15581e7}</destination>
@@ -140,6 +140,7 @@
 			<destination>{3341aa89-6543-4ebe-9cd0-262e80675c0f}</destination>
 			<destination>{68a669e4-7b6c-4e7c-ae1b-3f60fca680cb}</destination>
 			<destination>{2177f320-b68c-40ca-b53b-291f2e883a10}</destination>
+			<destination>{441a0c53-1586-414d-ab01-9932e271d2ac}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{80b8673c-2401-419b-b4bd-7fcefc4a5c9c}" />
@@ -171,6 +172,20 @@
 		<relationship name="modulators">
 			<destination>{cafc2466-830c-41a3-a677-8f67d44b83db}</destination>
 		</relationship>
+	</object>
+	<object class="SpatialiserEffect" id="{441a0c53-1586-414d-ab01-9932e271d2ac}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>300</value>
+		</property>
+		<property name="soundSize">
+			<value>10000</value>
+		</property>
 	</object>
 	<object class="AutomationCurve" id="{4145763f-ea62-4f33-83f9-c783ad9b6426}">
 		<relationship name="parameter">

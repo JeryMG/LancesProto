@@ -8,6 +8,8 @@
 {6d5bf010-d0aa-433a-ad5d-b5621a992004} event:/Event2D/Joueur/Mort
 {60a97471-4ae2-43ea-8de4-c203edb595ad} event:/Event2D/Joueur/Parade
 {483db6fa-7ba3-4eb5-a362-1303dcc98cf8} event:/Event2D/Lance/Visee
+{53df0492-9ab2-4414-85c6-f3a3c3eb0ada} event:/Event3D/Ambiance/Fight
+{aa7be5ff-4458-48d3-b258-807a8cd5963c} event:/Event3D/Ambiance/Move
 {6c45ce62-db9b-427f-81dc-51417b23a840} event:/Event3D/EnnemiCAC3D/CAC
 {75925b31-c362-4146-9879-2f8ec3df993a} event:/Event3D/EnnemiCAC3D/Spawn
 {c0b8ae64-ec71-40e5-bf5a-c704492b6195} event:/Event3D/EnnemiDistance3D/Cloches/Boss_cloche
@@ -24,5 +26,5 @@
 {98d1c002-81e8-4bbf-b16b-c395b570901c} event:/Event3D/Lance3D/Ennemi
 {34f68742-12dd-4470-accf-d6949c30cf08} event:/Event3D/Lance3D/Mur
 {b4e9ca3e-6c89-4607-837d-a45260c65446} event:/Event3D/Lance3D/Sol
-{62e2d454-c563-4d56-b6be-1f2d57e57697} event:/Hit_Effect/Hit_Effect
+{3f88dea1-2189-45ff-a319-25ff5f569a00} event:/Hit_Effect/Hit_Effect
 {27c32edc-4d8a-4017-a56e-d7eb970c1cec} snapshot:/Snapshot_Hit_Effect

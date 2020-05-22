@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using FMOD.Studio;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -21,7 +20,6 @@ public class CameraTop90 : MonoBehaviour
 	private bool activated;
 	public bool clamped;
 	public bool followMouse;
-	private EventInstance event_fmod;
 	// [SerializeField] private float offsetX;
 	[SerializeField] private float offsetZ = -4f;
 	
@@ -36,22 +34,6 @@ public class CameraTop90 : MonoBehaviour
 
 		target = player.position; //set default target
 		yStart = transform.position.y; //capture current y position
-		
-		//son Ambiance
-		event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event2D/Environnement/Ambiance");
-	}
-
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.P))
-		{
-			event_fmod.start();
-		}
-
-		if (Input.GetKeyDown(KeyCode.M))
-		{
-			event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-		}
 	}
 
 	void FixedUpdate () 

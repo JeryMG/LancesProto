@@ -17,7 +17,6 @@ public class GameSystem : MonoBehaviour
     
     private EventInstance event_fmod;
 
-
     private void Awake()
     {
         if (Instance != null)
@@ -34,13 +33,16 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
-        event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event2D/Environnement/Ambiance");
+        event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event3D/Ambiance/Move");
+        event_fmod.start();
+
+        event_fmod.setVolume(0f);
     }
 
     private void Update()
     {
         RestartScene();
-        
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             event_fmod.start();

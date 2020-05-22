@@ -5,7 +5,7 @@
 			<value>DestructionEnnemi</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{83f47698-832f-44e4-a944-401179eb5075}</destination>
@@ -145,6 +145,7 @@
 			<destination>{b92646c1-277b-423d-a8fb-3c6b9bc010e2}</destination>
 			<destination>{dbab59ac-a9ff-414c-85f3-835337d11cc6}</destination>
 			<destination>{12a7d438-7135-434b-8af5-c04554675174}</destination>
+			<destination>{f1b43e90-5103-4cb5-b468-3a3ca650452a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{de8648ec-d10d-453b-a833-cc5c0cef2c67}" />
@@ -224,6 +225,20 @@
 		<relationship name="modulators">
 			<destination>{de12817c-f8f9-44c1-b0a4-d67f31c5d562}</destination>
 		</relationship>
+	</object>
+	<object class="SpatialiserEffect" id="{f1b43e90-5103-4cb5-b468-3a3ca650452a}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>300</value>
+		</property>
+		<property name="soundSize">
+			<value>10000</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{7b632882-33b3-4e08-8590-800cc7cba92c}" />
 	<object class="AutomationPoint" id="{ed92f947-cb34-45b9-ad6c-33d36d9fb585}">

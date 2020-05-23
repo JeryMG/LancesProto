@@ -46,6 +46,7 @@ public class Fade_Son_Ambiance : MonoBehaviour
 			{
 				event_fmod.start();
 				_lancer=true;
+				Debug.Log("telle mdpfjsokjdfq");
 			}
 			timer=0;
 			_volumeRecup=volume;
@@ -84,5 +85,9 @@ public class Fade_Son_Ambiance : MonoBehaviour
 	{
 		volume=Mathf.Lerp(_volumeRecup,SoundMin,timer/TempsMax);
 		event_fmod.setVolume(volume);
+		if(timer==TempsMax)
+		{
+			event_fmod.setVolume(SoundMin);
+		}
 	}
 }

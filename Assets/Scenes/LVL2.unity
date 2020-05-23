@@ -1937,28 +1937,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &728041660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4111129287774354146, guid: 7b471ac9b48f6e249b37f766faebb08b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1432730861}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &728041664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728041660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cad7b10d47ebdc48a6444d369119d88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Gameintance: {fileID: 1562014069}
-  SoundMax: 1
-  SoundMin: 0
-  TempsMax: 5
 --- !u!1001 &734309470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7156,7 +7134,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5563084770460124157, guid: 7b471ac9b48f6e249b37f766faebb08b,
+        type: 3}
+      propertyPath: Gameintance
+      value: 
+      objectReference: {fileID: 1562014069}
+    m_RemovedComponents:
+    - {fileID: 4111129287774354173, guid: 7b471ac9b48f6e249b37f766faebb08b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b471ac9b48f6e249b37f766faebb08b, type: 3}
 --- !u!114 &1461351247 stripped
 MonoBehaviour:
@@ -8913,16 +8897,16 @@ PrefabInstance:
         type: 3}
       propertyPath: TpPosition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1137824306}
     - target: {fileID: 6315617477288753837, guid: 80d788e61c0a54c4d891c8fa1b368ba0,
         type: 3}
       propertyPath: SoundMax
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6315617477288753837, guid: 80d788e61c0a54c4d891c8fa1b368ba0,
         type: 3}
       propertyPath: TempsMax
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6315617477288753837, guid: 80d788e61c0a54c4d891c8fa1b368ba0,
         type: 3}

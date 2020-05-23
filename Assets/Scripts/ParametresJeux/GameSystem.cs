@@ -24,7 +24,7 @@ public class GameSystem : MonoBehaviour
     private bool _OutSound =false;
     private bool SoundChange =false;
     private bool _resetTimer=false;
-    public float Volume;
+    [HideInInspector] public float Volume;
     [HideInInspector] public float _volumeRecup;
 
     private void Awake()
@@ -43,7 +43,7 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
-        event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event2D/Environnement/Ambiance");
+        event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event3D/Ambiance/Move");
         event_fmod.start();
         event_fmod.setVolume(SoundMax);
     }

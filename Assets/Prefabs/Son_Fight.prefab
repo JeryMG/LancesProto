@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4111129287774354175}
   - component: {fileID: 4111129287774354172}
   - component: {fileID: 4111129287774354173}
+  - component: {fileID: 5563084770460124157}
   m_Layer: 0
   m_Name: Son_Fight
   m_TagString: Untagged
@@ -68,3 +69,20 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &5563084770460124157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4111129287774354146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cad7b10d47ebdc48a6444d369119d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gameintance: {fileID: 0}
+  SoundMax: 1
+  SoundMin: 0
+  TempsMax: 5
+  volume: 0

@@ -15,7 +15,7 @@ public class Fade_Son_Ambiance : MonoBehaviour
 	public float TempsMax;
 	private bool _playerTouch=false;
 	private float volume;
-	private float _volumeRecup;
+	private float _volumeR;
 	private bool _inSound=false;
 	private bool _outSound=false;
 	private void Start()
@@ -46,15 +46,14 @@ public class Fade_Son_Ambiance : MonoBehaviour
 			{
 				event_fmod.start();
 				_lancer=true;
-				Debug.Log("telle mdpfjsokjdfq");
 			}
 			timer=0;
-			_volumeRecup=volume;
+			_volumeR=volume;
 
 			_inSound=true;
 			_outSound=false;
-			Gd.EnterZoneCombat();
 			Gd._volumeRecup=Gd.Volume;
+			Gd.EnterZoneCombat();
 			Gd.resetTimer();
 
 		}
@@ -66,7 +65,7 @@ public class Fade_Son_Ambiance : MonoBehaviour
 		if (Hiter.gameObject.tag == "Player")
 		{
 			timer=0;
-			_volumeRecup=volume;
+			_volumeR=volume;
 			_inSound=false;
 			_outSound=true;
 			Gd._volumeRecup=Gd.Volume;
@@ -78,12 +77,12 @@ public class Fade_Son_Ambiance : MonoBehaviour
 	}
 	private void SoundFightOn()
 	{
-		volume=Mathf.Lerp(_volumeRecup,SoundMax,timer/TempsMax);
+		volume=Mathf.Lerp(_volumeR,SoundMax,timer/TempsMax);
 		event_fmod.setVolume(volume);
 	}
 	private void SoundFightOff()
 	{
-		volume=Mathf.Lerp(_volumeRecup,SoundMin,timer/TempsMax);
+		volume=Mathf.Lerp(_volumeR,SoundMin,timer/TempsMax);
 		event_fmod.setVolume(volume);
 		if(timer==TempsMax)
 		{

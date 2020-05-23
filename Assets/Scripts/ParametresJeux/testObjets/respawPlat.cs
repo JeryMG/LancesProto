@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class respawPlat : MonoBehaviour
 {
+    public float timeToAppear;
     // Update is called once per frame
     void Update()
     {
@@ -11,7 +12,7 @@ public class respawPlat : MonoBehaviour
         {
             if (!transform.GetChild(i).gameObject.activeSelf)
             {
-                StartCoroutine(reappearX(2, i));
+                StartCoroutine(reappearX(timeToAppear, i));
             }
         }
     }

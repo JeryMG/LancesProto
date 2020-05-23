@@ -234,7 +234,7 @@ public class _E_Cac : Vivant, IClochePropag
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Wave"))
+        if (other.gameObject.CompareTag("WaveOri"))
         {
             // Debug.Log("gooopoooooo");
             // Onde.SetActive(true);

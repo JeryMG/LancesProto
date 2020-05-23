@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class platformD : MonoBehaviour
 {
+    public float fadeTime;
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(disappearX(2));
+            StartCoroutine(disappearX(fadeTime));
         }
     }
 

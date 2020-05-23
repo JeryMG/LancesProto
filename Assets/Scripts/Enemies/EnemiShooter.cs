@@ -224,7 +224,7 @@ public class EnemiShooter : Vivant, IClochePropag
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Wave"))
+        if (other.gameObject.CompareTag("WaveOri"))
         {
             Onde.gameObject.SetActive(true);
             currentState = State.Gonging;

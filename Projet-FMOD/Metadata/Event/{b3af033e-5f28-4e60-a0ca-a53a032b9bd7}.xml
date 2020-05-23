@@ -122,6 +122,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{fd0dcf4a-3065-46fa-a1bf-7eecf6cc0788}">
+		<property name="volume">
+			<value>-1</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -180,7 +183,7 @@
 	<object class="MixerBusFader" id="{953858fd-d0b4-4b5a-b971-51ccfa597b39}" />
 	<object class="SFXReverbEffect" id="{59b01978-415a-4ec1-9082-1f7920ae3888}">
 		<property name="decayTime">
-			<value>130</value>
+			<value>100</value>
 		</property>
 		<property name="HFReference">
 			<value>2000</value>

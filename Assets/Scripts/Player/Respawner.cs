@@ -20,17 +20,20 @@ public class Respawner : MonoBehaviour
     
     void Update()
     {
-        Ray rayonDown = new Ray(transform.position, -transform.up);
-        if (follow && Physics.Raycast(playerTransform.transform.position, -transform.up, 15, LayerMask.GetMask("Ground")))
+        if(playerTransform!=null)
         {
-            var position = playerTransform.transform.position;
-            clampedY = Mathf.Clamp(transform.position.y, position.y, position.y);
-            transform.position = new Vector3(position.x, clampedY, position.z);
-        }
-
-        if (!follow)
-        {
-            transform.position = respawnPos;
+            Ray rayonDown = new Ray(transform.position, -transform.up);
+            if (follow && Physics.Raycast(playerTransform.transform.position, -transform.up, 15, LayerMask.GetMask("Ground")))
+            {
+                var position = playerTransform.transform.position;
+                clampedY = Mathf.Clamp(transform.position.y, position.y, position.y);
+                transform.position = new Vector3(position.x, clampedY, position.z);
+            }
+    
+            if (!follow)
+            {
+                transform.position = respawnPos;
+            }
         }
     }
 }

@@ -16,7 +16,16 @@ public class GameSystem : MonoBehaviour
     private Hunter player;
     
     private EventInstance event_fmod;
-
+    public float SoundMax;
+    public float SoundMin;
+    private float timer;
+    public float TempsMax;
+    private bool _inSound =false;
+    private bool _OutSound =false;
+    private bool SoundChange =false;
+    private bool _resetTimer=false;
+    [HideInInspector] public float Volume=1f;
+    [HideInInspector] public float _volumeRecup;
 
     private void Awake()
     {
@@ -34,16 +43,50 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
-        event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event2D/Environnement/Ambiance");
+        event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event3D/Ambiance/Move");
+        event_fmod.start();
+        event_fmod.setVolume(SoundMax);
+        Volume=SoundMax;
+        _volumeRecup=Volume;
     }
 
     private void Update()
     {
+
+        timer+=Time.deltaTime;
         RestartScene();
-        
+        if(_inSound==true)
+        {
+            EnterZoneCombat();
+            if(timer>=TempsMax)
+            {
+                _resetTimer=false;
+                _inSound=false;
+            }
+        }
+        if(_OutSound==true)
+        {
+            ExitZoneCombat();
+            if(timer>=TempsMax)
+            {
+                _resetTimer=false;
+                _OutSound=false;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             event_fmod.start();
+        }
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            resetTimer();
+            EnterZoneCombat();
+        }
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            resetTimer();
+            ExitZoneCombat();
         }
 
         if (Input.GetKeyDown(KeyCode.M))
@@ -57,6 +100,28 @@ public class GameSystem : MonoBehaviour
         }
     }
 
+    public void EnterZoneCombat()
+    {   
+        _inSound=true;
+        Volume=Mathf.Lerp(_volumeRecup,SoundMin,timer/TempsMax);
+        event_fmod.setVolume(Volume);
+
+    }
+    public void ExitZoneCombat()
+    {
+        _OutSound=true;
+        Volume=Mathf.Lerp(_volumeRecup,SoundMax,timer/TempsMax);
+        event_fmod.setVolume(Volume);
+
+    }
+    public void resetTimer()
+    {
+        if(_resetTimer==false)
+        {
+            timer=0;
+            _resetTimer=true;
+        }
+    }
     private static void RestartScene()
     {
         if (Input.GetKeyDown(KeyCode.RightShift))

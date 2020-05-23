@@ -5,7 +5,7 @@
 			<value>DestructionGONG</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{83f47698-832f-44e4-a944-401179eb5075}</destination>
@@ -194,6 +194,7 @@
 			<destination>{3fbca213-6229-449c-9f30-6744ba0b693b}</destination>
 			<destination>{bd89ff93-3a69-4c96-b237-1098999c4055}</destination>
 			<destination>{e80f210b-a8d7-49e3-a86c-37e2cc5ee115}</destination>
+			<destination>{03ba15cc-77b3-4ea8-92a7-c1eaccb50caf}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{79ce6ae0-4b4b-4c53-ac52-47aaf713bf33}" />
@@ -226,6 +227,7 @@
 			<destination>{ccd56ca4-f965-403c-b30b-400b320adc9b}</destination>
 			<destination>{ae2f8372-c140-442a-b9c7-06a4add7d754}</destination>
 			<destination>{9775734f-0f9b-41a5-921a-29304650c507}</destination>
+			<destination>{8941dd9e-cad7-4049-b7bd-b3c2e3c59a3b}</destination>
 		</relationship>
 	</object>
 	<object class="SFXReverbEffect" id="{08ca0659-23d5-43de-a783-f3aa9cb15b39}">
@@ -288,6 +290,20 @@
 			<destination>{2abfab63-a776-49a8-ba67-98b72b507bd3}</destination>
 		</relationship>
 	</object>
+	<object class="SpatialiserEffect" id="{03ba15cc-77b3-4ea8-92a7-c1eaccb50caf}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>300</value>
+		</property>
+		<property name="soundSize">
+			<value>10000</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{08bf70eb-8ea6-4859-8eaf-26b3c7474238}" />
 	<object class="AutomationCurve" id="{8ea3cfd0-b40d-4818-95fe-7558f9137d5b}">
 		<relationship name="parameter">
@@ -310,15 +326,26 @@
 	</object>
 	<object class="AutomationPoint" id="{ae2f8372-c140-442a-b9c7-06a4add7d754}">
 		<property name="position">
-			<value>0.90000000000000002</value>
+			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-5</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9775734f-0f9b-41a5-921a-29304650c507}">
 		<property name="position">
-			<value>1.4500000000000002</value>
+			<value>1.6000000000000001</value>
+		</property>
+		<property name="value">
+			<value>-7</value>
+		</property>
+		<property name="curveShape">
+			<value>0.301075637</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{8941dd9e-cad7-4049-b7bd-b3c2e3c59a3b}">
+		<property name="position">
+			<value>2.3000000000000003</value>
 		</property>
 		<property name="value">
 			<value>-80</value>

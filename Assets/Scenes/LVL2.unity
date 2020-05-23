@@ -7327,7 +7327,7 @@ PrefabInstance:
     - target: {fileID: 4111129287774354175, guid: 7b471ac9b48f6e249b37f766faebb08b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -62
+      value: 336.9
       objectReference: {fileID: 0}
     - target: {fileID: 4111129287774354175, guid: 7b471ac9b48f6e249b37f766faebb08b,
         type: 3}
@@ -7337,7 +7337,7 @@ PrefabInstance:
     - target: {fileID: 4111129287774354175, guid: 7b471ac9b48f6e249b37f766faebb08b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 283.9
+      value: 419
       objectReference: {fileID: 0}
     - target: {fileID: 4111129287774354175, guid: 7b471ac9b48f6e249b37f766faebb08b,
         type: 3}
@@ -7379,11 +7379,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4111129287774354175, guid: 7b471ac9b48f6e249b37f766faebb08b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 298.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111129287774354175, guid: 7b471ac9b48f6e249b37f766faebb08b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 637.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5563084770460124157, guid: 7b471ac9b48f6e249b37f766faebb08b,
         type: 3}
       propertyPath: Gameintance
       value: 
       objectReference: {fileID: 1562014069}
+    - target: {fileID: 5563084770460124157, guid: 7b471ac9b48f6e249b37f766faebb08b,
+        type: 3}
+      propertyPath: TempsMax
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4111129287774354173, guid: 7b471ac9b48f6e249b37f766faebb08b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b471ac9b48f6e249b37f766faebb08b, type: 3}
@@ -9010,7 +9025,7 @@ PrefabInstance:
     - target: {fileID: 1340757584167726390, guid: cdd1853ab0ae53c4f99c80092fb466e0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -81
+      value: -81.00001
       objectReference: {fileID: 0}
     - target: {fileID: 1340757584167726390, guid: cdd1853ab0ae53c4f99c80092fb466e0,
         type: 3}
@@ -9159,7 +9174,7 @@ PrefabInstance:
     - target: {fileID: 6315617477288753837, guid: 80d788e61c0a54c4d891c8fa1b368ba0,
         type: 3}
       propertyPath: TempsMax
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6315617477288753837, guid: 80d788e61c0a54c4d891c8fa1b368ba0,
         type: 3}

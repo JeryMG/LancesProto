@@ -7,6 +7,7 @@ public class ProgagOnde : MonoBehaviour, IClochePropag
 {
     public GameObject Onde;
     public Animator gongWaveAnimator;
+    public Animator animAnimator;
     public bool go;
 
 

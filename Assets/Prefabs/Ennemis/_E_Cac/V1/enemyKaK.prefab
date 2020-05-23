@@ -813,16 +813,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Donus1.0
       objectReference: {fileID: 0}
-    - target: {fileID: 5256647930545578002, guid: 84477c05415299c48a08bbd7113f20f5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5823026214698489036, guid: 84477c05415299c48a08bbd7113f20f5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9126549772233134595, guid: 84477c05415299c48a08bbd7113f20f5,
         type: 3}
       propertyPath: m_LocalPosition.x

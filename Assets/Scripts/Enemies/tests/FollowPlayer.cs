@@ -35,31 +35,34 @@ public class FollowPlayer : MonoBehaviour
 
     private void Update()
     {
-        distance = Vector3.Distance(target.position, transform.position);
-        direction = target.position - transform.position;
-        direction.y = 0;
-        if (shooter != null)
+        if (target != null && !entity.dead)
         {
-            if (distance < shooter.stopingD)
+            distance = Vector3.Distance(target.position, transform.position);
+            direction = target.position - transform.position;
+            direction.y = 0;
+            if (shooter != null)
             {
-                Vector3 newTarget = transform.position - direction * distance;
-                pointToReach = newTarget;
-                pathfinder.stoppingDistance = shooter.stopingD;
-                shooter.facing = false;
+                if (distance < shooter.stopingD)
+                {
+                    Vector3 newTarget = transform.position - direction * distance;
+                    pointToReach = newTarget;
+                    pathfinder.stoppingDistance = shooter.stopingD;
+                    shooter.facing = false;
+                }
+                else
+                {
+                    pathfinder.stoppingDistance = shooter.stopingD;
+                    pointToReach = target.position;
+                }
             }
             else
             {
-                pathfinder.stoppingDistance = shooter.stopingD;
-                pointToReach = target.position;
+                pointToReach=direction;
             }
-        }
-        else
-        {
-            pointToReach=direction;
-        }
         
-        StartCoroutine(resfreshDestination());
-        StartCoroutine(raycastDirection());
+            StartCoroutine(resfreshDestination());
+            StartCoroutine(raycastDirection());
+        }
     }
 
     IEnumerator resfreshDestination()

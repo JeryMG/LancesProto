@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1450667057796525334}
   - component: {fileID: 758412878755314642}
   - component: {fileID: 3278958033495199822}
-  - component: {fileID: 5384448973233701246}
   m_Layer: 4
   m_Name: Lance
   m_TagString: Lance
@@ -92,7 +91,7 @@ BoxCollider:
   m_GameObject: {fileID: 927533244945138560}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.35, y: 1.29, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -112,26 +111,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5384448973233701246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927533244945138560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a54e2a5fc8f2d914d9a35f47a22645eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lanceSpeed: 60
-  acceleration: 80
-  maxSpeed: 100
-  stop: 0
-  lanceDamage: 3.5
-  timerDestruction: 14
-  returning: 0
-  distanceReturn: 1
 --- !u!1 &4967782149952105825
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,8 +208,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.35, y: 1.29, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.3450108, y: 1.29, z: 1.2526944}
+  m_Center: {x: -0.016602436, y: 0, z: 0.1263473}
 --- !u!54 &4967782149952105831
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -280,7 +259,6 @@ GameObject:
   - component: {fileID: 6951003102803942511}
   - component: {fileID: 4873980646304471093}
   - component: {fileID: 6798553571834714356}
-  - component: {fileID: 6199738498191250773}
   m_Layer: 4
   m_Name: Lance (1)
   m_TagString: Lance
@@ -359,7 +337,7 @@ BoxCollider:
   m_GameObject: {fileID: 6897148008330540073}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.35, y: 1.29, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -379,26 +357,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6199738498191250773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6897148008330540073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a54e2a5fc8f2d914d9a35f47a22645eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lanceSpeed: 60
-  acceleration: 80
-  maxSpeed: 100
-  stop: 0
-  lanceDamage: 3.5
-  timerDestruction: 14
-  returning: 0
-  distanceReturn: 1
 --- !u!1 &8098453993720225303
 GameObject:
   m_ObjectHideFlags: 0

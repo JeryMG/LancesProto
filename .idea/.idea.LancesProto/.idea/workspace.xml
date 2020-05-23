@@ -5,19 +5,25 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/ondeGong.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/ondeGong.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cone/ConeDongLance.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cone/ConeDongLance.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Donus1_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Donus1_0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/NewWave.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NewWave.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/NewWave.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/NewWave.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Torus1.0.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Torus1.0.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cone/ConeDongLance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cone/ConeDongLance.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/Donus1.0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/Donus1.0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/DonusOri.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/DonusOri.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V1/enemyKaK.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/EnemiDist.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Distance/EnemiDist.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Lance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Lance.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL2/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL2/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProgagOnde.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProgagOnde.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneJerome.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/platformD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/platformD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/respawPlat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/respawPlat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/GongWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/GongWave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +74,7 @@
     <setting file="file://$PROJECT_DIR$/../ShootingParty/Assets/Scripts/MapGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/Exercice_Space/Assets/Scripts/Armes/Arme.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/Exercice_Space/Assets/Scripts/Armes/Laser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/NewWaveCube.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Cac/V2/Anim_EnenmieCac.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProgagOnde.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/Scripts/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
@@ -85,7 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/MoteurProjectile.cs" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa17260.40435/CameraShake.cs" />
         <option value="$USER_HOME$/Desktop/2GD/Prog Unity/Anims/Assets/tourneur.cs" />
         <option value="$PROJECT_DIR$/Assets/Onde.cs" />
@@ -116,7 +122,6 @@
         <option value="$PROJECT_DIR$/Assets/respawPlat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/projEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/IPropageDong.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Game/test/Boutton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Respawner.cs" />
         <option value="$PROJECT_DIR$/Assets/limitCamera.cs" />
@@ -125,7 +130,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
         <option value="$PROJECT_DIR$/Assets/ballz.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/goproj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" />
@@ -135,7 +139,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/GongWave.cs" />
+        <option value="$PROJECT_DIR$/Assets/NewWaveCube.cs" />
         <option value="$PROJECT_DIR$/Assets/ProgagOnde.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/E_Gong.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" />
       </list>
     </option>
   </component>
@@ -218,6 +225,7 @@
       <workItem from="1589908180073" duration="10784000" />
       <workItem from="1589961239170" duration="14450000" />
       <workItem from="1590133307312" duration="6224000" />
+      <workItem from="1590256675958" duration="4668000" />
     </task>
     <servers />
   </component>

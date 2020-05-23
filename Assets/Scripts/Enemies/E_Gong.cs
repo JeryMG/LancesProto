@@ -192,6 +192,7 @@ public class E_Gong : Vivant
         }
     }
 
+    [ContextMenu("propage")]
     IEnumerator GongWave()
     {
         if (Time.time > nextGongTime && !stunned)

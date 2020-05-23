@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Activator.cs" t="Include" />
+        <e p="NewWaveCube.cs" t="Include" />
         <e p="Particul_DONG_Script.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
@@ -135,6 +136,9 @@
             <e p="Lance.cs" t="Include" />
             <e p="ParryAbility.cs" t="Include" />
             <e p="Respawner.cs" t="Include" />
+          </e>
+          <e p="Son" t="Include">
+            <e p="Fade_Son_Ambiance.cs" t="Include" />
           </e>
         </e>
       </e>

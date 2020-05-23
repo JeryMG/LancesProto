@@ -10,7 +10,7 @@ public class Vivant : MonoBehaviour, IDamageable
     [SerializeField]protected float health;
     [SerializeField] private float MaxHealth = 5;
     public bool stunned;
-    protected bool dead;
+    public bool dead;
     public GameObject HitParticule;
     [Header("HP variables")]
     public Image LifeFill;

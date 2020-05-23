@@ -55,6 +55,8 @@ public class E_Gong : Vivant
     public bool JoueurAuCac=false;
     private int RandAnimCac=1;
     private bool SoundActiveGong=false;
+    public GameObject Gauche;
+    public GameObject Droite;
     
 
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
@@ -141,6 +143,19 @@ public class E_Gong : Vivant
         {
             if (dejaJouee==true)
             {
+                if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>0.25&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime<0.35)
+                {
+                    Vector3 _tetePos=this.transform.position;
+                    _tetePos.y+=4;
+                    Destroy(
+                Instantiate(Gauche, _tetePos,
+                Quaternion.FromToRotation(Vector3.forward, transform.position)),
+                1);
+                Destroy(
+                Instantiate(Droite, _tetePos,
+                Quaternion.FromToRotation(Vector3.forward, transform.position)),
+                1);
+                }
                 if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>0.35)
                 {
                     if(SoundActiveGong==false)

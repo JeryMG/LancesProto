@@ -148,7 +148,7 @@ public class Lance : MonoBehaviour
             StayImmobile(false);
             Vector3 destination = PlayerTransform.position - transform.position;
             transform.position += destination * vitesseReturn * Time.deltaTime;
-            
+            this.transform.LookAt(PlayerTransform);
             vitesseReturn += acceleration * Time.deltaTime;
  
             if (vitesseReturn > maxSpeed)

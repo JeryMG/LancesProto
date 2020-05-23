@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8697,6 +8697,7 @@ MonoBehaviour:
   MaxHealth: 5
   stunned: 0
   HitParticule: {fileID: 0}
+  LifeFill: {fileID: 0}
   currentState: 4
   idleDistanceTreshold: 10
   points: []
@@ -8710,6 +8711,8 @@ MonoBehaviour:
     type: 3}
   vision: 10
   JoueurAuCac: 0
+  Gauche: {fileID: 0}
+  Droite: {fileID: 0}
 --- !u!195 &1584979565
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12898,7 +12901,7 @@ PrefabInstance:
     - target: {fileID: 8632970731411079796, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8632970731411079801, guid: b2d4af9e8f11ad240a0422c33344939e,
         type: 3}

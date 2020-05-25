@@ -16,6 +16,7 @@ TagManager:
   - LifeBarUI
   - WaveOri
   - Cloche
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Ground
   - Joueur
   - FxHit
-  - 
+  - Shield
   - 
   - 
   - 

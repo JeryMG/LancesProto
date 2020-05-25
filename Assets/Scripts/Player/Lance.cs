@@ -124,6 +124,11 @@ public class Lance : MonoBehaviour
             Egong.stunned = true;
             StartCoroutine( Egong.StunXseconds(5f));
         }
+
+        if (other.gameObject.CompareTag("Shield"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnDestroy()

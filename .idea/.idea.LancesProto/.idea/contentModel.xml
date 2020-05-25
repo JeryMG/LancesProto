@@ -132,6 +132,7 @@
           <e p="Player" t="Include">
             <e p="ballz.cs" t="Include" />
             <e p="CacAbility.cs" t="Include" />
+            <e p="E_GongFixe.cs" t="Include" />
             <e p="Hunter.cs" t="Include" />
             <e p="Lance.cs" t="Include" />
             <e p="ParryAbility.cs" t="Include" />

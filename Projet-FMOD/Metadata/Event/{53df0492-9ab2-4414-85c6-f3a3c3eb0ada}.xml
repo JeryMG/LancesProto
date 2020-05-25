@@ -5,7 +5,7 @@
 			<value>Fight</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{bf02b3c3-6fab-494d-a91d-69b5a7c01746}</destination>
@@ -93,10 +93,10 @@
 	<object class="MixerBusPanner" id="{f266939c-0138-4f43-b534-e19a803d1dec}" />
 	<object class="SingleSound" id="{c656979a-a9de-43a0-b751-55601fc77682}">
 		<property name="length">
-			<value>161.136</value>
+			<value>149.136</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>3</value>
+			<value>15</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{0bf25bbe-4cf6-4cc0-84b2-b750a9914b33}</destination>
@@ -124,7 +124,7 @@
 	</object>
 	<object class="LoopRegion" id="{2678ef4c-886e-4e06-93b0-78610606dba4}">
 		<property name="position">
-			<value>43.089536422413786</value>
+			<value>31.089536422413786</value>
 		</property>
 		<property name="length">
 			<value>117.03583417744254</value>
@@ -139,7 +139,6 @@
 	<object class="MixerBusEffectChain" id="{8b889270-88dc-43f0-8191-23b9ccb0cf46}">
 		<relationship name="effects">
 			<destination>{95b84f63-4d0c-4ae4-96b4-7bb74e29eabd}</destination>
-			<destination>{4ab3430d-6666-47cb-8194-1adc938bdbde}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f0c0900f-c721-45ee-978f-5423e7321ec0}" />
@@ -159,11 +158,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{535c507f-bf5d-49d9-af4e-9ced58560a2a}" />
 	<object class="MixerBusFader" id="{95b84f63-4d0c-4ae4-96b4-7bb74e29eabd}" />
-	<object class="SpatialiserEffect" id="{4ab3430d-6666-47cb-8194-1adc938bdbde}">
-		<property name="bypass">
-			<value>true</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{983fbfbb-b2f8-4b17-a7c8-1389b586489a}">
 		<property name="position">
 			<value>0</value>

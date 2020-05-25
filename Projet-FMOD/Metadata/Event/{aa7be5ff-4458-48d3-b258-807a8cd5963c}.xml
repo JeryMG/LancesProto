@@ -5,7 +5,7 @@
 			<value>Move</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{bf02b3c3-6fab-494d-a91d-69b5a7c01746}</destination>
@@ -136,7 +136,6 @@
 	<object class="MixerBusEffectChain" id="{5d2da515-1c0b-4a43-bd55-9aacb289e94e}">
 		<relationship name="effects">
 			<destination>{60f54646-8cdc-4557-bd66-e5ff566374fa}</destination>
-			<destination>{e164d675-eaa4-467d-b8be-e2deff3ceb72}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{56ca8207-417d-428f-8d05-4993aad0c03e}" />
@@ -156,29 +155,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{6dac8378-56de-40a6-83ab-a3787d1d7098}" />
 	<object class="MixerBusFader" id="{60f54646-8cdc-4557-bd66-e5ff566374fa}" />
-	<object class="SpatialiserEffect" id="{e164d675-eaa4-467d-b8be-e2deff3ceb72}">
-		<property name="bypass">
-			<value>true</value>
-		</property>
-		<property name="minimumDistance">
-			<value>0</value>
-		</property>
-		<property name="maximumDistance">
-			<value>10000</value>
-		</property>
-		<property name="extentMode">
-			<value>1</value>
-		</property>
-		<property name="soundSize">
-			<value>10000</value>
-		</property>
-		<property name="minimumExtent">
-			<value>360</value>
-		</property>
-		<property name="userLFELevel">
-			<value>-1.5</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{a68ebea7-db50-47c8-bcb3-d041646d001b}">
 		<property name="position">
 			<value>0</value>

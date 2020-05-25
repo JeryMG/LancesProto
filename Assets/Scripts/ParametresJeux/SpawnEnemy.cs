@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,6 +20,7 @@ public class SpawnEnemy : MonoBehaviour
     public Wave[] Waves;
     public List<Vivant> enemy;
     public Transform spawnPoint;
+    public GameObject murs;
 
     private Vivant playerEntity;
     private Transform playerT;
@@ -52,6 +54,11 @@ public class SpawnEnemy : MonoBehaviour
         {
             if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
             {
+                if (murs != null)
+                {
+                    murs.gameObject.SetActive(true);
+                }
+                
                 if(SonJouer==false)
                 {
                     //SON SPAWN
@@ -93,6 +100,11 @@ public class SpawnEnemy : MonoBehaviour
         if (enemiesRemainingAlive == 0)
         {
             NextWave();
+        }
+
+        if (currentWaveNumber == Waves.Length - 1 && enemiesRemainingToSpawn == 0)
+        {
+            murs.SetActive(false);
         }
     }
     

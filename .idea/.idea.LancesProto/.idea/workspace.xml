@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/WallEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materiel ED/WallEffect.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/eGongFixe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/eGongFixe.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +32,6 @@
     <setting file="file://$USER_HOME$/Downloads/PhysicsInputTest2 (1).cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Shaders/Lit.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ParryAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" root0="FORCE_HIGHLIGHTING" />
@@ -72,7 +70,6 @@
     <setting file="file://$USER_HOME$/Desktop/Prog/CC2-UnityProject/Assets/ARendre/LaserBeam.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/respawPlat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Game/Camera.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/MaterialUpgrader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ShootingParty/Assets/Scripts/GameManager/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/platformD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParametresJeux/CameraTop90.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,7 +114,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
         <option value="$PROJECT_DIR$/Assets/ballz.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/goproj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Activator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/platformD.cs" />
@@ -132,6 +128,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/tests/FollowPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Lance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/E_GongFixe.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/SpawnEnemy.cs" />
       </list>
     </option>
   </component>
@@ -216,6 +213,7 @@
       <workItem from="1590133307312" duration="6224000" />
       <workItem from="1590256675958" duration="5745000" />
       <workItem from="1590346781120" duration="2551000" />
+      <workItem from="1590412268404" duration="3339000" />
     </task>
     <servers />
   </component>

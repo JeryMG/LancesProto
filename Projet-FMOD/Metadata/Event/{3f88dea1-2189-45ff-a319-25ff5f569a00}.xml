@@ -124,7 +124,7 @@
 	</object>
 	<object class="SnapshotModule" id="{7ad44927-c43b-43e5-8fb4-b786aba1496b}">
 		<property name="length">
-			<value>5</value>
+			<value>3</value>
 		</property>
 		<relationship name="automators">
 			<destination>{afabac8f-c12e-4fb5-899e-772d87ce34f2}</destination>
@@ -342,7 +342,7 @@
 	</object>
 	<object class="AutomationPoint" id="{74ecfdf9-14d4-4e82-9588-e985bc638003}">
 		<property name="position">
-			<value>5</value>
+			<value>3</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -350,7 +350,7 @@
 	</object>
 	<object class="AutomationPoint" id="{23c6fa03-00c3-4bab-a33f-2db670731a3e}">
 		<property name="position">
-			<value>1.8</value>
+			<value>0.90000000000000002</value>
 		</property>
 		<property name="value">
 			<value>90</value>

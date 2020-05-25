@@ -9,7 +9,8 @@ public class GameSystem : MonoBehaviour
 {
     public static GameSystem Instance { get; private set; }
 
-    private float slowmotionScale = 0.3f;
+    private float slowmotionScale = 0f;
+    public bool paused;
 
     public Transform[] TpPositions;
 
@@ -68,6 +69,11 @@ public class GameSystem : MonoBehaviour
         SoundStuff();
         MuteAudio();
         seTP();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu();
+        }
     }
 
     private void SoundStuff()
@@ -194,7 +200,22 @@ public class GameSystem : MonoBehaviour
     public IEnumerator SlowMotion()
     {
         Time.timeScale = slowmotionScale;
-        yield return new WaitForSeconds(0.7f);
+        yield return null;
         Time.timeScale = 1;
+    }
+
+    private void pauseMenu()
+    {
+        if (!paused)
+        {
+            Time.timeScale = 0;
+            event_fmod.setPaused(true);
+        }
+        if (paused)
+        {
+            Time.timeScale = 1;
+            event_fmod.setPaused(false);
+        }
+        paused = !paused;
     }
 }

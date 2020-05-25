@@ -160,6 +160,13 @@ public class Hunter : Vivant
         {
             balls[2].SetActive(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            lancesRestantes = 3;
+            lanceReturning = false;
+            lieuxDeTp.Clear();
+        }
     }
     
     private void Move()

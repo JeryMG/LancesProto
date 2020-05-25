@@ -37,7 +37,10 @@ public class SpawnEnemy : MonoBehaviour
     private bool startSpawn;
     private bool SonJouer=false;
 
+    public int nbrEnemiesT;
+
     public event Action<int> OnNewWave;
+    public event Action Ondeath;
     
     private void Start()
     {
@@ -45,6 +48,10 @@ public class SpawnEnemy : MonoBehaviour
         playerEntity = FindObjectOfType<Hunter>();
         playerT = playerEntity.transform;
         playerEntity.OnDeath += onPlayerDeath;
+        foreach (var wave in Waves)
+        {
+            nbrEnemiesT += wave.enemyCount;
+        }
         NextWave();
     }
     
@@ -54,11 +61,10 @@ public class SpawnEnemy : MonoBehaviour
         {
             if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
             {
-                if (murs != null)
-                {
-                    murs.gameObject.SetActive(true);
-                }
-                
+                // if (murs != null)
+                // {
+                //     murs.SetActive(true);
+                // }
                 if(SonJouer==false)
                 {
                     //SON SPAWN
@@ -70,6 +76,11 @@ public class SpawnEnemy : MonoBehaviour
 
                 StartCoroutine(SpawnAnEnemy());
             }
+        }
+
+        if (nbrEnemiesT == 0 && murs != null)
+        {
+            murs.SetActive(false);
         }
     }
     
@@ -88,23 +99,23 @@ public class SpawnEnemy : MonoBehaviour
 
         //int id = Random.Range(0, enemy.Count);
         
-        Vivant spawnedEnemy = Instantiate(enemy[Waves[currentWaveNumber - 1].enemyType], spawnPoint.position + Vector3.up, Quaternion.identity);
+        Vivant spawnedEnemy = Instantiate(enemy[Waves[currentWaveNumber - 1].enemyType], spawnPoint.position + Vector3.up, /*Quaternion.identity*/ spawnPoint.rotation);
         spawnedEnemy.OnDeath += OnEnemyDeath;
         effetSol.gameObject.SetActive(false);
     }
     
     void OnEnemyDeath()
     {
+        if (Ondeath != null)
+        {
+            Ondeath();
+        }
         print("enemy died");
         enemiesRemainingAlive--;
+        nbrEnemiesT--;
         if (enemiesRemainingAlive == 0)
         {
             NextWave();
-        }
-
-        if (currentWaveNumber == Waves.Length - 1 && enemiesRemainingToSpawn == 0)
-        {
-            murs.SetActive(false);
         }
     }
     

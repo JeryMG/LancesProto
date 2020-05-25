@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Lance : MonoBehaviour
@@ -22,7 +23,8 @@ public class Lance : MonoBehaviour
     public bool returning;
     [SerializeField] private float distanceReturn = 3f;
     private Transform PlayerTransform;
-    
+    public GameObject HitParticule;
+
 
     //private bool isFlying = false;
 
@@ -128,6 +130,10 @@ public class Lance : MonoBehaviour
         if (other.gameObject.CompareTag("Shield"))
         {
             Destroy(gameObject);
+            Destroy(
+                Instantiate(HitParticule, transform.position,
+                    Quaternion.FromToRotation(Vector3.forward, transform.position)),
+                2);
         }
     }
 

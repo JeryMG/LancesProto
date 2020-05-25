@@ -116,7 +116,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389914126516622893}
-  m_LocalRotation: {x: -0, y: 0.9987158, z: -0, w: -0.05066204}
+  m_LocalRotation: {x: 0, y: 0.9987158, z: -0, w: -0.050662585}
   m_LocalPosition: {x: 375.5882, y: 5.92, z: 504.33194}
   m_LocalScale: {x: 1.5104978, y: 1.5104978, z: 1.5104978}
   m_Children:
@@ -261,7 +261,7 @@ MonoBehaviour:
   MaxHealth: 20
   stunned: 0
   dead: 0
-  HitParticule: {fileID: 2347459403106267186, guid: a154c2069f7658f498744a621c4873ef,
+  HitParticule: {fileID: 786689074593348444, guid: 89ef49cf9e245c44dbe7fbd3a2e70071,
     type: 3}
   LifeFill: {fileID: 0}
   currentState: 0

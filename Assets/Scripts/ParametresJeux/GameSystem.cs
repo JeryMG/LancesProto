@@ -11,19 +11,22 @@ public class GameSystem : MonoBehaviour
 
     private float slowmotionScale = 0.3f;
 
-    public Transform TpPosition;
+    public Transform[] TpPositions;
 
     private Hunter player;
-    
+
+    private Camera mainCam;
+
+    [Header("Sounds")]
     private EventInstance event_fmod;
     public float SoundMax;
     public float SoundMin;
     private float timer;
     public float TempsMax;
-    private bool _inSound =false;
-    private bool _OutSound =false;
+    private bool _inSound;
+    private bool _OutSound;
     private bool SoundChange =false;
-    private bool _resetTimer=false;
+    private bool _resetTimer;
     [HideInInspector] public float Volume=1f;
     [HideInInspector] public float _volumeRecup;
 
@@ -39,38 +42,53 @@ public class GameSystem : MonoBehaviour
         }
 
         player = FindObjectOfType<Hunter>();
+        
     }
 
     private void Start()
     {
+        mainCam = Camera.main;
         event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event3D/Ambiance/Move");
         event_fmod.start();
         event_fmod.setVolume(SoundMax);
         Volume=SoundMax;
         _volumeRecup=Volume;
+
+        TpPositions = new Transform[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            TpPositions[i] = transform.GetChild(i);
+        }
     }
 
     private void Update()
     {
-
         timer+=Time.deltaTime;
         RestartScene();
-        if(_inSound==true)
+        SoundStuff();
+        MuteAudio();
+        seTP();
+    }
+
+    private void SoundStuff()
+    {
+        if (_inSound)
         {
             EnterZoneCombat();
-            if(timer>=TempsMax)
+            if (timer >= TempsMax)
             {
-                _resetTimer=false;
-                _inSound=false;
+                _resetTimer = false;
+                _inSound = false;
             }
         }
-        if(_OutSound==true)
+
+        if (_OutSound)
         {
             ExitZoneCombat();
-            if(timer>=TempsMax)
+            if (timer >= TempsMax)
             {
-                _resetTimer=false;
-                _OutSound=false;
+                _resetTimer = false;
+                _OutSound = false;
             }
         }
 
@@ -78,25 +96,68 @@ public class GameSystem : MonoBehaviour
         {
             event_fmod.start();
         }
-        if(Input.GetKeyDown(KeyCode.W))
+
+        if (Input.GetKeyDown(KeyCode.W))
         {
             resetTimer();
             EnterZoneCombat();
         }
-        if(Input.GetKeyDown(KeyCode.X))
+
+        if (Input.GetKeyDown(KeyCode.X))
         {
             resetTimer();
             ExitZoneCombat();
         }
+    }
 
+    private void MuteAudio()
+    {
         if (Input.GetKeyDown(KeyCode.M))
         {
             event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
-        
-        if (Input.GetKeyDown(KeyCode.T) && TpPosition != null)
+    }
+
+    private void seTP()
+    {
+        if (Input.GetKeyDown(KeyCode.Keypad1) && TpPositions[0] != null)
         {
-            player.transform.position = TpPosition.position;
+            mainCam.gameObject.SetActive(false);
+            player.transform.position = TpPositions[0].position;
+            mainCam.transform.position = player.transform.position;
+            mainCam.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad2) && TpPositions[1] != null)
+        {
+            mainCam.gameObject.SetActive(false);
+            player.transform.position = TpPositions[1].position;
+            mainCam.transform.position = player.transform.position;
+            mainCam.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad3) && TpPositions[2] != null)
+        {
+            mainCam.gameObject.SetActive(false);
+            player.transform.position = TpPositions[2].position;
+            mainCam.transform.position = player.transform.position;
+            mainCam.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad4) && TpPositions[3] != null)
+        {
+            mainCam.gameObject.SetActive(false);
+            player.transform.position = TpPositions[3].position;
+            mainCam.transform.position = player.transform.position;
+            mainCam.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad5) && TpPositions[4] != null)
+        {
+            mainCam.gameObject.SetActive(false);
+            player.transform.position = TpPositions[4].position;
+            mainCam.transform.position = player.transform.position;
+            mainCam.gameObject.SetActive(true);
         }
     }
 

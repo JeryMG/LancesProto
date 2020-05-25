@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProgagOnde : MonoBehaviour, IClochePropag
+public class ProgagOnde : Vivant, IClochePropag
 {
     public GameObject Onde;
     public Animator gongWaveAnimator;

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4053016804259229643}
   - component: {fileID: 1450667057796525334}
   - component: {fileID: 758412878755314642}
-  - component: {fileID: 3278958033495199822}
   m_Layer: 4
   m_Name: Lance
   m_TagString: Lance
@@ -95,22 +94,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.35, y: 1.29, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &3278958033495199822
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927533244945138560}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1 &4967782149952105825
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +229,8 @@ MonoBehaviour:
   timerDestruction: 14
   returning: 0
   distanceReturn: 1
+  HitParticule: {fileID: 786689074593348444, guid: 89ef49cf9e245c44dbe7fbd3a2e70071,
+    type: 3}
 --- !u!1 &6897148008330540073
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +243,6 @@ GameObject:
   - component: {fileID: 1803035027906965819}
   - component: {fileID: 6951003102803942511}
   - component: {fileID: 4873980646304471093}
-  - component: {fileID: 6798553571834714356}
   m_Layer: 4
   m_Name: Lance (1)
   m_TagString: Lance
@@ -341,22 +325,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.35, y: 1.29, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6798553571834714356
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6897148008330540073}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1 &8098453993720225303
 GameObject:
   m_ObjectHideFlags: 0

@@ -67,8 +67,11 @@ MonoBehaviour:
   - {fileID: 8632970731411079803, guid: b2d4af9e8f11ad240a0422c33344939e, type: 3}
   - {fileID: 3597102815451038830, guid: 2fb51673ba28c524bbb131fc6e13a31e, type: 3}
   - {fileID: 1750036897544190704, guid: acb24d08f61a12b4aa3cca15fb864f98, type: 3}
+  - {fileID: 1389914126516622888, guid: d12412d2fa2c39440a5e3e45d7747d35, type: 3}
   spawnPoint: {fileID: 7165733382697450865}
+  murs: {fileID: 0}
   spawnDelay: 2
+  nbrEnemiesT: 0
 --- !u!1001 &166841594
 PrefabInstance:
   m_ObjectHideFlags: 0

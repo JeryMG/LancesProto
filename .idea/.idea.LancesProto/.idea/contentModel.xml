@@ -117,6 +117,7 @@
             </e>
           </e>
           <e p="ParametresJeux" t="Include">
+            <e p="ArenaWalls.cs" t="Include" />
             <e p="CameraTop90.cs" t="Include" />
             <e p="GameSystem.cs" t="Include" />
             <e p="IClochePropag.cs" t="Include" />

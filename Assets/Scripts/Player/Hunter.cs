@@ -40,7 +40,7 @@ public class Hunter : Vivant
     [Header("Animation")]
     public TrailRenderer _trail;
     public Animator animMove;
-    
+
     [Header("Random")]
     private PlayerInputs _playerInputs;
     private Rigidbody rb;
@@ -276,4 +276,6 @@ public class Hunter : Vivant
     {
         //Gizmos.DrawWireSphere(transform.position, rayonLance);
     }
+    
+    
 }

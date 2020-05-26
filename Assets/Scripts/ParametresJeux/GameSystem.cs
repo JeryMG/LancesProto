@@ -11,7 +11,7 @@ public class GameSystem : MonoBehaviour
 
     private float slowmotionScale = 0f;
     public bool paused;
-
+    public GameObject gameOverImage;
     public Transform[] TpPositions;
 
     private Hunter player;
@@ -48,6 +48,7 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
+        event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         mainCam = Camera.main;
         event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event3D/Ambiance/Move");
         event_fmod.start();
@@ -60,12 +61,17 @@ public class GameSystem : MonoBehaviour
         {
             TpPositions[i] = transform.GetChild(i);
         }
+        
+        player.OnDeath += showGameOverScreen;
     }
 
     private void Update()
     {
         timer+=Time.deltaTime;
-        RestartScene();
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            RestartScene();
+        }
         SoundStuff();
         MuteAudio();
         seTP();
@@ -73,6 +79,11 @@ public class GameSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu();
+        }
+
+        if (player.dead && Input.GetKeyDown(KeyCode.Space))
+        {
+            RestartScene();
         }
     }
 
@@ -189,12 +200,11 @@ public class GameSystem : MonoBehaviour
             _resetTimer=true;
         }
     }
-    private static void RestartScene()
+
+    public void RestartScene()
     {
-        if (Input.GetKeyDown(KeyCode.RightShift))
-        {
-            SceneManager.LoadScene(0);
-        }
+        Debug.Log("boutton !!!!!!");
+        SceneManager.LoadScene(0);
     }
 
     public IEnumerator SlowMotion()
@@ -217,5 +227,11 @@ public class GameSystem : MonoBehaviour
             event_fmod.setPaused(false);
         }
         paused = !paused;
+    }
+
+    private void showGameOverScreen()
+    {
+        gameOverImage.SetActive(true);
+        event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

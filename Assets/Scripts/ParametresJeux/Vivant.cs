@@ -18,13 +18,18 @@ public class Vivant : MonoBehaviour, IDamageable
     private bool isLifeFillNotNull;
     private bool goRestoreHP;
     private bool restoringHP;
-
+    public Image DamageRecuImage;
+    private bool isImageDmgNull;
+    [SerializeField] private float fadeTime = 0.3f;
+    private bool isRunning;
 
     public event Action OnDeath;
 
     private void Awake()
     {
+        
         isLifeFillNotNull = LifeFill != null;
+        isImageDmgNull = DamageRecuImage != null;
     }
 
     protected virtual void Start()
@@ -33,6 +38,13 @@ public class Vivant : MonoBehaviour, IDamageable
         if (isLifeFillNotNull)
         {
             LifeFill.fillAmount = 1f;
+        }
+
+        if (!isImageDmgNull && CompareTag("Player"))
+        {
+            Color c = DamageRecuImage.color;
+            c.a = 0;
+            DamageRecuImage.color = c;
         }
     }
     
@@ -57,6 +69,10 @@ public class Vivant : MonoBehaviour, IDamageable
             //goRestoreHP = true;
             UpdateLifeBar();
             //StartCoroutine(restoreHP());
+            if (!isImageDmgNull && !isRunning)
+            {
+                StartCoroutine(AfficherDmgRecuIN());
+            }
         }
         if (health <= 0 && !dead)
         {
@@ -70,7 +86,25 @@ public class Vivant : MonoBehaviour, IDamageable
         LifeFill.fillAmount = lifeAmount;
     }
 
-    IEnumerator restoreHP()
+    private YieldInstruction fadeInstruction = new YieldInstruction();
+    private IEnumerator AfficherDmgRecuIN()
+    {
+        isRunning = true;
+        //fade in
+        float elapsedTime = 0.0f;
+        Color c = DamageRecuImage.color;
+        while (c.a < 0.82f)
+        {
+            yield return fadeInstruction;
+            elapsedTime += Time.deltaTime ;
+            c.a = Mathf.Lerp(0, 0.82f, elapsedTime / fadeTime);
+            DamageRecuImage.color = c;
+        }
+        //fade out
+        StartCoroutine(AfficherDmgRecuOUT());
+    }
+    
+    public IEnumerator restoreHP()
     {
         if (goRestoreHP)
         {
@@ -102,6 +136,20 @@ public class Vivant : MonoBehaviour, IDamageable
             yield return new WaitForSeconds(seconds);
             stunned = false;
         }
+    }
+    IEnumerator AfficherDmgRecuOUT()    
+    {
+        float elapsedTime = 0.0f;
+        Color c = DamageRecuImage.color;
+        while (c.a > 0f)
+        {
+            yield return fadeInstruction;
+            elapsedTime += Time.deltaTime ;
+            //c.a = 0.82f - Mathf.Clamp01(elapsedTime / fadeTime);
+            c.a = Mathf.Lerp(0.82f, 0, elapsedTime / fadeTime);
+            DamageRecuImage.color = c;
+        }
+        isRunning = false;
     }
     
     [ContextMenu("Se suicider")]

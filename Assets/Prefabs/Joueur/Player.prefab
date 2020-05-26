@@ -323,6 +323,8 @@ MonoBehaviour:
   HitParticule: {fileID: 2347459403106267186, guid: a154c2069f7658f498744a621c4873ef,
     type: 3}
   LifeFill: {fileID: 0}
+  DamageRecuImage: {fileID: 0}
+  fadeTime: 0.7
   cdLances: 15
   Hand: {fileID: 1077123968680730172}
   lancePrefab: {fileID: 4967782149952105830, guid: 6179feb74bc5f034891e8d4de2c15f3e,

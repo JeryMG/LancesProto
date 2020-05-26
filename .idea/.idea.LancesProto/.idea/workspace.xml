@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5113c090-ef2c-46d5-86d4-12c60a2a5689" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Arene3.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Arene3.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Projectil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materiel ED/Enemy/Projectil.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/Donus1.0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/Donus1.0.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DonusOri.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DonusOri.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/enemyGong.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI_Infos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/UI_Infos.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Joueur/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LVL2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LVL2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CubesDispa.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CubesDispa.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CubesDispa.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CubesDispa.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/platformD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/platformD.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +113,6 @@
         <option value="$PROJECT_DIR$/Assets/ballz.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/goproj.cs" />
         <option value="$PROJECT_DIR$/Assets/Activator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/platformD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/respawPlat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Cac.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiShooter.cs" />
@@ -136,6 +128,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Hunter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/Vivant.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/GameSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ParametresJeux/testObjets/platformD.cs" />
       </list>
     </option>
   </component>
@@ -222,7 +215,7 @@
       <workItem from="1590346781120" duration="2551000" />
       <workItem from="1590412268404" duration="16435000" />
       <workItem from="1590445130363" duration="3339000" />
-      <workItem from="1590498219385" duration="10167000" />
+      <workItem from="1590498219385" duration="13139000" />
     </task>
     <servers />
   </component>

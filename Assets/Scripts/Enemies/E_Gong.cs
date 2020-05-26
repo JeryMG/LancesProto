@@ -55,8 +55,10 @@ public class E_Gong : Vivant
     public bool JoueurAuCac=false;
     private int RandAnimCac=1;
     private bool SoundActiveGong=false;
+    private bool _ondeTeteJoue=false;
     public GameObject Gauche;
     public GameObject Droite;
+    public ParticleSystem _particule;
     
 
     //[SerializeField] private List<AnimatorController> Anim =new List<AnimatorController>();
@@ -110,8 +112,10 @@ public class E_Gong : Vivant
             }
             if(SoundActiveGong==true&&Time.time < nextGongTime)
             {
-                 SoundActiveGong=false;
-                 dejaJouee=false;
+                SoundActiveGong=false;
+                dejaJouee=false;
+                _ondeTeteJoue=false;
+
             }
 
             if (stunned)
@@ -143,18 +147,24 @@ public class E_Gong : Vivant
         {
             if (dejaJouee==true)
             {
-                if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>0.25&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime<0.35)
+                if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>0.25&&AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime<0.28)
                 {
-                    Vector3 _tetePos=this.transform.position;
-                    _tetePos.y+=4;
-                    Destroy(
-                Instantiate(Gauche, _tetePos,
-                Quaternion.FromToRotation(Vector3.forward, transform.position)),
-                1);
-                Destroy(
-                Instantiate(Droite, _tetePos,
-                Quaternion.FromToRotation(Vector3.forward, transform.position)),
-                1);
+                    if(_ondeTeteJoue==false)
+                    {
+                        Vector3 _tetePos=this.transform.position;
+                        _tetePos.y+=4;
+                        Destroy(
+                            Instantiate(Gauche, _tetePos,
+                            Quaternion.FromToRotation(Vector3.forward, transform.position),this.transform),
+                            1.2f);
+
+                        Destroy(
+                            Instantiate(Droite, _tetePos,
+                            Quaternion.FromToRotation(Vector3.forward, transform.position),this.transform),
+                            1.2f);
+
+                        _ondeTeteJoue=true;
+                    }
                 }
                 if(AnimGong.anim.GetCurrentAnimatorStateInfo(5).normalizedTime>0.35)
                 {
@@ -201,7 +211,6 @@ public class E_Gong : Vivant
             {
                 dejaJouee=true;
             }
-            
             nextGongTime = Time.time + gongTimer;
             pathFinder.enabled = false;
             gongWaveAnimator.SetTrigger("Elargi");

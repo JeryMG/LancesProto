@@ -243,7 +243,7 @@ public class _E_Cac : Vivant, IClochePropag
             // propagOnde();
             // pathFinder.enabled = true;
 
-            Onde.gameObject.SetActive(true);
+            Onde.gameObject.SetActive(true);            
                 currentState = State.Gonging;
         }
         

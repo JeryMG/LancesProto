@@ -87,6 +87,7 @@ MonoBehaviour:
   JoueurAuCac: 0
   Gauche: {fileID: 0}
   Droite: {fileID: 0}
+  _particule: {fileID: 0}
 --- !u!1 &1750036897204442342
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +276,7 @@ MonoBehaviour:
   JoueurAuCac: 0
   Gauche: {fileID: 2645133089058554620, guid: 3cc79664c44d34e489440d1283216dcd, type: 3}
   Droite: {fileID: 4998105254166600798, guid: b5e7370cbde9e1949af03b0de4ee3e0b, type: 3}
+  _particule: {fileID: 6185331375542852272}
 --- !u!1 &1750036897661473897
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +682,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1750036897544190705}
     m_Modifications:
+    - target: {fileID: 2222655404528987661, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199154801868529979, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199154801868529980, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209100634386737625, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6209100634386737627, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96,
         type: 3}
       propertyPath: m_Name
@@ -745,6 +767,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8846174008576330021, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96, type: 3}
 --- !u!4 &5721026734491682911 stripped
@@ -756,6 +783,12 @@ Transform:
 --- !u!95 &8736546049905474127 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6209100634386737624, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96,
+    type: 3}
+  m_PrefabInstance: {fileID: 3392717370755847063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6185331375542852272 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8846174008576330023, guid: 06d13bcb3a4cd3849b2cf6d6e23d0c96,
     type: 3}
   m_PrefabInstance: {fileID: 3392717370755847063}
   m_PrefabAsset: {fileID: 0}

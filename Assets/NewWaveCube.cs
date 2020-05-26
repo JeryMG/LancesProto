@@ -31,15 +31,17 @@ public class NewWaveCube : MonoBehaviour
         {
             if (bro != null)
             {
+            Vector3 pos=other.transform.position;
+            pos.y+=4f;
                 Destroy(
-                    Instantiate(GauchePart, transform.position,
-                        Quaternion.FromToRotation(Vector3.forward, transform.position)),
-                    1);
+                    Instantiate(GauchePart, pos,
+                        Quaternion.FromToRotation(Vector3.forward, other.transform.position),other.transform),
+                    1.2f);
                 Destroy(
-                    Instantiate(DroitePart, transform.position,
-                        Quaternion.FromToRotation(Vector3.forward, transform.position)),
-                    1);
-        
+                    Instantiate(DroitePart, pos,
+                        Quaternion.FromToRotation(Vector3.forward, other.transform.position),other.transform),
+                    1.2f);
+                Debug.Log(this.gameObject);
                 Debug.Log("lets go !!!!");
                 bro.propagOnde();
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Event3D/EnnemiDistance3D/Cloches/Ennemi_Cloche",transform.position);

@@ -264,7 +264,7 @@ MonoBehaviour:
   idleDistanceTreshold: 40
   points: []
   pathHolder: {fileID: 1750036897204442337}
-  damage: 1.5
+  damage: 1
   attackDistanceTreshold: 7
   TimeBetweenAttacks: 2
   gongTimer: 3

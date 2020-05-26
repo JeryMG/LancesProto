@@ -189,13 +189,14 @@ MonoBehaviour:
   health: 0
   MaxHealth: 10
   stunned: 0
+  dead: 0
   HitParticule: {fileID: 2347459403106267186, guid: a154c2069f7658f498744a621c4873ef,
     type: 3}
   LifeFill: {fileID: 0}
   DejaJoue: 0
   currentState: 0
   Onde: {fileID: 7812985772422509705}
-  damage: 0.5
+  damage: 1
   attackDistanceTreshold: 5
   TimeBetweenAttacks: 1
   idleDistanceTreshold: 45

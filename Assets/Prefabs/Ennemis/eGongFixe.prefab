@@ -266,7 +266,7 @@ MonoBehaviour:
   LifeFill: {fileID: 0}
   currentState: 0
   idleDistanceTreshold: 285
-  damage: 2
+  damage: 1
   attackDistanceTreshold: 7
   TimeBetweenAttacks: 2
   gongTimer: 3

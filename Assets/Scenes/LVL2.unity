@@ -5434,11 +5434,6 @@ PrefabInstance:
       propertyPath: LifeFill
       value: 
       objectReference: {fileID: 1461351247}
-    - target: {fileID: 1077123968288378779, guid: 7c9d9b8bec91a894ba0a0d0fa66c4cb5,
-        type: 3}
-      propertyPath: MaxHealth
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 1077123968288378780, guid: 7c9d9b8bec91a894ba0a0d0fa66c4cb5,
         type: 3}
       propertyPath: m_LocalPosition.x

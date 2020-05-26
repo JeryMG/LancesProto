@@ -215,7 +215,6 @@ public class GameSystem : MonoBehaviour
     public void RestartScene()
     {
         Debug.Log("boutton !!!!!!");
-        event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         SceneManager.LoadScene(0);
     }
 

@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LancesProto/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Plateformes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/solLV2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/solLV2.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materiel ED/PV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materiel ED/PV.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cone/ConeDongLance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cone/ConeDongLance.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/Donus1.0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/Donus1.0.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DonusOri.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/_E_Gong/DonusOri.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/eGongFixe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ennemis/eGongFixe.prefab" afterDir="false" />
@@ -65,7 +63,6 @@
     <setting file="file://$USER_HOME$/Downloads/PhysicsInputTest2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CacAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/_E_Gong_Cac.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Cone/ConeDongLance.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ShootingParty/Assets/Scripts/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Build/interfaces/CameraShake.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/PhysicsInputTest.cs" root0="SKIP_HIGHLIGHTING" />
@@ -228,8 +225,7 @@
       <workItem from="1590346781120" duration="2551000" />
       <workItem from="1590412268404" duration="16435000" />
       <workItem from="1590445130363" duration="3339000" />
-      <workItem from="1590498219385" duration="18173000" />
-      <workItem from="1590531992613" duration="300000" />
+      <workItem from="1590498219385" duration="17518000" />
     </task>
     <servers />
   </component>

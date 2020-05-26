@@ -196,8 +196,8 @@ MonoBehaviour:
   LifeFill: {fileID: 0}
   DejaJoue: 0
   currentState: 0
-  Onde: {fileID: 6860986370756017861}
-  damage: 0.5
+  Onde: {fileID: 7812985772422509705}
+  damage: 1
   attackDistanceTreshold: 5
   TimeBetweenAttacks: 1
   idleDistanceTreshold: 45

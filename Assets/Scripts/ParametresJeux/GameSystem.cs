@@ -9,8 +9,9 @@ public class GameSystem : MonoBehaviour
 {
     public static GameSystem Instance { get; private set; }
 
-    private float slowmotionScale = 0.3f;
-
+    private float slowmotionScale = 0f;
+    public bool paused;
+    public GameObject gameOverImage;
     public Transform[] TpPositions;
 
     private Hunter player;
@@ -47,6 +48,7 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
+        event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         mainCam = Camera.main;
         event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event3D/Ambiance/Move");
         event_fmod.start();
@@ -59,15 +61,30 @@ public class GameSystem : MonoBehaviour
         {
             TpPositions[i] = transform.GetChild(i);
         }
+        
+        player.OnDeath += showGameOverScreen;
     }
 
     private void Update()
     {
         timer+=Time.deltaTime;
-        RestartScene();
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            RestartScene();
+        }
         SoundStuff();
         MuteAudio();
         seTP();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu();
+        }
+
+        if (player.dead && Input.GetKeyDown(KeyCode.Space))
+        {
+            RestartScene();
+        }
     }
 
     private void SoundStuff()
@@ -183,18 +200,38 @@ public class GameSystem : MonoBehaviour
             _resetTimer=true;
         }
     }
-    private static void RestartScene()
+
+    public void RestartScene()
     {
-        if (Input.GetKeyDown(KeyCode.RightShift))
-        {
-            SceneManager.LoadScene(0);
-        }
+        Debug.Log("boutton !!!!!!");
+        SceneManager.LoadScene(0);
     }
 
     public IEnumerator SlowMotion()
     {
         Time.timeScale = slowmotionScale;
-        yield return new WaitForSeconds(0.7f);
+        yield return null;
         Time.timeScale = 1;
+    }
+
+    private void pauseMenu()
+    {
+        if (!paused)
+        {
+            Time.timeScale = 0;
+            event_fmod.setPaused(true);
+        }
+        if (paused)
+        {
+            Time.timeScale = 1;
+            event_fmod.setPaused(false);
+        }
+        paused = !paused;
+    }
+
+    private void showGameOverScreen()
+    {
+        gameOverImage.SetActive(true);
+        event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

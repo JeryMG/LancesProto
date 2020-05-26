@@ -73,6 +73,8 @@ MonoBehaviour:
   dead: 0
   HitParticule: {fileID: 0}
   LifeFill: {fileID: 0}
+  DamageRecuImage: {fileID: 0}
+  fadeTime: 0.3
   currentState: 0
   idleDistanceTreshold: 10
   points: []
@@ -261,11 +263,13 @@ MonoBehaviour:
   HitParticule: {fileID: 2347459403106267186, guid: a154c2069f7658f498744a621c4873ef,
     type: 3}
   LifeFill: {fileID: 0}
+  DamageRecuImage: {fileID: 0}
+  fadeTime: 0.3
   currentState: 0
   idleDistanceTreshold: 40
   points: []
   pathHolder: {fileID: 1750036897204442337}
-  damage: 1.5
+  damage: 2
   attackDistanceTreshold: 7
   TimeBetweenAttacks: 2
   gongTimer: 3

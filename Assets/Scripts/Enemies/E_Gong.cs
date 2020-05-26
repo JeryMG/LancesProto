@@ -25,6 +25,8 @@ public class E_Gong : Vivant
     private bool hasTarget;
     private Hunter _hunter;
     private Transform target;
+    public GameObject HPpack;
+
     private Vivant targetVie;
     
     [Header("Mode Idle")]
@@ -90,6 +92,7 @@ public class E_Gong : Vivant
         }
         
         OnDeath += enemyDeath;
+        OnDeath += spawnPV;
     }
 
     private void Update()
@@ -287,6 +290,11 @@ public class E_Gong : Vivant
     private void desactiveOnde()
     {
         gongWaveAnimator.gameObject.SetActive(false);
+    }
+    
+    private void spawnPV()
+    {
+        Instantiate(HPpack, transform.position, Quaternion.identity);
     }
 
     private void OnCollisionEnter(Collision other)

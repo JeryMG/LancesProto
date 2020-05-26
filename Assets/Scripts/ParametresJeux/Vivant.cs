@@ -16,8 +16,6 @@ public class Vivant : MonoBehaviour, IDamageable
     public Image LifeFill;
     private float lifeAmount;
     private bool isLifeFillNotNull;
-    private bool goRestoreHP;
-    private bool restoringHP;
     public Image DamageRecuImage;
     private bool isImageDmgNull;
     [SerializeField] private float fadeTime = 0.3f;
@@ -80,6 +78,21 @@ public class Vivant : MonoBehaviour, IDamageable
         }
     }
 
+    public virtual void RecoverHP(float amount)
+    {
+        health += amount;
+        if (CompareTag("Player"))
+        {
+            //goRestoreHP = true;
+            UpdateLifeBar();
+            //StartCoroutine(restoreHP());
+        }
+        if (health >= MaxHealth && !dead)
+        {
+            health = MaxHealth;
+        }
+    }
+
     private void UpdateLifeBar()
     {
         lifeAmount = health / MaxHealth;
@@ -103,32 +116,7 @@ public class Vivant : MonoBehaviour, IDamageable
         //fade out
         StartCoroutine(AfficherDmgRecuOUT());
     }
-    
-    public IEnumerator restoreHP()
-    {
-        if (goRestoreHP)
-        {
-            yield return new WaitForSeconds(10);
-            restoringHP = true;
-            goRestoreHP = false;
-        }
-        
-        if (health < MaxHealth)
-        {
-            if (restoringHP)
-            {
-                health += 0.5f;
-                UpdateLifeBar();
-                yield return new WaitForSeconds(1);
-            }
-        }
-        else
-        {
-            yield return null;
-            restoringHP = false;
-        }
-    }
-    
+
     public IEnumerator StunXseconds(float seconds)
     {
         if (stunned)

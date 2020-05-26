@@ -79,6 +79,9 @@
           </e>
         </e>
         <e p="Prefabs" t="Include">
+          <e p="Cone" t="Include">
+            <e p="Cone_Anim.cs" t="Include" />
+          </e>
           <e p="Ennemis" t="Include">
             <e p="_E_Cac" t="Include">
               <e p="V2" t="Include">
@@ -104,6 +107,7 @@
         </e>
         <e p="ProgagOnde.cs" t="Include" />
         <e p="projectile.cs" t="Include" />
+        <e p="recoverHP.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
             <e p="_E_Cac.cs" t="Include" />

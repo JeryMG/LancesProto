@@ -12,7 +12,6 @@ public class E_GongFixe : Vivant
         Gonging,
         //quand le joueur se trouve tres proche (range de cac)
         Attacking,
-
     }
     
     public State currentState;
@@ -20,6 +19,7 @@ public class E_GongFixe : Vivant
     private Hunter _hunter;
     private Transform target;
     private Vivant targetVie;
+    public GameObject HPpack;
     
     [Header("Mode Idle")]
     [SerializeField] private float idleDistanceTreshold = 40f;
@@ -66,6 +66,7 @@ public class E_GongFixe : Vivant
             //StartCoroutine(UpdatePath());
         }
         OnDeath += enemyDeath;
+        OnDeath += spawnPV;
     }
 
     private void Update()
@@ -218,6 +219,7 @@ public class E_GongFixe : Vivant
             Instantiate(DeathEffect, transform.position,
                 Quaternion.FromToRotation(Vector3.forward, transform.position)),
             DeathEffect.main.startLifetimeMultiplier);
+        spawnPV();
     }
     
     private void desactiveOnde()
@@ -234,5 +236,10 @@ public class E_GongFixe : Vivant
             stunned = true;
             StartCoroutine(StunXseconds(5f));
         }
+    }
+
+    private void spawnPV()
+    {
+        Instantiate(HPpack, transform.position, Quaternion.identity);
     }
 }

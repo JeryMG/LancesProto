@@ -66,7 +66,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5477644865704712350}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.9, y: 7.58, z: 2.9}
@@ -90,6 +90,8 @@ MonoBehaviour:
   HitParticule: {fileID: 2347459403106267186, guid: a154c2069f7658f498744a621c4873ef,
     type: 3}
   LifeFill: {fileID: 0}
+  DamageRecuImage: {fileID: 0}
+  fadeTime: 0.3
   Onde: {fileID: 5091308607219837058}
   gongWaveAnimator: {fileID: 5091308607219837057}
   animAnimator: {fileID: 2661233976431968085}
@@ -122,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d4a9e8f6e1fdc4cbf1931c5f62f0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jouer: 0
   Anim: {fileID: 2661233976431968085}
 --- !u!1 &6380929271043212958
 GameObject:
@@ -275,7 +278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 92356347a11f3a342934e71e6858f125, type: 3}
+  - {fileID: 2100000, guid: eb6137350f879854cb1af38c6386dfd8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,7 +309,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1474722786543118505, guid: 92356347a11f3a342934e71e6858f125, type: 3}

@@ -76,6 +76,7 @@ MonoBehaviour:
   DamageRecuImage: {fileID: 0}
   fadeTime: 0.3
   currentState: 0
+  HPpack: {fileID: 0}
   idleDistanceTreshold: 10
   points: []
   pathHolder: {fileID: 0}
@@ -266,6 +267,7 @@ MonoBehaviour:
   DamageRecuImage: {fileID: 0}
   fadeTime: 0.3
   currentState: 0
+  HPpack: {fileID: 7146727353261949405, guid: f55ae174feba0cd42b8427149c6ea3b1, type: 3}
   idleDistanceTreshold: 40
   points: []
   pathHolder: {fileID: 1750036897204442337}

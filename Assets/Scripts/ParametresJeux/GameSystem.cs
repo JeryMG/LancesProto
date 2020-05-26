@@ -30,6 +30,7 @@ public class GameSystem : MonoBehaviour
     private bool _resetTimer;
     [HideInInspector] public float Volume=1f;
     [HideInInspector] public float _volumeRecup;
+    private Scene currentScene;
 
     private void Awake()
     {
@@ -47,7 +48,9 @@ public class GameSystem : MonoBehaviour
     }
 
     private void Start()
-    {
+    { 
+        currentScene = SceneManager.GetActiveScene();
+        
         event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         mainCam = Camera.main;
         event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Event3D/Ambiance/Move");
@@ -67,6 +70,14 @@ public class GameSystem : MonoBehaviour
 
     private void Update()
     {
+        if (currentScene ==  SceneManager.GetSceneByBuildIndex(0))
+        {
+            if (Input.anyKey)
+            {
+                SceneManager.LoadScene(1);
+                event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            }
+        }
         timer+=Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
@@ -204,6 +215,7 @@ public class GameSystem : MonoBehaviour
     public void RestartScene()
     {
         Debug.Log("boutton !!!!!!");
+        event_fmod.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         SceneManager.LoadScene(0);
     }
 

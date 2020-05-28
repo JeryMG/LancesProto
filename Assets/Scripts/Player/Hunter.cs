@@ -261,6 +261,7 @@ public class Hunter : Vivant
         {
             rb.velocity = Vector3.zero;
             transform.position = respawner.transform.position;
+            TakeDamage(0.5f);
         }
 
         if (other.transform.CompareTag("Ground") && !grounded)

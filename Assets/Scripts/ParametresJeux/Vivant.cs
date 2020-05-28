@@ -20,6 +20,7 @@ public class Vivant : MonoBehaviour, IDamageable
     private bool isImageDmgNull;
     [SerializeField] private float fadeTime = 0.3f;
     private bool isRunning;
+    protected bool godMode;
 
     public event Action OnDeath;
 
@@ -45,23 +46,23 @@ public class Vivant : MonoBehaviour, IDamageable
             DamageRecuImage.color = c;
         }
     }
-    
+
     public virtual void TakeDamage(float damage)
     {
-
         // Son Hit Effect
         if (this.CompareTag("Player"))
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Hit_Effect/Hit_Effect");
         }
-
-
         Destroy(
             Instantiate(HitParticule, transform.position,
                 Quaternion.FromToRotation(Vector3.forward, transform.position)),
             2);
 
-        health -= damage;
+        if (godMode == false)
+        {
+            health -= damage;
+        }
         if (CompareTag("Player"))
         {
             //goRestoreHP = true;
@@ -100,6 +101,7 @@ public class Vivant : MonoBehaviour, IDamageable
     }
 
     private YieldInstruction fadeInstruction = new YieldInstruction();
+
     private IEnumerator AfficherDmgRecuIN()
     {
         isRunning = true;

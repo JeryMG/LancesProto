@@ -167,6 +167,11 @@ public class Hunter : Vivant
             lanceReturning = false;
             lieuxDeTp.Clear();
         }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            godMode = !godMode;
+        }
     }
     
     private void Move()
